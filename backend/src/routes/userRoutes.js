@@ -10,7 +10,7 @@ import {
 const router = express.Router();
 
 router.get("/", authMiddleware, getAllUsers);
-router.get("/:id", getUserById);
+router.get("/:id", authMiddleware, getUserById);
 router.patch("/:id", authMiddleware, updateUser);
 router.delete("/:id", authMiddleware, deleteUser);
 

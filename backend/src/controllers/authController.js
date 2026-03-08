@@ -44,13 +44,14 @@ export const loginUser = async (req, res) => {
         // 4. Så når jeg har funnet en bruker så sammenligner jeg passord som er skrevet inn med det som er lagret på brukeren i db med bcrypt.compare?
             if (await bcrypt.compare(password, foundUser.password)) {
         // 5. Jeg returnerer en JWT token om det er match og kanskje en melding om at brukeren er logget inn.
-                const token = jwt.sign({ id: foundUser._id }, secret, { expiresIn: "1h" });
+                const token = jwt.sign({ id: foundUser._id }, secret, { expiresIn: "10h" });
                 res.status(200).json({
                     message: "Logged in successfully",
                     token,
                     id: foundUser._id,
                     username: foundUser.username,
-                    email: foundUser.email
+                    email: foundUser.email,
+                    role: foundUser.role
                 });
             } else {
         // 6. Her returnerer jeg feilmelding om hva som ikke stemmer, jeg velger å gjøre dette konkret siden det er en test.
