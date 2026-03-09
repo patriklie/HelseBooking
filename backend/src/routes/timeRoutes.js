@@ -17,11 +17,15 @@ router.get("/mine", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("
 // hent alle timer for innlogget behandler
 router.get("/behandlerTimer", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("behandler"), hentBehandlerTimer);
 
+/* 
+vi avventer med endring av oppsatt time, dette blir i såfall bare at behandler endrer tidspunkt
 // endre oppsatt time behandler/pasient
 router.patch("/:id", endreTime);
+*/
+
 
 // book time av rolle pasient.
-router.patch("/:id/book", bookTime);
+router.patch("/:id/book",authMiddleware, validateIdMiddleware, verifyRoleMiddleware("pasient", "behandler"), bookTime);
 
 // avlys time av rollen behandler/pasient
 router.patch("/:id/avlys", avlysTime);

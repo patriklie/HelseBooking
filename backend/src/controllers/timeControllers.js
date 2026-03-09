@@ -88,3 +88,21 @@ export const hentBehandlerTimer = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 }
+
+export const bookTime = async (req, res) => {
+    try {
+        const { id: timeID } = req.params;
+        const { id: pasientID } = req.user;
+
+        if (!timeID) return res.status(400).json({ message: "Time ID mangler." });
+        if (!mongoose.Types.ObjectId.isValid(timeID)) return res.status(400).json({ message: "Time ID er ikke riktig." });
+        
+        const bookaTime = await Time.findOneAndUpdate({ _id: timeID, status: "ledig" }, { pasient: pasientID, status: "booket" }, { new: true }).populate("behandler", "username");
+        if (!bookaTime) return res.status(400).json({ message: "Time finnes ikke eller er ikke ledig." });
+
+        res.status(200).json({ message: "Time booket!", bookaTime});
+
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
