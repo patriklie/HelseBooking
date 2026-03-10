@@ -28,9 +28,9 @@ router.patch("/:id", endreTime);
 router.patch("/:id/book",authMiddleware, validateIdMiddleware, verifyRoleMiddleware("pasient", "behandler"), bookTime);
 
 // avlys time av rollen behandler/pasient
-router.patch("/:id/avlys", avlysTime);
+router.patch("/:id/avlys", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("pasient", "behandler"), avlysTime);
 
 // slett opprettet time av behandler
-router.delete("/:id", slettTime);
+router.delete("/:id", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("behandler"), slettTime);
 
 export default router;

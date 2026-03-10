@@ -106,3 +106,48 @@ export const bookTime = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 }
+
+
+// Avlys time setter den til ledig om du er behandler/pasient rolle og gjør timen tilgjengelig for andre.
+export const avlysTime = async (req, res) => {
+    try {
+        const { id: timeID } = req.params;
+        const { id: brukerID, role } = req.user;
+
+        if (!timeID) return res.status(404).json({ message: "Mangler time ID." });
+        if (!mongoose.Types.ObjectId.isValid(timeID)) return res.status(400).json({ message: "Ikke godkjent Time ID." });
+
+        let endretTime;
+
+        if (role === "pasient") {
+            endretTime = await Time.findOneAndUpdate({ _id: timeID, pasient: brukerID }, { status: "ledig", pasient: null,  }, { new: true })
+            if (!endretTime) return res.status(404).json({ message: "Fant ingen time med oppgitt ID" });
+            res.status(200).json({ endretTime, message: `Avlyst timen ${endretTime.dato}, kl: ${endretTime.startTid}.` })
+        } else {
+            endretTime = await Time.findOneAndUpdate({ _id: timeID, behandler: brukerID }, { status: "ledig", pasient: null, }, { new: true })
+            if (!endretTime) return res.status(404).json({ message: "Fant ingen time med oppgitt ID" });
+            res.status(200).json({ endretTime, message: `Avlyst timen ${endretTime.dato}, kl: ${endretTime.startTid}.` })
+        }
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
+
+export const slettTime = async (req, res) => {
+    try {
+
+        const { id: timeID } = req.params;
+        const { id: brukerID } = req.user;
+
+        if (!timeID) return res.status(404).json({ message: "Mangler time ID." });
+        if (!mongoose.Types.ObjectId.isValid(timeID)) return res.status(400).json({ message: "Ikke godkjent Time ID." })
+
+        const slettetTime = await Time.findOneAndDelete({ _id: timeID, behandler: brukerID })
+        if (!slettetTime) return res.status(400).json({ message: "Fant ingen time å slette." })
+        
+        res.status(200).json({ message: `Slettet timen: ${slettetTime.dato}.` })
+        
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
