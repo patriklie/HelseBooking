@@ -1,30 +1,38 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
-export const useStore = create((set) => ({
-    token: null,
-    username: "",
-    email: "",
-    role: "",
-    mineBookedeTimer: [],
-    setUsername: (newUsername) => set({ username: newUsername }),
-    setEmail: (newEmail) => set({ email: newEmail }),
-    setRole: (newRole) => set({ role: newRole }),
-    setToken: (newToken) => set({ token: newToken }),
-    fjernBookedTime: (timeID) => set((state) => ({
-        mineBookedeTimer: state.mineBookedeTimer.filter((time) => time._id !== timeID)
-    })),
-    leggTilBookedtime: (time) => set((state) => ({
-        mineBookedeTimer: [...state.mineBookedeTimer, time]
-    })),
-    logout: () => set({
-        token: null,
-        username: "",
-        email: "",
-        role: "",
-        mineBookedeTimer: [],
-    }),
-}))
+export const useAppStore = create(
+    persist(
+        (set) => ({
+            token: null,
+            username: "",
+            email: "",
+            role: "",
+            mineBookedeTimer: [],
+            setUsername: (newUsername) => set({ username: newUsername }),
+            setEmail: (newEmail) => set({ email: newEmail }),
+            setRole: (newRole) => set({ role: newRole }),
+            setToken: (newToken) => set({ token: newToken }),
+            fjernBookedTime: (timeID) => set((state) => ({
+                mineBookedeTimer: state.mineBookedeTimer.filter((time) => time._id !== timeID)
+            })),
+            leggTilBookedtime: (time) => set((state) => ({
+                mineBookedeTimer: [...state.mineBookedeTimer, time]
+            })),
+            logout: () => set({
+                token: null,
+                username: "",
+                email: "",
+                role: "",
+                mineBookedeTimer: [],
+            }),
+            
+        }),
+        { name: "app-store" }
+    )
+)
 
+export const useMineBookedeTimer = () => useAppStore((state) => state.mineBookedeTimer);
 
 
 
