@@ -1,22 +1,38 @@
-import { NavLink } from "react-router"
+import { NavLink } from "react-router";
+import { Squash as Hamburger } from 'hamburger-react';
+import { motion, AnimatePresence } from 'motion/react';
+import { useState } from "react";
 
 const Navbar = () => {
 
-const navLinkClass = ({ isActive }) => ` font-bold ${isActive ? "text-black" : "text-zinc-600"}`
+  const [isOpen, SetIsOpen] = useState(false);
 
   return (
-    <>
-        <nav className='grid grid-cols-3 bg-amber-100 py-3 font-inter'>
-            <NavLink to="/" className='flex justify-start ml-3 font-black'>TempusCura</NavLink>      
-              <div className='flex justify-center gap-3'>
-                <NavLink to="/avtaler" className={navLinkClass}>Mine Avtaler</NavLink>
-                <NavLink to="/timer" className={navLinkClass}>Ledige Timer</NavLink>
-              </div>      
-              <div className='flex justify-end mr-3 gap-3'>
-                <NavLink to="/register" className={navLinkClass}>Registrer</NavLink>
-                <NavLink to="/login" className={navLinkClass}>Login</NavLink>
-              </div>      
-        </nav>
+    <>  
+      <nav className="navbar">
+
+
+      <div className="navbar-header">
+        <div className="navbar-ham"><Hamburger rounded color="#fff" toggled={isOpen} toggle={SetIsOpen} distance='sm' hideOutline={false} /></div>
+        <div className="navbar-logo"><span>Tempus</span>Cura</div>
+      </div>
+
+<AnimatePresence>
+    {isOpen && (
+        <motion.div
+          initial={{ x: "-100%" }}
+          animate={{ x: 0 }}
+          exit={{ x: "-100%"}}
+          transition={{ type: "spring", stiffness: 300, damping: 35 }}
+          className="navbar-sidebar"
+        >
+        </motion.div>
+    )}
+</AnimatePresence>
+ 
+
+
+      </nav>
     </>
   )
 }
