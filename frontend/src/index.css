@@ -44,7 +44,8 @@ input:-webkit-autofill:active {
 
 
 body {
-    background-image: url("https://picsum.photos/1920/1080");
+    /*background-image: url("https://picsum.photos/1920/1080");*/
+    background-image: url("/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -57,7 +58,7 @@ body {
   border-radius: 30px;
   background-color: rgba(255, 255, 255, 0.05);
   /* gjennomsiktig */
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(50px);
   /* Safari */
   height: 60px;
