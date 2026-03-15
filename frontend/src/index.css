@@ -42,7 +42,7 @@ input:-webkit-autofill:active {
   margin: 16px;
 }
 
-/* 
+
 body {
     background-image: url("https://picsum.photos/1920/1080");
       background-size: cover;
@@ -50,7 +50,6 @@ body {
       background-repeat: no-repeat;
       background-attachment: fixed;
 }
-*/
 
 .navbar-animasjon {
   display: block;
