@@ -30,8 +30,10 @@ const Navbar = () => {
         >
 
           <div className="navbar-top">
+            <img src="/g15.svg" className="navbar-top-logo-svg" />
             <div className="navbar-ham"><Hamburger size={20} rounded color="#000" toggled={isOpen} toggle={SetIsOpen} distance='sm' hideOutline={false} /></div>
             <div className="navbar-logo"><span>Behandler</span>Booking</div>
+            
           </div>
 
           <motion.div 
