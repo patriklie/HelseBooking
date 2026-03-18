@@ -51,6 +51,7 @@ input:-webkit-autofill:active {
 body {
     background-image: url("./assets/alex-padurariu-iNmouRApXYM-unsplash_large.jpg");
     /*background-image: url("/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg");*/
+    /* Link til bilde på unsplash for credits https://unsplash.com/photos/clear-glass-jar-on-gray-wooden-table-iNmouRApXYM */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
