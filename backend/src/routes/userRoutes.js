@@ -5,7 +5,8 @@ import {
     getUserById,
     updateUser,
     deleteUser,
-    uploadProfilePicture
+    uploadProfilePicture,
+    deleteProfilePicture
 } from "../controllers/userController.js";
 import { upload } from "../middleware/uploadMiddleware.js";
 
@@ -16,5 +17,6 @@ router.get("/:id", authMiddleware, getUserById); // legg til protection her så 
 router.patch("/:id", authMiddleware, updateUser);
 router.delete("/:id", authMiddleware, deleteUser);
 router.post("/:id/profilbilde", authMiddleware, upload.single("profilbilde"), uploadProfilePicture);
+router.delete("/:id/profilbilde", authMiddleware, deleteProfilePicture);
 
 export default router;

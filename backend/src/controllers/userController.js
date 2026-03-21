@@ -125,7 +125,7 @@ export const uploadProfilePicture = async (req, res) => {
     const findUser = await User.findByIdAndUpdate(id, {
         profilbildeUrl: response.secure_url,
         profilbildePublicId: response.public_id,
-    }, { new: true }); // oppdater DENNE TIL NYESTE MONGOOSE SYNTAXEN.
+    }, { returnDocument: "after" });
 
     console.log(response);
         res.status(200).json({
@@ -133,9 +133,32 @@ export const uploadProfilePicture = async (req, res) => {
             profilbildeUrl: response.secure_url,
         });
         
-
     } catch (error) {
       res.status(500).json({ message: error.message, text: "Inni uploadProfilePicture." })
     }
+}
 
+export const deleteProfilePicture = async (req, res) => {
+
+    try {
+
+    const { id } = req.params;
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(400).json({ message: "Ikke en valid bruker ID." })
+    }
+
+    const foundUser = await User.findById(id);
+    if (foundUser.profilbildePublicId) {
+        await cloudinary.uploader.destroy(foundUser.profilbildePublicId);
+        await User.findByIdAndUpdate(id, {
+            profilbildeUrl: null,
+            profilbildePublicId: null,
+        });
+    }
+
+    res.status(200).json({ message: "Slettet profilbilde." })
+
+    } catch (error) {
+      res.status(500).json({ message: error.message, text: "Inni deleteProfilePicture." })
+    }
 }
