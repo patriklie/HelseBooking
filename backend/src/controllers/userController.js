@@ -99,10 +99,10 @@ export const deleteUser = async (req, res) => {
 
 export const uploadProfilePicture = async (req, res) => {
     try {
-    const { id } = req.params;
+    const { id } = req.user;
     
     if (!req.file) {
-    return res.status(404).json({ message: "Mangler fil i req.fil." })
+    return res.status(404).json({ message: "Mangler fil i req.file." })
     }
 
     if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -142,7 +142,7 @@ export const deleteProfilePicture = async (req, res) => {
 
     try {
 
-    const { id } = req.params;
+    const { id } = req.user;
     if (!mongoose.Types.ObjectId.isValid(id)) {
         return res.status(400).json({ message: "Ikke en valid bruker ID." })
     }

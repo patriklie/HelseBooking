@@ -1,26 +1,66 @@
 import { useProfile, useAppStore } from "../store/authStore.js";
 import { useState } from "react";
 import axios from "axios";
+import { motion } from "motion/react";
+import { UserPen, Mail, ImageUp } from "lucide-react";
+import ProfileCard from "../components/ProfileCard.jsx";
+import toast from "react-hot-toast";
 
 const Profil = () => {
   
-  const { username, email, role, typeBehandler, profilbilde } = useProfile();
+  const { username, email, role, typeBehandler } = useProfile();
   const token = useAppStore((state) => state.token);
-  const setProfil = useAppStore((state) => state.setProfil)
-  
+  const setProfil = useAppStore((state) => state.setProfil);
+  const profilbilde = useAppStore((state) => state.profilbilde);
+  const setProfilbilde = useAppStore((state) => state.setProfilbilde);
   const [nyProfil, setNyProfil] = useState({
     username: username,
     email: email,
     role: role,
     typeBehandler: typeBehandler,
-    profilbilde: profilbilde,
   });
   
-  const handleOppdaterBruker = (e) => {
-    setNyProfil({ ...nyProfil, [e.target.name]: e.target.value })
+  const profilbildeKlikk = async (e) => {
+    console.log("Du klikket på profilbilde!");
+    console.log(e)
+    const nyttProfilbilde = (e.target.files[0]);
+    const maxFileSize = 5 * 1024 * 1024;
+    
+    if (!nyttProfilbilde) {
+      toast.error("Vennligst velg et bilde.");
+      return;
+    }
+    
+    if (nyttProfilbilde.size > maxFileSize) {
+      toast.error("Bilde er for stort! Maks 5mb 👀");
+      return;
+    }
+    
+    const formData = new FormData();
+    formData.append('profilbilde', nyttProfilbilde);
+    
+    try {
+
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/users/profilbilde`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          Authorization: `Bearer ${token}`,
+        }
+      })
+      
+      setProfilbilde(response.data.profilbildeUrl)
+      toast.success("Lastet opp nytt profilbilde 👏")
+      
+    } catch (error) {
+      toast.error(error.response.data.message);
+    }
     
   }
-  
+
+  const handleOppdaterBruker = (e) => {
+    setNyProfil({ ...nyProfil, [e.target.name]: e.target.value })
+  }
+
   const oppdaterProfil = async (e) => {
     e.preventDefault();
     console.log(nyProfil);
@@ -39,7 +79,6 @@ const Profil = () => {
         email: response.data.email,
         role: response.data.role,
         typeBehandler: response.data.typeBehandler,
-        profilbilde: response.data.profilbilde,
       })
     
     } catch (error) {
@@ -51,16 +90,33 @@ const Profil = () => {
   
   return (
     <>
-    <div>Brukernavn: {username}</div>
-    <div>Epost: {email}</div>
-    <div>Rolle: {role}</div>
-    <div>Type behandler: {typeBehandler}</div>
+    
+    <ProfileCard profilbildeKlikk={profilbildeKlikk} />
     
     <form onSubmit={oppdaterProfil} className="form-container"> 
       <div className="input-container">
+        <UserPen className="input-icon" size={18} color="grey" strokeWidth={1.5} />
         <input type="text" value={nyProfil.username} name="username" onChange={handleOppdaterBruker} />
-          <button>Send endringer</button>
-      </div>
+      </div>  
+          
+      <div className="input-container">
+        <Mail className="input-icon" size={18} color="grey" strokeWidth={1.5} />
+        <input type="text" value={nyProfil.email} name="email" onChange={handleOppdaterBruker} />
+      </div>  
+          
+          
+        <motion.button
+          layout="position"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 1 }}
+          transition={{ type: "spring", stiffness: 200, damping: 17 }}
+          type="submit"
+          className="logginn-btn">
+          Oppdater profil
+          <UserPen color="#FFFFFF" size={20} />
+        </motion.button>
+            
+
     </form>
     </>
   )

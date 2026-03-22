@@ -41,5 +41,4 @@ export const useProfile = () => useAppStore(useShallow((state) => ({
     email: state.email,
     role: state.role,
     typeBehandler: state.typeBehandler,
-    profilbilde: state.profilbilde,
 })));
