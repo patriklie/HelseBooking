@@ -1,8 +1,9 @@
 import { useAppStore } from "../store/authStore.js";
 import defaultAvatar from "../assets/Profile_avatar_placeholder_large.png";
 import { useRef } from "react";
+import { ShieldCheck } from "lucide-react";
 
-const ProfileCard = ({ profilbildeKlikk }) => {
+const ProfileCard = ({ profilbildeKlikk, username, email, role, typeBehandler }) => {
     
     const profilbilde = useAppStore((state) => state.profilbilde);
     const inputField = useRef();
@@ -14,12 +15,20 @@ const ProfileCard = ({ profilbildeKlikk }) => {
     
     return (
     <>
-        <div className="profile-container">
-                <img onClick={() => inputField.current.click()} src={profilbilde || defaultAvatar} alt="profilbilde" />
-                <input type="file" ref={inputField} style={{ display: "none" }} onChange={handleOnChangeProfile} />
-        
-                
+    <div className="profile-container">
+        <div className="profilbilde-wrapper">
+            <div className="profilbilde-bakgrunn"
+                onClick={() => inputField.current.click()}
+                style={{ backgroundImage: `url(${profilbilde || defaultAvatar})` }}
+            />
         </div>
+    <input type="file" ref={inputField} style={{ display: "none" }} onChange={handleOnChangeProfile} />
+    <div className="profil-innhold">
+        <div className="profil-brukernavn">{username}</div>
+        <div className="profil-typebehandler">{typeBehandler}<ShieldCheck color="#379437" strokeWidth={2} size={14} /></div>
+        <div className="profil-om">{`Erfaren ${typeBehandler} med bred faglig bakgrunn. Tilbyr skreddersydde behandlinger tilpasset dine behov, og hjelper deg tilbake til en aktiv hverdag.`}</div>
+    </div>
+    </div>
     </>
   )
 }

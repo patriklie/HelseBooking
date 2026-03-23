@@ -10,9 +10,9 @@ const Layout = () => {
       <Outlet />   
       </div>
       <Toaster 
-        position="top-center"
+        position="bottom-center"
         containerStyle={{
-          top: 90
+          /* top: 90 */
         }}
       toastOptions={{
       style: {

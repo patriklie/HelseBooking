@@ -51,7 +51,7 @@ export const updateUser = async (req, res) => {
         }
 
         // Felt vi IKKE vil tillate at klienten oppdaterer direkte
-        const protectedKeys = ["_id", "__v", "createdAt", "updatedAt", "role", "profilbildeUrl", "profilbildePublicId" ];
+        const protectedKeys = ["_id", "__v", "createdAt", "updatedAt", "role", "profilbilde", "profilbildePublicId" ];
 
         for (let key in req.body) {
             if (protectedKeys.includes(key)) continue; // hopper over sensitive felter
@@ -123,14 +123,14 @@ export const uploadProfilePicture = async (req, res) => {
         
      // Legger til url og public-id for profilbilde på brukeren i mongodb
     const findUser = await User.findByIdAndUpdate(id, {
-        profilbildeUrl: response.secure_url,
+        profilbilde: response.secure_url,
         profilbildePublicId: response.public_id,
     }, { returnDocument: "after" });
 
     console.log(response);
         res.status(200).json({
             message: "Profilbilde lastet opp.",
-            profilbildeUrl: response.secure_url,
+            profilbilde: response.secure_url,
         });
         
     } catch (error) {
@@ -151,7 +151,7 @@ export const deleteProfilePicture = async (req, res) => {
     if (foundUser.profilbildePublicId) {
         await cloudinary.uploader.destroy(foundUser.profilbildePublicId);
         await User.findByIdAndUpdate(id, {
-            profilbildeUrl: null,
+            profilbilde: null,
             profilbildePublicId: null,
         });
     }

@@ -2,7 +2,7 @@ import { useProfile, useAppStore } from "../store/authStore.js";
 import { useState } from "react";
 import axios from "axios";
 import { motion } from "motion/react";
-import { UserPen, Mail, ImageUp } from "lucide-react";
+import { UserPen, Mail, Stethoscope } from "lucide-react";
 import ProfileCard from "../components/ProfileCard.jsx";
 import toast from "react-hot-toast";
 
@@ -11,7 +11,6 @@ const Profil = () => {
   const { username, email, role, typeBehandler } = useProfile();
   const token = useAppStore((state) => state.token);
   const setProfil = useAppStore((state) => state.setProfil);
-  const profilbilde = useAppStore((state) => state.profilbilde);
   const setProfilbilde = useAppStore((state) => state.setProfilbilde);
   const [nyProfil, setNyProfil] = useState({
     username: username,
@@ -48,8 +47,8 @@ const Profil = () => {
         }
       })
       
-      setProfilbilde(response.data.profilbildeUrl)
-      toast.success("Lastet opp nytt profilbilde 👏")
+      setProfilbilde(response.data.profilbilde);
+      toast.success("Endret profilbilde 👏");
       
     } catch (error) {
       toast.error(error.response.data.message);
@@ -64,7 +63,7 @@ const Profil = () => {
   const oppdaterProfil = async (e) => {
     e.preventDefault();
     console.log(nyProfil);
-    console.log(import.meta.env.VITE_API_URL)
+    console.log(import.meta.env.VITE_API_URL);
     
     try {
       const response = await axios.patch(`${import.meta.env.VITE_API_URL}/api/users/`, nyProfil, {
@@ -80,18 +79,17 @@ const Profil = () => {
         role: response.data.role,
         typeBehandler: response.data.typeBehandler,
       })
+      
+      toast.success("Oppdatert profilen")
     
     } catch (error) {
       console.log(error);
-    }
-    
-
   }
+}
   
   return (
     <>
-    
-    <ProfileCard profilbildeKlikk={profilbildeKlikk} />
+    <ProfileCard profilbildeKlikk={profilbildeKlikk} username={username} email={email} role={role} typeBehandler={typeBehandler} />
     
     <form onSubmit={oppdaterProfil} className="form-container"> 
       <div className="input-container">
@@ -103,19 +101,34 @@ const Profil = () => {
         <Mail className="input-icon" size={18} color="grey" strokeWidth={1.5} />
         <input type="text" value={nyProfil.email} name="email" onChange={handleOppdaterBruker} />
       </div>  
-          
-          
-        <motion.button
-          layout="position"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 1 }}
-          transition={{ type: "spring", stiffness: 200, damping: 17 }}
-          type="submit"
-          className="logginn-btn">
-          Oppdater profil
-          <UserPen color="#FFFFFF" size={20} />
-        </motion.button>
-            
+        
+      <div className="input-container">
+        <Stethoscope className="input-icon" size={18} color="grey" strokeWidth={1.5} />
+        <select value={nyProfil.typeBehandler} name="typeBehandler" onChange={handleOppdaterBruker}> 
+          <option value="">Velg fagfelt</option>
+          <option value="akupunktør">Akupunktør</option>
+          <option value="ernæringsfysiolog">Ernæringsfysiolog</option>
+          <option value="fysioterapeut">Fysioterapeut</option>
+          <option value="kiropraktor">Kiropraktor</option>
+          <option value="lege">Lege</option>
+          <option value="naprapat">Naprapat</option>
+          <option value="osteopat">Osteopat</option>
+          <option value="personligtrener">Personlig trener</option>
+          <option value="psykolog">Psykolog</option>
+          <option value="tannlege">Tannlege</option>
+        </select>
+      </div>
+        
+      <motion.button
+        layout="position"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 1 }}
+        transition={{ type: "spring", stiffness: 200, damping: 17 }}
+        type="submit"
+        className="logginn-btn">
+        Oppdater profil
+        <UserPen color="#FFFFFF" size={20} />
+      </motion.button>  
 
     </form>
     </>

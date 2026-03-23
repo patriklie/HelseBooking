@@ -37,7 +37,7 @@ const LoginPage = () => {
       setProfilbilde(response.data.profilbilde);
       setAuth(true);
       setTypeBehandler(response.data.typeBehandler || "");
-      navigate("/timer");
+      navigate("/profil");
 
     } catch (error) {
       console.error(error.response.data);

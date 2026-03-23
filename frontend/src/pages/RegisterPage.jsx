@@ -63,7 +63,7 @@ const RegisterPage = () => {
       });
       console.log("Dette får jeg tilbake ved registrering: ", loginRespons)
       setToken(loginRespons.data.token);
-      navigate("/timer")
+      navigate("/profil")
 
     } catch (error) {
       setFeil(error.response.data.message);
