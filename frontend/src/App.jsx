@@ -2,11 +2,11 @@ import { Routes, Route, Navigate } from 'react-router';
 import About from './pages/About.jsx';
 import LoginPage from './pages/LoginPage.jsx';
 import RegisterPage from './pages/RegisterPage.jsx';
-import MineAvtalerPage from './pages/MineAvtalerPage.jsx';
-import LedigeTimerPage from './pages/LedigeTimerPage.jsx';
+import BookTimePage from './pages/BookTimePage.jsx';
 import Layout from './components/Layout.jsx';
 import Profil from './pages/Profil.jsx';
 import ProtectedRoutes from './components/ProtectedRoutes.jsx';
+import MineTimerPage from './pages/MineTimerPage.jsx';
 
 export default function App() {
 return (
@@ -17,8 +17,8 @@ return (
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/about" element={<About />} />
       <Route element={<ProtectedRoutes />}>
-        <Route path="/avtaler" element={<MineAvtalerPage />} />
-        <Route path="/timer" element={<LedigeTimerPage />} />
+        <Route path="/booktime" element={<BookTimePage />} />
+        <Route path="/minetimer" element={<MineTimerPage />} />
         <Route path="/profil" element={<Profil />} />
       </Route>
     </Route>

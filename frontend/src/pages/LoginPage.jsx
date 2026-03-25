@@ -49,7 +49,7 @@ const LoginPage = () => {
 
   return (
     <>
-      <div>
+      <div className="margin-klassen">
       
         <form onSubmit={loginRequest} className="form-container" >
           <div className="input-container">

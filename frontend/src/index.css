@@ -58,7 +58,7 @@ input:-webkit-autofill:active {
 /* Generell margin class */
 
 .margin-klassen {
-  margin: 32px;
+  margin: 16px 32px;
 }
 
 /* NAVBAR */
@@ -74,7 +74,8 @@ input:-webkit-autofill:active {
 
 
 body {
-    background-image: url("./assets/alex-padurariu-iNmouRApXYM-unsplash_large.jpg");
+/*     background-image: url("./assets/alex-padurariu-iNmouRApXYM-unsplash_large.jpg"); */
+    background-image: url("./assets/BG_app.png");
     /*background-image: url("/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg");*/
     /* Link til bilde på unsplash for credits https://unsplash.com/photos/clear-glass-jar-on-gray-wooden-table-iNmouRApXYM */
     background-size: cover;
@@ -155,7 +156,7 @@ body {
 /* Login */
 
 .form-container {
-  padding: 20px 40px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -396,7 +397,7 @@ input[type="radio"] {
 background-color: rgb(255, 255, 255);
 width: clamp(200px, 100%, 500px);
 margin: 0 auto;
-height: 200px;
+height: 180px;
 border-radius: 5px;
 box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 3px;
 display: grid;
@@ -422,8 +423,8 @@ overflow: hidden;
 }
 
 .profil-brukernavn {
-  font-size: 20px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .profil-typebehandler {
@@ -436,11 +437,12 @@ overflow: hidden;
 }
 
 .profil-om {
-  font-size: 12px;
+  padding-top: 10px;
+  font-size: 10px;
 }
 
 .profil-forhåndsvisning {
-  color :rgb(255, 255, 255);
+  color :rgba(255, 255, 255);
   margin: 16px auto;
   gap: 10px;
   font-size: 20px;
@@ -450,4 +452,21 @@ overflow: hidden;
 .profil-forhåndsvisning span {
   font-family: "Caveat", cursive;
   font-size: 26px;
+}
+
+.profil-valgt-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.profil-valgt {
+  background-color: #379437;
+  color: white;
+  padding: 4px 20px;
+  text-align: center;
+  width: 100%;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }

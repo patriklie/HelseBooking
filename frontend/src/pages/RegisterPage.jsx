@@ -77,7 +77,7 @@ const RegisterPage = () => {
 
   return (
   <>
-      <div>
+      <div className="margin-klassen">
       
         <form onSubmit={registrerBruker} className="form-container">
 

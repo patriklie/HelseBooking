@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-const LedigeTimerPage = () => {
+const BookTimePage = () => {
   
   const token = useAppStore((state) => state.token);
   const [valgtBehandler, setValgtBehandler] = useState(null);
@@ -34,9 +34,10 @@ const LedigeTimerPage = () => {
   
   return (
       
-  <>
+    <>
+      <div className="profil-forhåndsvisning"><span>Velg behandler</span></div>
       <Swiper
-        style={{ padding: "40px", marginTop: "16px" }}
+        style={{ padding: "0 16px 40px 16px" }}
         spaceBetween={50}
         slidesPerView={1}
         pagination={true}
@@ -55,4 +56,4 @@ const LedigeTimerPage = () => {
   )
 }
 
-export default LedigeTimerPage
+export default BookTimePage

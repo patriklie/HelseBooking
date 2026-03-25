@@ -67,14 +67,14 @@ const Navbar = () => {
           />
           {isAuth && 
           <>
-          <NavLink to="/timer" className="navbar-links" onClick={() => SetIsOpen(false)}>
+          <NavLink to="/booktime" className="navbar-links" onClick={() => SetIsOpen(false)}>
             <Calendar1 style={{ pointerEvents: "none" }} color="black" size={30} strokeWidth={1}/>
-            <span>Kalender</span>
+            <span>Book time</span>
           </NavLink>
 
-          <NavLink to="/avtaler" className="navbar-links" onClick={() => SetIsOpen(false)}>
+          <NavLink to="/minetimer" className="navbar-links" onClick={() => SetIsOpen(false)}>
             <ClipboardClock style={{ pointerEvents: "none" }} color="black" size={30} strokeWidth={1}/>
-            <span>Mine avtaler</span>
+            <span>Mine timer</span>
           </NavLink>
 
           <NavLink to="/profil" className="navbar-links" onClick={() => SetIsOpen(false)}>

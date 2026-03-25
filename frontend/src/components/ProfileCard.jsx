@@ -28,7 +28,12 @@ const ProfileCard = ({ profilbildeKlikk, username, email, role, typeBehandler, p
     <div className="profil-innhold">
         <div className="profil-brukernavn">{username}</div>
         <div className="profil-typebehandler">{typeBehandler}<ShieldCheck color="#379437" strokeWidth={2} size={14} /></div>
-        <div className="profil-om">{`Erfaren ${typeBehandler} med bred faglig bakgrunn. Tilbyr skreddersydde behandlinger tilpasset dine behov, og hjelper deg tilbake til en aktiv hverdag.`}</div>
+        <div className="profil-om">{`Erfaren ${typeBehandler} med bred faglig bakgrunn. Tilbyr skreddersydde behandlinger tilpasset dine behov.`}</div>
+        { valgt &&
+            <div className="profil-valgt-container">
+                <div className="profil-valgt">Valgt behandler</div>
+            </div>
+        }
     </div>
     </div>
     </>
