@@ -7,12 +7,28 @@ import 'swiper/css/pagination';
 import { useState, useEffect } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { useRef } from "react";
 
 const BookTimePage = () => {
   
   const token = useAppStore((state) => state.token);
   const [valgtBehandler, setValgtBehandler] = useState(null);
   const [alleBehandlere, setAlleBehandlere] = useState(null);
+  const swiperRef = useRef(null);
+  
+  useEffect(() => {
+  if (!swiperRef.current) return;
+
+  if (valgtBehandler) {
+    swiperRef.current.allowTouchMove = false;
+    swiperRef.current.allowSlideNext = false;
+    swiperRef.current.allowSlidePrev = false;
+  } else {
+    swiperRef.current.allowTouchMove = true;
+    swiperRef.current.allowSlideNext = true;
+    swiperRef.current.allowSlidePrev = true;
+  }
+}, [valgtBehandler]);
   
   useEffect(() => {
 
@@ -35,18 +51,19 @@ const BookTimePage = () => {
   return (
       
     <>
-      <div className="profil-forhåndsvisning"><span>Velg behandler</span></div>
+      <div className="profil-forhåndsvisning"><span>{ valgtBehandler ? "Valgt behandler" : "Velg behandler" }</span></div>
       <Swiper
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
         style={{ padding: "0 16px 40px 16px" }}
         spaceBetween={50}
         slidesPerView={1}
-        pagination={true}
+        className={`mySwiper ${valgtBehandler ? "locked" : ""}`}
+        pagination={{ clickable: true }}
         modules={[ Pagination ]}
-        className="mySwiper"
       >
         {
          alleBehandlere && alleBehandlere.map((behandler) => {
-            return <SwiperSlide key={behandler._id}><ProfileCard velgbehandler={() => setValgtBehandler(valgtBehandler?._id === behandler._id ? null : behandler)} valgt={behandler._id === valgtBehandler?._id} username={behandler.username} email={behandler.email} role={behandler.role} typeBehandler={behandler.typeBehandler} profilbilde={behandler.profilbilde} /></SwiperSlide>
+            return <SwiperSlide key={behandler._id}><ProfileCard cursorEnabled={true} velgbehandler={() => setValgtBehandler((prev) => { return prev?._id === behandler._id ? null : behandler })} valgt={behandler._id === valgtBehandler?._id} username={behandler.username} email={behandler.email} role={behandler.role} typeBehandler={behandler.typeBehandler} profilbilde={behandler.profilbilde} /></SwiperSlide>
           })
         }
       </Swiper>

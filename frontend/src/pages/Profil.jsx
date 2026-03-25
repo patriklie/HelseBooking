@@ -66,6 +66,13 @@ const Profil = () => {
     console.log(nyProfil);
     console.log(import.meta.env.VITE_API_URL);
     
+    const erProfilEndret = nyProfil.username === username && nyProfil.email === email && nyProfil.typeBehandler === typeBehandler;
+    
+    if (erProfilEndret) {
+      toast("Ingen endringer å lagre 🕵🏻");
+      return;
+}
+    
     try {
       const response = await axios.patch(`${import.meta.env.VITE_API_URL}/api/users/`, nyProfil, {
         headers: {
