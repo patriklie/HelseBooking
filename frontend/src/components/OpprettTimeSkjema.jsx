@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import { useAppStore } from "../store/authStore";
 import toast from "react-hot-toast";
 
-const OpprettTimeSkjema = () => {
+const OpprettTimeSkjema = ({ hentBehandlerTimer }) => {
     
   const dateInputRef = useRef();
   const timeInputStartRef = useRef();
@@ -34,7 +34,7 @@ const OpprettTimeSkjema = () => {
       
       toast.success(response.data.message);
       setTime({ dato: "", startTid: "", sluttTid: "", pris: "" })
-      
+      hentBehandlerTimer();
     } catch (error) {
       toast.error(error.response?.data?.message || "Noe gikk galt");
     }
@@ -62,7 +62,7 @@ const OpprettTimeSkjema = () => {
             <label htmlFor="startTid">Starttid</label>
             <div className="input-wrapper" onClick={() => timeInputStartRef.current.showPicker()}>
               <Clock className="input-icon" size={18} color="grey" strokeWidth={1.5} />
-              <input ref={timeInputStartRef} value={time.startTid} onChange={handleTime} type="time" id="startTid" name="startTid" placeholder="start tid" required />
+              <input  ref={timeInputStartRef} value={time.startTid} onChange={handleTime} type="time" id="startTid" name="startTid" placeholder="start tid" required />
             </div>
           </div>
             

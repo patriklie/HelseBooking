@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
-const Kalender = ({ onDatoValg }) => {
+const Kalender = ({ timer, onDatoValg }) => {
     
     const [year, setYear] = useState(new Date().getFullYear())
     const [month, setMonth] = useState(new Date().getMonth())
@@ -39,9 +39,23 @@ const Kalender = ({ onDatoValg }) => {
     
 const handleDatoValg = (dato) => {
     if (!dato) return;
-    console.log(`${year}-${String(month + 1).padStart(2, "0")}-${String(dato).padStart(2, "0")}`);
-    setValgtDato(`${year}-${String(month + 1).padStart(2, "0")}-${String(dato).padStart(2, "0")}`);
-    onDatoValg(`${year}-${String(month + 1).padStart(2, "0")}-${String(dato).padStart(2, "0")}`);
+    const datoStreng = `${year}-${String(month + 1).padStart(2, "0")}-${String(dato).padStart(2, "0")}`;
+    console.log(datoStreng);
+    setValgtDato(datoStreng);
+    onDatoValg(datoStreng);
+}
+    
+const harTimer = (dato) => {
+    if (!dato) return false
+    const datoStreng = `${year}-${String(month + 1).padStart(2, "0")}-${String(dato).padStart(2, "0")}`
+    return timer.some(t => t.dato.startsWith(datoStreng))
+    }
+    
+const getCellClass = (dato) => {
+    if (dato === null) return "kalender-celler-null"
+    if (!harTimer(dato)) return "kalender-celler-null"
+    const erValgt = `${year}-${String(month + 1).padStart(2, "0")}-${String(dato).padStart(2, "0")}` === valgtDato
+    return `kalender-celler-datoer ${erValgt ? "valgt" : ""}`
 }
     
     
@@ -61,7 +75,7 @@ const handleDatoValg = (dato) => {
                   })}
                   
                   {monthCeller.map((dato, index) => {
-                      return <div key={index} className={`${dato === null ? "kalender-celler-null" : "kalender-celler-datoer"} ${dato && `${year}-${String(month + 1).padStart(2, "0")}-${String(dato).padStart(2, "0")}` === valgtDato ? "valgt" : ""}`} onClick={() => handleDatoValg(dato)}>{dato}</div>
+                      return <div key={index} className={getCellClass(dato)} onClick={() => handleDatoValg(dato)}>{dato}</div>
                   })}  
                   
               </div>

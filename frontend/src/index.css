@@ -598,6 +598,7 @@ transition: box-shadow 0.3s ease;
 
 .kalender-celler-null {
     background-color: rgb(241, 241, 241);
+    pointer-events: none;
 }
 
 .kalender-celler-datoer {
@@ -617,4 +618,41 @@ transition: box-shadow 0.3s ease;
 .kalender-formatert-dato {
   text-align: center;
   font-weight: 600;
+}
+
+.timer-container {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ margin: 16px auto;
+ padding: 0 1rem;
+ gap: 5px;
+ width: clamp(350px, 100%, 750px)
+}
+
+.time-celle {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 1px solid rgb(212, 212, 212);
+  padding: 10px;
+  color: #444444;
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 5px;
+}
+
+.time-top-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-flex {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.time-flex.delete {
+  color: rgb(255, 52, 52);
 }
