@@ -47,29 +47,29 @@ const OpprettTimeSkjema = ({ hentBehandlerTimer }) => {
     return (
       
     <>
-      
-        <form className="form-container" style={{ backgroundColor: "#ffffff", borderRadius: "10px" }} onSubmit={opprettTime}>
+
+        <form className="form-container" style={{ backgroundColor: "#ffffff" }} onSubmit={opprettTime}>
 
         <div className="input-container">
           <label htmlFor="dato">Dato</label>
-          <div className="input-wrapper" onClick={() => dateInputRef.current.showPicker()}>
-            <Calendar1 className="input-icon" size={18} color="grey" strokeWidth={1.5} />
+          <div className="input-wrapper">
+            <Calendar1 className="input-icon" size={18} color="grey" strokeWidth={1.5} onClick={() => dateInputRef.current.showPicker()} />
             <input type="date" ref={dateInputRef} value={time.dato} onChange={handleTime} id="dato" name="dato" placeholder="dato" required />
           </div>
         </div>
           
         <div className="input-container">
           <label htmlFor="startTid">Starttid</label>
-          <div className="input-wrapper" onClick={() => timeInputStartRef.current.showPicker()}>
-            <Clock className="input-icon" size={18} color="grey" strokeWidth={1.5} />
+          <div className="input-wrapper">
+            <Clock className="input-icon" size={18} color="grey" strokeWidth={1.5} onClick={() => timeInputStartRef.current.showPicker()} />
             <input  ref={timeInputStartRef} value={time.startTid} onChange={handleTime} type="time" id="startTid" name="startTid" placeholder="start tid" required />
           </div>
         </div>
           
           <div className="input-container">
             <label htmlFor="sluttTid">SluttTid</label>
-            <div className="input-wrapper" onClick={() => timeInputStopRef.current.showPicker()}>
-              <ClockCheck className="input-icon" size={18} color="grey" strokeWidth={1.5} />
+            <div className="input-wrapper">
+              <ClockCheck className="input-icon" size={18} color="grey" strokeWidth={1.5} onClick={() => timeInputStopRef.current.showPicker()} />
               <input ref={timeInputStopRef} value={time.sluttTid} onChange={handleTime} type="time" id="sluttTid" name="sluttTid" placeholder="slutt tid" required />
             </div>
           </div>

@@ -4,54 +4,63 @@ import OpprettTimeSkjema from "../components/OpprettTimeSkjema.jsx";
 import axios from "axios";
 import { useAppStore } from "../store/authStore.js";
 import toast from "react-hot-toast";
-import { Clock, Info, Wallet } from "lucide-react";
+
 import { motion, AnimatePresence } from "motion/react";
+import TimeListe from "../components/TimeListe.jsx";
+import Skillelinje from "../components/Skillelinje.jsx";
 
 const MineTimerPage = () => {
 
-const token = useAppStore((state) => state.token);
-const [behandlerTimer, setBehandlerTimer] = useState([]);
-const [valgtDato, setValgtDato] = useState(new Date().toISOString().split("T")[0]);  
-const timerValgtDato = behandlerTimer.filter(time => time.dato.startsWith(valgtDato));
-const [showSkjema, setShowSkjema] = useState(false);
-  
-const formatDato = (datoString) => {
-  const date = new Date(datoString);
-  return new Intl.DateTimeFormat("no-NO", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-}).format(date);
-};
-  
-const hentBehandlerTimer = async () => {
-    try {
-      
-      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/time/behandlerTimer`, {
-        headers: { Authorization: `Bearer ${token}` }
-      })
-      setBehandlerTimer(response.data.foundAlleBehandlerTimer);
-      
-    } catch (error) {
-      toast.error(error.response?.data?.message);
-    }
-  }  
-  
+  const token = useAppStore((state) => state.token);
+  const [behandlerTimer, setBehandlerTimer] = useState([]);
+  const [valgtDato, setValgtDato] = useState(new Date().toISOString().split("T")[0]);  
+  const timerValgtDato = behandlerTimer.filter(time => time.dato.startsWith(valgtDato));
+  const [showSkjema, setShowSkjema] = useState(false);
+
+  const formatDato = (datoString) => {
+    const date = new Date(datoString);
+    return new Intl.DateTimeFormat("no-NO", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+  }).format(date);
+  };
+    
+  const hentBehandlerTimer = async () => {
+      try {
+        
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/time/behandlerTimer`, {
+          headers: { Authorization: `Bearer ${token}` }
+        })
+        setBehandlerTimer(response.data.foundAlleBehandlerTimer);
+        
+      } catch (error) {
+        toast.error(error.response?.data?.message);
+      }
+    }  
+    
   useEffect(() => {
     hentBehandlerTimer();
-  },[])
+  }, [])
+    
   
- 
+  const slettTime = async (time) => {
+    try {
+      const response = await axios.delete(`${import.meta.env.VITE_API_URL}/api/time/${time._id}`, {
+        headers: { Authorization: `Bearer ${token}` }
+      })
+      hentBehandlerTimer();
+      toast.success(response.data.message)
+    } catch (error) {
+    toast.error(error.response?.data?.message || "Noe gikk galt ved sletting av time")
+    }
+  }
   
   return (
     <>
 
       
-      <div className="ny-time-knapp-container">
-        <div></div>
-        <button onClick={() => setShowSkjema(!showSkjema)}>{ showSkjema ? "Lukk" : "Åpne ny time skjema" }</button> 
-        <div></div>
-      </div>
+      <Skillelinje tekst={showSkjema ? "Lukk" : "Opprett time"} onClick={() => setShowSkjema(!showSkjema)} />
       
       <AnimatePresence mode="popLayout">  
       {showSkjema && 
@@ -81,22 +90,7 @@ const hentBehandlerTimer = async () => {
       <AnimatePresence>
       <motion.div layout="position" className="timer-container">
         
-      {
-        timerValgtDato.map((time) => {
-          return (
-          <div key={time._id} className="time-celle">
-            <div className="time-top-flex"> 
-              <div className="time-flex"><Clock size={12} color="#444444" /> <span>{time.startTid}</span>-<span>{time.sluttTid}</span></div>
-              <div className="time-flex"><Info size={12} color="#444444" /> <span>{time.status}</span></div>
-            </div>
-            <div className="time-top-flex"> 
-              <div className="time-flex"><Wallet size={12} color="#444444" /> <span>{time.pris}kr</span></div>
-              <div className="time-flex delete"><span>Slett time</span></div>
-            </div>
-          </div>
-          )
-        })
-      }
+      <TimeListe timerValgtDato={timerValgtDato} slettTime={slettTime} />
       </motion.div>
 
 </AnimatePresence>

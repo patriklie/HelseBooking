@@ -655,11 +655,13 @@ transition: box-shadow 0.3s ease;
 
 .time-flex.delete {
   color: rgb(255, 52, 52);
+  user-select: none;
+  cursor: pointer;
 }
 
-/* Ny time skillelinje */
+/* Skillelinje Styling */
 
-.ny-time-knapp-container {
+.skillelinje-knapp-container {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -668,13 +670,13 @@ transition: box-shadow 0.3s ease;
   margin: 32px;
 }
 
-.ny-time-knapp-container div {
+.skillelinje-knapp-container div {
   height: 1px;
   background-color: #c0c0c0;;
   flex: 1;
 }
 
-.ny-time-knapp-container button {
+.skillelinje-knapp-container button {
   background-color: rgb(226, 226, 226);
   padding: 5px 10px;
   border-radius: 5px;
