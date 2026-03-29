@@ -5,6 +5,8 @@ import { useAppStore } from "../store/authStore.js";
 import { useNavigate, Link } from "react-router";
 import { motion } from "motion/react";
 import toast from "react-hot-toast";
+import Maskott from "../assets/Maskott_lion_no_bg.png"
+import LoginPerson from "../assets/freepik__background__69816.png";
 
 const LoginPage = () => {
 
@@ -50,7 +52,9 @@ const LoginPage = () => {
   return (
     <>
       <div className="margin-klassen">
-      
+        
+        <img src={LoginPerson} alt="login" className="login-person" />
+        
         <form onSubmit={loginRequest} className="form-container" >
           <div className="input-container">
             <Mail className="input-icon" size={18} color="grey" strokeWidth={1.5} />

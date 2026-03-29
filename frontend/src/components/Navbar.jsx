@@ -6,6 +6,7 @@ import { useAppStore } from "../store/authStore.js";
 import { Info, ClipboardClock, Calendar1, CircleUserRound, LogOut, LogIn, UserPlus } from "lucide-react";
 import toast from "react-hot-toast";
 
+
 const Navbar = () => {
 
   const [isOpen, SetIsOpen] = useState(false);
@@ -115,6 +116,7 @@ const Navbar = () => {
             <span>Logg ut</span>
           </div>
           }
+                   
 
         </motion.div>
 

@@ -158,6 +158,12 @@ body {
 
 /* Login */
 
+.login-person {
+ width: 200px;
+ display: block;
+ margin: -20px auto;
+}
+
 .form-container {
   padding: 20px;
   display: flex;
@@ -333,7 +339,7 @@ input[type="radio"] {
 
 .card-container {
   background-color: rgb(255, 255, 255);
-  max-width: 100%;
+  width: clamp(320px, 100%, 600px);
   margin: 16px auto;
   padding: 20px;
   border-radius: 25px;
