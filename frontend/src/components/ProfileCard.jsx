@@ -25,13 +25,13 @@ const ProfileCard = ({ profilbildeKlikk, username, email, role, typeBehandler, p
     <input type="file" ref={inputField} style={{ display: "none" }} onChange={handleOnChangeProfile} />
     }
 
-    <div className="profil-innhold">
-    <div className="profil-typebehandler">{typeBehandler}<ShieldCheck style={{ color: "var(--mint-green)" }} strokeWidth={2} size={14} /></div>
-    <div className="profil-brukernavn">{username}</div>
-    <div className="profil-om">{`Erfaren ${typeBehandler} med bred faglig bakgrunn. Tilbyr skreddersydde behandlinger tilpasset dine behov.`}</div>        
-    <div className={ `profil-valgt ${valgt ? "" : "profil-valgt-hide"}` }>Valgt behandler</div>
+        <div className="profil-innhold">
+            <div className="profil-typebehandler">{typeBehandler}<ShieldCheck style={{ color: "var(--mint-green)" }} strokeWidth={2} size={14} /></div>
+            <div className="profil-brukernavn">{username}</div>
+            <div className="profil-om">{`Erfaren ${typeBehandler} med bred faglig bakgrunn. Tilbyr skreddersydde behandlinger tilpasset dine behov.`}</div>        
+            <div className={ `profil-valgt ${valgt ? "" : "profil-valgt-hide"}` }>Valgt behandler</div>
 
-    </div>
+        </div>
     </div>
     </>
   )

@@ -92,7 +92,6 @@ const OpprettTimeSkjema = ({ hentBehandlerTimer }) => {
         </motion.button>
           
       </form>
-            
     </>
     
   )

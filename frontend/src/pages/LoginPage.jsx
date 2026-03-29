@@ -1,4 +1,4 @@
-import { LockKeyhole, ArrowBigRight, Mail } from "lucide-react";
+import { LockKeyhole, ArrowBigRight, Mail, Eye, EyeOff, EyeClosed } from "lucide-react";
 import axios from "axios";
 import { useState } from "react";
 import { useAppStore } from "../store/authStore.js";
@@ -20,6 +20,8 @@ const LoginPage = () => {
   const setTypeBehandler = useAppStore((state) => state.setTypeBehandler);
   const setProfilbilde = useAppStore((state) => state.setProfilbilde);
   const navigate = useNavigate();
+  const [visPassord, setVisPassord] = useState(false);
+  const PassordIkon = visPassord ? Eye : EyeClosed;
 
   const loginRequest = async (e) => {
     e.preventDefault();
@@ -56,15 +58,19 @@ const LoginPage = () => {
         <img src={LoginPerson} alt="login" className="login-person" />
         
         <form onSubmit={loginRequest} className="form-container" >
+          
           <div className="input-container">
             <Mail className="input-icon" size={18} color="grey" strokeWidth={1.5} />
             <input type="text" onChange={(e) => setEpost(e.target.value)} value={epost} id="epost" placeholder="patrik@hotmail.com" required />
           </div>
+          
           <div className="input-container">
             <LockKeyhole className="input-icon" size={18} color="grey" strokeWidth={1.5} />
-            <input type="password" onChange={(e) => setPassord(e.target.value)} value={passord} id="passord" placeholder="passord" required />
+            <input type={ visPassord ? "text" : "password"} onChange={(e) => setPassord(e.target.value)} value={passord} id="passord" placeholder="passord" required />
+            <PassordIkon className="input-icon-right" size={18} strokeWidth={1.5} onClick={() => setVisPassord(!visPassord)} />
           </div>
           <div className="form-no-bruker">Har du ikke bruker? Registrer <Link to="/register">her</Link></div>
+          
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 1 }}

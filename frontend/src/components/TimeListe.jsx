@@ -17,13 +17,11 @@ const TimeListe = ({ timerValgtDato, slettTime }) => {
                             
                             <div className="time-top-flex">
                                 <div className="time-flex"><Wallet size={12} color="#444444" /> <span>{time.pris}kr</span></div>
-                                <div className="time-flex delete"><span onClick={() => slettTime(time)} >Slett time</span></div>
+                                { slettTime &&
+                                    <div className="time-flex delete"><span onClick={() => slettTime(time)} >Slett time</span></div>
+                                }  
                             </div>
-                            
-                            <div className="time-top-flex">
-                                <div className="time-flex"><User size={12} color="#444444" /> <span>{time.pasient ? `Pasient` : "Ingen pasient"}</span></div>
-                            </div>
-                            
+                                                        
                         </div>
                     )
                 })

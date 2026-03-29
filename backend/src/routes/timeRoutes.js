@@ -9,7 +9,8 @@ import {
     hentBehandlerTimer,
     bookTime,
     avlysTime,
-    slettTime
+    slettTime,
+    hentValgtBehandlerTimer
 } from "../controllers/timeControllers.js"
 
 const router = express.Router();
@@ -25,6 +26,9 @@ router.get("/mine", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("
 
 // hent alle timer for innlogget behandler
 router.get("/behandlerTimer", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("behandler"), hentBehandlerTimer);
+
+// hent alle timer for valgt behandler (pasient som booker dette her)
+router.get("/behandler/:behandlerId", authMiddleware, validateIdMiddleware, hentValgtBehandlerTimer);
 
 /* 
 vi avventer med endring av oppsatt time, dette blir i såfall bare at behandler endrer tidspunkt

@@ -1,12 +1,14 @@
 
 
-const Skillelinje = ({ tekst, onClick }) => {
+const Skillelinje = ({ tekst, onClick, buttonColor, lineColor, buttonTextColor }) => {
   return (
-    <div className="skillelinje-knapp-container">
-        <div></div>
-          <button onClick={onClick}>{tekst}</button> 
-        <div></div>
-    </div>
+    <>
+    <div className="skillelinje-knapp-container" >
+        <div style={{ backgroundColor: lineColor }}></div>
+          <button onClick={onClick} style={{ backgroundColor: buttonColor, color: buttonTextColor }}>{tekst}</button> 
+        <div style={{ backgroundColor: lineColor }}></div>
+      </div>
+    </>
   )
 }
 

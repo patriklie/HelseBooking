@@ -35,7 +35,7 @@ const MineTimerPage = () => {
         setBehandlerTimer(response.data.foundAlleBehandlerTimer);
         
       } catch (error) {
-        toast.error(error.response?.data?.message);
+        console.error(error.response?.data?.message);
       }
     }  
     
@@ -60,7 +60,7 @@ const MineTimerPage = () => {
     <>
 
       
-      <Skillelinje tekst={showSkjema ? "Lukk" : "Opprett time"} onClick={() => setShowSkjema(!showSkjema)} />
+      <Skillelinje buttonColor={"var(--primary-color)"} buttonTextColor={"white"} tekst={showSkjema ? "Lukk" : "Opprett time"} onClick={() => setShowSkjema(!showSkjema)} />
       
       <AnimatePresence mode="popLayout">  
       {showSkjema && 

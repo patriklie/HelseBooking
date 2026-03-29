@@ -22,10 +22,11 @@ input[type="checkbox"] {
 :root {
   --primary-color: #006EFF;
   --secondary-color: #d2e1f5;
+  --secondary-blue: #7bb4ff;
   --mint-green: #279A74;
   --mint-green-shadow: #279a745e;
   --grey-text: #71847E;
-  --bg-almost-white:#F7F7F7;
+  --bg-almost-white:#F6F6F8;
   --bg-darker-almost-white: #F1F3F2;
 }
 
@@ -196,6 +197,15 @@ body {
   transform: translateY(-50%);
 }
 
+.input-icon-right {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  color: rgb(178, 181, 184);
+  cursor: pointer;
+}
+
 .input-container input {
   outline: 1px solid rgb(224, 224, 224);
   padding: 12px 42px;
@@ -340,10 +350,10 @@ input[type="radio"] {
 .card-container {
   background-color: rgb(255, 255, 255);
   width: clamp(320px, 100%, 600px);
-  margin: 16px auto;
+  margin: 32px auto;
   padding: 20px;
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 10px;
   position: relative;
   backdrop-filter: blur(20px);
 }
@@ -469,6 +479,7 @@ transition: box-shadow 0.3s ease;
 .profil-innhold {
   padding: 1rem;
   position: relative;
+  user-select: none;
 }
 
 .profil-brukernavn {

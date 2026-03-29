@@ -1,4 +1,4 @@
-import { Mail, LockKeyhole, ArrowBigRight, User, UserPlus, ChevronDown, Bone, Activity, Stethoscope, Brain, Leaf, Circle, Zap, Dumbbell, Apple, PersonStanding, Smile } from "lucide-react";
+import { Mail, Eye, EyeOff, EyeClosed, LockKeyhole, ArrowBigRight, User, UserPlus, ChevronDown, Bone, Activity, Stethoscope, Brain, Leaf, Circle, Zap, Dumbbell, Apple, PersonStanding, Smile } from "lucide-react";
 import { useState } from "react";
 import axios from "axios";
 import { useAppStore } from "../store/authStore.js";
@@ -8,9 +8,11 @@ import toast from "react-hot-toast";
 import RegisterPerson from "../assets/3d-female-character-working-laptop-while-sitting-chair.png";
 
 const RegisterPage = () => {
-
+  const [visPassord, setVisPassord] = useState(false);
   const setToken = useAppStore((state) => state.setToken);
   const navigate = useNavigate();
+  const PassordIkon = visPassord ? Eye : EyeClosed;
+  
 
   const [nyBruker, setNyBruker] = useState({
     username: "",
@@ -94,7 +96,8 @@ const RegisterPage = () => {
 
           <div className="input-container">
             <LockKeyhole className="input-icon" size={18} color="grey" strokeWidth={1.5} />
-            <input type="password" value={nyBruker.password} name="password" onChange={handleBruker} placeholder="passord" required />
+            <input type={visPassord ? "text": "password"} value={nyBruker.password} name="password" onChange={handleBruker} placeholder="passord" required />
+            <PassordIkon className="input-icon-right" size={18} strokeWidth={1.5} onClick={() => setVisPassord(!visPassord)} />
           </div>
 
           <div className="radio-container">
