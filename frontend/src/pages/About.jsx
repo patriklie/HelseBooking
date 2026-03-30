@@ -34,7 +34,17 @@ const About = () => {
             behandlere får full oversikt over sin timeplan, alt på ett sted.
           </motion.div>
           </Card>
+      </div>
+      
+      <section className="diagonal">
+        <div className="wrapper">
+          <h2 className="section-title">Diagonal</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus maxime, magni, iure recusandae reiciendis aut, necessitatibus odio libero cum molestiae exercitationem id sit nobis hic vel quibusdam nam eius tempora?</p>
         </div>
+      </section>
+    
+      
+      
     </>
   );
 }

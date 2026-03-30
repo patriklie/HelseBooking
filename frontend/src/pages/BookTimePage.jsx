@@ -20,6 +20,22 @@ const BookTimePage = () => {
   const swiperRef = useRef(null);
   const [valgtDato, setValgtDato] = useState(new Date().toISOString().split("T")[0]);
   const timerValgtDato = valgtBehandlerTimer.filter(time => time.dato.startsWith(valgtDato));
+  const [valgtTime, setValgtTime] = useState(null);
+  const dialogRef = useRef();
+  
+  const handleTimeValg = (time) => {
+    setValgtTime(time);
+    dialogRef.current.showModal();
+  }
+  
+  const bookTime = () => {
+    console.log("Booker time!");
+  }
+  
+  const avbrytBooking = () => {
+    setValgtTime(null);
+    dialogRef.current.close();
+  }
   
   const formatDato = (datoString) => {
     const date = new Date(datoString);
@@ -105,19 +121,65 @@ const BookTimePage = () => {
       </Swiper>
       <AnimatePresence mode="popLayout" >  
       {valgtBehandler && (
-        <>
+        <motion.div key="kalender-wrapper" layout>
           <motion.div layout style={{ marginTop: "-30px" }}>
             <Kalender timer={valgtBehandlerTimer} onDatoValg={setValgtDato} />
           </motion.div>
+            
           <motion.div layout className="kalender-formatert-dato">
             {valgtDato ? formatDato(valgtDato) : "Ingen dato valgt"}
           </motion.div>
+            
           <motion.div layout="position" className="timer-container">
-            <TimeListe timerValgtDato={timerValgtDato} />
+              <TimeListe timerValgtDato={timerValgtDato} onTimeKlikk={handleTimeValg} />
           </motion.div>
-        </>
+            
+        </motion.div>
         )}
-    </AnimatePresence > 
+      </AnimatePresence > 
+      
+      <dialog className="time-booking-modal" ref={dialogRef}>
+        <div className="bilde-flex dotsdots">
+          <motion.div
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0px 15px 25px rgba(0,0,0,0.2)"
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 10
+            }}
+            className="logo"></motion.div>
+          <motion.div
+            className="behandler-bilde"
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0px 15px 25px rgba(0,0,0,0.2)"
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 10
+            }}
+            style={{ backgroundImage: `url(${valgtBehandler?.profilbilde})` }}></motion.div>
+        </div>
+        
+        <div className="time-booking-overskrift">Godkjenn timevalget</div>
+        <div className="time-booking-tekst">{valgtTime?.dato && formatDato(valgtTime.dato)} hos {valgtBehandler?.typeBehandler} {valgtBehandler?.username}. Timen er fra {valgtTime?.startTid} til {valgtTime?.sluttTid} og koster {valgtTime?.pris}kr.</div>
+        <motion.button
+          whileHover={{
+            scale: 1.1,
+            boxShadow: "0px 15px 25px rgba(0,0,0,0.2)"
+          }}
+          transition={{
+            type: "spring",
+            stiffness: 300,
+            damping: 10
+          }}
+          className="modal-book-btn" onClick={bookTime}>Book time</motion.button>
+        <button className="modal-cancel-btn" onClick={avbrytBooking}>Avbryt</button>
+      </dialog>
       
   </>
     

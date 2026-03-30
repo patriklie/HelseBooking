@@ -1,6 +1,6 @@
 import { Clock, Info, User, Wallet } from "lucide-react";
 
-const TimeListe = ({ timerValgtDato, slettTime }) => {
+const TimeListe = ({ timerValgtDato, slettTime, onTimeKlikk }) => {
     
 
     return (
@@ -17,11 +17,10 @@ const TimeListe = ({ timerValgtDato, slettTime }) => {
                             
                             <div className="time-top-flex">
                                 <div className="time-flex"><Wallet size={12} color="#444444" /> <span>{time.pris}kr</span></div>
-                                { slettTime &&
-                                    <div className="time-flex delete"><span onClick={() => slettTime(time)} >Slett time</span></div>
-                                }  
+                                { slettTime && <div className="time-flex delete"><span onClick={() => slettTime(time)} >Slett time</span></div> }  
+                                { onTimeKlikk && <div className="time-flex se-time" onClick={() => onTimeKlikk(time)}>Velg</div>}
                             </div>
-                                                        
+                                                         
                         </div>
                     )
                 })
