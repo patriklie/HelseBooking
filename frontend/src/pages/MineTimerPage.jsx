@@ -12,6 +12,7 @@ import Skillelinje from "../components/Skillelinje.jsx";
 const MineTimerPage = () => {
 
   const token = useAppStore((state) => state.token);
+  const role = useAppStore((state) => state.role);
   const [behandlerTimer, setBehandlerTimer] = useState([]);
   const [valgtDato, setValgtDato] = useState(new Date().toISOString().split("T")[0]);  
   const timerValgtDato = behandlerTimer.filter(time => time.dato.startsWith(valgtDato));
@@ -37,9 +38,10 @@ const MineTimerPage = () => {
       } catch (error) {
         console.error(error.response?.data?.message);
       }
-    }  
+    }
     
   useEffect(() => {
+    if (role !== "behandler") return;
     hentBehandlerTimer();
   }, [])
     
@@ -59,7 +61,8 @@ const MineTimerPage = () => {
   return (
     <>
 
-      
+      { role === "behandler" &&
+      <>
       <Skillelinje buttonColor={"var(--primary-color)"} buttonTextColor={"white"} tekst={showSkjema ? "Lukk" : "Opprett time"} onClick={() => setShowSkjema(!showSkjema)} />
       
       <AnimatePresence mode="popLayout">  
@@ -77,6 +80,9 @@ const MineTimerPage = () => {
       }
 
       </AnimatePresence>  
+      </>
+      }
+      
       
       <motion.div layout>
       <Kalender timer={behandlerTimer} onDatoValg={setValgtDato} />

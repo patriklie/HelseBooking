@@ -94,11 +94,22 @@ const Profil = () => {
       console.log(error);
   }
 }
+
+const slettProfil = async () => {
+  console.log("Slette profil");
+}
   
   return (
     <div className="margin-klassen">
+    
+    
+    { role === "behandler" &&
+    <>
     <div className="profil-forhåndsvisning"><span>Forhåndsvisning av profilen din </span></div>
     <ProfileCard profilbildeKlikk={profilbildeKlikk} username={username} email={email} role={role} typeBehandler={typeBehandler} profilbilde={profilbilde} />
+    </>
+    }
+    
     
     <form onSubmit={oppdaterProfil} className="form-container"> 
       <div className="input-container">
@@ -110,7 +121,8 @@ const Profil = () => {
         <Mail className="input-icon" size={18} color="grey" strokeWidth={1.5} />
         <input type="text" value={nyProfil.email} name="email" onChange={handleOppdaterBruker} />
       </div>  
-        
+    
+    { role === "behandler" &&
       <div className="input-container">
         <Stethoscope className="input-icon" size={18} color="grey" strokeWidth={1.5} />
         <select value={nyProfil.typeBehandler} className={nyProfil.typeBehandler ? "has-value" : ""} name="typeBehandler" onChange={handleOppdaterBruker}> 
@@ -126,19 +138,27 @@ const Profil = () => {
           <option value="tannlege">Tannlege</option>
         </select>
       </div>
+    } 
+
         
-      <motion.button
-        layout="position"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 1 }}
-        transition={{ type: "spring", stiffness: 200, damping: 17 }}
-        type="submit"
-        className="logginn-btn">
-        Oppdater profil
-        <UserPen color="#FFFFFF" size={20} />
-      </motion.button>  
+    <motion.button
+      layout="position"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 1 }}
+      transition={{ type: "spring", stiffness: 200, damping: 17 }}
+      type="submit"
+      className="logginn-btn">
+      Oppdater profil
+      <UserPen color="#FFFFFF" size={20} />
+    </motion.button>  
+    <motion.button className="profil-slett-btn">
+      Slett profilen
+    </motion.button>
 
     </form>
+
+
+
     </div>
   )
 }

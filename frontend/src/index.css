@@ -535,6 +535,13 @@ transition: box-shadow 0.3s ease;
   transform: scale(0.9);
 }
 
+.profil-slett-btn {
+  display: block;
+  margin: 0 auto;
+  color: var(--grey-text);
+  cursor: pointer;
+}
+
 .rounded-info-box {
   background-color: var(--secondary-color);
   margin: 1rem auto 0 auto;
