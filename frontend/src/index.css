@@ -901,6 +901,30 @@ dialog.slett-profil-modal[open] {
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 10px 10px;
+  overflow: hidden;
+/*   border-bottom: 5px solid rgb(0, 0, 0); */
+}
+
+dialog.slett-profil-modal::after {
+  content:"";
+  background-image:
+  linear-gradient(15deg,
+    #00fff0 0%,
+    #54a4ff 40%,
+    #006EFF 100%);
+  width: 100%;
+  height: 100px;
+  transform: skewY(-5deg);
+  position: absolute;
+  top: 30%;
+  z-index: -1;
+  /* animation: skewAnimation 15s ease-in-out infinite alternate; */
+}
+
+@keyframes skewAnimation {
+  from { transform: skewY(-5deg); }
+  to { transform: skewY(5deg); }
 }
 
 .slett-profil-char {
@@ -911,11 +935,30 @@ dialog.slett-profil-modal[open] {
 }
 
 .slett-profil-modal .slett-btn {
-  color: red;
+  color: white;
+  background-color: rgb(255, 0, 0);
+  padding: 5px 20px;
+  border-radius: 25px;
   cursor: pointer;
+}
+
+.slett-profil-modal .slett-btn span {
+  font-weight: 700;
 }
 
 .slett-profil-modal .avbryt-btn {
   color: var(--grey-text);
   cursor: pointer;
+}
+
+.lukk-modal {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+  color: var(--grey-text);
+}
+
+.lukk-modal:hover {
+  color: black;
 }

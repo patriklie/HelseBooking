@@ -2,7 +2,7 @@ import { useProfile, useAppStore } from "../store/authStore.js";
 import { useState, useRef } from "react";
 import axios from "axios";
 import { motion } from "motion/react";
-import { UserPen, Mail, Stethoscope, CircleChevronDown } from "lucide-react";
+import { UserPen, Mail, Stethoscope, CircleChevronDown, LockKeyhole, Eye, EyeClosed, X } from "lucide-react";
 import ProfileCard from "../components/ProfileCard.jsx";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router";
@@ -20,10 +20,13 @@ const Profil = () => {
     username: username,
     email: email,
     role: role,
+    password: "",
     typeBehandler: typeBehandler,
   });
   const profilbilde = useAppStore((state) => state.profilbilde);
   const slettModalRef = useRef();
+  const [visPassord, setVisPassord] = useState(false);
+  const PassordIkon = visPassord ? Eye : EyeClosed;
 
 
   const profilbildeKlikk = async (e) => {
@@ -69,18 +72,29 @@ const Profil = () => {
 
   const oppdaterProfil = async (e) => {
     e.preventDefault();
-    console.log(nyProfil);
-    console.log(import.meta.env.VITE_API_URL);
     
-    const erProfilEndret = nyProfil.username === username && nyProfil.email === email && nyProfil.typeBehandler === typeBehandler;
+    const ingenEndringer = !nyProfil.password && 
+        nyProfil.username === username && 
+        nyProfil.email === email && 
+        nyProfil.typeBehandler === typeBehandler
     
-    if (erProfilEndret) {
+    if (ingenEndringer) {
       toast("Ingen endringer å lagre 🕵🏻");
       return;
-}
+      }
+
+    const payloadProfil = {
+        username: nyProfil.username,
+        email: nyProfil.email,
+        typeBehandler: nyProfil.typeBehandler,
+    }
+
+    if (nyProfil.password) {
+      payloadProfil.password = nyProfil.password;
+    }
     
     try {
-      const response = await axios.patch(`${import.meta.env.VITE_API_URL}/api/users/`, nyProfil, {
+      const response = await axios.patch(`${import.meta.env.VITE_API_URL}/api/users/`, payloadProfil, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -94,10 +108,11 @@ const Profil = () => {
         typeBehandler: response.data.typeBehandler,
       })
       
-      toast.success("Oppdatert profilen")
+      toast.success("Oppdatert profilen");
+      setNyProfil(prev => ({ ...prev, password: "" }));
     
     } catch (error) {
-      console.log(error);
+      toast.error(error.response?.data?.message || "Noe gikk galt ved oppdatering")
   }
 }
 
@@ -141,6 +156,12 @@ const slettProfil = async () => {
         <Mail className="input-icon" size={18} color="grey" strokeWidth={1.5} />
         <input type="text" value={nyProfil.email} name="email" onChange={handleOppdaterBruker} />
       </div>  
+
+      <div className="input-container">
+        <LockKeyhole className="input-icon" size={18} color="grey" strokeWidth={1.5} />
+        <input type={ visPassord ? "text" : "password"} onChange={handleOppdaterBruker} value={nyProfil.password} id="password" name="password" placeholder="passord" />
+        <PassordIkon className="input-icon-right" size={18} strokeWidth={1.5} onClick={() => setVisPassord(!visPassord)} />
+      </div>
     
     { role === "behandler" &&
       <div className="input-container">
@@ -182,16 +203,21 @@ const slettProfil = async () => {
     <dialog className="slett-profil-modal" ref={slettModalRef}>
       <img className="slett-profil-char" src={SlettCharacter} />
       <motion.button
-      whileHover={{ scale: 1.5 }}
+      whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 1 }} 
       transition={{ type: "spring" }}
       className="slett-btn" 
-      onClick={slettProfil}>Slett profilen</motion.button>
+      onClick={slettProfil}>Slett profilen: <span>{username}</span></motion.button>
       <motion.button 
-      whileHover={{ scale: 1.5 }}
+      whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 1 }} 
       transition={{ type: "spring" }} 
       className="avbryt-btn" onClick={() => slettModalRef.current.close()}>Avbryt</motion.button>
+      <X 
+      onClick={() => slettModalRef.current.close()} 
+      className="lukk-modal" 
+      
+      />
     </dialog>
 
     </div>

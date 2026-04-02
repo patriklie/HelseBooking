@@ -64,10 +64,8 @@ const About = () => {
           
           <div className="figur-placeholder"></div> {/* ikke i flyten */}
           <div className="figur2"></div>
-          
-                  
+                 
         </div>
-
       </section>
      
       
