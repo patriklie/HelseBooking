@@ -765,6 +765,7 @@ transition: box-shadow 0.3s ease;
   width: 300px;
   height: 300px;
   grid-column: 2;
+  pointer-events: none;
 }
 
 .figur2 {
@@ -776,6 +777,7 @@ transition: box-shadow 0.3s ease;
   position: absolute;
   right: -150px;
   top: -100px;
+  pointer-events: none;
 }
 
 .about-button {
@@ -961,4 +963,32 @@ dialog.slett-profil-modal::after {
 
 .lukk-modal:hover {
   color: black;
+}
+
+/* PasientTimeListe JSX */
+
+.pasientTimer-container {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.pasientTime-wrapper {
+  position: relative;
+}
+
+.pasientTime-celle {
+  display: flex;
+  padding: 20px 10px;
+  box-shadow: 1px 0 10px 1px rgba(0, 0, 0, 0.048);
+  cursor: pointer;
+}
+
+.bak-timecelle-ikon {
+  position: absolute;
+  height: 100%;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  z-index: -1;
 }

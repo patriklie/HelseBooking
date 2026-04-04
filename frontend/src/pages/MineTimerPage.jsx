@@ -4,16 +4,17 @@ import OpprettTimeSkjema from "../components/OpprettTimeSkjema.jsx";
 import axios from "axios";
 import { useAppStore } from "../store/authStore.js";
 import toast from "react-hot-toast";
-
 import { motion, AnimatePresence } from "motion/react";
 import TimeListe from "../components/TimeListe.jsx";
 import Skillelinje from "../components/Skillelinje.jsx";
+import PasientTimeListe from "../components/PasientTimeListe.jsx";
 
 const MineTimerPage = () => {
 
   const token = useAppStore((state) => state.token);
   const role = useAppStore((state) => state.role);
   const [behandlerTimer, setBehandlerTimer] = useState([]);
+  const [pasientTimer, setPasientTimer] = useState([]);
   const [valgtDato, setValgtDato] = useState(new Date().toISOString().split("T")[0]);  
   const timerValgtDato = behandlerTimer.filter(time => time.dato.startsWith(valgtDato));
   const [showSkjema, setShowSkjema] = useState(false);
@@ -26,6 +27,27 @@ const MineTimerPage = () => {
       year: "numeric",
   }).format(date);
   };
+  
+  const hentPasientTimer = async () => {
+    try {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/time/pasienttimer`, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      setPasientTimer(response.data.mineTimer);
+      
+    } catch (error) {
+      if (error.response?.status === 404) {
+        setPasientTimer([])
+        return
+      }
+      toast.error(error.response?.data?.message || "Noe gikk galt ved henting av pasienttimer")
+    }
+  }
+  
+  useEffect(() => {
+    if (role !== "pasient") return
+    hentPasientTimer();    
+  },[])
     
   const hentBehandlerTimer = async () => {
       try {
@@ -99,8 +121,16 @@ const MineTimerPage = () => {
       </>
       }
 
-    <div>Pasienttimelist med swipe slettings</div>
+     
+      {pasientTimer &&
 
+        <>
+        <PasientTimeListe timer={pasientTimer} />
+        </>
+      }
+
+      
+    
     </>
   )
 }
