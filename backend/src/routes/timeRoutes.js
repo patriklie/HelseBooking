@@ -22,7 +22,7 @@ router.get("/", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("pasi
 router.post("/", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("behandler", "admin"), opprettTime);
 
 // henter alle timer for pasient
-router.get("/mine", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("pasient"), hentMineTimer);
+router.get("/pasienttimer", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("pasient"), hentMineTimer);
 
 // hent alle timer for innlogget behandler
 router.get("/behandlerTimer", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("behandler"), hentBehandlerTimer);

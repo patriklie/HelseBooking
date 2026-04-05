@@ -59,7 +59,7 @@ export const opprettTime = async (req, res) => {
 export const hentMineTimer = async (req, res) => {
     try {
         const { id } = req.user;
-        const mineTimer = await Time.find({ pasient: id }).populate("behandler", "username");
+        const mineTimer = await Time.find({ pasient: id }).populate("behandler", "username typeBehandler profilbilde").sort({ dato: 1 });
         if (mineTimer.length === 0) return res.status(404).json({ message: "Ingen timeavtaler funnet." })
         res.status(200).json({ mineTimer, message: "Mine timeavtaler på innlogget pasient." })
         
