@@ -11,6 +11,7 @@ import { useRef } from "react";
 import Kalender from "../components/Kalender.jsx";
 import TimeListe from "../components/TimeListe.jsx";
 import { motion, AnimatePresence } from "motion/react";
+import Skillelinje from "../components/Skillelinje.jsx";
 
 const BookTimePage = () => {
   const token = useAppStore((state) => state.token);
@@ -115,7 +116,8 @@ const BookTimePage = () => {
   return (
       
   <>
-    <div className="rounded-info-box"><span>{ valgtBehandler ? "Valgt behandler" : "Velg behandler" }</span></div>
+    
+      <Skillelinje tekst={valgtBehandler ? "Valgt behandler" : "Velg behandler"} />
     <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         style={{ padding: "0 16px 20px 16px" }}

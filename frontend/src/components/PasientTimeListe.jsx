@@ -12,8 +12,9 @@ const PasientTimeListe = ({ timer }) => {
         const diffMs = timeDato - idag;
         const diffDager = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
         
-        if (diffDager <= 0) return "0";
-        return `${diffDager}`;   
+        if (diffDager < 0) return "-1";
+        if (diffDager === 0) return "0"
+        return diffDager;   
     } 
 
     const formatDato = (datoString) => {

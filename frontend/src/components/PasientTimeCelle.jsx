@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useTransform, animate, useMotionValueEvent, useAnimationControls, AnimatePresence } from "motion/react";
 import { useState } from "react";
-import { CalendarX, Trash2 } from "lucide-react";
+import { BadgeCheck, Calendar, CalendarClock, CalendarX, Clock, Trash2 } from "lucide-react";
 
 const PasientTimeCelle = ({ time, formatertDato, dagerTilTime }) => {
     const x = useMotionValue(0);
@@ -69,16 +69,43 @@ const PasientTimeCelle = ({ time, formatertDato, dagerTilTime }) => {
                     }
                 }}
             >
-                <div className="pasientTime-grid-celle">
-                    <div>{time.behandler.username}</div>
-                    <div>{time.startTid} - {time.sluttTid}</div>
-                </div>
+                
+                {dagerTilTime > 0 ?
+                    <div div className="dager-banner">
+                <CalendarClock size={30} strokeWidth={1.2} />
+                <div>{dagerTilTime} dager</div>
+        </div> : ""
+                }
+                
+                {dagerTilTime === "0" ?
+                    <div div className="dager-banner">
+                        <CalendarClock size={30} strokeWidth={1.2} />
+                        <div>I dag!</div>
+                    </div> : ""
+                }
+
                 
                 <div className="pasientTime-grid-celle">
-                    <div>{dagerTilTime} dager til</div>
-                    <div>{time.behandler.typeBehandler}</div>
+                    <div className="pasientTime-profilbilde" style={{ backgroundImage: `url(${time.behandler.profilbilde})` }}>
+                    </div>  
                 </div>
-
+                
+                <div className="pasientTime-grid-celle innhold">
+                    <div className="stor-forbokstav pasienttime-type-behandler">{time.behandler.typeBehandler}</div>
+                    <div className="pasienttime-behandler-navn">{time.behandler.username}</div>
+                    <div className="pasientTime-ikon-flex">
+                        <div className="icon-pair">
+                            <Clock strokeWidth={2} size={18} />
+                            <div>{time.startTid} - {time.sluttTid}</div>
+                        </div>
+                        <div className="icon-pair">
+                            <Calendar strokeWidth={2} size={18} />
+                            <div>{formatertDato}</div>
+                        </div>
+                    </div>
+                    <div>{time.pris},-</div>
+                </div>
+                
  
             </motion.div>
 

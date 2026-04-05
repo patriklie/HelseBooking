@@ -5,7 +5,7 @@ const Skillelinje = ({ tekst, onClick, buttonColor, lineColor, buttonTextColor }
     <>
     <div className="skillelinje-knapp-container" >
         <div style={{ backgroundColor: lineColor }}></div>
-          <button onClick={onClick} style={{ backgroundColor: buttonColor, color: buttonTextColor }}>{tekst}</button> 
+          <button onClick={onClick} style={{ backgroundColor: buttonColor, color: buttonTextColor, cursor: onClick ? "pointer" : "default" }}>{tekst}</button> 
         <div style={{ backgroundColor: lineColor }}></div>
       </div>
     </>

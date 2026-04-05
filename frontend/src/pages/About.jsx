@@ -58,7 +58,7 @@ const About = () => {
                 damping: 10
               }}
               className="about-button"
-              onClick={() => navigate("/login")}
+              onClick={() => navigate("/booktime")}
             >Kom i gang!</motion.button>
           </div>
           

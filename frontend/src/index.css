@@ -542,19 +542,6 @@ transition: box-shadow 0.3s ease;
   cursor: pointer;
 }
 
-.rounded-info-box {
-  background-color: var(--secondary-color);
-  margin: 1rem auto 0 auto;
-  border-radius: 50px;
-  padding: 4px 20px;
-  font-size: 0.7rem;
-  color: var(--primary-color);
-  font-weight: 600;
-  letter-spacing: .5px;
-  width: fit-content;
-  text-align: center;
-}
-
 .mySwiper.locked .swiper-pagination {
   opacity: 0;
   pointer-events: none;
@@ -700,7 +687,7 @@ transition: box-shadow 0.3s ease;
   gap: 15px;
   margin-bottom: 1rem;
   user-select: none;
-  margin: 32px;
+  margin: 32px 32px 16px 32px;
 }
 
 .skillelinje-knapp-container div {
@@ -713,7 +700,6 @@ transition: box-shadow 0.3s ease;
   background-color: rgb(226, 226, 226);
   padding: 5px 10px;
   border-radius: 5px;
-  cursor: pointer;
 }
 
 /* TEST på about sida */
@@ -968,7 +954,7 @@ dialog.slett-profil-modal::after {
 /* PasientTimeListe JSX */
 
 .pasientTimer-container {
- margin: 0 1rem;
+ margin: 2rem;
 }
 
 .pasientTime-wrapper {
@@ -981,8 +967,8 @@ dialog.slett-profil-modal::after {
 
 .pasientTime-celle {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 5px;
+  grid-template-columns: auto 2fr;
+  gap: 1rem;
   padding: 16px;
   box-shadow: 1px 0 10px 1px rgba(0, 0, 0, 0.048);
   cursor: pointer;
@@ -990,7 +976,36 @@ dialog.slett-profil-modal::after {
   border: 1px solid #E5E7EB;
   overflow: hidden;
   font-size: 12px;
+  position: relative;
 }
+
+.dager-banner {
+  position: absolute;
+  width: 100px;
+  height:90px;
+  color: white;
+  font-size: 12px;
+  background-color: var(--mint-green);
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 34% 66% 46% 54% / 39% 44% 56% 61%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  justify-content: center;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, .4),
+      inset 0 -1px 2px rgba(255, 255, 255, 0.1);
+      
+}
+
+@media (max-width: 550px) {
+  .dager-banner {
+    display: none;
+  }
+}
+
 
 .bak-timecelle-ikon {
   position: absolute;
@@ -1013,7 +1028,61 @@ dialog.slett-profil-modal::after {
   z-index: -1;
 }
 
-.pasientTime-grid-celle {
+.pasientTime-grid-celle.innhold {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 5px;
 }
+
+.pasientTime-profilbilde {
+  background-position: center;
+  background-size: cover;
+  height: 120px;
+  width: 90px;
+  border-radius: 12px;
+}
+
+.pasientTime-ikon-flex {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pasientTime-ikon-flex .icon-pair {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  line-height: 0;
+}
+
+.stor-forbokstav::first-letter {
+  text-transform: capitalize;
+}
+
+.pasienttime-behandler-navn {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.pasienttime-type-behandler {
+  padding: 5px 16px;
+  background-color: var(--mint-green);
+  color: white;
+  border-radius: 20px;
+  width: fit-content;
+  font-size: 12px;
+}
+
+/* .pasientTime-profilbilde::after {
+  content: '';
+  width: 100%;
+  height: 35%;
+  position: absolute;
+  bottom: 0;
+  backdrop-filter: blur(20px);
+  border-radius: 0 0 20px 20px;
+  mask-image: linear-gradient(to top, black 0%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to top, black 50%, transparent 100%);
+} */
