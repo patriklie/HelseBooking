@@ -8,21 +8,22 @@ import { motion, AnimatePresence } from "motion/react";
 import TimeListe from "../components/TimeListe.jsx";
 import Skillelinje from "../components/Skillelinje.jsx";
 import PasientTimeListe from "../components/PasientTimeListe.jsx";
+import DrawerEndretime from "../components/DrawerEndretime.jsx";
 
 const MineTimerPage = () => {
 
   const token = useAppStore((state) => state.token);
   const role = useAppStore((state) => state.role);
   const [behandlerTimer, setBehandlerTimer] = useState([]);
-
   const [valgtDato, setValgtDato] = useState(new Date().toISOString().split("T")[0]);  
   const timerValgtDato = behandlerTimer.filter(time => time.dato.startsWith(valgtDato));
   const [showSkjema, setShowSkjema] = useState(false);
-  
   const [filter, setFilter] = useState("");
   const [pasientTimer, setPasientTimer] = useState([]);
   const idag = new Date();
   idag.setHours(0, 0, 0, 0);
+  const [showTimeDrawer, setShowTimeDrawer] = useState(false);
+  const [valgtEndreTime, setValgtEndreTime] = useState("");
 
   const kommende = pasientTimer.filter(time => {
     const dato = new Date(time.dato);
@@ -113,6 +114,19 @@ const MineTimerPage = () => {
     }
   }
   
+  const onBehandlerTimeKlikk = (time) => {
+    console.log("Åpner timen for redigering");
+    console.log(time)
+    setShowTimeDrawer(true);
+    setValgtEndreTime(time);
+  }
+  
+  const closeBehandlerTime = () => {
+    console.log("Stenger vindu")
+    setShowTimeDrawer(false);
+    setValgtEndreTime("");
+  }
+  
   return (
     <>
 
@@ -147,10 +161,15 @@ const MineTimerPage = () => {
       <AnimatePresence>
       <motion.div layout="position" className="timer-container">
         
-      <TimeListe timerValgtDato={timerValgtDato} slettTime={slettTime} />
+        <TimeListe timerValgtDato={timerValgtDato} slettTime={slettTime} onBehandlerTimeKlikk={onBehandlerTimeKlikk} musepeker={true} />
       </motion.div>
 
       </AnimatePresence>
+      
+        {showTimeDrawer &&
+          <DrawerEndretime time={valgtEndreTime} closeBehandlerTime={closeBehandlerTime} hentBehandlerTimer={hentBehandlerTimer} />
+        }
+        
       </>
       }
 

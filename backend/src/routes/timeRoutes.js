@@ -10,7 +10,8 @@ import {
     bookTime,
     avlysTime,
     slettTime,
-    hentValgtBehandlerTimer
+    hentValgtBehandlerTimer,
+    endreTime
 } from "../controllers/timeControllers.js"
 
 const router = express.Router();
@@ -21,6 +22,9 @@ router.get("/", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("pasi
 // dennne vil opprette en tilgjengelig timeavtale kun av rollen behandler som kan bookes
 router.post("/", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("behandler", "admin"), opprettTime);
 
+// her endrer vi en time for behandlere
+router.patch("/:id/endretime", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("behandler", "admin"), endreTime);
+
 // henter alle timer for pasient
 router.get("/pasienttimer", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("pasient"), hentMineTimer);
 
@@ -30,15 +34,8 @@ router.get("/behandlerTimer", authMiddleware, validateIdMiddleware, verifyRoleMi
 // hent alle timer for valgt behandler (pasient som booker dette her)
 router.get("/behandler/:behandlerId", authMiddleware, validateIdMiddleware, hentValgtBehandlerTimer);
 
-/* 
-vi avventer med endring av oppsatt time, dette blir i såfall bare at behandler endrer tidspunkt
-// endre oppsatt time behandler/pasient
-router.patch("/:id", endreTime);
-*/
-
-
 // book time av rolle pasient.
-router.patch("/:id/book",authMiddleware, validateIdMiddleware, verifyRoleMiddleware("pasient", "behandler"), bookTime);
+router.patch("/:id/book",authMiddleware, validateIdMiddleware, verifyRoleMiddleware("pasient"), bookTime);
 
 // avlys time av rollen behandler/pasient
 router.patch("/:id/avlys", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("pasient", "behandler"), avlysTime);

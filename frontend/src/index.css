@@ -86,7 +86,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2000;
+  z-index: 99;
   margin: 16px;
 }
 
@@ -673,6 +673,11 @@ transition: box-shadow 0.3s ease;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 5px;
+  transition: border 0.25s ease;
+}
+
+.time-celle:hover {
+  border-color: grey;
 }
 
 .time-top-flex {
@@ -1131,4 +1136,41 @@ dialog.slett-profil-modal::after {
 
 .filter-btn.active {
   background-color: var(--mint-green);
+}
+
+/* MineTimerPage Behandler Drawer */
+
+.time-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, .4);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.time-drawer-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  border-radius: 10px 10px 0 0;
+  padding: 1rem 2rem;
+  bottom: -10%;
+  height: 90%;
+  width: 100vw;
+  background: white;
+  z-index: 101;
+}
+
+.time-drawer-drag-wrapper {
+  width: 100%;
+}
+
+.time-drawer-drag {
+  background-color: rgb(212, 212, 212);
+  width: 48px;
+  height: 6px;
+  border-radius: 9999px;
+  margin: 0 auto 2rem auto;
 }

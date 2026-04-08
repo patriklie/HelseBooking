@@ -187,3 +187,12 @@ export const deleteProfilePicture = async (req, res) => {
       res.status(500).json({ message: error.message, text: "Inni deleteProfilePicture." })
     }
 }
+
+export const hentAllePasienter = async (req, res) => {
+    try {
+        const pasienter = await User.find({ role: "pasient" }).select("-password");
+        res.status(200).json({ pasienter });
+    } catch(error) {
+        res.status(500).json({ message: error.message });
+    }
+}

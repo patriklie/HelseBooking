@@ -34,6 +34,10 @@ export const opprettTime = async (req, res) => {
             return res.status(400).json({ message: "Start- og slutt er samme tidspunkt." })
         }
 
+        if (startTid > sluttTid) {
+            return res.status(400).json({ message: "Starttid kan ikke være etter sluttTid." })
+        }
+
         // Eksempel: Vi oppretter time med start 10:00 og slutt 12:00
         // da sjekker vi databasen om det finnes timer med starttid før kl 12:00 OG
         // har en slutttid etter kl 10:00
@@ -184,6 +188,57 @@ export const hentValgtBehandlerTimer = async (req, res) => {
 
         const valgtBehandlerTimer = await Time.find({ behandler: id, status: "ledig" }).sort({ startDatoTidspunkt: 1 })
         res.status(200).json({ message: "Hentet alle ledige timer på valgt behandler.", valgtBehandlerTimer })
+
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
+
+export const endreTime = async (req, res) => {
+
+    try {
+        const { dato, startTid, sluttTid, pris, pasientID } = req.body;
+        const { id: timeID } = req.params;
+        const { id: behandlerID } = req.user;
+
+        const behandler = await User.findById(behandlerID);
+
+        if (!behandler) {
+            return res.status(404).json({ message: "Behandler ID finnes ikke i databasen." })
+        }
+
+        if (startTid === sluttTid) {
+            return res.status(400).json({ message: "Start- og slutt er samme tidspunkt." })
+        }
+
+        if (startTid > sluttTid) {
+            return res.status(400).json({ message: "Starttid kan ikke være etter sluttTid." })
+        }
+
+
+        const eksisterendeTime = await Time.findOne({
+            _id: { $ne: timeID },
+            behandler: behandlerID,
+            dato: dato,
+            startTid: { $lt: sluttTid },
+            sluttTid: { $gt: startTid }
+        });
+
+        if (eksisterendeTime) {
+            return res.status(400).json({ message: "Det finnes allerede en overlappende time, endre dato eller tidspunkt og prøv igjen." })
+        }
+        const now = new Date();
+        const startDatoTidspunkt = new Date(`${dato}T${startTid}`);
+        const sluttDatoTidspunkt = new Date(`${dato}T${sluttTid}`);
+
+        if (now >= startDatoTidspunkt) {
+            return res.status(400).json({ message: "Kan ikke endre til et tidspunkt tilbake i tid." });
+        }
+
+        const nyStatus = pasientID ? "booket" : "ledig";
+
+        const endretTime = await Time.findByIdAndUpdate(timeID, { dato, startTid, sluttTid, startDatoTidspunkt, sluttDatoTidspunkt, pris, pasient: pasientID || null, status: nyStatus }, { returnDocument: "after" })
+        res.status(200).json({ message: "Oppdatert timen.", endretTime })
 
     } catch (error) {
         res.status(500).json({ message: error.message });
