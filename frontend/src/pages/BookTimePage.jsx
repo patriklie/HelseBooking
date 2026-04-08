@@ -37,6 +37,7 @@ const BookTimePage = () => {
         }
       })
       hentValgtBehandlerTimer();
+      hentAlleBehandlere(); // løftet ut av useEffect, blir et ekstra API kall men da er det oppdatert fra backend.
       setValgtTime(null);
       dialogRef.current.close();
       toast.success(response.data.message)
@@ -104,20 +105,21 @@ const BookTimePage = () => {
   }
 }, [valgtBehandler]);
   
-  useEffect(() => {
-    const hentAlleBehandlere = async () => {
-    
-      try {
+  const hentAlleBehandlere = async () => {
+
+    try {
       const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/users/behandlere`, {
         headers: { Authorization: `Bearer ${token}` }
       })
-        
+
       setAlleBehandlere(response.data.alleBehandlere)
-      console.log("Her er alle behandleren: ", response.data.alleBehandlere) 
-      } catch (error) {
-      toast.error(error.response?.data?.message || "Feil ved henting av behandlere.") 
-      }   
+      console.log("Her er alle behandleren: ", response.data.alleBehandlere)
+    } catch (error) {
+      toast.error(error.response?.data?.message || "Feil ved henting av behandlere.")
     }
+  }
+  
+  useEffect(() => {
     hentAlleBehandlere();
   },[])
   
