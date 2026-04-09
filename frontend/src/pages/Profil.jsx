@@ -2,7 +2,7 @@ import { useProfile, useAppStore } from "../store/authStore.js";
 import { useState, useRef } from "react";
 import axios from "axios";
 import { motion } from "motion/react";
-import { UserPen, Mail, Stethoscope, CircleChevronDown, LockKeyhole, Eye, EyeClosed, X } from "lucide-react";
+import { UserPen, Mail, Stethoscope, CircleChevronDown, LockKeyhole, Eye, EyeClosed, X, Info } from "lucide-react";
 import ProfileCard from "../components/ProfileCard.jsx";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router";
@@ -13,7 +13,7 @@ import Skillelinje from "../components/Skillelinje.jsx";
 const Profil = () => {
   
   const navigate = useNavigate();
-  const { username, email, role, typeBehandler } = useProfile();
+  const { username, email, role, typeBehandler, omBehandler } = useProfile();
   const token = useAppStore((state) => state.token);
   const logout = useAppStore((state) => state.logout);
   const setProfil = useAppStore((state) => state.setProfil);
@@ -24,6 +24,7 @@ const Profil = () => {
     role: role,
     password: "",
     typeBehandler: typeBehandler,
+    omBehandler: omBehandler,
   });
   const profilbilde = useAppStore((state) => state.profilbilde);
   const slettModalRef = useRef();
@@ -78,7 +79,8 @@ const Profil = () => {
     const ingenEndringer = !nyProfil.password && 
         nyProfil.username === username && 
         nyProfil.email === email && 
-        nyProfil.typeBehandler === typeBehandler
+        nyProfil.typeBehandler === typeBehandler &&
+        nyProfil.omBehandler === omBehandler
     
     if (ingenEndringer) {
       toast("Ingen endringer å lagre 🕵🏻");
@@ -89,6 +91,7 @@ const Profil = () => {
         username: nyProfil.username,
         email: nyProfil.email,
         typeBehandler: nyProfil.typeBehandler,
+        omBehandler: nyProfil.omBehandler
     }
 
     if (nyProfil.password) {
@@ -108,6 +111,7 @@ const Profil = () => {
         email: response.data.email,
         role: response.data.role,
         typeBehandler: response.data.typeBehandler,
+        omBehandler: response.data.omBehandler,
       })
       
       toast.success("Oppdatert profilen");
@@ -143,7 +147,7 @@ const slettProfil = async () => {
     { role === "behandler" &&
     <>
     <div className="profil-forhåndsvisning"><span>Forhåndsvisning av profilen din </span></div>
-    <ProfileCard profilbildeKlikk={profilbildeKlikk} username={username} email={email} role={role} typeBehandler={typeBehandler} profilbilde={profilbilde} />
+    <ProfileCard profilbildeKlikk={profilbildeKlikk} username={username} email={email} role={role} typeBehandler={typeBehandler} profilbilde={profilbilde} omBehandler={omBehandler} />
     </>
       }
       
@@ -173,23 +177,34 @@ const slettProfil = async () => {
         <PassordIkon className="input-icon-right" size={18} strokeWidth={1.5} onClick={() => setVisPassord(!visPassord)} />
       </div>
     
-    { role === "behandler" &&
-      <div className="input-container">
-        <Stethoscope className="input-icon" size={18} color="grey" strokeWidth={1.5} />
-        <select value={nyProfil.typeBehandler} className={nyProfil.typeBehandler ? "has-value" : ""} name="typeBehandler" onChange={handleOppdaterBruker}> 
-          <option value="akupunktør">Akupunktør</option>
-          <option value="ernæringsfysiolog">Ernæringsfysiolog</option>
-          <option value="fysioterapeut">Fysioterapeut</option>
-          <option value="kiropraktor">Kiropraktor</option>
-          <option value="lege">Lege</option>
-          <option value="naprapat">Naprapat</option>
-          <option value="osteopat">Osteopat</option>
-          <option value="personligtrener">Personlig trener</option>
-          <option value="psykolog">Psykolog</option>
-          <option value="tannlege">Tannlege</option>
-        </select>
-      </div>
-    } 
+      {role === "behandler" &&
+        <>
+        <div className="input-container">
+          <Stethoscope className="input-icon" size={18} color="grey" strokeWidth={1.5} />
+          <select value={nyProfil.typeBehandler} className={nyProfil.typeBehandler ? "has-value" : ""} name="typeBehandler" onChange={handleOppdaterBruker}> 
+            <option value="akupunktør">Akupunktør</option>
+            <option value="ernæringsfysiolog">Ernæringsfysiolog</option>
+            <option value="fysioterapeut">Fysioterapeut</option>
+            <option value="kiropraktor">Kiropraktor</option>
+            <option value="lege">Lege</option>
+            <option value="naprapat">Naprapat</option>
+            <option value="osteopat">Osteopat</option>
+            <option value="personligtrener">Personlig trener</option>
+            <option value="psykolog">Psykolog</option>
+            <option value="tannlege">Tannlege</option>
+          </select>
+        </div>
+             
+        <div className="input-container">
+          <div className="textarea-limit">{nyProfil?.omBehandler?.length} / 170</div>
+    {/*  <Info className="textarea-icon" size={18} fill="#FFFFFF" color="grey" strokeWidth={1.5} /> */}
+          <textarea type="text" maxLength={170} rows={4} onChange={handleOppdaterBruker} value={nyProfil.omBehandler} id="omBehandler" name="omBehandler" placeholder="Om Behandler" />  
+        </div>
+          
+      </>
+      } 
+        
+
 
         
     <motion.button

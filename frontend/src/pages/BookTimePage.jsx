@@ -139,7 +139,7 @@ const BookTimePage = () => {
       >
         {
           alleBehandlere && alleBehandlere.map((behandler) => {
-            return <SwiperSlide key={behandler._id}><ProfileCard cursorEnabled={true} velgbehandler={() => setValgtBehandler((prev) => { return prev?._id === behandler._id ? null : behandler })} valgt={behandler._id === valgtBehandler?._id} username={behandler.username} email={behandler.email} role={behandler.role} typeBehandler={behandler.typeBehandler} profilbilde={behandler.profilbilde} nesteTime={behandler.nesteTilgjengeligeTime} formaterDato={formatDatoUtenYear} visTilgjengelighet={true} /></SwiperSlide>
+            return <SwiperSlide key={behandler._id}><ProfileCard cursorEnabled={true} velgbehandler={() => setValgtBehandler((prev) => { return prev?._id === behandler._id ? null : behandler })} valgt={behandler._id === valgtBehandler?._id} username={behandler.username} email={behandler.email} role={behandler.role} typeBehandler={behandler.typeBehandler} profilbilde={behandler.profilbilde} nesteTime={behandler.nesteTilgjengeligeTime} formaterDato={formatDatoUtenYear} visTilgjengelighet={true} omBehandler={behandler.omBehandler} /></SwiperSlide>
           })
         }
       </Swiper>

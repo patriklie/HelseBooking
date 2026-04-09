@@ -114,16 +114,25 @@ const DrawerEndretime = ({ time, closeBehandlerTime, hentBehandlerTimer, slettTi
             </div>
 
             <form className="form-container drawer-form" onSubmit={endreTime}>
-                <div className="drawer-form-overskrift">Endre time</div>
-                <div className="input-container">
+                    <div className="drawer-form-overskrift colspan-2">Endre time</div>
+                    
+                    <div className="input-container drawer-input">
                     <label htmlFor="dato">Dato</label>
                     <div className="input-wrapper">
                         <Calendar1 className="input-icon" size={18} color="grey" strokeWidth={1.5} onClick={() => dateInputRef.current.showPicker()} />
                         <input type="date" ref={dateInputRef} value={endretTime.dato} onChange={handleTime} id="dato" name="dato" placeholder="dato" required />
                     </div>
-                </div>
+                    </div>
+                    
+                    <div className="input-container drawer-input">
+                        <label htmlFor="pris">Pris</label>
+                        <div className="input-wrapper">
+                            <Wallet className="input-icon" size={18} color="grey" strokeWidth={1.5} />
+                            <input type="number" id="pris" name="pris" value={endretTime.pris} onChange={handleTime} min={0} placeholder="NOK / Timepris" required />
+                        </div>
+                    </div>
 
-                <div className="input-container">
+                    <div className="input-container drawer-input">
                     <label htmlFor="startTid">Starttid</label>
                     <div className="input-wrapper">
                         <Clock className="input-icon" size={18} color="grey" strokeWidth={1.5} onClick={() => timeInputStartRef.current.showPicker()} />
@@ -131,7 +140,7 @@ const DrawerEndretime = ({ time, closeBehandlerTime, hentBehandlerTimer, slettTi
                     </div>
                 </div>
 
-                <div className="input-container">
+                    <div className="input-container drawer-input">
                     <label htmlFor="sluttTid">SluttTid</label>
                     <div className="input-wrapper">
                         <ClockCheck className="input-icon" size={18} color="grey" strokeWidth={1.5} onClick={() => timeInputStopRef.current.showPicker()} />
@@ -139,15 +148,9 @@ const DrawerEndretime = ({ time, closeBehandlerTime, hentBehandlerTimer, slettTi
                     </div>
                 </div>
 
-                <div className="input-container">
-                    <label htmlFor="pris">Pris</label>
-                    <div className="input-wrapper">
-                        <Wallet className="input-icon" size={18} color="grey" strokeWidth={1.5} />
-                            <input type="number" id="pris" name="pris" value={endretTime.pris} onChange={handleTime} min={0} placeholder="NOK / Timepris" required />
-                    </div>
-                    </div>
+
                     
-                    <div className="input-container">
+                    <div className="input-container drawer-input colspan-2">
                         <label htmlFor="pasientID">Pasient</label>
                         <div className="input-wrapper">
                             <User className="input-icon" size={18} color="grey" strokeWidth={1.5} />
@@ -169,10 +172,10 @@ const DrawerEndretime = ({ time, closeBehandlerTime, hentBehandlerTimer, slettTi
                     whileTap={{ scale: 1 }}
                     transition={{ type: "spring", stiffness: 200, damping: 17 }}
                     type="submit"
-                    className="logginn-btn drawer-btn">
+                        className="logginn-btn drawer-btn colspan-2">
                     Oppdater timen <CalendarClock size={20} />
                 </motion.button>
-                    <div className="drawer-slett" onClick={async () => {
+                    <div className="drawer-slett colspan-2" onClick={async () => {
                         await slettTime(time);
                         handleClose();
                     }}>Slett time</div>

@@ -2,7 +2,7 @@ import defaultAvatar from "../assets/Profile_avatar_placeholder_large.png";
 import { useRef } from "react";
 import { ShieldCheck } from "lucide-react";
 
-const ProfileCard = ({ profilbildeKlikk, username, email, role, typeBehandler, profilbilde, velgbehandler, valgt, cursorEnabled, nesteTime, formaterDato, visTilgjengelighet }) => {
+const ProfileCard = ({ profilbildeKlikk, username, email, role, typeBehandler, profilbilde, velgbehandler, valgt, cursorEnabled, nesteTime, formaterDato, visTilgjengelighet, omBehandler }) => {
     
     const inputField = useRef();
     
@@ -28,12 +28,12 @@ const ProfileCard = ({ profilbildeKlikk, username, email, role, typeBehandler, p
         <div className="profil-innhold">
             <div className="profil-typebehandler">{typeBehandler}<ShieldCheck style={{ color: "var(--mint-green)" }} strokeWidth={2} size={14} /></div>
             <div className="profil-brukernavn">{username}</div>
-            <div className="profil-om">{`Erfaren ${typeBehandler} med bred faglig bakgrunn. Tilbyr skreddersydde behandlinger tilpasset dine behov.`}</div>        
+            <div className="profil-om">{omBehandler}</div>        
             
             {visTilgjengelighet && (
             <>
             {nesteTime ? 
-            <div className="profil-neste-time">Neste ledige time: {formaterDato(nesteTime.dato)} kl. {nesteTime.startTid}</div>
+                                <div className="profil-neste-time">Neste ledige time: <span>{formaterDato(nesteTime.dato)} kl. {nesteTime.startTid}</span></div>
             : <div className="profil-ingen-neste-time">Ingen ledige timer</div>
             }                       
             </>

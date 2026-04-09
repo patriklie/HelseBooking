@@ -11,12 +11,14 @@ export const useAppStore = create(
                 username: "",
                 email: "",
                 role: "",
+                omBehandler: "",
                 typeBehandler: "",
                 profilbilde: "",
                 setIsAuth: (bool) => set({ isAuth: bool }),
                 setUsername: (newUsername) => set({ username: newUsername }),
                 setEmail: (newEmail) => set({ email: newEmail }),
                 setRole: (newRole) => set({ role: newRole }),
+                setOmBehandler: (nyTekst) => set({ omBehandler: nyTekst }),
                 setToken: (newToken) => set({ token: newToken }),
                 setTypeBehandler: (nyTypeBehandler) => set({ typeBehandler: nyTypeBehandler }),
                 setProfilbilde: (nyttProfilbilde) => set({ profilbilde: nyttProfilbilde }),
@@ -29,6 +31,7 @@ export const useAppStore = create(
                     role: "",
                     typeBehandler: "",
                     profilbilde: "",
+                    omBehandler: "",
                 }),
             }),
             { name: "app-store" }
@@ -41,4 +44,5 @@ export const useProfile = () => useAppStore(useShallow((state) => ({
     email: state.email,
     role: state.role,
     typeBehandler: state.typeBehandler,
+    omBehandler: state.omBehandler,
 })));

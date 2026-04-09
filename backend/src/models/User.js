@@ -39,6 +39,11 @@ const userSchema = new mongoose.Schema({
         ],
         default: null,
     },
+    omBehandler: {
+        type: String,
+        maxLength: [170, "Teksten kan ikke være over 100 tegn."],
+        default: ""
+    },
     profilbilde: {
         type: String,
         default: null,

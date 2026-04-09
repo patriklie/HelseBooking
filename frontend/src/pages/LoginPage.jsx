@@ -19,6 +19,7 @@ const LoginPage = () => {
   const setAuth = useAppStore((state) => state.setIsAuth);
   const setTypeBehandler = useAppStore((state) => state.setTypeBehandler);
   const setProfilbilde = useAppStore((state) => state.setProfilbilde);
+  const setOmBehandler = useAppStore((state) => state.setOmBehandler);
   const navigate = useNavigate();
   const [visPassord, setVisPassord] = useState(false);
   const PassordIkon = visPassord ? Eye : EyeClosed;
@@ -39,6 +40,7 @@ const LoginPage = () => {
       setEmail(response.data.email);
       setRole(response.data.role);
       setProfilbilde(response.data.profilbilde);
+      setOmBehandler(response.data.omBehandler);
       setAuth(true);
       setTypeBehandler(response.data.typeBehandler || "");
       navigate("/profil");
