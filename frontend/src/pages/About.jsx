@@ -3,6 +3,7 @@ import Card from "../components/Card.jsx";
 import figur from "../assets/freepik__background__36259.png";
 import { motion } from "motion/react"
 import { Link, useNavigate } from "react-router";
+import Isometric from "../assets/IsoMetric_klinikk.png";
 
 const About = () => {
   
@@ -43,8 +44,8 @@ const About = () => {
       <section className="diagonal">
         <div className="wrapper">
           <div>
-            <h2 className="section-title">En enkel måte å booke behandling på</h2>
-            <p>HelseBooking er en moderne bookingplattform som kobler pasienter
+            <h2 className="section-title">En enkel måte å booke behandling</h2>
+            <p className="section-tekst">HelseBooking er en moderne bookingplattform som kobler pasienter
               og behandlere. Pasienter finner og booker timer enkelt, mens
               behandlere får full oversikt over sin timeplan, alt på ett sted.</p>
             <motion.button
@@ -66,6 +67,17 @@ const About = () => {
           <div className="figur2"></div>
                  
         </div>
+      </section>
+      
+      <section className="about-section">
+
+          <img className="isometric-klinikk" src={Isometric} />
+          <div className="isometric-tekst">
+            <div className="about-section-overskrift">Behandlere samlet på et sted</div>
+            <div className="about-section-innhold">Endre timebestillinger, bestill nye timer alt på et sted. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste molestiae aliquam tempore numquam perspiciatis. Molestias ipsa perspiciatis sed placeat repellendus eius vero vel ex, fugiat aliquam, nesciunt est fuga ipsam?</div>
+          </div>
+
+        
       </section>
      
       
