@@ -1,4 +1,4 @@
-import { Info, ArrowBigRight } from "lucide-react";
+import { Info, ArrowBigRight, ChevronDown } from "lucide-react";
 import Card from "../components/Card.jsx";
 import figur from "../assets/freepik__background__36259.png";
 import { motion } from "motion/react"
@@ -75,12 +75,14 @@ const About = () => {
           <img className="isometric-klinikk" src={Isometric} />
           <div className="isometric-tekst">
             <div className="about-section-overskrift">Behandlere samlet på et sted</div>
-            <div className="about-section-innhold">Endre timebestillinger, bestill nye timer alt på et sted. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste molestiae aliquam tempore numquam perspiciatis. Molestias ipsa perspiciatis sed placeat repellendus eius vero vel ex, fugiat aliquam, nesciunt est fuga ipsam?</div>
+          <div className="about-section-innhold">Alle behandlere samlet i én oversiktlig plattform. Finn riktig behandler raskt uten å måtte lete på tvers av ulike systemer. Utforsk tilgjengelige tider, sammenlign behandlere og book direkte på få sekunder.</div>
           </div>
 
         
       </section>
-     
+      <div className="feature-liste-topp-overskrift">Alle HelseBooking sine</div>
+      <div className="feature-liste-overskrift">Funksjoner</div>
+      <ChevronDown />
       <FeatureListe />
       
     </>

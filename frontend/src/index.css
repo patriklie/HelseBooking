@@ -70,14 +70,6 @@ input:-webkit-autofill:active {
 }
 
 body {
-/*     background-image: url("./assets/alex-padurariu-iNmouRApXYM-unsplash_large.jpg"); */
-/*     background-image: url("./assets/BG_app.png"); */
-    /*background-image: url("/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg");*/
-    /* Link til bilde på unsplash for credits https://unsplash.com/photos/clear-glass-jar-on-gray-wooden-table-iNmouRApXYM */
-/*     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed; */
     background-color: var(--bg-almost-white);
 }
 
@@ -831,6 +823,10 @@ transition: box-shadow 0.3s ease;
   font-size: 2rem;
 }
 
+.section-tekst {
+  font-weight: 200;
+}
+
 .figur-placeholder {
   width: 300px;
   height: 300px;
@@ -890,13 +886,14 @@ transition: box-shadow 0.3s ease;
 }
 
 .about-section-overskrift {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 900;
   color: var(--text-off-black);
 }
 
 .about-section-innhold {
   color: rgb(122, 122, 122);
+  font-weight: 300;
 }
 
 /* .isometric-bg {
@@ -918,14 +915,30 @@ transition: box-shadow 0.3s ease;
 
 /* About featureliste */ 
 
+.feature-liste-topp-overskrift {
+  font-weight: 400;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.feature-liste-overskrift {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
 .feature-grid-container {
   margin: 2rem;
 }
 
 .feature-grid {
   padding: 2rem 3rem;
-  background-color: rgb(221, 122, 122);
-  overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .feature-rad {
@@ -933,8 +946,12 @@ transition: box-shadow 0.3s ease;
   grid-template-columns: 2fr 1fr;
   align-items: start;
   padding: 1rem 0;
-  border-bottom: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
+  user-select: none;
+}
 
+.feature-grid > .feature-rad:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .feature-navn {
@@ -945,20 +962,22 @@ transition: box-shadow 0.3s ease;
 
 .feature-detaljer {
   grid-column: 1 / -1;
-/*   padding-top: .5rem; */
   font-size: .9rem;
-  color: pink;
   overflow: hidden;
+  color: var(--text-off-black);
 }
 
 .feature-status {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: 0.75rem;
+  font-weight: 300;
+  color: var(--text-off-black)
 }
 
 .feature-chevron {
   transition: transform .25s ease;
+  color: var(--text-off-black);
 }
 
 .feature-chevron-open {
@@ -968,6 +987,23 @@ transition: box-shadow 0.3s ease;
 .feature-inner-detaljer {
   padding-top: .5rem;
 }
+
+.feature-status-done {
+  color: var(--mint-green);
+  fill: var(--mint-green);
+}
+
+.feature-status-ongoing {
+  color: rgb(255, 222, 77);
+  fill: rgb(255, 222, 77);
+}
+
+.feature-status-planned {
+  color: var(--primary-color);
+  fill: var(--primary-color);
+}
+
+
 
 /* MODAL, Dialog */
 
