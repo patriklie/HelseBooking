@@ -10,6 +10,7 @@ import {
     uploadProfilePicture,
     deleteProfilePicture,
     getAlleBehandlere,
+    getAlleBehandlerePublic,
     hentAllePasienter
 } from "../controllers/userController.js";
 import { upload } from "../middleware/uploadMiddleware.js";
@@ -17,6 +18,7 @@ import { upload } from "../middleware/uploadMiddleware.js";
 const router = express.Router();
 
 router.get("/behandlere", authMiddleware, getAlleBehandlere);
+router.get("/behandlere/public", getAlleBehandlerePublic); // til about siden krever ikke auth eller token
 router.get("/pasienter", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("behandler", "admin"), hentAllePasienter);
 router.get("/", authMiddleware, getAllUsers);
 router.get("/:id", authMiddleware, getUserById); // legg til protection her så ikke alle kan hente brukere

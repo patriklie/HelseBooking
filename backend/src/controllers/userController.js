@@ -42,6 +42,15 @@ export const getAlleBehandlere = async (req, res) => {
     }
 };
 
+export const getAlleBehandlerePublic = async (req, res) => {
+    try {
+        const publicBehandlere = await User.find({ role: "behandler" }).select("username typeBehandler omBehandler profilbilde")
+        res.status(200).json(publicBehandlere)
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
+
 export const getUserById = async (req, res) => {
     try {
 

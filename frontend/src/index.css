@@ -865,7 +865,7 @@ transition: box-shadow 0.3s ease;
 .about-section {
   display: flex;
   align-items: center;
-  margin: 8rem 2rem;
+  margin: 8rem 2rem 5rem 2rem;
   gap: 2rem;
 }
 
@@ -1025,10 +1025,68 @@ transition: box-shadow 0.3s ease;
   fill: var(--primary-color);
 }
 
+/* ABOUT Behandlere visning */ 
+.about-behandlere-overskrift {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--text-off-black)
+}
+
+.about-behandlere-grid-wrapper {
+  margin: 4rem 2rem 6rem 2rem;
+}
+
+.about-behandlere-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-behandlere-grid-celle {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-behandlere-profilbilde-wrapper {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.about-behandlere-profilbilde {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-behandlere-navn {
+  color: var(--text-off-black);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.about-behandlere-type {
+  color: var(--grey-text);
+  font-weight: 300;
+  font-size: .9rem;
+}
+
+.about-behandlere-type::first-letter {
+  text-transform: uppercase;
+}
+
+/* FOOTER about */
+
 .feature-helse-logo {
   width: 250px;
   display: block;
-  margin: 8rem auto 1rem auto;
+  margin: 10rem auto 1rem auto;
 }
 
 .feature-footer {
@@ -1044,7 +1102,7 @@ transition: box-shadow 0.3s ease;
   background-color: var(--primary-color);
   display: flex;
   justify-content: space-evenly;
-  margin: 7rem 0;
+  margin: 10rem 0;
   padding: 2rem 0;
   background-color: rgba(0, 0, 0, 0.158);
   background-image:
@@ -1076,7 +1134,7 @@ transition: box-shadow 0.3s ease;
 }
 
 .disclaimer {
-  font-size: 10px;
+  font-size: 14px;
   position: absolute;
   bottom: .5rem;
   right: 1rem;
@@ -1572,6 +1630,12 @@ dialog.slett-profil-modal::after {
   margin-top: 1rem;
 }
 
+@media (max-width: 850px) {
+  .about-behandlere-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (max-width: 550px) {
   .dager-banner {
     display: none;
@@ -1599,4 +1663,8 @@ dialog.slett-profil-modal::after {
     flex-direction: column;
     margin: 2rem;
   }
+  .about-behandlere-grid {
+    grid-template-columns: 1fr;
+  }
 }
+

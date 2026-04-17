@@ -3,7 +3,9 @@ import { motion } from "motion/react"
 import { useNavigate } from "react-router";
 import Isometric from "../assets/IsoMetric_klinikk.png";
 import FeatureListe from "../components/FeatureListe.jsx";
+import FeatureListe_data_driven from "../components/FeatureListe_data_driven.jsx";
 import HelseBookingLogo500 from "../assets/HelseBooking_500.png";
+import AboutBehandlere from "../components/AboutBehandlere.jsx";
 
 const About = () => {
   
@@ -44,20 +46,20 @@ const About = () => {
           <img className="isometric-klinikk" src={Isometric} />
           <div className="isometric-tekst">
             <div className="about-section-overskrift">Behandlere samlet på et sted</div>
-          <div className="about-section-innhold">Alle behandlere samlet i én oversiktlig plattform. Finn riktig behandler raskt uten å måtte lete på tvers av ulike systemer. Utforsk tilgjengelige tider, sammenlign behandlere og book direkte på få sekunder.</div>
+          <div className="about-section-innhold">Alle behandlere samlet i en oversiktlig plattform. Finn riktig behandler raskt uten å måtte lete på tvers av ulike systemer. Utforsk tilgjengelige tider, sammenlign behandlere og book direkte på få sekunder.</div>
           </div>
 
         
       </section>
       
-
+      <AboutBehandlere />
   
       <div className="feature-liste-topp-overskrift">Alle HelseBooking sine</div>
       <div className="feature-liste-overskrift">Funksjoner</div>
       <div className="feature-chevron-wrapper">
         <ChevronDown />
       </div>
-      <FeatureListe />
+      <FeatureListe_data_driven />
       
       {/* Infosection */}
       <div className="info-section-container">

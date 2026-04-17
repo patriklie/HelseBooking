@@ -179,17 +179,17 @@ const FeatureListe = () => {
                           }
                       </AnimatePresence>
                   </div>
-
+                  
                   <div className="feature-rad" onClick={() => handleOpenRad(7)} >
                       <div className="feature-navn" >
                           <ChevronDown size={24}
                               className={`feature-chevron ${visRad === 7 ? "feature-chevron-open" : ""}`}
                           />
-                          <div>Klinikker</div>
+                          <div>Epost time bekreftelse</div>
                       </div>
                       <div className="feature-status">
-                          <Circle className="feature-status-planned" size={24} />
-                          <div>Kommer</div>
+                          <Circle className="feature-status-ongoing" size={24} />
+                          <div>Utvikles</div>
                       </div>
                       <AnimatePresence>
                           {visRad === 7 &&
@@ -200,19 +200,19 @@ const FeatureListe = () => {
                                   exit={{ height: 0 }}
                               >
                                   <div className="feature-inner-detaljer" ref={ref}>
-                                      Det planlegges støtte for at behandlere skal kunne opprette klinikker og knytte andre behandlere til klinikken.
+                                      Brukere vil få bekreftelse på mail når man booker eller avlyser en time samt en påminnelses mail 24 timer før timen.
                                   </div>
                               </motion.div>
                           }
                       </AnimatePresence>
                   </div>
-                  
+
                   <div className="feature-rad" onClick={() => handleOpenRad(8)} >
                       <div className="feature-navn" >
                           <ChevronDown size={24}
                               className={`feature-chevron ${visRad === 8 ? "feature-chevron-open" : ""}`}
                           />
-                          <div>Behandler rating</div>
+                          <div>Klinikker</div>
                       </div>
                       <div className="feature-status">
                           <Circle className="feature-status-planned" size={24} />
@@ -227,7 +227,61 @@ const FeatureListe = () => {
                                   exit={{ height: 0 }}
                               >
                                   <div className="feature-inner-detaljer" ref={ref}>
+                                      Det planlegges støtte for at behandlere skal kunne opprette klinikker og knytte andre behandlere til klinikken.
+                                  </div>
+                              </motion.div>
+                          }
+                      </AnimatePresence>
+                  </div>
+                  
+                  <div className="feature-rad" onClick={() => handleOpenRad(9)} >
+                      <div className="feature-navn" >
+                          <ChevronDown size={24}
+                              className={`feature-chevron ${visRad === 9 ? "feature-chevron-open" : ""}`}
+                          />
+                          <div>Behandler rating</div>
+                      </div>
+                      <div className="feature-status">
+                          <Circle className="feature-status-planned" size={24} />
+                          <div>Kommer</div>
+                      </div>
+                      <AnimatePresence>
+                          {visRad === 9 &&
+                              <motion.div
+                                  className="feature-detaljer"
+                                  initial={{ height: 0 }}
+                                  animate={{ height: bounds.height }}
+                                  exit={{ height: 0 }}
+                              >
+                                  <div className="feature-inner-detaljer" ref={ref}>
                                       Brukere kan gi stjernerating til behandlere basert på sin opplevelse etter gjennomført time med status gjennomført. Dette gir et enkelt og oversiktlig grunnlag for å vurdere kvalitet og erfaring før booking.
+                                  </div>
+                              </motion.div>
+                          }
+                      </AnimatePresence>
+                  </div>
+                  
+                  <div className="feature-rad" onClick={() => handleOpenRad(10)} >
+                      <div className="feature-navn" >
+                          <ChevronDown size={24}
+                              className={`feature-chevron ${visRad === 10 ? "feature-chevron-open" : ""}`}
+                          />
+                          <div>Admin side</div>
+                      </div>
+                      <div className="feature-status">
+                          <Circle className="feature-status-planned" size={24} />
+                          <div>Kommer</div>
+                      </div>
+                      <AnimatePresence>
+                          {visRad === 10 &&
+                              <motion.div
+                                  className="feature-detaljer"
+                                  initial={{ height: 0 }}
+                                  animate={{ height: bounds.height }}
+                                  exit={{ height: 0 }}
+                              >
+                                  <div className="feature-inner-detaljer" ref={ref}>
+                                      Egen side for brukere med admin tilgang. Her kan de administrere brukere, timer, klinikker og få full oversikt over appens innhold. En komplett søkefunksjon som henter og administrerer backend data.
                                   </div>
                               </motion.div>
                           }
