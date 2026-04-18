@@ -118,10 +118,13 @@ body {
   gap: 10px;
   font-weight: 300;
   font-size: 1rem;
-
   border-top: 2px solid transparent;
-  border-bottom: 2px dotted rgba(0, 0, 0, 0.1);
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.05);
   transition: all .25s ease;
+}
+
+.navbar-links:last-child {
+  border-bottom: none
 }
 
 .navbar-links.active {
@@ -812,10 +815,14 @@ transition: box-shadow 0.3s ease;
     inset 0 -20px 20px -20px rgba(0, 0, 0, 0.4);
 }
 
-.diagonal .wrapper {
+.diagonal .wrapper-hero {
   display: grid;
   grid-template-columns: 1fr 250px;
   align-items: center;
+}
+
+.diagonal-hero-container {
+  justify-self: center;
 }
 
 .section-title {
@@ -825,6 +832,7 @@ transition: box-shadow 0.3s ease;
 
 .section-tekst {
   font-weight: 200;
+  max-width: 800px;
 }
 
 .figur-placeholder {
@@ -862,10 +870,16 @@ transition: box-shadow 0.3s ease;
 
 /* About isometric */
 
+.about-section-wrapper {
+  margin: 6rem 2rem;
+}
+
 .about-section {
   display: flex;
   align-items: center;
-  margin: 8rem 2rem 5rem 2rem;
+  justify-content: start;
+  margin: 0 auto;
+  max-width: 1000px;
   gap: 2rem;
 }
 
@@ -914,6 +928,13 @@ transition: box-shadow 0.3s ease;
 } */
 
 /* About featureliste */ 
+
+.feature-badge-200 {
+  display:block;
+  margin: 0 auto;
+  width: 100px;
+  margin-bottom: 1rem;
+}
 
 .feature-liste-topp-overskrift {
   font-weight: 400;
@@ -1026,12 +1047,19 @@ transition: box-shadow 0.3s ease;
 }
 
 /* ABOUT Behandlere visning */ 
+.about-behandlere-topp-overskrift {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-off-black);
+}
+
 .about-behandlere-overskrift {
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 900;
-  color: var(--text-off-black)
+  color: var(--text-off-black);
 }
 
 .about-behandlere-grid-wrapper {
@@ -1304,7 +1332,7 @@ dialog.slett-profil-modal[open] {
 /*   border-bottom: 5px solid rgb(0, 0, 0); */
 }
 
-dialog.slett-profil-modal::after {
+/* dialog.slett-profil-modal::after {
   content:"";
   background-image:
   linear-gradient(15deg,
@@ -1317,8 +1345,8 @@ dialog.slett-profil-modal::after {
   position: absolute;
   top: 30%;
   z-index: -1;
-  /* animation: skewAnimation 15s ease-in-out infinite alternate; */
-}
+  animation: skewAnimation 15s ease-in-out infinite alternate;
+} */
 
 @keyframes skewAnimation {
   from { transform: skewY(-5deg); }
@@ -1335,9 +1363,10 @@ dialog.slett-profil-modal::after {
 .slett-profil-modal .slett-btn {
   color: white;
   background-color: rgb(255, 0, 0);
-  padding: 5px 20px;
+  padding: 10px 20px;
   border-radius: 25px;
   cursor: pointer;
+  width: 100%;
 }
 
 .slett-profil-modal .slett-btn span {
@@ -1351,7 +1380,7 @@ dialog.slett-profil-modal::after {
 }
 
 .slett-profil-modal .avbryt-btn:hover {
-  color: red;
+  color: black;
 }
 
 .lukk-modal {

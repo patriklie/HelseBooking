@@ -88,7 +88,7 @@ const Navbar = () => {
 
           <NavLink to="/profil" className="navbar-links" onClick={() => SetIsOpen(false)}>
             <CircleUserRound style={{ pointerEvents: "none" }} size={24} strokeWidth={1.2}/>
-            <span>Profil</span>
+            <span>{username || "Profil"}</span>
           </NavLink>
           </>
           }

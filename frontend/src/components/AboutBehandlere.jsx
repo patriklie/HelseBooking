@@ -22,7 +22,8 @@ const AboutBehandlere = () => {
       <>
           
           <div className="about-behandlere-grid-wrapper">
-            <div className="about-behandlere-overskrift" >Møt fagpersonene</div>
+            <div className="about-behandlere-topp-overskrift">Møt HelseBooking sine</div>
+            <div className="about-behandlere-overskrift">fagpersoner</div>
             <div className="about-behandlere-grid">
           
             {
