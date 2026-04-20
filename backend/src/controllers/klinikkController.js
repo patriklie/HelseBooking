@@ -4,8 +4,6 @@ import { Klinikk } from "../models/Klinikk.js";
 import mongoose from "mongoose";
 
 
-
-
 export const opprettKlinikk = async (req, res) => {
     try {
         const { id } = req.user;
@@ -32,6 +30,30 @@ export const opprettKlinikk = async (req, res) => {
         
         res.status(201).json({ message: `Ny klinikk opprettet ${opprettetKlinikk.navn}`})
 
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
+
+
+export const hentAlleKlinikker = async (req, res) => {
+    try {
+        const alleKlinikker = await Klinikk.find()
+            .populate("opprettetAv", "navn email")
+            .populate("behandlere", "navn email")
+        res.status(200).json(alleKlinikker)
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
+
+export const slettKlinikk = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const slettetKlinikk = await Klinikk.findByIdAndDelete(id)
+        if (!slettetKlinikk) return res.status(404).json({ message: "Fant ingen klinikk å slette." });
+
+        res.status(200).json({ message: `Slettet ${slettetKlinikk.navn}.` })
     } catch (error) {
         res.status(500).json({ message: error.message });
     }

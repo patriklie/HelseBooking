@@ -11,7 +11,7 @@ import {
 } from '@geoapify/react-geocoder-autocomplete';
 
 
-const DrawerOpprettKlinikk = ({ closeDrawer }) => {
+const DrawerOpprettKlinikk = ({ closeDrawer, oppdaterKlinikker }) => {
     
     const y = useMotionValue(0);
     const swipeAvstand = 150;
@@ -57,6 +57,7 @@ const DrawerOpprettKlinikk = ({ closeDrawer }) => {
                 longitude: null,
             })
             setResetKey((prev) => prev + 1);
+            oppdaterKlinikker();
             handleClose();
             toast.success(response.data.message);
         } catch (error) {

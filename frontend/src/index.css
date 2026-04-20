@@ -1666,6 +1666,23 @@ dialog.slett-profil-modal[open] {
 
 /* Klinikk JSX */
 
+.opprett-klinikk-btn {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: rgb(212, 212, 212);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.404);
+  cursor: pointer;
+}
+
+/* KlinikkKort.jsx */
+
+/* Klinikk Form inni drawer nå */
+
 .klinikk-form-container {
   width: 100%;
   max-width: 500px;
