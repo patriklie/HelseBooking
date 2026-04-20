@@ -1,7 +1,7 @@
 import { motion, useTransform, useMotionValue, animate } from "motion/react"
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Hospital, HospitalIcon, Map, Plus } from "lucide-react";
+import { Hospital, Map } from "lucide-react";
 import { useAppStore } from "../store/authStore";
 import toast from "react-hot-toast";
 import '@geoapify/geocoder-autocomplete/styles/minimal.css';
@@ -11,7 +11,7 @@ import {
 } from '@geoapify/react-geocoder-autocomplete';
 
 
-const DrawerOpprettKlinikk = ({ closeDrawer, oppdaterKlinikker }) => {
+const DrawerRedigerKlinikk = ({ klinikk: klinikkData, closeDrawer, oppdaterKlinikker, slettKlinikk }) => {
     
     const y = useMotionValue(0);
     const swipeAvstand = 150;
@@ -19,10 +19,11 @@ const DrawerOpprettKlinikk = ({ closeDrawer, oppdaterKlinikker }) => {
     const token = useAppStore((state) => state.token);
     const [resetKey, setResetKey] = useState(0);
     const [klinikk, setKlinikk] = useState({
-        navn: "",
-        adresse: "",
-        latitude: null,
-        longitude: null,
+        navn: klinikkData.navn,
+        adresse: klinikkData.adresse,
+        latitude: klinikkData.latitude,
+        longitude: klinikkData.longitude,
+        behandlere: klinikkData.behandlere
     })
     
     const handleClose = () => {
@@ -42,26 +43,27 @@ const DrawerOpprettKlinikk = ({ closeDrawer, oppdaterKlinikker }) => {
     const handleKlinikk = (e) => {
         setKlinikk({ ...klinikk, [e.target.name]: e.target.value })
     }
+    
+    const handleSlett = async () => {
+        await slettKlinikk(klinikkData._id);
+        handleClose();
+    }
 
-    const opprettKlinikk = async (e) => {
+    const oppdaterKlinikk = async (e) => {
         e.preventDefault();
 
         try {
-            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/klinikk`, klinikk, {
+            console.log(klinikk)
+            console.log(klinikkData._id)
+            const response = await axios.patch(`${import.meta.env.VITE_API_URL}/api/klinikk/${klinikkData._id}`, klinikk, {
                 headers: { Authorization: `Bearer ${token}` }
-            })
-            setKlinikk({
-                navn: "",
-                adresse: "",
-                latitude: null,
-                longitude: null,
             })
             setResetKey((prev) => prev + 1);
             oppdaterKlinikker();
             handleClose();
             toast.success(response.data.message);
         } catch (error) {
-            toast.error(error.response?.data?.message || "Noe gikk galt ved oppretting av klinikk");
+            toast.error(error.response?.data?.message || "Noe gikk galt ved redigering av klinikk");
         }
     }
 
@@ -79,7 +81,7 @@ const DrawerOpprettKlinikk = ({ closeDrawer, oppdaterKlinikker }) => {
     return (
     <>
         <motion.div
-            className="opprett-klinikk-drawer-overlay"
+            className="rediger-klinikk-drawer-overlay"
             onClick={handleClose}
             style={{ opacity: overlayOpacity }}
         >
@@ -87,7 +89,7 @@ const DrawerOpprettKlinikk = ({ closeDrawer, oppdaterKlinikker }) => {
         </motion.div>
             
         <motion.div
-            className="opprett-klinikk-drawer-panel"
+            className="rediger-klinikk-drawer-panel"
             drag="y"
             style={{ y }}
             dragElastic={0.1}
@@ -101,27 +103,27 @@ const DrawerOpprettKlinikk = ({ closeDrawer, oppdaterKlinikker }) => {
             }}
             
             >
-            <div className="opprett-klinikk-drawer-drag-wrapper">
-                <div className="opprett-klinikk-drawer-drag"></div>
+            <div className="rediger-klinikk-drawer-drag-wrapper">
+                <div className="rediger-klinikk-drawer-drag"></div>
             </div>
 
-            <form className="klinikk-form-container" onSubmit={opprettKlinikk}>
+            <form className="rediger-klinikk-form-container" onSubmit={oppdaterKlinikk}>
 
-                <div className="klinikk-input-container">
+                <div className="rediger-klinikk-input-container">
                     <label htmlFor="navn">Klinikknavn</label>
-                    <div className="klinikk-input-wrapper">
-                        <Hospital className="klinikk-input-icon" size={18} color="grey" strokeWidth={1.5} />
+                    <div className="rediger-klinikk-input-wrapper">
+                        <Hospital className="rediger-klinikk-input-icon" size={18} color="grey" strokeWidth={1.5} />
                         <input type="text" value={klinikk.navn} onChange={handleKlinikk} id="navn" name="navn" placeholder="Klinikknavn" required />
                     </div>
                 </div>
 
-                <div className="klinikk-input-container">
+                <div className="rediger-klinikk-input-container">
                     <label htmlFor="dato">Adresse</label>
-                    <div className="klinikk-input-wrapper">
-                        <Map className="klinikk-input-icon" size={18} color="grey" strokeWidth={1.5} />
+                    <div className="rediger-klinikk-input-wrapper">
+                        <Map className="rediger-klinikk-input-icon" size={18} color="grey" strokeWidth={1.5} />
                         <GeoapifyContext apiKey={import.meta.env.VITE_GEOAPIFY_API_KEY}>
                             <GeoapifyGeocoderAutocomplete
-                                placeholder="Søk etter adresse"
+                                placeholder={klinikkData.adresse}
                                 lang="no"
                                 key={resetKey}
                                 limit={8}
@@ -139,11 +141,18 @@ const DrawerOpprettKlinikk = ({ closeDrawer, oppdaterKlinikker }) => {
                 whileTap={{ scale: 1 }}
                 transition={{ type: "spring", stiffness: 200, damping: 17 }}
                 type="submit"
-                className="klinikk-opprett-btn">
-                    <div>Opprett Klinikk</div>
+                className="rediger-klinikk-btn">
+                    <div>Oppdater Klinikk</div>
                     <Hospital strokeWidth={1.5} size={20} />
-                    <Plus className="klinikk-opprett-btn-icon-plus" size={16} strokeWidth={3} />
                 </motion.button>
+                    
+                    <motion.button
+                        type="button"
+                        className="slett-klinikk-btn"
+                        onClick={handleSlett}
+                    >
+                    Slett klinikk
+                    </motion.button>    
 
             </form>
            
@@ -153,4 +162,4 @@ const DrawerOpprettKlinikk = ({ closeDrawer, oppdaterKlinikker }) => {
   )
 }
 
-export default DrawerOpprettKlinikk;
+export default DrawerRedigerKlinikk;

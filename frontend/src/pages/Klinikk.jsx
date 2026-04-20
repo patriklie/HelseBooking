@@ -6,12 +6,21 @@ import axios from "axios";
 import { useAppStore } from "../store/authStore.js";
 import KlinikkKort from "../components/KlinikkKort.jsx";
 import toast from "react-hot-toast";
+import DrawerRedigerKlinikk from "../components/DrawerRedigerKlinikk.jsx";
 
 const Klinikk = () => {
   
-  const [showOpprettKlinikkDrawer, setShowOpprettKlinikkDrawer] = useState(false);
-  const [klinikker, setKlinikker] = useState([]);
   const token = useAppStore((state) => state.token);
+  const [showOpprettKlinikkDrawer, setShowOpprettKlinikkDrawer] = useState(false);
+  const [showRedigerKlinikkDrawer, setShowRedigerKlinikkDrawer] = useState(false);
+  const [klinikker, setKlinikker] = useState([]);
+  const [valgtKlinikk, setValgtKlinikk] = useState(null);
+  const [openCard, setOpenCard] = useState(false);
+  const [alleBehandlere, setAlleBehandlere] = useState([]);
+  
+  const toggleBehandlere = (klinikkId) => {
+    setOpenCard(openCard === klinikkId ? null : klinikkId)
+  }
   
   const hentAlleKlinikker = async () => {
     try {
@@ -27,6 +36,51 @@ const Klinikk = () => {
     }
   }
   
+  const hentAlleBehandlere = async () => {
+    try {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/users/behandlere/enkel`, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      })
+      setAlleBehandlere(response.data);
+      console.log("Hent alle behandlere: ", response.data)
+
+    } catch (error) {
+      console.log(error?.response?.data?.message)
+    }
+  }
+  
+  const slettBehandlerFraKlinikk = async (klinikkId, behandlerId ) => {
+    try {
+      const response = await axios.delete(`${import.meta.env.VITE_API_URL}/api/klinikk/${klinikkId}/behandler/${behandlerId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      })
+      hentAlleKlinikker()
+      toast.success(response?.data?.message);
+    } catch (error) {
+      toast.error(error?.response?.data?.message)
+    }
+  }
+  
+  const leggTilBehandlerKlinikk = async (klinikkId, behandlerId) => {
+    try {
+      console.log("KlinikkId: ", klinikkId, "behandlerId: ", behandlerId)
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/klinikk/${klinikkId}/behandler`, { behandlerId }, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+      hentAlleKlinikker();
+      toast.success(response?.data?.message)
+      
+    } catch (error) {
+      toast.error(error?.response?.data?.message)
+    }
+  }
+  
   const slettKlinikk = async (id) => {
     try {
       const response = await axios.delete(`${import.meta.env.VITE_API_URL}/api/klinikk/${id}`, {
@@ -36,14 +90,19 @@ const Klinikk = () => {
       });
       hentAlleKlinikker()
       toast.success(response?.data?.message)
+      closeRedigerKlinikkDrawer();
       
     } catch (error) {
-      console.log(error?.response?.data?.message)
+      toast.error(error?.response?.data?.message)
     }
   }
   
   useEffect(() => {
     hentAlleKlinikker();
+  }, [])
+  
+  useEffect(() => {
+    hentAlleBehandlere();
   }, [])
   
   const openDrawer = () => {
@@ -55,21 +114,39 @@ const Klinikk = () => {
     console.log("Lukker drawer for opprett klinikk");
     setShowOpprettKlinikkDrawer(false);
   }
+  
+  const openRedigerKlinikkDrawer = (klinikk) => {
+    setValgtKlinikk(klinikk)
+    setShowRedigerKlinikkDrawer(true);
+  }
+  
+  const closeRedigerKlinikkDrawer = () => {
+    setValgtKlinikk(null);
+    setShowRedigerKlinikkDrawer(false);
+  }
 
     return (
       <>
-        <div className="opprett-klinikk-btn" onClick={openDrawer}>
+        <div className="open-klinikk-opprett-btn" onClick={openDrawer}>
           <div>Opprett Klinikk</div>
           <Hospital size={ 50 } strokeWidth={1} />
         </div>
         
-        
-        {klinikker.map((klinikk) => {
-          return <KlinikkKort key={klinikk._id} klinikk={klinikk} slettKlinikk={slettKlinikk} />
-        })}
+        <div className="klinikk-kort-wrapper">
+          <div className="klinikk-kort-container">
+            {klinikker.map((klinikk) => {
+              return <KlinikkKort key={klinikk._id} klinikk={klinikk} slettKlinikk={slettKlinikk} openRedigerKlinikkDrawer={openRedigerKlinikkDrawer} visBehandlere={openCard === klinikk._id} slettBehandlerFraKlinikk={slettBehandlerFraKlinikk} leggTilBehandlerKlinikk={leggTilBehandlerKlinikk} toggleBehandlere={toggleBehandlere} alleBehandlere={alleBehandlere} />
+            })}
+          </div>
+        </div>
         
         {showOpprettKlinikkDrawer && 
           <DrawerOpprettKlinikk closeDrawer={closeDrawer} oppdaterKlinikker={hentAlleKlinikker} />
+        }
+        
+        {showRedigerKlinikkDrawer &&
+          <DrawerRedigerKlinikk closeDrawer={closeRedigerKlinikkDrawer} slettKlinikk={slettKlinikk} klinikk={valgtKlinikk} oppdaterKlinikker={hentAlleKlinikker} />
+        
         }
         
       </>

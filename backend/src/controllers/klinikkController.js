@@ -39,21 +39,77 @@ export const opprettKlinikk = async (req, res) => {
 export const hentAlleKlinikker = async (req, res) => {
     try {
         const alleKlinikker = await Klinikk.find()
-            .populate("opprettetAv", "navn email")
-            .populate("behandlere", "navn email")
+            .populate("opprettetAv", "username email")
+            .populate("behandlere", "username email")
         res.status(200).json(alleKlinikker)
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 }
 
+
+// Ikke så elegant men sletter alle timer tilhørende en klinikk når man sletter tilhørende klinikk.
 export const slettKlinikk = async (req, res) => {
     try {
         const { id } = req.params;
-        const slettetKlinikk = await Klinikk.findByIdAndDelete(id)
+
+        const slettetKlinikk = await Klinikk.findByIdAndDelete(id);
         if (!slettetKlinikk) return res.status(404).json({ message: "Fant ingen klinikk å slette." });
+        
+        await Time.deleteMany({ klinikk: id });
 
         res.status(200).json({ message: `Slettet ${slettetKlinikk.navn}.` })
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
+
+
+// Her redigerer vi alt bortsett fra behandlere lager eget endpoint for det.
+export const redigerKlinikk = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { navn, adresse, latitude, longitude } = req.body;
+
+        if (!navn || !adresse || !latitude || !longitude) return res.status(400).json({ message: "Mangler klinikkinfo." });
+
+        const klinikk = await Klinikk.findByIdAndUpdate(id, { navn, adresse, latitude, longitude }, { returnDocument: "after", runValidators: true });
+        if (!klinikk) return res.status(404).json({ message: "Fant ingen klinikk." })
+        
+        return res.status(200).json({ klinikk, message: `Oppdatert klinikk ${klinikk.navn}` });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
+
+export const leggTilBehandler = async (req, res) => {
+    try {
+        const { id: klinikkId } = req.params;
+        const { behandlerId } = req.body;
+
+        if (!klinikkId) return res.status(400).json({ message: "Klinikk ID mangler." })
+        if (!behandlerId) return res.status(400).json({ message: "Behandler ID mangler." })
+        
+        const klinikk = await Klinikk.findByIdAndUpdate(klinikkId, { $addToSet: { behandlere: behandlerId } }, { returnDocument: "after" });
+        if (!klinikk) return res.status(404).json({ message: "Fant ingen klinikk" });
+        
+        return res.status(200).json({ klinikk, message: "Lagt til behandler" })
+
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
+
+export const fjernBehandler = async (req, res) => {
+    try {
+        const { id, behandlerId } = req.params;
+        if (!id) return res.status(400).json({ message: "Klinikk ID mangler." });
+        if (!behandlerId) return res.status(400).json({ message: "Behandler Id mangler." });
+
+        const fjernetBehandlerKlinikk = await Klinikk.findByIdAndUpdate(id, { $pull: { behandlere: behandlerId } }, { returnDocument: "after" });
+        if (!fjernetBehandlerKlinikk) return res.status(404).json({ message: "Fant ingen klinikk." });
+        return res.status(200).json({ fjernetBehandlerKlinikk, message: `Fjernet behandler` })
+
     } catch (error) {
         res.status(500).json({ message: error.message });
     }

@@ -205,3 +205,12 @@ export const hentAllePasienter = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 }
+
+export const getAlleBehandlereEnkel = async (req, res) => {
+    try {
+        const behandlere = await User.find({ role: "behandler" }).select("username _id");
+        res.status(200).json(behandlere);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
