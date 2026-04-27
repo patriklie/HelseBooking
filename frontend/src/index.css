@@ -80,7 +80,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99999;
+  z-index: 99;
   user-select: none;
 }
 
@@ -725,12 +725,12 @@ transition: box-shadow 0.3s ease;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   border: 1px solid rgb(212, 212, 212);
-  padding: 10px;
+  padding: 1rem;
   color: #444444;
   font-size: 0.8rem;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 5px;
+  gap: .5rem;
   transition: border 0.25s ease;
 }
 
@@ -763,6 +763,10 @@ transition: box-shadow 0.3s ease;
   background: var(--primary-color);
   border-radius: 3px;
   padding: 3px 20px;
+}
+
+.time-flex-status::first-letter {
+  text-transform: capitalize;
 }
 
 /* Skillelinje Styling */
@@ -1186,7 +1190,7 @@ dialog.time-booking-modal[open] {
   border: none;
   border-radius: 20px;
   padding: 0 40px 20px 40px;
-  width: clamp(200px, 90%, 400px);
+  width: clamp(200px, 90%, 500px);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1197,6 +1201,16 @@ dialog::backdrop {
   background-color: rgba(0, 8, 32, 0.644);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
+}
+
+/* MODAL map container */
+
+.time-booking-map-container {
+  height: 150px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1rem;
+  z-index: 0;
 }
 
 .modal-book-btn {
@@ -1548,7 +1562,7 @@ dialog.slett-profil-modal[open] {
   background-color: var(--primary-color);
 }
 
-/* MineTimerPage Behandler Drawer */
+/* MineTimerPage Behandler Drawer ENDRE TIME */
 
 .time-drawer-overlay {
   position: fixed;
@@ -1567,8 +1581,7 @@ dialog.slett-profil-modal[open] {
   border-radius: 10px 10px 0 0;
   padding: 1rem 2rem;
   bottom: -10%;
-/*   height: 90%; */
-  height: 600px;
+  height: 90%;
   width: 100vw;
   background: white;
   z-index: 101;
@@ -2192,7 +2205,13 @@ dialog.slett-profil-modal[open] {
   color: rgb(155, 155, 155);
 } */
 
-
+.rediger-klinikk-map-container {
+  height: 300px;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1rem;
+  z-index: 0;
+}
 
 
 @media (max-width: 850px) {

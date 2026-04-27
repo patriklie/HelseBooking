@@ -44,7 +44,7 @@ const KlinikkKort = ({ klinikk, openRedigerKlinikkDrawer, visBehandlere, toggleB
             <div>{adresse}</div>
           </Popup>
         </Marker>
-        <FlyttKart latitude={latitude} longitude={longitude} />
+        <FlyttKart latitude={latitude} longitude={longitude} zoom={13} />
       </MapContainer>
       
       <div className="klinikk-kort-behandlere-container">
@@ -91,7 +91,6 @@ const KlinikkKort = ({ klinikk, openRedigerKlinikkDrawer, visBehandlere, toggleB
             
 
             <div className="klinikk-kort-behandler-liste">
-            
             
             {behandlere.map((behandler) => {
             const thumbnailUrl = behandler.profilbilde?.replace("/upload/", "/upload/w_48,h_48,c_fill/");

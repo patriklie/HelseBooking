@@ -185,7 +185,7 @@ const MineTimerPage = () => {
       </AnimatePresence>
       
         {showTimeDrawer &&
-          <DrawerEndretime time={valgtEndreTime} closeBehandlerTime={closeBehandlerTime} hentBehandlerTimer={hentBehandlerTimer} slettTime={slettTime} />
+          <DrawerEndretime time={valgtEndreTime} closeBehandlerTime={closeBehandlerTime} hentBehandlerTimer={hentBehandlerTimer} slettTime={slettTime} klinikker={klinikker} />
         }
         
       </>

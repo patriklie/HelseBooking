@@ -1,4 +1,4 @@
-import { Clock, Info, User, Wallet } from "lucide-react";
+import { Clock, Hospital, Info, Map, MapPin, User, Wallet } from "lucide-react";
 import { motion } from "motion/react";
 
 const TimeListe = ({ timerValgtDato, slettTime, onTimeKlikk, onBehandlerTimeKlikk, musepeker }) => {
@@ -12,9 +12,16 @@ const TimeListe = ({ timerValgtDato, slettTime, onTimeKlikk, onBehandlerTimeKlik
                         <div style={{ cursor: musepeker ? "pointer" : "default"  }} key={time._id} className="time-celle" onClick={ onBehandlerTimeKlikk ? () => onBehandlerTimeKlikk(time) : undefined }>
                             
                             <div className="time-top-flex">
-                                <div className="time-flex"><Clock size={12} color="#444444" /> <span>{time.startTid}</span>-<span>{time.sluttTid}</span></div>
-                                <div className="time-flex"><Info size={12} color="#444444" /> <span>{time.status}</span></div>
+                                <div className="time-flex"><Hospital size={12} color="#444444" /> <span>{time.klinikk?.navn}</span></div>
+                                <div className="time-flex"><span>{time.klinikk?.adresse?.split(",")[0]}</span><MapPin size={12} color="#444444" /> </div>
                             </div>
+                            
+                            <div className="time-top-flex">
+                                <div className="time-flex"><Clock size={12} color="#444444" /> <span>{time.startTid}</span>-<span>{time.sluttTid}</span></div>
+                                <div className="time-flex"><span className="time-flex-status">{time.status}</span> <Info size={12} color="#444444" /></div>
+                            </div>
+                            
+
                             
                             <div className="time-top-flex">
                                 <div className="time-flex"><Wallet size={12} color="#444444" /> <span>{time.pris}kr</span></div>
@@ -31,6 +38,8 @@ const TimeListe = ({ timerValgtDato, slettTime, onTimeKlikk, onBehandlerTimeKlik
                                     }}
                                     className="time-flex se-time" onClick={() => onTimeKlikk(time)}>Velg</motion.div>}
                             </div>
+                            
+
                           
                         </div>
                     )

@@ -9,6 +9,11 @@ import {
     GeoapifyContext,
     GeoapifyGeocoderAutocomplete
 } from '@geoapify/react-geocoder-autocomplete';
+import "leaflet/dist/leaflet.css";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { FlyttKart } from "./FlyttKart";
+import L from "leaflet";
+
 
 
 const DrawerRedigerKlinikk = ({ klinikk: klinikkData, closeDrawer, oppdaterKlinikker, slettKlinikk }) => {
@@ -25,6 +30,12 @@ const DrawerRedigerKlinikk = ({ klinikk: klinikkData, closeDrawer, oppdaterKlini
         longitude: klinikkData.longitude,
         behandlere: klinikkData.behandlere
     })
+    const customIcon = L.icon({
+    iconUrl: "/HelseBooking_32.png",
+    iconSize: [32, 32],   
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16]
+    });
     
     const handleClose = () => {
         animate(y, window.innerHeight, {
@@ -154,9 +165,36 @@ const DrawerRedigerKlinikk = ({ klinikk: klinikkData, closeDrawer, oppdaterKlini
                     Slett klinikk
                     </motion.button>    
 
-            </form>
-           
-        </motion.div>
+                </form>
+                
+                <MapContainer
+                    center={[klinikk.latitude, klinikk.longitude]}
+                    attributionControl={false} /* Denne legger jeg til true eller fjerner ved prodsetting  */
+                    zoom={15}
+                    className="rediger-klinikk-map-container"
+                    zoomControl={false}
+                    dragging={false}
+                    scrollWheelZoom={false}
+                    doubleClickZoom={false}
+                    touchZoom={false}
+                    >
+                    <TileLayer
+                        /* url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" */ /* Denne var kaldere også fin */
+                        url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+                    /* attribution='&copy; <a href="https://carto.com/">CARTO</a>' AKTIVER attribution linken i prodsetting */
+                    />
+                    <Marker position={[klinikk.latitude, klinikk.longitude]} icon={customIcon}>
+                        <Popup>
+                            <div style={{ fontWeight: "600" }}>{klinikk.navn}</div>
+                            <div>{klinikk.adresse}</div>
+                        </Popup>
+                    </Marker>
+                    <FlyttKart latitude={klinikk.latitude} longitude={klinikk.longitude} zoom={15} />
+                </MapContainer>
+                
+            </motion.div>
+            
+
     </>
 
   )

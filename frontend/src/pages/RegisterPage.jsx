@@ -86,12 +86,12 @@ const RegisterPage = () => {
 
           <div className="input-container">
             <UserPlus className="input-icon" size={18} color="grey" strokeWidth={1.5} />
-            <input type="text" value={nyBruker.username} name="username" onChange={handleBruker} placeholder="Patrik Lie" required />
+            <input type="text" value={nyBruker.username} name="username" onChange={handleBruker} placeholder="Navn" required />
           </div>
 
           <div className="input-container">
             <Mail className="input-icon" size={18} color="grey" strokeWidth={1.5} />
-            <input type="text" value={nyBruker.email} name="email" onChange={handleBruker} placeholder="patrik@hotmail.com" required />
+            <input type="text" value={nyBruker.email} name="email" onChange={handleBruker} placeholder="din@epost.no" required />
           </div>
 
           <div className="input-container">

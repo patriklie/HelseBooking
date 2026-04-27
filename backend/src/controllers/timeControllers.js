@@ -89,7 +89,7 @@ export const hentBehandlerTimer = async (req, res) => {
             const foundBehandlerTimer = await Time.find({ behandler: id, status }).populate("pasient", "username email");
             return res.status(200).json({ foundBehandlerTimer, message: `Fant alle timer med status ${status}.` })
         }
-        const foundAlleBehandlerTimer = await Time.find({ behandler: id }).populate("pasient", "username email");
+        const foundAlleBehandlerTimer = await Time.find({ behandler: id }).populate("pasient", "username email").populate("klinikk", "navn adresse latitude longitude");
         res.status(200).json({ foundAlleBehandlerTimer, message: "Alle behandlertimer." });
     } catch (error) {
         res.status(500).json({ message: error.message });
@@ -182,7 +182,7 @@ export const hentValgtBehandlerTimer = async (req, res) => {
         const { behandlerId: id } = req.params;
         if (!mongoose.Types.ObjectId.isValid(id)) return res.status(400).json({ message: "Ikke godkjent behandler ID." });
 
-        const valgtBehandlerTimer = await Time.find({ behandler: id, status: "ledig" }).populate("klinikk", "navn adresse").sort({ startDatoTidspunkt: 1 })
+        const valgtBehandlerTimer = await Time.find({ behandler: id, status: "ledig", startDatoTidspunkt: { $gt: new Date() } }).populate("klinikk", "navn adresse latitude longitude").sort({ startDatoTidspunkt: 1 })
         res.status(200).json({ message: "Hentet alle ledige timer på valgt behandler.", valgtBehandlerTimer })
 
     } catch (error) {
@@ -193,7 +193,7 @@ export const hentValgtBehandlerTimer = async (req, res) => {
 export const endreTime = async (req, res) => {
 
     try {
-        const { dato, startTid, sluttTid, pris, pasientID } = req.body;
+        const { dato, startTid, sluttTid, pris, pasientID, klinikk } = req.body;
         const { id: timeID } = req.params;
         const { id: behandlerID } = req.user;
 
@@ -233,7 +233,7 @@ export const endreTime = async (req, res) => {
 
         const nyStatus = pasientID ? "booket" : "ledig";
 
-        const endretTime = await Time.findByIdAndUpdate(timeID, { dato, startTid, sluttTid, startDatoTidspunkt, sluttDatoTidspunkt, pris, pasient: pasientID || null, status: nyStatus }, { returnDocument: "after" })
+        const endretTime = await Time.findByIdAndUpdate(timeID, { dato, startTid, sluttTid, startDatoTidspunkt, sluttDatoTidspunkt, pris, pasient: pasientID || null, status: nyStatus, klinikk }, { returnDocument: "after" })
         res.status(200).json({ message: "Oppdatert timen.", endretTime })
 
     } catch (error) {

@@ -1,13 +1,14 @@
 import { motion, useTransform, useMotionValue, animate } from "motion/react"
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
-import { Calendar1, Clock, ClockCheck, Wallet, CalendarClock, User, Mail, Trash } from "lucide-react";
+import { Calendar1, Clock, ClockCheck, Wallet, CalendarClock, User, Mail, Trash, Hospital } from "lucide-react";
 import { useAppStore } from "../store/authStore";
 import toast from "react-hot-toast";
 
 
-const DrawerEndretime = ({ time, closeBehandlerTime, hentBehandlerTimer, slettTime }) => {
+const DrawerEndretime = ({ time, closeBehandlerTime, hentBehandlerTimer, slettTime, klinikker }) => {
     
+    console.log(time);
     const y = useMotionValue(0);
     const swipeAvstand = 150;
     const overlayOpacity = useTransform(y, [0, swipeAvstand], [1, 0]);
@@ -22,7 +23,8 @@ const DrawerEndretime = ({ time, closeBehandlerTime, hentBehandlerTimer, slettTi
         startTid: time.startTid || "",
         sluttTid: time.sluttTid || "",
         pris: time.pris || "",
-        pasientID: time.pasient?._id || ""
+        pasientID: time.pasient?._id || "",
+        klinikk: time.klinikk._id || ""
     })
     
     const valgtPasient = allePasienter.find(p => p._id === endretTime.pasientID);
@@ -114,58 +116,69 @@ const DrawerEndretime = ({ time, closeBehandlerTime, hentBehandlerTimer, slettTi
             </div>
 
             <form className="form-container drawer-form" onSubmit={endreTime}>
-                    <div className="drawer-form-overskrift colspan-2">Endre time</div>
+                
+                <div className="drawer-form-overskrift colspan-2">Endre time</div>
                     
-                    <div className="input-container drawer-input">
+                <div className="input-container drawer-input">
                     <label htmlFor="dato">Dato</label>
                     <div className="input-wrapper">
                         <Calendar1 className="input-icon" size={18} color="grey" strokeWidth={1.5} onClick={() => dateInputRef.current.showPicker()} />
                         <input type="date" ref={dateInputRef} value={endretTime.dato} onChange={handleTime} id="dato" name="dato" placeholder="dato" required />
                     </div>
-                    </div>
+                </div>
                     
-                    <div className="input-container drawer-input">
-                        <label htmlFor="pris">Pris</label>
-                        <div className="input-wrapper">
-                            <Wallet className="input-icon" size={18} color="grey" strokeWidth={1.5} />
-                            <input type="number" id="pris" name="pris" value={endretTime.pris} onChange={handleTime} min={0} placeholder="NOK / Timepris" required />
-                        </div>
+                <div className="input-container drawer-input">
+                    <label htmlFor="pris">Pris</label>
+                    <div className="input-wrapper">
+                        <Wallet className="input-icon" size={18} color="grey" strokeWidth={1.5} />
+                        <input type="number" id="pris" name="pris" value={endretTime.pris} onChange={handleTime} min={0} placeholder="NOK / Timepris" required />
                     </div>
+                </div>
 
-                    <div className="input-container drawer-input">
+                <div className="input-container drawer-input">
                     <label htmlFor="startTid">Starttid</label>
                     <div className="input-wrapper">
                         <Clock className="input-icon" size={18} color="grey" strokeWidth={1.5} onClick={() => timeInputStartRef.current.showPicker()} />
-                            <input ref={timeInputStartRef} value={endretTime.startTid} onChange={handleTime} type="time" id="startTid" name="startTid" placeholder="start tid" required />
+                        <input ref={timeInputStartRef} value={endretTime.startTid} onChange={handleTime} type="time" id="startTid" name="startTid" placeholder="start tid" required />
                     </div>
                 </div>
 
-                    <div className="input-container drawer-input">
+                <div className="input-container drawer-input">
                     <label htmlFor="sluttTid">SluttTid</label>
                     <div className="input-wrapper">
                         <ClockCheck className="input-icon" size={18} color="grey" strokeWidth={1.5} onClick={() => timeInputStopRef.current.showPicker()} />
-                            <input ref={timeInputStopRef} value={endretTime.sluttTid} onChange={handleTime} type="time" id="sluttTid" name="sluttTid" placeholder="slutt tid" required />
+                        <input ref={timeInputStopRef} value={endretTime.sluttTid} onChange={handleTime} type="time" id="sluttTid" name="sluttTid" placeholder="slutt tid" required />
                     </div>
                 </div>
-
-
-                    
-                    <div className="input-container drawer-input colspan-2">
-                        <label htmlFor="pasientID">Pasient</label>
-                        <div className="input-wrapper">
-                            <User className="input-icon" size={18} color="grey" strokeWidth={1.5} />
-                            {   valgtPasient &&
-                                <Mail className="drawer-form-contact" strokeWidth={1.5} onClick={() => window.location.href = `mailto:${valgtPasient.email}`} />}
-                            <select id="pasientID" name="pasientID" value={endretTime.pasientID} onChange={handleTime}>
-                                <option value="">Ingen pasient</option>
-                                {allePasienter.map(pasient => (
-                                    <option key={pasient._id} value={pasient._id}>
-                                        {pasient.username}
-                                    </option>
-                                ))}
-                            </select>
-                        </div>
+  
+                <div className="input-container drawer-input colspan-2">
+                    <label htmlFor="pasientID">Pasient</label>
+                    <div className="input-wrapper">
+                        <User className="input-icon" size={18} color="grey" strokeWidth={1.5} />
+                        {   valgtPasient &&
+                            <Mail className="drawer-form-contact" strokeWidth={1.5} onClick={() => window.location.href = `mailto:${valgtPasient.email}`} />}
+                        <select id="pasientID" name="pasientID" value={endretTime.pasientID} onChange={handleTime}>
+                            <option value="">Ingen pasient</option>
+                            {allePasienter.map(pasient => (
+                                <option key={pasient._id} value={pasient._id}>
+                                    {pasient.username}
+                                </option>
+                            ))}
+                        </select>
                     </div>
+                </div>
+                    
+                <div className="input-container drawer-input colspan-2">
+                    <label htmlFor="klinikk">Klinikk</label>
+                    <div className="input-wrapper">
+                        <Hospital className="input-icon" size={18} color="grey" strokeWidth={1.5} />
+                            <select value={endretTime.klinikk} onChange={handleTime} type="text" id="klinikk" name="klinikk" placeholder="klinikk" required >
+                                {klinikker.map((klinikk) => {
+                                    return <option value={klinikk._id} key={klinikk._id}>{klinikk.navn}</option>
+                                })}
+                            </select>
+                    </div>
+                </div>    
 
                 <motion.button
                     whileHover={{ scale: 1.05 }}

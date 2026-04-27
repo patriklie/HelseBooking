@@ -36,7 +36,7 @@ const OpprettTimeSkjema = ({ hentBehandlerTimer, mineKlinikker }) => {
         })
       
       toast.success(response.data.message);
-      setTime({ dato: "", startTid: "", sluttTid: "", pris: "" })
+      setTime({ dato: "", startTid: "", sluttTid: "", pris: "", klinikk: "" })
       hentBehandlerTimer();
     } catch (error) {
       toast.error(error.response?.data?.message || "Noe gikk galt");

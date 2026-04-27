@@ -63,12 +63,12 @@ const LoginPage = () => {
           
           <div className="input-container">
             <Mail className="input-icon" size={18} color="grey" strokeWidth={1.5} />
-            <input type="text" onChange={(e) => setEpost(e.target.value)} value={epost} id="epost" placeholder="patrik@hotmail.com" required />
+            <input type="text" onChange={(e) => setEpost(e.target.value)} value={epost} id="epost" placeholder="din@epost.no" required />
           </div>
           
           <div className="input-container">
             <LockKeyhole className="input-icon" size={18} color="grey" strokeWidth={1.5} />
-            <input type={ visPassord ? "text" : "password"} onChange={(e) => setPassord(e.target.value)} value={passord} id="passord" placeholder="passord" required />
+            <input type={ visPassord ? "text" : "password"} onChange={(e) => setPassord(e.target.value)} value={passord} id="passord" placeholder="Passord" required />
             <PassordIkon className="input-icon-right" size={18} strokeWidth={1.5} onClick={() => setVisPassord(!visPassord)} />
           </div>
           <div className="form-no-bruker">Har du ikke bruker? Registrer <Link to="/register">her</Link></div>

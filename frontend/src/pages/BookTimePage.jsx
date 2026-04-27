@@ -12,6 +12,8 @@ import Kalender from "../components/Kalender.jsx";
 import TimeListe from "../components/TimeListe.jsx";
 import { motion, AnimatePresence } from "motion/react";
 import Skillelinje from "../components/Skillelinje.jsx";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
 
 const BookTimePage = () => {
   const token = useAppStore((state) => state.token);
@@ -29,10 +31,19 @@ const BookTimePage = () => {
   const unikeBehandlerTyper = ["Alle", ...typer];
   const behandlereFiltrert = valgtBehandlerType === "Alle" ? alleBehandlere : alleBehandlere.filter((b) => b.typeBehandler === valgtBehandlerType)
 
+  const customIcon = L.icon({
+    iconUrl: "/HelseBooking_32.png",
+    iconSize: [32, 32],   
+    iconAnchor: [16, 16],
+    popupAnchor: [0, -16]
+  });
+  
   const handleTimeValg = (time) => {
     setValgtTime(time);
     dialogRef.current.showModal();
   }
+  
+  console.log("dette er timen som velges", valgtTime);
   
   const bookTime = async () => {
     try {
@@ -183,7 +194,9 @@ const BookTimePage = () => {
         )}
       </AnimatePresence > 
       
-      <dialog className="time-booking-modal" ref={dialogRef}>
+      <dialog className="time-booking-modal" ref={dialogRef} onClick={(e) => {
+        if (e.target === dialogRef.current) avbrytBooking();
+      }}>
         <div className="bilde-flex dotsdots">
           <motion.div
             whileHover={{
@@ -212,6 +225,29 @@ const BookTimePage = () => {
         
         <div className="time-booking-overskrift">Godkjenn timevalget</div>
         <div className="time-booking-tekst">{valgtTime?.dato && formatDato(valgtTime.dato)} hos {valgtBehandler?.typeBehandler} {valgtBehandler?.username}. Timen er fra {valgtTime?.startTid} til {valgtTime?.sluttTid} og koster {valgtTime?.pris}kr.</div>
+        {valgtTime &&
+          <MapContainer
+            center={[valgtTime.klinikk.latitude, valgtTime.klinikk.longitude]}
+            attributionControl={false} /* Denne legger jeg til true eller fjerner ved prodsetting  */
+            zoom={13}
+            className="time-booking-map-container"
+            zoomControl={false}
+          >
+            <TileLayer
+              /* url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" */ /* Denne var kaldere også fin */
+              url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+            /* attribution='&copy; <a href="https://carto.com/">CARTO</a>' AKTIVER attribution linken i prodsetting */
+            />
+            <Marker position={[valgtTime.klinikk.latitude, valgtTime.klinikk.longitude]} icon={customIcon}>
+              <Popup>
+                <div style={{ fontWeight: "600" }}>{valgtTime.klinikk.navn}</div>
+                <div>{valgtTime.klinikk.adresse}</div>
+              </Popup>
+            </Marker>
+
+          </MapContainer>
+        }
+
         
         {role === "pasient" ? 
           <motion.button
