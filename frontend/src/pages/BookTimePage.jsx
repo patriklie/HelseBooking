@@ -1,4 +1,5 @@
 import ProfileCard from "../components/ProfileCard.jsx";
+import Badge200 from "../assets/Badge_200.png";
 import { useAppStore } from "../store/authStore.js";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
@@ -14,6 +15,7 @@ import { motion, AnimatePresence } from "motion/react";
 import Skillelinje from "../components/Skillelinje.jsx";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
+import { Calendar1, CalendarClock, Clock, Coins, Wallet } from "lucide-react";
 
 const BookTimePage = () => {
   const token = useAppStore((state) => state.token);
@@ -30,7 +32,7 @@ const BookTimePage = () => {
   const typer = [...new Set(alleBehandlere.map((behandler) => behandler.typeBehandler))].sort((a, b) => a.localeCompare(b, "no")); // rein sortering og fjernet "alle" legger til under
   const unikeBehandlerTyper = ["Alle", ...typer];
   const behandlereFiltrert = valgtBehandlerType === "Alle" ? alleBehandlere : alleBehandlere.filter((b) => b.typeBehandler === valgtBehandlerType)
-
+  
   const customIcon = L.icon({
     iconUrl: "/HelseBooking_32.png",
     iconSize: [32, 32],   
@@ -197,8 +199,10 @@ const BookTimePage = () => {
       <dialog className="time-booking-modal" ref={dialogRef} onClick={(e) => {
         if (e.target === dialogRef.current) avbrytBooking();
       }}>
-        <div className="bilde-flex dotsdots">
-          <motion.div
+        <div className="time-booking-modal-bilde-wrapper dotsdots">
+          <motion.img
+            src={Badge200}
+            className="time-booking-modal-logo"
             whileHover={{
               scale: 1.1,
               boxShadow: "0px 15px 25px rgba(0,0,0,0.2)"
@@ -208,9 +212,11 @@ const BookTimePage = () => {
               stiffness: 300,
               damping: 10
             }}
-            className="logo"></motion.div>
-          <motion.div
-            className="behandler-bilde"
+            >
+          </motion.img>
+          <motion.img
+            src={valgtBehandler?.profilbilde}
+            className="time-booking-modal-behandler-bilde"
             whileHover={{
               scale: 1.1,
               boxShadow: "0px 15px 25px rgba(0,0,0,0.2)"
@@ -220,11 +226,19 @@ const BookTimePage = () => {
               stiffness: 300,
               damping: 10
             }}
-            style={{ backgroundImage: `url(${valgtBehandler?.profilbilde})` }}></motion.div>
+            ></motion.img>
         </div>
         
         <div className="time-booking-overskrift">Godkjenn timevalget</div>
-        <div className="time-booking-tekst">{valgtTime?.dato && formatDato(valgtTime.dato)} hos {valgtBehandler?.typeBehandler} {valgtBehandler?.username}. Timen er fra {valgtTime?.startTid} til {valgtTime?.sluttTid} og koster {valgtTime?.pris}kr.</div>
+        <div className="time-booking-tekst-wrapper">
+          <div className="time-booking-behandler">{valgtBehandler?.typeBehandler} {valgtBehandler?.username} ved {valgtTime?.klinikk.navn} på adressen {valgtTime?.klinikk.adresse}.</div>
+          <div className="time-booking-bottom-icons-wrapper">
+            <div className="time-booking-bottom-icons-flex"><Wallet size={20} strokeWidth={1.5} color="grey" />{valgtTime?.pris}kr</div>
+            <div className="time-booking-bottom-icons-flex"><Clock size={20} strokeWidth={1.5} color="grey" />{valgtTime?.startTid}</div>
+            <div className="time-booking-bottom-icons-flex"><Calendar1 size={20} strokeWidth={1.5} color="grey" />{valgtTime?.dato && formatDato(valgtTime.dato)}</div>
+          </div>
+        </div>
+        
         {valgtTime &&
           <MapContainer
             center={[valgtTime.klinikk.latitude, valgtTime.klinikk.longitude]}

@@ -5,14 +5,27 @@ const AboutBehandlere = () => {
     
     const [alleBehandlere, setAlleBehandlere] = useState([]);
     
+    
+    // pugge mer på Fisher Yates algoritmen ved anledning
+    const shuffle = (array) => {
+        const shuffled = [...array];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
+    };
+    
     const getAlleBehandlerePublic = async () => {
         try {
             const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/users/behandlere/public`);
-            setAlleBehandlere(response.data);
+            setAlleBehandlere(shuffle(response.data));
         } catch (error) {
             console.error(error.response?.data?.message);
         }
     }
+    
+
     
     useEffect(() => {
         getAlleBehandlerePublic();

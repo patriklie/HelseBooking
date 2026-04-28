@@ -11,10 +11,10 @@ const TimeListe = ({ timerValgtDato, slettTime, onTimeKlikk, onBehandlerTimeKlik
                     return (
                         <div style={{ cursor: musepeker ? "pointer" : "default"  }} key={time._id} className="time-celle" onClick={ onBehandlerTimeKlikk ? () => onBehandlerTimeKlikk(time) : undefined }>
                             
-                            <div className="time-top-flex">
+    {/*                         <div className="time-top-flex">
                                 <div className="time-flex"><Hospital size={12} color="#444444" /> <span>{time.klinikk?.navn}</span></div>
                                 <div className="time-flex"><span>{time.klinikk?.adresse?.split(",")[0]}</span><MapPin size={12} color="#444444" /> </div>
-                            </div>
+                            </div> */}
                             
                             <div className="time-top-flex">
                                 <div className="time-flex"><Clock size={12} color="#444444" /> <span>{time.startTid}</span>-<span>{time.sluttTid}</span></div>
