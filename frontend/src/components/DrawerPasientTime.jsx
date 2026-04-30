@@ -15,6 +15,7 @@ const DrawerPasientTime = ({ closeDrawer, time, avlysTime }) => {
     const overlayOpacity = useTransform(y, [0, swipeAvstand], [1, 0]);
     const token = useAppStore((state) => state.token);
     const brukernavn = useAppStore((state) => state.username);
+    const googleMapsLink = `https://www.google.com/maps/dir/?api=1&destination=${time.klinikk.latitude},${time.klinikk.longitude}`;
     
     const roundIcon = time.behandler.profilbilde?.replace(
         "/upload/",
@@ -27,6 +28,16 @@ const DrawerPasientTime = ({ closeDrawer, time, avlysTime }) => {
         iconAnchor: [25, 25],
         popupAnchor: [0, -25]
     });
+    
+    useEffect(() => {
+        const handleEscape = (e) => {
+            if (e.key === "Escape") handleClose();
+        };
+
+        window.addEventListener("keydown", handleEscape);
+
+        return () => window.removeEventListener("keydown", handleEscape);
+    }, []);
     
     const formatDato = (datoString) => {
         const date = new Date(datoString);
@@ -91,7 +102,7 @@ const DrawerPasientTime = ({ closeDrawer, time, avlysTime }) => {
                     <div className="pasienttime-left">Klinikk</div>
                     <div className="pasienttime-right">{time.klinikk.navn}</div>
                     <div className="pasienttime-left">Adresse</div>
-                    <div className="pasienttime-right">{time.klinikk.adresse}</div>
+                    <div className="pasienttime-right"><a className="pasienttime-google-link" href={googleMapsLink} target="_blank" rel="noopener noreferrer">{time.klinikk.adresse}</a></div>
                 </div>
            
             
@@ -121,7 +132,7 @@ const DrawerPasientTime = ({ closeDrawer, time, avlysTime }) => {
                 </MapContainer>
                 </div>
                 
-                <div className="pasienttime-avlys-btn" onClick={() => { avlysTime(time._id); handleClose(); }}>avlys time</div>
+                <div className="pasienttime-avlys-btn" onClick={async () => { await avlysTime(time._id); handleClose(); }}>Avlys time</div>
 
            
                 

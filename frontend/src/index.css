@@ -1424,7 +1424,23 @@ dialog.slett-profil-modal[open] {
 /* PasientTimeListe */
 
 .pasienttimer-container {
- margin: 2rem;
+ margin: 1rem 2rem;
+}
+
+.pasienttimer-sorter-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+  position: absolute;
+  right: 20px;
+  top: 132px;
+}
+
+.pasienttimer-sorter-button {
+  color: rgb(68, 68, 68);
+  cursor: pointer;
 }
 
 .pasienttimer-ingen-timer {
@@ -1652,6 +1668,10 @@ dialog.slett-profil-modal[open] {
 .pasienttime-left {
   color: rgb(121, 121, 121);
 
+}
+
+.pasienttime-google-link {
+  color: var(--primary-color);
 }
 
 .pasienttime-storbokstav::first-letter {

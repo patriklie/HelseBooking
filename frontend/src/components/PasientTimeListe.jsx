@@ -1,12 +1,19 @@
-
 import { useState } from "react";
 import toast from "react-hot-toast";
 import PasientTimeCelle from "../components/PasientTimeCelle.jsx";
 import { time, motion, AnimatePresence } from "motion/react";
 import CharSmartPhone from "../assets/char_smartphone.png";
 import { Link } from "react-router";
+import { ArrowUpNarrowWide, ArrowDownNarrowWide } from "lucide-react";
     
 const PasientTimeListe = ({ timer, avlysTime, openDrawer }) => {
+    
+    const [stigende, setStigende] = useState(true);
+    const sortertListe = [...timer].sort((a, b) => {
+        const diff =
+            new Date(a.startDatoTidspunkt) - new Date(b.startDatoTidspunkt);
+        return stigende ? diff : -diff;
+    });
     
     const dagerTilTime = (timeString) => {
         const idag = new Date();
@@ -30,9 +37,20 @@ const PasientTimeListe = ({ timer, avlysTime, openDrawer }) => {
     
     return (
         <>
+            <div className="pasienttimer-sorter-wrapper">
+                <motion.button
+                    className="pasienttimer-sorter-button"
+                    onClick={() => setStigende(prev => !prev)}
+                    animate={{ rotate: stigende ? 0 : 180 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
+                    <ArrowUpNarrowWide size={30} />
+                </motion.button>
+            </div>
             <AnimatePresence mode="popLayout">
+
                 <motion.div className="pasienttimer-container" layout>
-                    {timer.map((time) => (
+                    {sortertListe.map((time) => (
                         <motion.div
                             key={time._id}
                             layout
