@@ -58,8 +58,7 @@ const DrawerPasientTime = ({ closeDrawer, time, avlysTime }) => {
         })
     }
     
-    const mailtoLink = `mailto:${time.behandler.email}?subject=Angående time ${formatDato(time.dato)}&body=Hei ${time.behandler.username},%0A%0AJeg har en time hos deg ${formatDato(time.dato)} kl. ${time.startTid} - ${time.sluttTid} ved ${time.klinikk.navn}.%0A%0AMed vennlig hilsen,%0A${brukernavn}`;
-
+    const mailTekstBehandler = `mailto:${time.behandler.email}?subject=Angående time ${formatDato(time.dato)} kl. ${time.startTid}`;
     
     useEffect(() => {
         y.set(window.innerHeight);
@@ -94,7 +93,7 @@ const DrawerPasientTime = ({ closeDrawer, time, avlysTime }) => {
                     <div className="pasienttime-left">Pasient</div>
                     <div className="pasienttime-right">{brukernavn}</div>
                     <div className="pasienttime-left">Behandler</div>
-                    <div className="pasienttime-right"><a className="pasienttime-behandler-link" href={mailtoLink}> {time.behandler.username}</a></div>
+                    <div className="pasienttime-right"><a className="pasienttime-behandler-link" href={mailTekstBehandler} target="_blank" rel="noopener noreferrer"> {time.behandler.username}</a></div>
                     <div className="pasienttime-left">Type</div>
                     <div className="pasienttime-right pasienttime-storbokstav">{time.behandler.typeBehandler}time</div>
                     <div className="pasienttime-left">Pris</div>
