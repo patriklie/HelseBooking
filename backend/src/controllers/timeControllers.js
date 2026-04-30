@@ -70,7 +70,7 @@ export const opprettTime = async (req, res) => {
 export const hentMineTimer = async (req, res) => {
     try {
         const { id } = req.user;
-        const mineTimer = await Time.find({ pasient: id }).populate("behandler", "username typeBehandler profilbilde").populate("klinikk", "navn adresse latitude longitude").sort({ startDatoTidspunkt: 1 });
+        const mineTimer = await Time.find({ pasient: id }).populate("behandler", "username typeBehandler email profilbilde").populate("klinikk", "navn adresse latitude longitude").sort({ startDatoTidspunkt: 1 });
         res.status(200).json({ mineTimer, message: "Mine timeavtaler på innlogget pasient." })
         
     } catch (error) {

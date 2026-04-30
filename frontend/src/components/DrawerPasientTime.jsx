@@ -17,6 +17,7 @@ const DrawerPasientTime = ({ closeDrawer, time, avlysTime }) => {
     const brukernavn = useAppStore((state) => state.username);
     const googleMapsLink = `https://www.google.com/maps/dir/?api=1&destination=${time.klinikk.latitude},${time.klinikk.longitude}`;
     
+    
     const roundIcon = time.behandler.profilbilde?.replace(
         "/upload/",
         "/upload/w_50,h_50,c_fill,r_max/"
@@ -57,6 +58,9 @@ const DrawerPasientTime = ({ closeDrawer, time, avlysTime }) => {
         })
     }
     
+    const mailtoLink = `mailto:${time.behandler.email}?subject=Angående time ${formatDato(time.dato)}&body=Hei ${time.behandler.username},%0A%0AJeg har en time hos deg ${formatDato(time.dato)} kl. ${time.startTid} - ${time.sluttTid} ved ${time.klinikk.navn}.%0A%0AMed vennlig hilsen,%0A${brukernavn}`;
+
+    
     useEffect(() => {
         y.set(window.innerHeight);
         animate(y, 0, { type: "spring", stiffness: 300, damping: 30 });
@@ -90,7 +94,7 @@ const DrawerPasientTime = ({ closeDrawer, time, avlysTime }) => {
                     <div className="pasienttime-left">Pasient</div>
                     <div className="pasienttime-right">{brukernavn}</div>
                     <div className="pasienttime-left">Behandler</div>
-                    <div className="pasienttime-right">{time.behandler.username}</div>
+                    <div className="pasienttime-right"><a className="pasienttime-behandler-link" href={mailtoLink}> {time.behandler.username}</a></div>
                     <div className="pasienttime-left">Type</div>
                     <div className="pasienttime-right pasienttime-storbokstav">{time.behandler.typeBehandler}time</div>
                     <div className="pasienttime-left">Pris</div>

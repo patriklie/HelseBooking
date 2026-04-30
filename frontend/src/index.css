@@ -1670,7 +1670,8 @@ dialog.slett-profil-modal[open] {
 
 }
 
-.pasienttime-google-link {
+.pasienttime-google-link,
+.pasienttime-behandler-link {
   color: var(--primary-color);
 }
 
