@@ -1427,6 +1427,33 @@ dialog.slett-profil-modal[open] {
  margin: 2rem;
 }
 
+.pasienttimer-ingen-timer {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  flex-direction: column;
+}
+
+.pasienttimer-ingen-timer-bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 250px;
+/*   background-image: linear-gradient(45deg, var(--primary-color) 0%, #00c3ff 100%);
+  border-radius: 25% 75% 25% 75% / 100% 0% 100% 0%; */
+}
+
+.pasienttimer-ingen-timer-figur {
+  width: 200px;
+}
+
+.pasienttime-bestill-time {
+  color: var(--primary-color);
+}
+
 .pasienttime-wrapper {
   position: relative;
   display: grid;
@@ -1451,8 +1478,8 @@ dialog.slett-profil-modal[open] {
 
 .dager-banner {
   position: absolute;
-  width: 100px;
-  height:90px;
+  width: 90px;
+  height:80px;
   color: white;
   font-size: 12px;
   background-color: var(--primary-color);
@@ -1500,24 +1527,25 @@ dialog.slett-profil-modal[open] {
 .pasienttime-profilbilde {
   background-position: center;
   background-size: cover;
-  height: 120px;
-  width: 90px;
+  height: 100px;
+  width: 70px;
   border-radius: 12px;
 }
 
 .pasienttime-ikon-flex {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 2rem;
-  font-size: 14px;
-  font-weight: 600;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .pasienttime-ikon-flex .icon-pair {
   display: flex;
   align-items: center;
-  gap: 5px;
-  line-height: 0;
+  gap: 4px;
+  line-height: 1;
 }
 
 .stor-forbokstav::first-letter {
@@ -1526,7 +1554,7 @@ dialog.slett-profil-modal[open] {
 
 .pasienttime-behandler-navn {
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .pasienttime-type-behandler {
@@ -1595,7 +1623,52 @@ dialog.slett-profil-modal[open] {
   background-color: rgb(143, 143, 143);
 }
 
+.pasienttime-klinikk-map-container {
+  height: 150px;
+  width: 340px;
+  z-index: 0;
+  border-radius: 10px;
+  width: 100%;
+  /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05); */
+}
 
+.pasienttime-info-container {
+  background-color: rgb(246, 249, 255);
+  padding: 1rem;
+  margin: 1rem 0;
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 2fr;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.pasienttime-right {
+  justify-self: end;
+  text-align: right;
+}
+
+.pasienttime-left {
+  color: rgb(121, 121, 121);
+
+}
+
+.pasienttime-storbokstav::first-letter {
+  text-transform: capitalize;
+}
+
+.pasienttime-avlys-btn {
+  margin-top: 1rem;
+  font-size: 14px;
+  transition: color .25s ease;
+  cursor: pointer;
+  color: rgb(92, 92, 92);
+}
+
+.pasienttime-avlys-btn:hover {
+  color: red;
+}
 
 /* MineTimerPage */ 
 

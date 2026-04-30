@@ -3,7 +3,9 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import PasientTimeCelle from "../components/PasientTimeCelle.jsx";
 import { time, motion, AnimatePresence } from "motion/react";
-
+import CharSmartPhone from "../assets/char_smartphone.png";
+import { Link } from "react-router";
+    
 const PasientTimeListe = ({ timer, avlysTime, openDrawer }) => {
     
     const dagerTilTime = (timeString) => {
@@ -51,6 +53,13 @@ const PasientTimeListe = ({ timer, avlysTime, openDrawer }) => {
                     ))}
                 </motion.div>
             </AnimatePresence>
+            
+            {timer.length === 0 && 
+                <div className="pasienttimer-ingen-timer">
+                    <div className="pasienttimer-ingen-timer-bubble">Her var det tomt.. <Link className="pasienttime-bestill-time" to="/booktime">Bestill time.</Link></div>
+                    <img className="pasienttimer-ingen-timer-figur" src={CharSmartPhone} />
+                </div>
+            }
         </>
   )
 }

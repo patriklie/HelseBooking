@@ -241,7 +241,7 @@ const MineTimerPage = () => {
       }
       
       {showDrawerPasientTime && role === "pasient" &&
-        <DrawerPasientTime closeDrawer={closeDrawerPasientTime} time={valgtTime} />
+        <DrawerPasientTime closeDrawer={closeDrawerPasientTime} time={valgtTime} avlysTime={avlysTime} />
       }
 
       

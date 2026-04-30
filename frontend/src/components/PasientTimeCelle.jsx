@@ -121,17 +121,13 @@ const PasientTimeCelle = ({ time, formatertDato, dagerTilTime, avlysTime, openDr
                 </div>
                 
                 <div className="pasienttime-grid-celle innhold">
-                    <div className="stor-forbokstav pasienttime-type-behandler">{time.behandler.typeBehandler}</div>
+                    <div className="stor-forbokstav pasienttime-type-behandler">{time.behandler.typeBehandler}time</div>
                     <div className="pasienttime-behandler-navn">{time.behandler.username}</div>
                     
                     <div className="pasienttime-ikon-flex">
                         <div className="icon-pair">
-                            <Clock strokeWidth={2} size={18} />
-                            <div>{time.startTid} - {time.sluttTid}</div>
-                        </div>
-                        <div className="icon-pair">
-                            <Calendar strokeWidth={2} size={18} />
-                            <div>{formatertDato}</div>
+                            <CalendarClock strokeWidth={1.8} size={15} />
+                            <div>{formatertDato} kl.{time.startTid}-{time.sluttTid}</div>
                         </div>
                     </div>
                     
