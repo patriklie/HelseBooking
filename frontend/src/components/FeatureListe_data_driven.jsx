@@ -38,7 +38,7 @@ const FeatureListe = () => {
                                 </div>
                                 <div className="feature-status">
                                     <Circle className={statusClass} size={24} />
-                                    <div>{statusTekst}</div>
+                                    <div className="feature-status-tekst">{statusTekst}</div>
                                 </div>
                                 <AnimatePresence>
                                     {visRad === feature.id &&

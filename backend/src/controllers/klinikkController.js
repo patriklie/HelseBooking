@@ -48,9 +48,7 @@ export const hentAlleKlinikker = async (req, res) => {
 export const hentMineKlinikker = async (req, res) => {
     try {
         const { id } = req.user;
-        const mineKlinikker = await Klinikk.find({ behandlere: id });
-        if (mineKlinikker.length === 0) return res.status(404).json({ message: "Fant ingen klinikker på brukeren." });
-        
+        const mineKlinikker = await Klinikk.find({ behandlere: id });        
         return res.status(200).json(mineKlinikker)
     } catch (error) {
         res.status(500).json({ message: error.message });
@@ -63,6 +61,7 @@ export const slettKlinikk = async (req, res) => {
     try {
         const { id } = req.params;
 
+        if (!mongoose.Types.ObjectId.isValid(id)) return res.status(400).json({ message: "Ikke godkjent klinikk ID." });
         const slettetKlinikk = await Klinikk.findByIdAndDelete(id);
         if (!slettetKlinikk) return res.status(404).json({ message: "Fant ingen klinikk å slette." });
         
@@ -80,6 +79,8 @@ export const redigerKlinikk = async (req, res) => {
     try {
         const { id } = req.params;
         const { navn, adresse, latitude, longitude } = req.body;
+
+        if (!mongoose.Types.ObjectId.isValid(id)) return res.status(400).json({ message: "Ikke godkjent klinikk ID." });
 
         if (!navn || !adresse || !latitude || !longitude) return res.status(400).json({ message: "Mangler klinikkinfo." });
 
@@ -99,6 +100,8 @@ export const leggTilBehandler = async (req, res) => {
 
         if (!klinikkId) return res.status(400).json({ message: "Klinikk ID mangler." })
         if (!behandlerId) return res.status(400).json({ message: "Behandler ID mangler." })
+        if (!mongoose.Types.ObjectId.isValid(klinikkId)) return res.status(400).json({ message: "Ikke godkjent klinikk ID." });
+        
         
         const klinikk = await Klinikk.findByIdAndUpdate(klinikkId, { $addToSet: { behandlere: behandlerId } }, { returnDocument: "after" });
         if (!klinikk) return res.status(404).json({ message: "Fant ingen klinikk" });
@@ -115,7 +118,10 @@ export const fjernBehandler = async (req, res) => {
         const { id, behandlerId } = req.params;
         if (!id) return res.status(400).json({ message: "Klinikk ID mangler." });
         if (!behandlerId) return res.status(400).json({ message: "Behandler Id mangler." });
+        if (!mongoose.Types.ObjectId.isValid(id)) return res.status(400).json({ message: "Ikke godkjent klinikk ID." });
+        if (!mongoose.Types.ObjectId.isValid(behandlerId)) return res.status(400).json({ message: "Ikke godkjent behandler ID." });
 
+        await Time.deleteMany({ behandler: behandlerId, klinikk: id }); // sletter timene laget på klinikken om jeg fjerner behandlere, litt enkel løsning, men holder PT.
         const fjernetBehandlerKlinikk = await Klinikk.findByIdAndUpdate(id, { $pull: { behandlere: behandlerId } }, { returnDocument: "after" });
         if (!fjernetBehandlerKlinikk) return res.status(404).json({ message: "Fant ingen klinikk." });
         return res.status(200).json({ fjernetBehandlerKlinikk, message: `Fjernet behandler` })

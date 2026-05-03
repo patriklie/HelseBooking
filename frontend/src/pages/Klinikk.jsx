@@ -8,6 +8,7 @@ import KlinikkKort from "../components/KlinikkKort.jsx";
 import toast from "react-hot-toast";
 import DrawerRedigerKlinikk from "../components/DrawerRedigerKlinikk.jsx";
 import Isometric from "../assets/IsoMetric_klinikk.png";
+import LeaningChar from "../assets/Leaning_char.png";
 
 const Klinikk = () => {
   
@@ -128,9 +129,12 @@ const Klinikk = () => {
 
     return (
       <>
-        <div className="open-klinikk-opprett-btn" onClick={openDrawer}>
-          <img className="opprett-klinikk-image" src={Isometric} />
-          <div>Opprett Klinikk</div>
+        <div className="open-klinikk-wrapper">
+          <div className="open-klinikk-opprett-btn" onClick={openDrawer}>
+            <img className="opprett-klinikk-image" src={Isometric} />
+            <div>Opprett Klinikk</div>
+            <img className="opprett-klinikk-leaning-char" src={LeaningChar} />
+          </div>
         </div>
         
         <div className="klinikk-kort-wrapper">

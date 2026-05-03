@@ -12,12 +12,14 @@ import {
     getAlleBehandlere,
     getAlleBehandlerePublic,
     hentAllePasienter,
-    getAlleBehandlereEnkel
+    getAlleBehandlereEnkel,
+    sjekkBrukernavn
 } from "../controllers/userController.js";
 import { upload } from "../middleware/uploadMiddleware.js";
 
 const router = express.Router();
 
+router.get("/sjekk/brukernavn", sjekkBrukernavn)
 router.get("/behandlere/public", getAlleBehandlerePublic); // til about siden krever ikke auth eller token
 router.get("/behandlere/enkel", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("behandler", "admin"), getAlleBehandlereEnkel);
 router.get("/behandlere", authMiddleware, getAlleBehandlere);

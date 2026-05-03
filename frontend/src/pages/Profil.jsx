@@ -227,14 +227,15 @@ const slettProfil = async () => {
       Slett profilen
     </motion.button>
 
-    <dialog className="slett-profil-modal" ref={slettModalRef}>
-      <img className="slett-profil-char" src={SlettCharacter} />
+      <dialog className="slett-profil-modal" ref={slettModalRef} onClick={(e) => { if (e.target === slettModalRef.current) slettModalRef.current.close() }} >
+        <img className="slett-profil-char" src={SlettCharacter} />
+        <div className="slett-profil-tekst">Er du sikker på at du vil slette kontoen din {username}?</div>
       <motion.button
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 1 }} 
       transition={{ type: "spring" }}
       className="slett-btn" 
-      onClick={slettProfil}>Slett: <span>{username}</span></motion.button>
+      onClick={slettProfil}>SLETT KONTO</motion.button>
       <button  
       className="avbryt-btn" onClick={() => slettModalRef.current.close()}>Avbryt</button>
       <X 

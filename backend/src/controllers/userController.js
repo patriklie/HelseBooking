@@ -214,3 +214,15 @@ export const getAlleBehandlereEnkel = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 }
+
+export const sjekkBrukernavn = async (req, res) => {
+    try {
+        const { username } = req.query;
+        if (!username) return res.status(400).json({ message: "Brukernavn mangler" });
+
+        const eksisterer = await User.findOne({ username });
+        res.status(200).json({ ledig: !eksisterer });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
