@@ -13,7 +13,7 @@ En fullstack bookingapplikasjon for helsetjenester, der pasienter kan finne og b
 ![Login](docs/bilder/Login.png)
 ![Registrer](docs/bilder/Registrer.png)
 ![Book time](docs/bilder/BookTime_valgt_time.png)
-![Book time pasient](docs/bilder/BookTime_pasient.png.png)
+![Book time pasient](docs/bilder/BookTime_pasient.png)
 
 
 
