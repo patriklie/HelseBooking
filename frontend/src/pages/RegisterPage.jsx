@@ -81,8 +81,8 @@ const RegisterPage = () => {
         delete brukerData.typeBehandler;
       }
         
-      await axios.post("http://localhost:5000/api/auth/register", brukerData);
-      const loginRespons = await axios.post("http://localhost:5000/api/auth/login", {
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/register`, brukerData);
+      const loginRespons = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
         email: nyBruker.email,
         password: nyBruker.password,
       });
