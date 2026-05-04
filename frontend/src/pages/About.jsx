@@ -54,7 +54,7 @@ const About = () => {
               <div className="about-section-overskrift">Behandlere samlet på et sted</div>
               <div className="about-section-innhold">Alle behandlere samlet i en oversiktlig og brukervennlig plattform. Finn riktig behandler raskt uten å måtte lete på tvers av ulike systemer. Utforsk tilgjengelige tider, sammenlign behandlere og book direkte på få sekunder.</div>
             </div>
-        </section>
+        </section>       
       </div>
       
       <AboutBehandlere />

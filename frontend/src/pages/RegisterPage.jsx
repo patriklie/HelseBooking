@@ -1,4 +1,4 @@
-import { Mail, Eye, EyeOff, EyeClosed, LockKeyhole, ArrowBigRight, User, UserPlus, ChevronDown, Bone, Activity, Stethoscope, Brain, Leaf, Circle, Zap, Dumbbell, Apple, PersonStanding, Smile } from "lucide-react";
+import { Mail, Eye, EyeOff, EyeClosed, LockKeyhole, ArrowBigRight, User, UserPlus, ChevronDown, Bone, Activity, Stethoscope, Brain, Leaf, Circle, Zap, Dumbbell, Apple, PersonStanding, Smile, CircleAlert, CheckCircle2, XCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useAppStore } from "../store/authStore.js";
@@ -13,7 +13,8 @@ const RegisterPage = () => {
   const navigate = useNavigate();
   const PassordIkon = visPassord ? Eye : EyeClosed;
   const [ledigBrukernavn, setLedigBrukernavn] = useState(null);
-
+  const [sjekkerBrukernavn, setSjekkerBrukernavn] = useState(false);
+  
   const [nyBruker, setNyBruker] = useState({
     username: "",
     email: "",
@@ -23,16 +24,26 @@ const RegisterPage = () => {
   });
   
   useEffect(() => {
-    if (!nyBruker.username) return;
-    
+    if (!nyBruker.username) {
+      setLedigBrukernavn(null);
+      setSjekkerBrukernavn(false);
+      return;
+    }
+
+    setLedigBrukernavn(null);
+    setSjekkerBrukernavn(true);
+
     const timeout = setTimeout(async () => {
-      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/users/sjekk/brukernavn?username=${nyBruker.username}`);
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/api/users/sjekk/brukernavn?username=${nyBruker.username}`
+      );
+
       setLedigBrukernavn(response.data.ledig);
-    }, 500); // venter 500ms etter siste tastetrykk
+      setSjekkerBrukernavn(false);
+    }, 500);
 
     return () => clearTimeout(timeout);
-    
-  },[nyBruker.username])
+  }, [nyBruker.username]);
   
   const behandlerIkoner = {
     kiropraktor: <Bone size={18} color="grey" strokeWidth={1.5} />,
@@ -100,7 +111,32 @@ const RegisterPage = () => {
 
           <div className="input-container">
             <UserPlus className="input-icon" size={18} color="grey" strokeWidth={1.5} />
-            <input /* className={ledigBrukernavn ? "brukernavn-ledig" : "brukernavn-opptatt"} */ type="text" value={nyBruker.username} name="username" onChange={handleBruker} placeholder="Navn" required />
+            <input type="text" value={nyBruker.username} name="username" onChange={handleBruker} placeholder="Fornavn Etternavn" required />
+            <AnimatePresence mode="wait">
+              {nyBruker.username && !sjekkerBrukernavn && (
+                ledigBrukernavn ? (
+                  <motion.div
+                    key="ledig"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.25 }}
+                  >
+                    <CheckCircle2 className="input-icon-right brukernavn-ledig" size={24} strokeWidth={1.2} />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="opptatt"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.25 }}
+                  >
+                      <XCircle className="input-icon-right brukernavn-opptatt" size={24} strokeWidth={1.2}  />
+                  </motion.div>
+                )
+              )}
+            </AnimatePresence>
           </div>
 
           <div className="input-container">

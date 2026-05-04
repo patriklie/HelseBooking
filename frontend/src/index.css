@@ -39,6 +39,10 @@ input[type="checkbox"] {
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  accent-color: var(--primary-color);
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -71,12 +75,13 @@ input:-webkit-autofill:active {
 
 body {
     background-color: var(--bg-almost-white);
+    width: 100%;
 }
 
 /* NAVBAR */
 .navbar {
   color: #000000;
-  width: 100vw;
+  right: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -211,6 +216,15 @@ body {
   cursor: pointer;
 }
 
+.brukernavn-opptatt {
+  color: rgb(255, 78, 78);
+  cursor: default;
+}
+.brukernavn-ledig {
+  color: var(--mint-green);
+  cursor: default;
+}
+
 .input-container input {
   outline: 1px solid #e0e0e0;
   padding: 12px 42px;
@@ -221,14 +235,6 @@ body {
   color: #444444;
   background-color: white;
   line-height: 1.2;
-}
-
-.input-container .brukernavn-ledig {
-  outline: 1px solid green;
-}
-
-.input-container .brukernavn-ledig:focus {
-  outline: 1px solid green;
 }
 
 .input-container textarea {
@@ -888,6 +894,7 @@ transition: box-shadow 0.3s ease;
 
 .about-section-wrapper {
   margin: 6rem 2rem;
+  position: relative;
 }
 
 .about-section {
@@ -912,7 +919,7 @@ transition: box-shadow 0.3s ease;
   gap: 1rem;
   justify-content: center;
   min-width: 0;
-    word-break: break-word;
+  word-break: break-word;
 }
 
 .about-section-overskrift {
@@ -1068,18 +1075,37 @@ transition: box-shadow 0.3s ease;
   font-size: 1.5rem;
   font-weight: 400;
   color: var(--text-off-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  user-select: none;
+
+  img {
+    width: 200px;
+    transform: translateY(1px);
+  }
+  
 }
 
 .about-behandlere-overskrift {
   text-align: center;
-  margin-bottom: 2rem;
   font-size: 1.5rem;
   font-weight: 900;
   color: var(--text-off-black);
 }
 
+.about-behandlere-chevron-wrapper {
+  display: flex;
+  justify-content: center;
+  color: var(--grey-text);
+  margin-top: .5rem;
+  animation: chevronAnimasjon 2s ease-in-out infinite;
+}
+
 .about-behandlere-grid-wrapper {
   margin: 4rem 2rem 6rem 2rem;
+  position: relative;
 }
 
 .about-behandlere-grid {
@@ -1087,7 +1113,7 @@ transition: box-shadow 0.3s ease;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 .about-behandlere-grid-celle {
@@ -1128,6 +1154,7 @@ transition: box-shadow 0.3s ease;
 .about-behandlere-type::first-letter {
   text-transform: uppercase;
 }
+
 
 /* FOOTER about */
 
@@ -1643,6 +1670,8 @@ dialog.slett-profil-modal[open] {
   z-index: 0;
   border-radius: 10px;
   width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
   /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05); */
 }
 
@@ -1656,6 +1685,7 @@ dialog.slett-profil-modal[open] {
   grid-template-columns: 1fr 2fr;
   border-radius: 10px;
   font-size: 14px;
+  max-width: 900px;
 }
 
 .pasienttime-right {

@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import HelseBookingTekst from "../assets/HelseBooking_tekst.png";
+import { ChevronDown } from "lucide-react";
 
 const AboutBehandlere = () => {
     
@@ -34,9 +36,20 @@ const AboutBehandlere = () => {
   return (
       <>
           
+
+          
+          
           <div className="about-behandlere-grid-wrapper">
-            <div className="about-behandlere-topp-overskrift">Møt HelseBooking sine</div>
-            <div className="about-behandlere-overskrift">fagpersoner</div>
+                          
+              <div className="about-behandlere-topp-overskrift">
+                    <div>Møt</div> 
+                  <img src={HelseBookingTekst} />
+                    <div>sine</div>
+                </div>
+              <div className="about-behandlere-overskrift">fagpersoner</div>
+              <div className="about-behandlere-chevron-wrapper">
+                  <ChevronDown />
+              </div>
             <div className="about-behandlere-grid">
           
             {

@@ -236,7 +236,7 @@ const MineTimerPage = () => {
 
         </div>
         
-        <PasientTimeListe timer={filtrerteTimer} avlysTime={avlysTime} openDrawer={openDrawerPasientTime} />
+        <PasientTimeListe timer={filtrerteTimer} avlysTime={avlysTime} openDrawer={openDrawerPasientTime} kommendeTimer={kommende} />
         </>
       }
       

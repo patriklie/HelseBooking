@@ -6,7 +6,7 @@ import CharSmartPhone from "../assets/char_smartphone.png";
 import { Link } from "react-router";
 import { ArrowUpNarrowWide, ArrowDownNarrowWide } from "lucide-react";
     
-const PasientTimeListe = ({ timer, avlysTime, openDrawer }) => {
+const PasientTimeListe = ({ timer, avlysTime, openDrawer, kommendeTimer }) => {
     
     const [stigende, setStigende] = useState(true);
     const sortertListe = [...timer].sort((a, b) => {
@@ -72,7 +72,7 @@ const PasientTimeListe = ({ timer, avlysTime, openDrawer }) => {
                 </motion.div>
             </AnimatePresence>
             
-            {timer.length === 0 && 
+            {kommendeTimer.length === 0 && 
                 <div className="pasienttimer-ingen-timer">
                     <div className="pasienttimer-ingen-timer-bubble">Her var det tomt.. <Link className="pasienttime-bestill-time" to="/booktime">Bestill time.</Link></div>
                     <img className="pasienttimer-ingen-timer-figur" src={CharSmartPhone} />

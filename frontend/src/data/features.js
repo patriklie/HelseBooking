@@ -44,14 +44,14 @@ const features = [
     {
         id: 7,
         title: "Kart og veibeskrivelse",
-        status: "ongoing",
+        status: "done",
         detaljer:
-            "Det utvikles en ny funksjon som gjør det mulig for behandler å legge til lokasjon med kart og veibeskrivelse som følger timen som opprettes."
+            "Nå er det mulig for behandler å legge til lokasjon med kart og veibeskrivelse som følger timen som opprettes."
     },
     {
         id: 8,
         title: "Epost time bekreftelse",
-        status: "planned",
+        status: "ongoing",
         detaljer:
             "Brukere vil få bekreftelse på mail når man booker eller avlyser en time samt en påminnelses mail 24 timer før timen."
     },

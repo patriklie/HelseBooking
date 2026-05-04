@@ -8,6 +8,7 @@ const PasientTimeCelle = ({ time, formatertDato, dagerTilTime, avlysTime, openDr
     const bakgrunnsfarge = useTransform(x, [0, -swipeDistance], ["#ffffff", "#ff4444"]);
     const ikonSize = useTransform(x, [0, -swipeDistance], [1, 2]);
     const ikonOpacity = useTransform(x, [0, -swipeDistance], [0, 1]);
+    /* const celleOpacity = useTransform(x, [0, -swipeDistance], [1, 0.9]); */
     const tekstPosition = useTransform(x, [0, -swipeDistance * 2], ["150px", "75px"]);
     const [visIkon, setVisIkon] = useState(true);
     const ikonControls = useAnimationControls();
