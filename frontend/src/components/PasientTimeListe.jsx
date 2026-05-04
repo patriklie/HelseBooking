@@ -74,8 +74,23 @@ const PasientTimeListe = ({ timer, avlysTime, openDrawer, kommendeTimer }) => {
             
             {kommendeTimer.length === 0 && 
                 <div className="pasienttimer-ingen-timer">
-                    <div className="pasienttimer-ingen-timer-bubble">Her var det tomt.. <Link className="pasienttime-bestill-time" to="/booktime">Bestill time.</Link></div>
+                    <div className="pasienttimer-ingen-timer-bubble">Her var det tomt..</div>
+
                     <img className="pasienttimer-ingen-timer-figur" src={CharSmartPhone} />
+                    <motion.div
+                        className="pasienttime-bestill-time"
+                        whileHover={{
+                            scale: 1.1,
+                            boxShadow: "0px 15px 25px rgba(0,0,0,0.2)"
+                        }}
+                        transition={{
+                            type: "spring",
+                            stiffness: 300,
+                            damping: 10
+                        }}
+                        >
+                        <Link  to="/booktime">Bestill time</Link>
+                    </motion.div>
                 </div>
             }
         </>
