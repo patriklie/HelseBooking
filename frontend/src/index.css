@@ -41,7 +41,6 @@ input[type="checkbox"] {
 
 html {
   accent-color: var(--primary-color);
-  background-color: blue;
 }
 
 a {
@@ -75,8 +74,7 @@ input:-webkit-autofill:active {
 }
 
 body {
-   /*  background-color: var(--bg-almost-white); */
-    background-color: red;
+    background-color: var(--bg-almost-white);
     width: 100%;
 }
 
