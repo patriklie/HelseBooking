@@ -5,9 +5,8 @@ import { Toaster } from "react-hot-toast";
 const Layout = () => {
   return (
     <>
+      <div className="theme-pwa-color"></div>
       <Navbar />
-      <div style={{ height: "60px", backgroundColor: "red" }}>
-      </div>
       <Outlet />   
       
       <Toaster 
