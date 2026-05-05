@@ -50,7 +50,7 @@ const Navbar = () => {
               if (diff < -50) SetIsOpen(false);
             }
           }}
-          
+          initial={{ height: "60px" }}
           animate={{
             height: isOpen ? "calc(100vh - 32px)" : "60px"
           }}
