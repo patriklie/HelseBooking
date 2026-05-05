@@ -78,18 +78,7 @@ body {
     width: 100%;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: env(safe-area-inset-top);
-  background-color: #ffffff;
-  z-index: 100;
-}
-
-.theme-pwa-color {
+.topp-gap {
   height: 60px;
 }
 

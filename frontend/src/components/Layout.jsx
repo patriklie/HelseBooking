@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 const Layout = () => {
   return (
     <>
-      <div className="theme-pwa-color"></div>
+      <div className="topp-gap"></div>
       <Navbar />
       <Outlet />   
       
