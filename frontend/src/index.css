@@ -172,7 +172,7 @@ body {
 .login-person {
  width: 200px;
  display: block;
- margin: -20px auto;
+ margin: 0 auto;
 }
 
 .form-container {
