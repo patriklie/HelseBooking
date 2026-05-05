@@ -1636,7 +1636,7 @@ dialog.slett-profil-modal[open] {
   border-radius: 10px 10px 0 0;
   padding: 1rem 2rem;
   bottom: -10%;
-  height: 90%;
+  height: 100%;
   width: 100vw;
   background: white;
   z-index: 101;
@@ -2339,7 +2339,7 @@ dialog.slett-profil-modal[open] {
   border-radius: 10px 10px 0 0;
   padding: 1rem 2rem;
   bottom: -10%;
-  height: 90%;
+  height: 100%;
   width: 100vw;
   background: white;
   z-index: 101;
