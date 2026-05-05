@@ -74,7 +74,12 @@ input:-webkit-autofill:active {
 }
 
 body {
-    background-color: var(--bg-almost-white);
+/*     background-color: var(--bg-almost-white); */
+  background-image: linear-gradient(to bottom,
+        #ffffff 0px,
+        #ffffff 60px,
+        #F6F6F8 60px);
+        background-attachment: fixed;
     width: 100%;
 }
 
