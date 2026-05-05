@@ -8,12 +8,14 @@ import Profil from './pages/Profil.jsx';
 import ProtectedRoutes from './components/ProtectedRoutes.jsx';
 import MineTimerPage from './pages/MineTimerPage.jsx';
 import Klinikk from './pages/Klinikk.jsx';
+import Home from './components/Home.jsx';
 
 export default function App() {
+  
 return (
   <Routes>
     <Route element={ <Layout /> }>
-      <Route path="/" element={<Navigate to="/login" />} />
+      <Route path="/" element={<Home />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/about" element={<About />} />
