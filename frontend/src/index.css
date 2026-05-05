@@ -230,7 +230,7 @@ body {
   padding: 12px 42px;
   width: 100%;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 16px;
   /* font-family: Verdana; */
   color: #444444;
   background-color: white;
@@ -312,7 +312,7 @@ input[type="time"]:not([value=""])::-webkit-datetime-edit-minutes-field {
   width: 100%;
   padding: 12px 42px;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 16px;
   appearance: none;
   -webkit-appearance: none;
   outline: 1px solid rgb(224, 224, 224);
