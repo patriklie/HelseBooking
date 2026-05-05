@@ -76,9 +76,9 @@ input:-webkit-autofill:active {
 body {
 /*     background-color: var(--bg-almost-white); */
   background-image: linear-gradient(to bottom,
-        #FCFCFD 0px,
+        #ffffff 0px,
         #ffffff 1px,
-        #F6F6F8 5px);
+        #F6F6F8 30px);
         background-attachment: fixed;
     width: 100%;
 }
