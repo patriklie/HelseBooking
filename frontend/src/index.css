@@ -808,8 +808,12 @@ transition: box-shadow 0.3s ease;
 
 /* About siden DIAGONAL hero */
 
+.diagonal-wrapper {
+  overflow: hidden;
+}
+
 .diagonal {
-  margin: 6rem 0 2rem 0;
+  margin: 6rem 0;
   padding: 4rem 2rem 3rem 2rem;
   background: transparent;
   position: relative;
@@ -849,7 +853,7 @@ transition: box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-width: 0;
+  min-width: 250px;
 }
 
 .section-title {
@@ -861,13 +865,17 @@ transition: box-shadow 0.3s ease;
   font-weight: 200;
 }
 
-.figur2 {
-  display: block;
+.about-figur-container {
+  background-color: red;
+}
+
+.about-figur {
   object-fit: cover;
-  width: 100px;
+  width: 200px;
   height: auto;
   margin-top: -130px;
-  margin-right: -10px;
+  margin-left: -30px;
+
   overflow: visible;
 }
 
@@ -887,7 +895,7 @@ transition: box-shadow 0.3s ease;
 /* About isometric */
 
 .about-section-wrapper {
-  margin: 6rem 2rem;
+  margin: 2rem;
   position: relative;
 }
 
