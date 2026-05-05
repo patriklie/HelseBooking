@@ -6,9 +6,10 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <div style={{ paddingTop: "60px" }}>
-      <Outlet />   
+      <div style={{ height: "60px", backgroundColor: "red" }}>
       </div>
+      <Outlet />   
+      
       <Toaster 
         position="bottom-center"
         containerStyle={{
