@@ -19,7 +19,7 @@ app.use(cors({
 }));
 
 app.get("/api/hello", (req, res) => {
-    res.json({ message: "Hello mister api hello" });
+    res.json({ message: "I'm awake, I'm awake" });  // pinger denne fra cronjobs 
 });
 
 app.use("/api/auth", authRoutes);
