@@ -814,13 +814,12 @@ transition: box-shadow 0.3s ease;
   background: transparent;
   position: relative;
   color: white;
-/*   -webkit-transform-style: preserve-3d; 
-  transform-style: preserve-3d;  */
+  -webkit-transform-style: preserve-3d; 
+  transform-style: preserve-3d; 
 }
 
 .diagonal::after {
-  content: 'Hvorfor titter du her?';
-  text-align: end;
+  content: '';
   font-size: 8px;
   padding-block: 10px;
   padding-inline: 20px;
@@ -851,8 +850,6 @@ transition: box-shadow 0.3s ease;
   flex-direction: column;
   justify-content: center;
   min-width: 0;
-  flex: 2;
-  z-index: 1;
 }
 
 .section-title {
@@ -865,17 +862,15 @@ transition: box-shadow 0.3s ease;
 }
 
 .figur2 {
-  object-fit: cover;
   display: block;
-  width:100px;
-  height: auto;
+  object-fit: cover;
+  width: 100px;
   margin-top: -130px;
+  margin-right: 10px;
   overflow: visible;
-  flex: 1;
 }
 
 .about-button {
-  /* background-color: var(--primary-color); */
   border: 1px solid rgba(255, 255, 255, 0.548);
   color: white;
   padding: 10px;
@@ -2442,10 +2437,6 @@ dialog.slett-profil-modal[open] {
     padding: 0 20px 20px 20px;
   }
 
-  .diagonal::after {
-    content: "";
-  }
-
   /* feature lista */
 
   .feature-grid-container {
@@ -2477,7 +2468,7 @@ dialog.slett-profil-modal[open] {
 
 @media (max-width: 450px) {
   .figur2 {
-
+    margin-left: 30px;
   }
 
   .pasienttimer-sorter-wrapper {
