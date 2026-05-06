@@ -192,18 +192,6 @@ body {
   gap: 15px;
 }
 
-/* .input-container input[type="date"],
-.input-container input[type="time"] {
-  -webkit-appearance: none;
-  appearance: none;
-  padding: 12px 42px;
-} */
-
-input[type='date'],
-input[type='time'] {
-  -webkit-appearance: none;
-}
-
 .input-container {
   position: relative;
   width: clamp(200px, 100%, 380px);
@@ -256,6 +244,7 @@ input[type='time'] {
   color: #444444;
   background-color: white;
   line-height: 1.2;
+  min-height: 44px;
 }
 
 .input-container textarea {
