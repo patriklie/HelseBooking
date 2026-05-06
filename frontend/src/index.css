@@ -199,6 +199,11 @@ body {
   padding: 12px 42px;
 } */
 
+input[type='date'],
+input[type='time'] {
+  -webkit-appearance: none;
+}
+
 .input-container {
   position: relative;
   width: clamp(200px, 100%, 380px);
