@@ -192,12 +192,12 @@ body {
   gap: 15px;
 }
 
-.input-container input[type="date"],
+/* .input-container input[type="date"],
 .input-container input[type="time"] {
   -webkit-appearance: none;
   appearance: none;
   padding: 12px 42px;
-}
+} */
 
 .input-container {
   position: relative;

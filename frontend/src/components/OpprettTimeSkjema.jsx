@@ -55,7 +55,7 @@ const OpprettTimeSkjema = ({ hentBehandlerTimer, mineKlinikker }) => {
           <label htmlFor="dato">Dato</label>
           <div className="input-wrapper">
             <Calendar1 className="input-icon" size={18} color="grey" strokeWidth={1.5} onClick={() => dateInputRef.current.showPicker()} />
-            <input type="date" ref={dateInputRef} value={time.dato} onChange={handleTime} id="dato" name="dato" placeholder="dato" required />
+            <input type="date" style={{ WebkitAppearance: "none", appearance: "none" }} ref={dateInputRef} value={time.dato} onChange={handleTime} id="dato" name="dato" placeholder="dato" required />
           </div>
         </div>
           
