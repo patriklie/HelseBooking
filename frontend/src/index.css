@@ -245,6 +245,7 @@ body {
   background-color: white;
   line-height: 1.2;
   min-height: 44px;
+  text-align: left;
 }
 
 .input-container textarea {
