@@ -87,6 +87,12 @@ body {
   height: 60px;
 }
 
+.input-container input[type="date"],
+.input-container input[type="time"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 /* NAVBAR */
 .navbar {
   color: #000000;
@@ -2469,6 +2475,29 @@ dialog.slett-profil-modal[open] {
   /* opprett klinikk */
   .opprett-klinikk-leaning-char {
     display: none;
+  }
+
+  /* Rediger Klinikk Drawer */
+  .rediger-klinikk-form-container {
+    padding: 20px 0;
+  }
+
+  .rediger-klinikk-input-container input {
+    font-size: 16px;
+    padding-right: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .rediger-klinikk-input-container input::placeholder {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .rediger-klinikk-map-container {
+    height: 150px;
   }
 
 }
