@@ -249,6 +249,11 @@ body {
   text-align: left;
 }
 
+.input-container input.login-epost-input,
+.input-container input.registrer-epost-input {
+ padding-right: 0;
+}
+
 .input-container textarea {
   outline: 1px solid rgb(224, 224, 224);
   padding: 16px;
@@ -315,7 +320,7 @@ input[type="time"]:not([value=""])::-webkit-datetime-edit-minutes-field {
 
 .input-container input:focus,
 .input-container select:focus {
-  outline: 1px solid rgb(56, 56, 56);
+  outline: 1px solid rgb(116, 116, 116);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 

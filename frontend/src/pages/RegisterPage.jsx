@@ -141,7 +141,7 @@ const RegisterPage = () => {
 
           <div className="input-container">
             <Mail className="input-icon" size={18} color="grey" strokeWidth={1.5} />
-            <input type="email" value={nyBruker.email} name="email" onChange={handleBruker} placeholder="din@epost.no" required />
+            <input className="registrer-epost-input" type="email" value={nyBruker.email} name="email" onChange={handleBruker} placeholder="din@epost.no" required />
           </div>
 
           <div className="input-container">

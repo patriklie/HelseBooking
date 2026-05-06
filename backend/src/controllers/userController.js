@@ -115,16 +115,19 @@ export const updateUser = async (req, res) => {
 export const deleteUser = async (req, res) => {
 
     try {
-        const { id } = req.params;
-        if (!mongoose.Types.ObjectId.isValid(id)) {
-            return res.status(400).json({ message: "Ikke en valid bruker ID." })
-        }
-
+        const { id } = req.user;
         const foundUser = await User.findByIdAndDelete(id);
         if (!foundUser) return res.status(404).json({ message: "Bruker ikke funnet." });
+        
+        if (foundUser.role === "behandler") {
+            await Time.deleteMany({ behandler: id })
+        }
+
+        if (foundUser.role === "pasient") {
+            await Time.updateMany({ pasient: id }, { $set: { pasient: null, status: "ledig" } })
+        }
 
         res.status(200).json({ message: `Slettet bruker ${foundUser.username}` })
-
 
     } catch (error) {
         res.status(500).json({ message: error.message, text: "Inni getUserById Catchen." })

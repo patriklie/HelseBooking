@@ -27,8 +27,9 @@ router.get("/pasienter", authMiddleware, validateIdMiddleware, verifyRoleMiddlew
 router.get("/", authMiddleware, getAllUsers);
 router.get("/:id", authMiddleware, getUserById); // legg til protection her så ikke alle kan hente brukere
 router.patch("/", authMiddleware, updateUser);
-router.delete("/:id", authMiddleware, deleteUser);
-router.post("/profilbilde", authMiddleware, upload.single("profilbilde"), uploadProfilePicture);
 router.delete("/profilbilde", authMiddleware, deleteProfilePicture);
+router.delete("/", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("pasient", "behandler", "admin") , deleteUser);
+router.post("/profilbilde", authMiddleware, upload.single("profilbilde"), uploadProfilePicture);
+
 
 export default router;

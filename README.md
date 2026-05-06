@@ -1,6 +1,6 @@
 # HelseBooking
 
-En fullstack bookingapplikasjon for helsetjenester, der pasienter kan finne og booke time hos behandlere. Bygget som et CV-prosjekt for å demonstrere praktiske ferdigheter i moderne webutvikling.
+En fullstack bookingapplikasjon for helsetjenester, der pasienter kan finne og booke time hos behandlere. Bygget som et CV-prosjekt for å demonstrere mine ferdigheter i webutvikling.
 
 🔗 **Live demo:** [helsebooking.onrender.com](https://helsebooking.onrender.com)
 
@@ -19,6 +19,27 @@ En fullstack bookingapplikasjon for helsetjenester, der pasienter kan finne og b
 
 
 ---
+
+## Test-brukere
+Jeg har laget en rekke testbrukere som du kan prøve å logge inn på. Det er bare å opprette og slette timer, pasienter, behandlere, profilbilder og klinikker, gjør som du vil. 
+
+| Rolle      | Epost                        | Passord   |
+|------------|------------------------------|-----------|
+| Behandler  | kristoffer@helsebooking.no   | Test1234  |
+| Behandler  | lise@helsebooking.no         | Test1234  |
+| Behandler  | tove@helsebooking.no         | Test1234  |
+| Behandler  | steinar@helsebooking.no      | Test1234  |
+| Behandler  | jonas@helsebooking.no        | Test1234  |
+| Behandler  | morten@helsebooking.no       | Test1234  |
+| Behandler  | kari@helsebooking.no         | Test1234  |
+| Pasient    | anders@helsebooking.no       | Test1234  |
+| Pasient    | camilla@helsebooking.no      | Test1234  |
+| Pasient    | daniel@helsebooking.no       | Test1234  |
+| Pasient    | emilie@helsebooking.no       | Test1234  |
+| Pasient    | fredrik@helsebooking.no      | Test1234  |
+| Pasient    | ingrid@helsebooking.no       | Test1234  |
+| Pasient    | marius@helsebooking.no       | Test1234  |
+
 
 ## Funksjonalitet
 

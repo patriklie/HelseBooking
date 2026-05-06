@@ -63,7 +63,7 @@ const LoginPage = () => {
           
           <div className="input-container">
             <Mail className="input-icon" size={18} color="grey" strokeWidth={1.5} />
-            <input type="email" onChange={(e) => setEpost(e.target.value)} value={epost} id="epost" placeholder="din@epost.no" required />
+            <input className="login-epost-input" type="email" onChange={(e) => setEpost(e.target.value)} value={epost} id="epost" placeholder="din@epost.no" required />
           </div>
           
           <div className="input-container">
