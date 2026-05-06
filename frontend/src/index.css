@@ -249,12 +249,6 @@ body {
   text-align: left;
 }
 
-.input-container input[type='date'],
-.input-container input[type='time'] {
-  -webkit-appearance: none;
-  text-align: left !important;
-}
-
 .input-container textarea {
   outline: 1px solid rgb(224, 224, 224);
   padding: 16px;
