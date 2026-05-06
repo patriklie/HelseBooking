@@ -87,12 +87,6 @@ body {
   height: 60px;
 }
 
-.input-container input[type="date"],
-.input-container input[type="time"] {
-  -webkit-appearance: none;
-  appearance: none;
-}
-
 /* NAVBAR */
 .navbar {
   color: #000000;
@@ -196,6 +190,13 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 15px;
+}
+
+.input-container input[type="date"],
+.input-container input[type="time"] {
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 12px 42px;
 }
 
 .input-container {
