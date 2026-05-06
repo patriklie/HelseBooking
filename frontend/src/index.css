@@ -252,6 +252,7 @@ body {
 .input-container input[type='date'],
 .input-container input[type='time'] {
   -webkit-appearance: none;
+  text-align: left !important;
 }
 
 .input-container textarea {
