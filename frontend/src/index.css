@@ -2497,6 +2497,26 @@ dialog.slett-profil-modal[open] {
     height: 150px;
   }
 
+  /* Opretty klinikk drawer */ 
+
+  .klinikk-form-container {
+    padding: 20px 0;
+  }
+
+  .klinikk-input-container input {
+    font-size: 16px;
+    padding-right: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .klinikk-input-container input::placeholder {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
 }
 
 @media (max-width: 450px) {
