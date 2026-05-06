@@ -9,18 +9,18 @@ const Layout = () => {
       <Navbar />
       <Outlet />   
       
-      <Toaster 
-        position="bottom-center"
+      <Toaster
+        position="top-center"
         containerStyle={{
-          /* top: 90 */
+          top: 70
         }}
-      toastOptions={{
-      style: {
-        padding: "10px 32px",
-        borderRadius: "50px",
-        boxShadow: "rgba(0, 0, 0, 0.4) 0 2px 10px"
-      }
-      }}
+        toastOptions={{
+          style: {
+            padding: "10px 32px",
+            borderRadius: "50px",
+            boxShadow: "rgba(0, 0, 0, 0.4) 0 2px 10px"
+          }
+        }}
       />
     </>
   )
