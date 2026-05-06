@@ -234,6 +234,7 @@ body {
   cursor: default;
 }
 
+
 .input-container input {
   outline: 1px solid #e0e0e0;
   padding: 12px 42px;
@@ -246,6 +247,11 @@ body {
   line-height: 1.2;
   min-height: 44px;
   text-align: left;
+}
+
+.input-container input[type='date'],
+.input-container input[type='time'] {
+  -webkit-appearance: none;
 }
 
 .input-container textarea {
