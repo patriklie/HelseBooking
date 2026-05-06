@@ -8,7 +8,9 @@ const secret = process.env.JWT_SECRET;
 
 export const registerUser = async (req, res) => {
     try {
-        const { password, username, email, role, typeBehandler } = req.body;
+        const { password, username, email: inputEmail, role, typeBehandler } = req.body;
+        const email = inputEmail.toLowerCase();
+
         if (!password || !username || !email || !role) return res.status(400).json({ message: "Mangler passord, brukernavn eller epost." })
         
         if (role === "behandler" && !typeBehandler) {
@@ -35,7 +37,8 @@ export const loginUser = async (req, res) => {
         console.log("Logging in user.");
 
         // 1. Jeg trenger brukernavn/epost og passord fra req.body
-        const { username, email, password } = req.body;
+        const { username, email: inputEmail, password } = req.body;
+        const email = inputEmail.toLowerCase();
         console.log("req.body inni loginUser: ", req.body)
         // 2. Jeg bør først validere om feltene finnes i req.body. 
         if (!password) return res.status(400).json({ message: "Passord mangler!" });
