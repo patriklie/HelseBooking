@@ -1,5 +1,7 @@
 <img src="docs/bilder/HelseBooking_Logo_blue.png" width="300" />
 
+<br>
+
 Hei! 👋
 
 Dette er en fullstack bookingapplikasjon for helsetjenester hvor pasienter kan finne og booke time hos behandlere.
@@ -39,15 +41,16 @@ Jeg har laget testbrukere under man kan logge på. Med disse er det bare å oppr
 | Pasient    | ingrid@helsebooking.no       | Test1234  |
 | Pasient    | marius@helsebooking.no       | Test1234  |
 
-# Skjermbilder
+<br>
 
-## 📸 App Showcase
+# 📸 Skjermbilder fra appen
 
 Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger deg inn på en av testbrukerne å klikker deg rundt selv, eller at vi sammen tar en gjennomgang! 😊
 
 ---
 
 ### 🏠 Forside / About
+
 <div>
   <img src="docs/bilder/about_hero_1.png" width="300" style="display:inline-block; vertical-align: top;" />
   <img src="docs/bilder/about_hero_2.png" width="300" style="display:inline-block; vertical-align: top;" />
@@ -98,7 +101,9 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
   <img src="docs/bilder/profil_2.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
-## ⭐ Funksjonalitet
+<br>
+
+# ⭐ Funksjonalitet
 
 **Pasient**
 - Registrering og innlogging med JWT-autentisering
@@ -122,9 +127,9 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
 - Hindrer at samme time bookes flere ganger, ikke mulig å booke eller opprette timer tilbake i tid. Timer blir slettet dersom man fjerner en behandler fra en klinikk eller sletter profilen sin pasient/behandler.
 - Responsivt design med animert navigasjon
 
----
+<br>
 
-## Tech Stack
+# Tech Stack
 
 ### 💻 Frontend
 | Teknologi          | Bruk                           |
@@ -154,9 +159,9 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
 | MongoDB Atlas | Skybasert database                                         |
 | Cloudinary    | Bildelagring                                               |
 
----
+<br>
 
-## 🏗️ Arkitektur / systemdesign
+# 🏗️ Arkitektur / systemdesign
 
 Dette prosjektet er bygget som et rollebasert bookingsystem der kjernen i systemet er samspillet mellom brukere, klinikker og timeavtaler.
 
@@ -165,6 +170,7 @@ Systemet er designet rundt tre hovedentiteter:
 - 🧑‍⚕️ Brukere (User)
 - 🏥 Klinikker (Klinikk)
 - 📅 Timer (Time)
+
 
 ## 🧑‍⚕️ Brukere og roller
 
@@ -253,7 +259,7 @@ Backend håndhever all forretningslogikk:
 - API er REST-basert og delt mellom frontend/backend (separat deploy)
 
 
-## 📁 Mappestrukturen:
+## 📁 Mappestruktur:
 
 ```
 behandler-booking/
@@ -274,9 +280,9 @@ behandler-booking/
 
 Frontend og backend er deployet som to separate services på Render og kommuniserer via REST API.
 
----
+<br>
 
-## Kom i gang lokalt
+## Installer appen lokalt
 
 ### Forutsetninger
 - Node.js
@@ -326,14 +332,15 @@ npm run dev
 # Start frontend (fra frontend-mappen)
 npm run dev
 ```
-
----
+<br>
 
 ## 👨🏻‍💻 Utvikler
 
 **Patrik Bystrøm Lie**
 - GitHub: [@patriklie](https://github.com/patriklie)
 - E-post: [patrik.lie@hotmail.com](mailto:patrik.lie@hotmail.com)
+
+<br>
 
 ## 👏 Kreditering
 
