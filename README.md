@@ -47,16 +47,17 @@ Under har jeg lagt ved noen skjermbilder fra Helsebooking-appen! Men anbefaler a
 ### 👤 Mine timer (pasient)
 <div>
   <img src="docs/bilder/MineTimer_pasient.png" width="300" style="display:inline-block; vertical-align: top;" />
-  <img src="docs/bilder/MineTimer_timeinfo.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/MineTimer_time_info.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
+---
 ---
 
 ### 👤 Klinikker (behandler)
 <div>
   <img src="docs/bilder/Klinikker.png" width="300" style="display:inline-block; vertical-align: top;" />
-  <img src="docs/bilder/klinikk_behandlere.png" width="300" style="display:inline-block; vertical-align: top;" />
-  <img src="docs/bilder/klinikk_rediger.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/Klinikk_behandlere.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/Klinikk_rediger.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
 ### Min profil (behandler)
