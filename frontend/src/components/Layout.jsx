@@ -8,7 +8,7 @@ const Layout = () => {
       <div className="topp-gap"></div>
       <Navbar />
       <Outlet />   
-      
+
       <Toaster
         position="top-center"
         containerStyle={{

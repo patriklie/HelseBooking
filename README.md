@@ -1,12 +1,20 @@
 <img src="docs/bilder/HelseBooking_Logo_blue.png" width="300" />
 
-Hei! Her har jeg laget en fullstack bookingapplikasjon for helsetjenester, der pasienter kan finne og booke time hos behandlere. Dette har jeg laget som et CV-prosjekt for å demonstrere mine ferdigheter innen webutvikling. Appen er laget for å fungere på alle flater, men den ser best ut på mobile enheter med skjermbredde mellom 375px - 1000px.
+Hei! 👋
+
+Dette er en fullstack bookingapplikasjon for helsetjenester hvor pasienter kan finne og booke time hos behandlere.
+
+Prosjektet er laget som et CV-prosjekt for å demonstrere ferdigheter innen moderne webutvikling, med fokus på brukeropplevelse, autentisering og rollebasert tilgang.
+
+```
+Appen er fullt responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px).
+```
 
 <h2>
 <a href="https://helsebooking.onrender.com" target="_blank">🔗 Live demo</a>
 </h2>
 
-Jeg har laget testbrukere som du kan bruke. Det er bare å opprette timer, slette timer, pasienter, behandlere, endre profilbilder og klinikker, gjør som du vil. 
+Jeg har laget testbrukere under man kan logge på. Med disse er det bare å opprette timer, slette timer, pasienter, behandlere, endre profilbilder og klinikker, gjør som du vil. Jeg har fylt appen med timer og klinikker slik at den ikke er tom.
 
 ## 🔑 Test-brukere
 
@@ -77,8 +85,8 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
 ### 🏥 Klinikker (behandler)
 <div>
   <img src="docs/bilder/Klinikker.png" width="300" style="display:inline-block; vertical-align: top;" />
-  <img src="docs/bilder/Klinikk_behandlere.png" width="300" style="display:inline-block; vertical-align: top;" />
   <img src="docs/bilder/Klinikk_rediger.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/Klinikk_behandlere.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
 ### 🩺 Min profil (behandler)
