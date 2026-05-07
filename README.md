@@ -235,4 +235,12 @@ npm run dev
 - GitHub: [@patriklie](https://github.com/patriklie)
 - E-post: [patrik.lie@hotmail.com](mailto:patrik.lie@hotmail.com)
 
-## 👨🏻‍💻 Utvikler
+## 👏 Kreditering
+
+Dette prosjektet bruker tredjepartsillustrasjoner og verktøy:
+
+- Freepik – illustrasjoner og 3D assets
+- Leaflet – kartvisning
+- Geoapify – kartdata
+
+<a href="https://www.magnific.com/free-psd/3d-female-character-with-superhero-cape-launching-into-flight_13678512.htm">Image by freepik</a>
