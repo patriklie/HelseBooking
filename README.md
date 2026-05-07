@@ -6,9 +6,8 @@ Dette er en fullstack bookingapplikasjon for helsetjenester hvor pasienter kan f
 
 Prosjektet er laget som et CV-prosjekt for å demonstrere ferdigheter innen moderne webutvikling, med fokus på brukeropplevelse, autentisering og rollebasert tilgang.
 
-```
-Appen er responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px).
-```
+> Appen er responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px).
+
 
 <h2>
 <a href="https://helsebooking.onrender.com" target="_blank">🔗 Live demo</a>
@@ -41,6 +40,8 @@ Jeg har laget testbrukere under man kan logge på. Med disse er det bare å oppr
 
 Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger deg inn på en av testbrukerne å klikker deg rundt selv, eller at vi sammen tar en gjennomgang! 😊
 
+Appen fungerer også som PWA bare lagre den som bokmerke på telefonen.
+
 ---
 
 ### 🏠 Forside / About
@@ -62,7 +63,6 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
   <img src="docs/bilder/auth_registrer_1.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
-
 ---
 
 ### 📅 Book time (pasient)
@@ -80,13 +80,14 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
 </div>
 
 ---
----
 
 ### 🏥 Klinikker (behandler)
 <div>
   <img src="docs/bilder/klinikker_1.png" width="300" style="display:inline-block; vertical-align: top;" />
   <img src="docs/bilder/klinikker_3.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
+
+---
 
 ### 🩺 Min profil (behandler)
 <div>
@@ -233,3 +234,5 @@ npm run dev
 **Patrik Bystrøm Lie**
 - GitHub: [@patriklie](https://github.com/patriklie)
 - E-post: [patrik.lie@hotmail.com](mailto:patrik.lie@hotmail.com)
+
+## 👨🏻‍💻 Utvikler
