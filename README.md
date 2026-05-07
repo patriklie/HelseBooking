@@ -2,17 +2,14 @@
 
 <br>
 
-Hei! 👋
+**Hei!** 👋
 
 Dette er en fullstack bookingapplikasjon for helsetjenester hvor pasienter kan finne og booke time hos behandlere.
 
-Mange bookingløsninger i helsebransjen er fragmenterte og lite brukervennlige. Målet med dette prosjektet var å bygge en enkel og moderne løsning der pasienter og behandlere kan samhandle sømløst i en plattform.
-
-Prosjektet er laget som et CV-prosjekt så jeg ville samtidig demonstrere ferdigheter innen moderne webutvikling, med fokus på brukeropplevelse, autentisering og rollebasert tilgang.
+Problemet appen løser er at mange bookingløsninger i helsebransjen er fragmenterte og lite brukervennlige. Målet med dette prosjektet var å bygge en enkel og moderne løsning der pasienter og behandlere kan samhandle sømløst i en plattform, og prøve å redusere antall klikk fra du logger inn til du har booket riktig time. Prosjektet er laget som et CV-prosjekt så jeg ville samtidig demonstrere ferdigheter innen moderne webutvikling, med fokus på brukeropplevelse, autentisering og rollebasert tilgang.
 
 > Appen er responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px). 
->
->Legg den helst inn som en PWA.
+>***Legg den helst inn som en PWA.***
 
 Jeg har lært mye i løpet av dette prosjektet og det er fortsatt **work in progress**, men jeg tenker allerede på forbedringer jeg kan gjøre i mitt neste prosjekt basert på erfaringer fra dette.
 
