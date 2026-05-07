@@ -1,6 +1,5 @@
 <img src="docs/bilder/HelseBooking_Logo_blue.png" width="300" />
 
-<br>
 Hei! Her har jeg laget en fullstack bookingapplikasjon for helsetjenester, der pasienter kan finne og booke time hos behandlere. Dette har jeg laget som et CV-prosjekt for å demonstrere mine ferdigheter innen webutvikling. Appen er laget for å fungere på alle flater, men den ser best ut på mobile enheter med skjermbredde mellom 375px - 1000px.
 
 <h2>
