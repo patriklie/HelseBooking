@@ -4,10 +4,13 @@ Hei! 👋
 
 Dette er en fullstack bookingapplikasjon for helsetjenester hvor pasienter kan finne og booke time hos behandlere.
 
-Prosjektet er laget som et CV-prosjekt for å demonstrere ferdigheter innen moderne webutvikling, med fokus på brukeropplevelse, autentisering og rollebasert tilgang.
+Mange bookingløsninger i helsebransjen er fragmenterte og lite brukervennlige. Målet med dette prosjektet var å bygge en enkel og moderne løsning der pasienter og behandlere kan samhandle sømløst i en plattform.
 
-> Appen er responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px).
+Prosjektet er laget som et CV-prosjekt så jeg ville samtidig demonstrere ferdigheter innen moderne webutvikling, med fokus på brukeropplevelse, autentisering og rollebasert tilgang.
 
+> Appen er responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px). Legg den gjerne inn som PWA.
+
+Jeg har lært mye i løpet av dette prosjektet og det er fortsatt et work in progress, men jeg tenker allerede på forbedringer jeg skal gjøre i neste prosjekt!
 
 <h2>
 <a href="https://helsebooking.onrender.com" target="_blank">🔗 Live demo</a>
@@ -15,7 +18,7 @@ Prosjektet er laget som et CV-prosjekt for å demonstrere ferdigheter innen mode
 
 Jeg har laget testbrukere under man kan logge på. Med disse er det bare å opprette timer, slette timer, pasienter, behandlere, endre profilbilder og klinikker, gjør som du vil. Jeg har fylt appen med timer og klinikker slik at den ikke er tom.
 
-## 🔑 Test-brukere
+### 🔑 Test-brukere
 
 | Rolle      | Epost                        | Passord   |
 |------------|------------------------------|-----------|
@@ -39,8 +42,6 @@ Jeg har laget testbrukere under man kan logge på. Med disse er det bare å oppr
 ## 📸 App Showcase
 
 Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger deg inn på en av testbrukerne å klikker deg rundt selv, eller at vi sammen tar en gjennomgang! 😊
-
-Appen fungerer også som PWA bare lagre den som bokmerke på telefonen.
 
 ---
 
@@ -124,36 +125,133 @@ Appen fungerer også som PWA bare lagre den som bokmerke på telefonen.
 ## Tech Stack
 
 ### 💻 Frontend
-| Teknologi | Bruk |
-|---|---|
-| React + Vite | UI-rammeverk og byggverktøy |
-| React Router v7 | Klientside routing |
-| Zustand | Global state management |
-| Framer Motion | Animasjoner og swipe-to-delete |
-| Swiper | Karusell for behandleroversikt |
-| Axios | HTTP-kall mot API |
-| Lucide React | Ikonbibliotek |
-| Leaflet + Geoapify | Kart |
+| Teknologi          | Bruk                           |
+|---                 |---                             |
+| React + Vite       | UI-rammeverk og byggverktøy    |
+| React Router v7    | Klientside routing             |
+| Zustand            | Global state management        |
+| Framer Motion      | Animasjoner og swipe-to-delete |
+| Swiper             | Karusell for behandleroversikt |
+| Axios              | HTTP-kall mot API              |
+| Lucide React       | Ikonbibliotek                  |
+| Leaflet + Geoapify | Kart                           |
 
 ### 🗄️ Backend
-| Teknologi | Bruk |
-|---|---|
-| Node.js + Express | API-server |
-| MongoDB + Mongoose | Database og ODM |
-| JWT + bcryptjs | Autentisering og passordhashing |
-| Cloudinary + Multer | Bildeopplasting og lagring |
-| CORS | Kryssdomene-tilgang |
+| Teknologi           | Bruk                            |
+|---                  |---                              |
+| Node.js + Express   | API-server                      |
+| MongoDB + Mongoose  | Database og ODM                 |
+| JWT + bcryptjs      | Autentisering og passordhashing |
+| Cloudinary + Multer | Bildeopplasting og lagring      |
+| CORS                | Kryssdomene-tilgang             |
 
 ### ☁️ Deploy
-| Tjeneste | Bruk |
-|---|---|
-| Render | Hosting av frontend (Static Site) og backend (Web Service) |
-| MongoDB Atlas | Skybasert database |
-| Cloudinary | Bildelagring |
+| Tjeneste      | Bruk                                                       |
+|---            |---                                                         |
+| Render        | Hosting av frontend (Static Site) og backend (Web Service) |
+| MongoDB Atlas | Skybasert database                                         |
+| Cloudinary    | Bildelagring                                               |
 
 ---
 
-## Arkitektur
+## 🏗️ Arkitektur / systemdesign
+
+Dette prosjektet er bygget som et rollebasert bookingsystem der kjernen i systemet er samspillet mellom brukere, klinikker og timeavtaler.
+
+Systemet er designet rundt tre hovedentiteter:
+
+- 👤 Brukere (User)
+- 🏥 Klinikker (Klinikk)
+- 📅 Timer (Time)
+
+## 👤 Brukere og roller
+
+Systemet har tre roller:
+
+- Pasient – kan velge behandler og booke tilgjengelige timer
+- Behandler – kan opprette tilgjengelige timer og administrere egne pasienter på sine timer
+- Admin – kan administrere systemets struktur (klinikker, brukere og relasjoner) (funksjon kommer)
+
+Brukere lagres i én felles User-modell, der rollen bestemmer tilgangsnivå og funksjonalitet i UI og API.
+
+Behandlere har i tillegg utvidet profil med:
+
+- fagfelt (typeBehandler)
+- profilinformasjon
+- profilbilde (Cloudinary)
+
+<br>
+
+![Bruker-relasjoner](docs/bilder/bruker_relasjoner.png)
+
+## 🏥 Klinikker som “hub”
+
+Klinikker fungerer som et organisatorisk lag mellom behandlere og timer.
+
+En Klinikk inneholder:
+
+- navn og adresse
+- geografiske koordinater (Leaflet/Geoapify)
+- liste over tilknyttede behandlere
+- eier (opprettetAv)
+
+Dette gjør at én behandler kan tilhøre flere klinikker, og klinikker kan skaleres uavhengig av brukere.
+
+<br>
+
+![Klinikk-relasjoner](docs/bilder/klinikk_relasjoner.png)
+
+## 📅 Time-modellen (kjerne i systemet)
+
+Time er den mest sentrale entiteten i systemet og binder hele domenet sammen.
+
+En time inneholder:
+
+- behandler (reference til User)
+- pasient (valgfri frem til booking)
+- klinikk
+- dato + start/slutt-tid
+- status: ledig | booket | avlyst
+
+Systemet er bygget rundt state transitions:
+
+- ledig → booket (pasient reserverer)
+- booket → ledig (avlysning)
+- opprettet → tilgjengelig slot fra behandler
+
+Dette gir en tydelig og kontrollert livssyklus for hver time.
+
+<br>
+
+![Time-relasjoner](docs/bilder/time_relasjoner.png)
+
+## 🔄 Backend regler
+
+Backend håndhever all forretningslogikk:
+
+- Overlappende timer blokkeres på server (ingen dobbeltbooking)
+- Tid i fortid kan ikke opprettes
+- Kun tilgjengelige timer kan bookes
+- Avlysning frigjør timer automatisk
+- Sletting av klinikk eller bruker rydder relaterte data (cascade-logikk)
+
+## 🔐 Autentisering og tilgang
+- JWT brukes for autentisering
+- Middleware beskytter private routes
+- Rollebasert tilgang styrer:
+  - Hvem som kan opprette timer
+  - Hvem som kan booke
+  - Hvem som kan administrere klinikker
+
+## 🚀 Designvalg
+- MongoDB ble valgt for fleksibel modellering av relasjoner
+- Mongoose brukes til validering og relasjonslogikk
+- Backend håndterer all validering (ikke frontend)
+- Frontend er kun presentasjonslag + state management
+- API er REST-basert og delt mellom frontend/backend (separat deploy)
+
+
+## 📁 Mappestrukturen:
 
 ```
 behandler-booking/
