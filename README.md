@@ -8,17 +8,61 @@ En fullstack bookingapplikasjon for helsetjenester, der pasienter kan finne og b
 
 ## Skjermbilder
 
-<!-- Legg til skjermbilder her -->
-![Forside](docs/bilder/About_Hero.png)
-![Login](docs/bilder/Login.png)
-![Registrer](docs/bilder/Registrer.png)
-![Book time](docs/bilder/BookTime_valgt_time.png)
-![Book time pasient](docs/bilder/BookTime_pasient.png)
+## 📸 App Showcase
 
+Under har jeg lagt ved noen skjermbilder fra Helsebooking-appen! Men anbefaler at du logger inn på en testbruker å selv klikker deg rundt i appen, eller at vi sammen tar en gjennomgang!
 
+---
+
+### 🏠 Forside / About
+<div>
+  <img src="docs/bilder/About_Hero.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/About_Behandlere.png" width="300" style="display:inline-block; vertical-align: top;" />
+</div>
+<br>
+<div>
+  <img src="docs/bilder/About_FeatureListe.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/About_footer.png" width="300" style="display:inline-block; vertical-align: top;" />
+</div>
+
+---
+
+### 🔐 Auth (login/registrering)
+<div>
+  <img src="docs/bilder/Login.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/Registrer.png" width="300" style="display:inline-block; vertical-align: top;" />
+</div>
 
 
 ---
+
+### 👤 Book time (pasient)
+<div>
+  <img src="docs/bilder/BookTime_pasient.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/BookTime_valgt_time.png" width="300" style="display:inline-block; vertical-align: top;" />
+</div>
+
+---
+
+### 👤 Mine timer (pasient)
+<div>
+  <img src="docs/bilder/MineTimer_pasient.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/MineTimer_timeinfo.png" width="300" style="display:inline-block; vertical-align: top;" />
+</div>
+
+---
+
+### 👤 Klinikker (behandler)
+<div>
+  <img src="docs/bilder/Klinikker.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/klinikk_behandlere.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/klinikk_rediger.png" width="300" style="display:inline-block; vertical-align: top;" />
+</div>
+
+### Min profil (behandler)
+  <img src="docs/bilder/Behandler_profil.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/Slett_behandler_profil.png" width="300" style="display:inline-block; vertical-align: top;" />
+
 
 ## Test-brukere
 Jeg har laget en rekke testbrukere som du kan prøve å logge inn på. Det er bare å opprette og slette timer, pasienter, behandlere, profilbilder og klinikker, gjør som du vil. 
