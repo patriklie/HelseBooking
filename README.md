@@ -1,18 +1,15 @@
-# HelseBooking
+<img src="docs/bilder/HelseBooking_Logo_blue.png" width="300" />
 
-En fullstack bookingapplikasjon for helsetjenester, der pasienter kan finne og booke time hos behandlere. Bygget som et CV-prosjekt for å demonstrere mine ferdigheter innen webutvikling. 
-
-Jeg har laget appen så den fungerer på alle flater, men den ser best ut på mobile enheter med skjermbredde mellom 375px - 1000px.
+<br>
+Hei! Her har jeg laget en fullstack bookingapplikasjon for helsetjenester, der pasienter kan finne og booke time hos behandlere. Dette har jeg laget som et CV-prosjekt for å demonstrere mine ferdigheter innen webutvikling. Appen er laget for å fungere på alle flater, men den ser best ut på mobile enheter med skjermbredde mellom 375px - 1000px.
 
 <h2>
-  🔗 
-  <a href="https://helsebooking.onrender.com">
-    Test live demo her
-  </a>
+<a href="https://helsebooking.onrender.com" target="_blank">🔗 Live demo</a>
 </h2>
 
-## 🔑 Test-brukere
 Jeg har laget testbrukere som du kan bruke. Det er bare å opprette timer, slette timer, pasienter, behandlere, endre profilbilder og klinikker, gjør som du vil. 
+
+## 🔑 Test-brukere
 
 | Rolle      | Epost                        | Passord   |
 |------------|------------------------------|-----------|
