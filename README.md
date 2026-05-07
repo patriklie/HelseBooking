@@ -10,7 +10,7 @@ Problemet appen løser er at mange bookingløsninger i helsebransjen er fragment
 
 > Appen er responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px).
 
-## 💭 Refleksjon
+## 🚀 Videre utvikling
 Før du tar en titt på appen må jeg bare si at jeg har lært mye i løpet av dette prosjektet og det er fortsatt **work in progress**, men underveis har jeg fått erfaring med både frontend, backend, databasedesign, autentisering og deploy.
 
 Samtidig har prosjektet gitt meg mange idéer til hvordan jeg kan strukturere og forbedre fremtidige applikasjoner enda bedre.
