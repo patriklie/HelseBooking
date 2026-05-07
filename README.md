@@ -8,9 +8,11 @@ Mange bookingløsninger i helsebransjen er fragmenterte og lite brukervennlige. 
 
 Prosjektet er laget som et CV-prosjekt så jeg ville samtidig demonstrere ferdigheter innen moderne webutvikling, med fokus på brukeropplevelse, autentisering og rollebasert tilgang.
 
-> Appen er responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px). Legg den gjerne inn som PWA.
+> Appen er responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px). 
+>
+>Legg den helst inn som en PWA.
 
-Jeg har lært mye i løpet av dette prosjektet og det er fortsatt et work in progress, men jeg tenker allerede på forbedringer jeg skal gjøre i neste prosjekt!
+Jeg har lært mye i løpet av dette prosjektet og det er fortsatt **work in progress**, men jeg tenker allerede på forbedringer jeg kan gjøre i mitt neste prosjekt basert på erfaringer fra dette.
 
 <h2>
 <a href="https://helsebooking.onrender.com" target="_blank">🔗 Live demo</a>
@@ -160,11 +162,11 @@ Dette prosjektet er bygget som et rollebasert bookingsystem der kjernen i system
 
 Systemet er designet rundt tre hovedentiteter:
 
-- 👤 Brukere (User)
+- 🧑‍⚕️ Brukere (User)
 - 🏥 Klinikker (Klinikk)
 - 📅 Timer (Time)
 
-## 👤 Brukere og roller
+## 🧑‍⚕️ Brukere og roller
 
 Systemet har tre roller:
 
@@ -225,7 +227,7 @@ Dette gir en tydelig og kontrollert livssyklus for hver time.
 
 ![Time-relasjoner](docs/bilder/time_relasjoner.png)
 
-## 🔄 Backend regler
+## 🛡️ Backend regler
 
 Backend håndhever all forretningslogikk:
 
