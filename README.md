@@ -4,19 +4,27 @@
 
 **Hei!** 👋
 
-Dette er en fullstack bookingapplikasjon for helsetjenester hvor pasienter kan finne og booke time hos behandlere.
+Velkommer til HelseBooking, min fullstack bookingapplikasjon for helsetjenester hvor pasienter kan finne og booke time hos behandlere.
 
 Problemet appen løser er at mange bookingløsninger i helsebransjen er fragmenterte og lite brukervennlige. Målet med dette prosjektet var å bygge en enkel og moderne løsning der pasienter og behandlere kan samhandle sømløst i en plattform, og samtidig prøve å redusere antall klikk fra du logger inn til du har booket riktig time. Prosjektet er laget som et CV-prosjekt så jeg ville samtidig demonstrere ferdigheter innen moderne webutvikling, med fokus på brukeropplevelse, autentisering og rollebasert tilgang.
 
-> Appen er responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px). 
->
->***Legg den helst inn som en PWA.***
+> Appen er responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px).
 
-Jeg har lært mye i løpet av dette prosjektet og det er fortsatt **work in progress**, men jeg tenker allerede på forbedringer jeg kan gjøre i mitt neste prosjekt basert på erfaringer fra dette.
+## 💭 Refleksjon
+Før du tar en titt på appen må jeg bare si at jeg har lært mye i løpet av dette prosjektet og det er fortsatt **work in progress**, men underveis har jeg fått erfaring med både frontend, backend, databasedesign, autentisering og deploy.
+
+Samtidig har prosjektet gitt meg mange idéer til hvordan jeg kan strukturere og forbedre fremtidige applikasjoner enda bedre.
+
+
 
 <h2>
 <a href="https://helsebooking.onrender.com" target="_blank">🔗 Live demo</a>
 </h2>
+
+<p style="text-align: left;">
+  <img src="docs/bilder/helsebooking_ios_2.jpeg" width="100" /></br>
+  <strong>Legg den helst inn som en PWA.</strong>
+</p>
 
 Jeg har laget testbrukere under man kan logge på. Med disse er det bare å opprette timer, slette timer, pasienter, behandlere, endre profilbilder og klinikker, gjør som du vil. Jeg har fylt appen med timer og klinikker slik at den ikke er tom.
 
