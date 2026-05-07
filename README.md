@@ -1,6 +1,8 @@
 # HelseBooking
 
-En fullstack bookingapplikasjon for helsetjenester, der pasienter kan finne og booke time hos behandlere. Bygget som et CV-prosjekt for å demonstrere mine ferdigheter i webutvikling. Jeg har laget appen så den fungerer uansett skjerm, men den ser best ut på mobile flater med skjermbredde mellom 375px - 1000px.
+En fullstack bookingapplikasjon for helsetjenester, der pasienter kan finne og booke time hos behandlere. Bygget som et CV-prosjekt for å demonstrere mine ferdigheter innen webutvikling. 
+
+Jeg har laget appen så den fungerer på alle flater, men den ser best ut på mobile enheter med skjermbredde mellom 375px - 1000px.
 
 <h2>
   🔗 
@@ -84,8 +86,10 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
 </div>
 
 ### 🩺 Min profil (behandler)
+<div>
   <img src="docs/bilder/Behandler_profil.png" width="300" style="display:inline-block; vertical-align: top;" />
   <img src="docs/bilder/Slett_behandler_profil.png" width="300" style="display:inline-block; vertical-align: top;" />
+</div>
 
 ## ⭐ Funksjonalitet
 
