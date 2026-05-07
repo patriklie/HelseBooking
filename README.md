@@ -1,16 +1,39 @@
 # HelseBooking
 
-En fullstack bookingapplikasjon for helsetjenester, der pasienter kan finne og booke time hos behandlere. Bygget som et CV-prosjekt for å demonstrere mine ferdigheter i webutvikling.
+En fullstack bookingapplikasjon for helsetjenester, der pasienter kan finne og booke time hos behandlere. Bygget som et CV-prosjekt for å demonstrere mine ferdigheter i webutvikling. Jeg har laget appen så den fungerer uansett skjerm, men den ser best ut på mobile flater med skjermbredde mellom 375px - 1000px.
 
-🔗 **Live demo:** [helsebooking.onrender.com](https://helsebooking.onrender.com)
+<h2>
+  🔗 
+  <a href="https://helsebooking.onrender.com">
+    Test live demo her
+  </a>
+</h2>
 
----
+## 🔑 Test-brukere
+Jeg har laget testbrukere som du kan bruke. Det er bare å opprette timer, slette timer, pasienter, behandlere, endre profilbilder og klinikker, gjør som du vil. 
 
-## Skjermbilder
+| Rolle      | Epost                        | Passord   |
+|------------|------------------------------|-----------|
+| Behandler  | kristoffer@helsebooking.no   | Test1234  |
+| Behandler  | lise@helsebooking.no         | Test1234  |
+| Behandler  | tove@helsebooking.no         | Test1234  |
+| Behandler  | steinar@helsebooking.no      | Test1234  |
+| Behandler  | jonas@helsebooking.no        | Test1234  |
+| Behandler  | morten@helsebooking.no       | Test1234  |
+| Behandler  | kari@helsebooking.no         | Test1234  |
+| Pasient    | anders@helsebooking.no       | Test1234  |
+| Pasient    | camilla@helsebooking.no      | Test1234  |
+| Pasient    | daniel@helsebooking.no       | Test1234  |
+| Pasient    | emilie@helsebooking.no       | Test1234  |
+| Pasient    | fredrik@helsebooking.no      | Test1234  |
+| Pasient    | ingrid@helsebooking.no       | Test1234  |
+| Pasient    | marius@helsebooking.no       | Test1234  |
+
+# Skjermbilder
 
 ## 📸 App Showcase
 
-Under har jeg lagt ved noen skjermbilder fra Helsebooking-appen! Men anbefaler at du logger inn på en testbruker å selv klikker deg rundt i appen, eller at vi sammen tar en gjennomgang!
+Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger deg inn på en av testbrukerne å klikker deg rundt selv, eller at vi sammen tar en gjennomgang! 😊
 
 ---
 
@@ -36,7 +59,7 @@ Under har jeg lagt ved noen skjermbilder fra Helsebooking-appen! Men anbefaler a
 
 ---
 
-### 👤 Book time (pasient)
+### 📅 Book time (pasient)
 <div>
   <img src="docs/bilder/BookTime_pasient.png" width="300" style="display:inline-block; vertical-align: top;" />
   <img src="docs/bilder/BookTime_valgt_time.png" width="300" style="display:inline-block; vertical-align: top;" />
@@ -44,7 +67,7 @@ Under har jeg lagt ved noen skjermbilder fra Helsebooking-appen! Men anbefaler a
 
 ---
 
-### 👤 Mine timer (pasient)
+### 👨🏻 Mine timer (pasient)
 <div>
   <img src="docs/bilder/MineTimer_pasient.png" width="300" style="display:inline-block; vertical-align: top;" />
   <img src="docs/bilder/MineTimer_time_info.png" width="300" style="display:inline-block; vertical-align: top;" />
@@ -53,40 +76,18 @@ Under har jeg lagt ved noen skjermbilder fra Helsebooking-appen! Men anbefaler a
 ---
 ---
 
-### 👤 Klinikker (behandler)
+### 🏥 Klinikker (behandler)
 <div>
   <img src="docs/bilder/Klinikker.png" width="300" style="display:inline-block; vertical-align: top;" />
   <img src="docs/bilder/Klinikk_behandlere.png" width="300" style="display:inline-block; vertical-align: top;" />
   <img src="docs/bilder/Klinikk_rediger.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
-### Min profil (behandler)
+### 🩺 Min profil (behandler)
   <img src="docs/bilder/Behandler_profil.png" width="300" style="display:inline-block; vertical-align: top;" />
   <img src="docs/bilder/Slett_behandler_profil.png" width="300" style="display:inline-block; vertical-align: top;" />
 
-
-## Test-brukere
-Jeg har laget en rekke testbrukere som du kan prøve å logge inn på. Det er bare å opprette og slette timer, pasienter, behandlere, profilbilder og klinikker, gjør som du vil. 
-
-| Rolle      | Epost                        | Passord   |
-|------------|------------------------------|-----------|
-| Behandler  | kristoffer@helsebooking.no   | Test1234  |
-| Behandler  | lise@helsebooking.no         | Test1234  |
-| Behandler  | tove@helsebooking.no         | Test1234  |
-| Behandler  | steinar@helsebooking.no      | Test1234  |
-| Behandler  | jonas@helsebooking.no        | Test1234  |
-| Behandler  | morten@helsebooking.no       | Test1234  |
-| Behandler  | kari@helsebooking.no         | Test1234  |
-| Pasient    | anders@helsebooking.no       | Test1234  |
-| Pasient    | camilla@helsebooking.no      | Test1234  |
-| Pasient    | daniel@helsebooking.no       | Test1234  |
-| Pasient    | emilie@helsebooking.no       | Test1234  |
-| Pasient    | fredrik@helsebooking.no      | Test1234  |
-| Pasient    | ingrid@helsebooking.no       | Test1234  |
-| Pasient    | marius@helsebooking.no       | Test1234  |
-
-
-## Funksjonalitet
+## ⭐ Funksjonalitet
 
 **Pasient**
 - Registrering og innlogging med JWT-autentisering
@@ -94,23 +95,27 @@ Jeg har laget en rekke testbrukere som du kan prøve å logge inn på. Det er ba
 - Se behandlerprofiler med profilbilde, navn og spesialitet
 - Booke ledig time med bekreftelsesmodal
 - Se og avbestille egne timer med swipe-to-delete animasjon
-- Laste opp og slette profilbilde via Cloudinary
+
 
 **Behandler**
 - Opprette ledige timer med dato og tidspunkt
 - Se oversikt over bookede timer i kalender
 - Rollebasert visning – behandlere ser andre verktøy enn pasienter
+- Laste opp og slette profilbilde via Cloudinary
+- Opprett og rediger klinikker og tilhørende behandlere
+- Rediger timer, legg til eller fjern pasienter på timen.
+
 
 **Generelt**
 - Rollebasert tilgangskontroll (pasient / behandler / admin)
-- Atomisk booking som forhindrer dobbeltbooking (race conditions)
+- Hindrer at samme time bookes flere ganger, ikke mulig å booke eller opprette timer tilbake i tid. Timer blir slettet dersom man fjerner en behandler fra en klinikk eller sletter profilen sin pasient/behandler.
 - Responsivt design med animert navigasjon
 
 ---
 
 ## Tech Stack
 
-### Frontend
+### 💻 Frontend
 | Teknologi | Bruk |
 |---|---|
 | React + Vite | UI-rammeverk og byggverktøy |
@@ -120,8 +125,9 @@ Jeg har laget en rekke testbrukere som du kan prøve å logge inn på. Det er ba
 | Swiper | Karusell for behandleroversikt |
 | Axios | HTTP-kall mot API |
 | Lucide React | Ikonbibliotek |
+| Leaflet + Geoapify | Kart |
 
-### Backend
+### 🗄️ Backend
 | Teknologi | Bruk |
 |---|---|
 | Node.js + Express | API-server |
@@ -130,7 +136,7 @@ Jeg har laget en rekke testbrukere som du kan prøve å logge inn på. Det er ba
 | Cloudinary + Multer | Bildeopplasting og lagring |
 | CORS | Kryssdomene-tilgang |
 
-### Deploy
+### ☁️ Deploy
 | Tjeneste | Bruk |
 |---|---|
 | Render | Hosting av frontend (Static Site) og backend (Web Service) |
@@ -215,7 +221,8 @@ npm run dev
 
 ---
 
-## Utvikler
+## 👨🏻‍💻 Utvikler
 
-**Patrik Lie**
+**Patrik Bystrøm Lie**
 - GitHub: [@patriklie](https://github.com/patriklie)
+- E-post: [patrik.lie@hotmail.com](mailto:patrik.lie@hotmail.com)
