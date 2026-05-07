@@ -7,7 +7,7 @@ Dette er en fullstack bookingapplikasjon for helsetjenester hvor pasienter kan f
 Prosjektet er laget som et CV-prosjekt for å demonstrere ferdigheter innen moderne webutvikling, med fokus på brukeropplevelse, autentisering og rollebasert tilgang.
 
 ```
-Appen er fullt responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px).
+Appen er responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px).
 ```
 
 <h2>
@@ -45,21 +45,21 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
 
 ### 🏠 Forside / About
 <div>
-  <img src="docs/bilder/About_Hero.png" width="300" style="display:inline-block; vertical-align: top;" />
-  <img src="docs/bilder/About_Behandlere.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/about_hero_1.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/about_hero_2.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 <br>
 <div>
-  <img src="docs/bilder/About_FeatureListe.png" width="300" style="display:inline-block; vertical-align: top;" />
-  <img src="docs/bilder/About_footer.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/about_hero_3.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/about_hero_4.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
 ---
 
 ### 🔐 Auth (login/registrering)
 <div>
-  <img src="docs/bilder/Login.png" width="300" style="display:inline-block; vertical-align: top;" />
-  <img src="docs/bilder/Registrer.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/auth_login_1.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/auth_registrer_1.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
 
@@ -67,16 +67,16 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
 
 ### 📅 Book time (pasient)
 <div>
-  <img src="docs/bilder/BookTime_pasient.png" width="300" style="display:inline-block; vertical-align: top;" />
-  <img src="docs/bilder/BookTime_valgt_time.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/book_time_1.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/book_time_2.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
 ---
 
 ### 👨🏻 Mine timer (pasient)
 <div>
-  <img src="docs/bilder/MineTimer_pasient.png" width="300" style="display:inline-block; vertical-align: top;" />
-  <img src="docs/bilder/MineTimer_time_info.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/mine_timer_1.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/mine_timer_2.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
 ---
@@ -84,15 +84,14 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
 
 ### 🏥 Klinikker (behandler)
 <div>
-  <img src="docs/bilder/Klinikker.png" width="300" style="display:inline-block; vertical-align: top;" />
-  <img src="docs/bilder/Klinikk_rediger.png" width="300" style="display:inline-block; vertical-align: top;" />
-  <img src="docs/bilder/Klinikk_behandlere.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/klinikker_1.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/klinikker_3.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
 ### 🩺 Min profil (behandler)
 <div>
-  <img src="docs/bilder/Behandler_profil.png" width="300" style="display:inline-block; vertical-align: top;" />
-  <img src="docs/bilder/Slett_behandler_profil.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/profil_1.png" width="300" style="display:inline-block; vertical-align: top;" />
+  <img src="docs/bilder/profil_2.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
 ## ⭐ Funksjonalitet
