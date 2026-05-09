@@ -139,32 +139,32 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
 # Tech Stack
 
 ### 💻 Frontend
-| Teknologi          | Bruk                           |
-|---                 |---                             |
-| React + Vite       | UI-rammeverk og byggverktøy    |
-| React Router v7    | Klientside routing             |
-| Zustand            | Global state management        |
-| Framer Motion      | Animasjoner og swipe-to-delete |
-| Swiper             | Karusell for behandleroversikt |
-| Axios              | HTTP-kall mot API              |
-| Lucide React       | Ikonbibliotek                  |
-| Leaflet + Geoapify | Kart                           |
+| Teknologi          | Bruk                           | Begrunnelse                                      |
+|---                 |---                             |---                                               |
+| React + Vite       | UI-rammeverk og byggverktøy    | Rask utviklingsopplevelse                        |
+| React Router v7    | Klientside routing             | Industristandard for React SPA                   |
+| Zustand            | Global state management        | Enklere API enn Redux, ingen boilerplate         |
+| Framer Motion      | Animasjoner og swipe-to-delete | Animasjon med god React-integrasjon              |
+| Swiper             | Karusell for behandleroversikt | Touch-vennlig og mobil-optimalisert              |
+| Axios              | HTTP-kall mot API              | Enklere enn fetch og god feilhåndtering          |
+| Lucide React       | Ikonbibliotek                  | Fine, lette og konsistente ikoner + treeshakable |
+| Leaflet + Geoapify | Kart og adressesøk             | Open source, ingen kostnad og enkel integrasjon  |
 
 ### 🗄️ Backend
-| Teknologi           | Bruk                            |
-|---                  |---                              |
-| Node.js + Express   | API-server                      |
-| MongoDB + Mongoose  | Database og ODM                 |
-| JWT + bcryptjs      | Autentisering og passordhashing |
-| Cloudinary + Multer | Bildeopplasting og lagring      |
-| CORS                | Kryssdomene-tilgang             |
+| Teknologi           | Bruk                            | Begrunnelse                                         |
+|---                  |---                              |---                                                  |
+| Node.js + Express   | API-server                      | Samme språk som frontend, stort økosystem           |
+| MongoDB + Mongoose  | Database og ODM                 | Fleksibel modellering og enkel skalering            |
+| JWT + bcryptjs      | Autentisering og passordhashing | Stateless auth, ingen server-side sessions          |
+| Cloudinary + Multer | Bildeopplasting og lagring      | CDN-optimalisert bildelagring med transformasjoner  |
+| CORS                | Kryssdomene-tilgang             | Nødvendig for separat frontend/backend deploy       |
 
 ### ☁️ Deploy
-| Tjeneste      | Bruk                                                       |
-|---            |---                                                         |
-| Render        | Hosting av frontend (Static Site) og backend (Web Service) |
-| MongoDB Atlas | Skybasert database                                         |
-| Cloudinary    | Bildelagring                                               |
+| Tjeneste      | Bruk                                                       | Begrunnelse                           |
+|---            |---                                                         |---                                    |
+| Render        | Hosting av frontend og backend                             | Gratis tier, enkel GitHub-integrasjon |
+| MongoDB Atlas | Skybasert database                                         | Gratis tier, enkel oppsett            |
+| Cloudinary    | Bildelagring                                               | Gratis tier med CDN                   |
 
 <br>
 
