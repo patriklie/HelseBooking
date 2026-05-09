@@ -15,7 +15,7 @@ Problemet appen løser er at mange bookingløsninger i helsebransjen er fragment
 </h2>
 
 <p style="text-align: left;">
-  <img src="docs/bilder/helsebooking_ios_2.jpeg" width="100" /></br>
+  <img src="docs/bilder/helsebooking_ios_2.jpeg" width="100" style="border-radius: 12px;"  /></br>
 </p>
 
 >💡 For best opplevelse: legg til som PWA på mobil.
