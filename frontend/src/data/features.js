@@ -11,7 +11,7 @@ const features = [
         title: "Bruker system",
         status: "done",
         detaljer:
-            "Brukere kan administrere sin egen profil ved å oppdatere informasjon og laste opp eller fjerne profilbilde. Systemet gjør det også mulig å hente ut lister over behandlere og pasienter, avhengig av rolle, og gir dermed en strukturert oversikt over brukerne i system."
+            "Brukere kan administrere sin egen profil ved å oppdatere informasjon og laste opp eller fjerne profilbilde (kun behandlere har profilbilde). Systemet gjør det mulig for administrator rollen å hente ut lister over behandlere og pasienter, avhengig av rolle, og gir dermed en strukturert oversikt over brukerne i system."
     },
     {
         id: 3,
@@ -39,14 +39,14 @@ const features = [
         title: "Klinikker",
         status: "done",
         detaljer:
-            "Det utvikles nå støtte for at behandlere skal kunne opprette klinikker/behandlingssteder og knytte andre behandlere til stedet."
+            "Nå er det mulig for behandlere å opprette klinikker (behandlingssteder) og styre hvilke behandlere som jobber ved klinikken. Behandlere kan ikke opprette en time på klinikken før de er lagt til. Tanken er at kun brukere med rollen Admin skal kunne redigere klinikker og behandlere, men åpner for at alle behandlere har rettigheter til dette for enklere testing."
     },
     {
         id: 7,
         title: "Kart og veibeskrivelse",
         status: "done",
         detaljer:
-            "Nå er det mulig for behandler å legge til lokasjon med kart og veibeskrivelse som følger timen som opprettes."
+            "Nå er det mulig for behandler å legge til lokasjon med kart og veibeskrivelse som følger timen som opprettes. Det er også lagt til autocomplete i søkefelt for adresser."
     },
     {
         id: 8,
@@ -57,13 +57,20 @@ const features = [
     },
     {
         id: 9,
+        title: "AI assistanse",
+        status: "ongoing",
+        detaljer:
+            "Pasienter vil få mulighet til å bruke og få assistanse av kunstig intelligens inne i appen for å raskt velge riktig behandler, lokasjon (klinikk) og time (dato og klokkeslett) ved hjelp av AI prompt."
+    },
+    {
+        id: 10,
         title: "Behandler rating",
         status: "planned",
         detaljer:
             "Brukere kan gi stjernerating til behandlere basert på sin opplevelse etter gjennomført time med status gjennomført. Dette gir et enkelt og oversiktlig grunnlag for å vurdere kvalitet og erfaring før booking."
     },
     {
-        id: 10,
+        id: 11,
         title: "Admin side",
         status: "planned",
         detaljer:
