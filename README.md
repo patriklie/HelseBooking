@@ -24,7 +24,7 @@ Problemet appen løser er at mange bookingløsninger i helsebransjen er fragment
 
 
 
-# [⚡️Live Demo ⚡️](https://helsebooking.onrender.com)
+<h1><a href="https://helsebooking.onrender.com" target="_blank">⚡️ Live Demo ⚡️</a></h1>
 
 <img src="docs/bilder/HelseBooking_booktime.gif" width="350" />
 
