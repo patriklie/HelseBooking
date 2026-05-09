@@ -33,15 +33,13 @@ const ProfileCard = ({ profilbildeKlikk, username, email, role, typeBehandler, p
             {visTilgjengelighet && (
             <>
             {nesteTime ? 
-                                <div className="profil-neste-time">Neste ledige time: <span>{formaterDato(nesteTime.dato)} kl. {nesteTime.startTid}</span></div>
-            : <div className="profil-ingen-neste-time">Ingen ledige timer</div>
+                <div className="profil-neste-time">Neste ledige time: <span>{formaterDato(nesteTime.dato)} kl. {nesteTime.startTid}</span></div>
+            :   <div className="profil-ingen-neste-time">Ingen ledige timer</div>
             }                       
             </>
             )}
-            
-            
+             
             <div className={`profil-valgt ${valgt ? "" : "profil-valgt-hide"}`}>Valgt behandler</div>
-
         </div>
     </div>
     </>

@@ -1,7 +1,7 @@
 import { motion, useTransform, useMotionValue, animate } from "motion/react"
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Hospital, HospitalIcon, Map, Plus } from "lucide-react";
+import { Hospital, Map } from "lucide-react";
 import { useAppStore } from "../store/authStore";
 import toast from "react-hot-toast";
 import '@geoapify/geocoder-autocomplete/styles/minimal.css';

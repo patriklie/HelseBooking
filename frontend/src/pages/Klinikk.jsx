@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import '@geoapify/geocoder-autocomplete/styles/minimal.css';
 import DrawerOpprettKlinikk from "../components/DrawerOpprettKlinikk.jsx";
-import { Hospital } from "lucide-react";
 import axios from "axios";
 import { useAppStore } from "../store/authStore.js";
 import KlinikkKort from "../components/KlinikkKort.jsx";

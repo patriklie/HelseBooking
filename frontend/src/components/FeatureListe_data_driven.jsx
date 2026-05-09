@@ -55,7 +55,7 @@ const FeatureListe = () => {
                                     }
                                 </AnimatePresence>
                             </div>
-                        )
+                            )
                         })
                 } 
                

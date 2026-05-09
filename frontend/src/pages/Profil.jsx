@@ -2,7 +2,7 @@ import { useProfile, useAppStore } from "../store/authStore.js";
 import { useState, useRef } from "react";
 import axios from "axios";
 import { motion } from "motion/react";
-import { UserPen, Mail, Stethoscope, CircleChevronDown, LockKeyhole, Eye, EyeClosed, X, Info } from "lucide-react";
+import { UserPen, Mail, Stethoscope, LockKeyhole, Eye, EyeClosed, X } from "lucide-react";
 import ProfileCard from "../components/ProfileCard.jsx";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router";

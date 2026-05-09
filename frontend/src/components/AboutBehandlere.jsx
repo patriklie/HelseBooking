@@ -7,7 +7,6 @@ const AboutBehandlere = () => {
     
     const [alleBehandlere, setAlleBehandlere] = useState([]);
     
-    
     // pugge mer på Fisher Yates algoritmen ved anledning
     const shuffle = (array) => {
         const shuffled = [...array];
@@ -26,18 +25,13 @@ const AboutBehandlere = () => {
             console.error(error.response?.data?.message);
         }
     }
-    
-
-    
+     
     useEffect(() => {
         getAlleBehandlerePublic();
     }, [])
     
   return (
       <>
-          
-
-          
           
           <div className="about-behandlere-grid-wrapper">
                           

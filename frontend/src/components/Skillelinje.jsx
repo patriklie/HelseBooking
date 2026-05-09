@@ -1,5 +1,3 @@
-
-
 const Skillelinje = ({ tekst, onClick, buttonColor, lineColor, buttonTextColor }) => {
   return (
     <>

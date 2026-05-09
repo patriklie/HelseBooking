@@ -1,12 +1,9 @@
 import { motion, useTransform, useMotionValue, animate } from "motion/react"
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect } from "react";
 import { useAppStore } from "../store/authStore";
-import toast from "react-hot-toast";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
-import { Calendar1 } from "lucide-react";
 
 const DrawerPasientTime = ({ closeDrawer, time, avlysTime }) => {
     
@@ -16,7 +13,6 @@ const DrawerPasientTime = ({ closeDrawer, time, avlysTime }) => {
     const token = useAppStore((state) => state.token);
     const brukernavn = useAppStore((state) => state.username);
     const googleMapsLink = `https://www.google.com/maps/dir/?api=1&destination=${time.klinikk.latitude},${time.klinikk.longitude}`;
-    
     
     const roundIcon = time.behandler.profilbilde?.replace(
         "/upload/",
@@ -135,13 +131,9 @@ const DrawerPasientTime = ({ closeDrawer, time, avlysTime }) => {
                 </div>
                 
                 <div className="pasienttime-avlys-btn" onClick={async () => { await avlysTime(time._id); handleClose(); }}>Avlys time</div>
-
-           
-                
               
             </motion.div>
             
-
     </>
 
   )

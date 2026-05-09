@@ -1,9 +1,8 @@
-import { Clock, Hospital, Info, Map, MapPin, User, Wallet } from "lucide-react";
+import { Clock, Info, Wallet } from "lucide-react";
 import { motion } from "motion/react";
 
 const TimeListe = ({ timerValgtDato, slettTime, onTimeKlikk, onBehandlerTimeKlikk, musepeker }) => {
     
-
     return (
         <>
             {
@@ -37,9 +36,7 @@ const TimeListe = ({ timerValgtDato, slettTime, onTimeKlikk, onBehandlerTimeKlik
                                         damping: 10
                                     }}
                                     className="time-flex se-time" onClick={() => onTimeKlikk(time)}>Velg</motion.div>}
-                            </div>
-                            
-
+                            </div>                         
                           
                         </div>
                     )

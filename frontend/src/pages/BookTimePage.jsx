@@ -15,7 +15,7 @@ import { motion, AnimatePresence } from "motion/react";
 import Skillelinje from "../components/Skillelinje.jsx";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
-import { Calendar1, CalendarClock, Clock, Coins, Wallet } from "lucide-react";
+import { Calendar1, Clock, Wallet } from "lucide-react";
 
 const BookTimePage = () => {
   const token = useAppStore((state) => state.token);

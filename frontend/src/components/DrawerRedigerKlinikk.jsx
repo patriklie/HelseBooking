@@ -15,7 +15,6 @@ import { FlyttKart } from "./FlyttKart";
 import L from "leaflet";
 
 
-
 const DrawerRedigerKlinikk = ({ klinikk: klinikkData, closeDrawer, oppdaterKlinikker, slettKlinikk }) => {
     
     const y = useMotionValue(0);
@@ -202,7 +201,6 @@ const DrawerRedigerKlinikk = ({ klinikk: klinikkData, closeDrawer, oppdaterKlini
                 
             </motion.div>
             
-
     </>
 
   )
