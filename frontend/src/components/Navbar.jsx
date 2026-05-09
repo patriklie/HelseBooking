@@ -1,14 +1,11 @@
 import { NavLink, useNavigate } from "react-router";
 import { Squash as Hamburger } from 'hamburger-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { useState, useRef } from "react";
 import { useAppStore } from "../store/authStore.js";
-import { Info, ClipboardClock, Calendar1, CircleUserRound, LogOut, LogIn, UserPlus, Hospital, CalendarPlus } from "lucide-react";
+import { Info, ClipboardClock, CircleUserRound, LogOut, LogIn, UserPlus, Hospital, CalendarPlus } from "lucide-react";
 import toast from "react-hot-toast";
-import HelseBooking from "../assets/HelseBooking_Logo.png";
-import HelseBookingSmall from "../assets/HelseBooking_Logo_sm.png";
 import HelseBookingBlue from "../assets/HelseBooking_Logo_blue.png";
-
 
 const Navbar = () => {
 
