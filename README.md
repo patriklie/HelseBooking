@@ -19,7 +19,7 @@ Problemet appen løser er at mange bookingløsninger i helsebransjen er fragment
 
 Jeg har laget testbrukere under man kan logge på. Med disse er det bare å opprette timer, slette timer, pasienter, behandlere, endre profilbilder og klinikker. **Logg inn og utforsk fritt** — timer og klinikker er forhåndsutfylt.
 
-# [Live Demo](https://helsebooking.onrender.com)
+# [⚡️Live Demo](https://helsebooking.onrender.com)
 
 ### 🔑 Test-brukere
 
