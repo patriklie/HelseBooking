@@ -10,12 +10,24 @@
 
 Problemet appen løser er at mange bookingløsninger i helsebransjen er fragmenterte og lite brukervennlige. Målet med dette prosjektet var å bygge en enkel og moderne løsning der pasienter og behandlere kan samhandle sømløst i en plattform, og samtidig prøve å redusere antall klikk fra du logger inn til du har booket riktig time. Prosjektet er laget som et CV-prosjekt så jeg ville samtidig demonstrere ferdigheter innen moderne webutvikling, med fokus på brukeropplevelse, autentisering og rollebasert tilgang.
 
+## 📋 Innhold
+
+- [Live Demo](#️live-demo)
+- [Skjermbilder](#-skjermbilder-fra-appen)
+- [Funksjonalitet](#-funksjonalitet)
+- [Tech Stack](#tech-stack)
+- [Arkitektur](#️-arkitektur--systemdesign)
+- [Installer lokalt](#installer-appen-lokalt)
+- [Utvikler](#-utvikler)
+
 > [!TIP]
 > Appen er responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px). For best opplevelse: legg til HelseBooking som PWA på mobilen.
 >
 > <img src="docs/bilder/helsebooking_ios_2_rounded.png" width="100" />
 
 Jeg har laget testbrukere under man kan logge på. Med disse er det bare å opprette timer, slette timer, pasienter, behandlere, endre profilbilder og klinikker. **Logg inn og utforsk fritt** — timer og klinikker er forhåndsutfylt.
+
+
 
 # [⚡️Live Demo](https://helsebooking.onrender.com)
 
