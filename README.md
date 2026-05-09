@@ -10,7 +10,7 @@ Problemet appen løser er at mange bookingløsninger i helsebransjen er fragment
 
 ## 📋 Innhold
 
-- [Live Demo](#️live-demo)
+- [Live Demo](https://helsebooking.onrender.com)
 - [Skjermbilder](#-skjermbilder-fra-appen)
 - [Funksjonalitet](#-funksjonalitet)
 - [Tech Stack](#tech-stack)
@@ -19,8 +19,6 @@ Problemet appen løser er at mange bookingløsninger i helsebransjen er fragment
 - [Utvikler](#-utvikler)
 
 <div align="center">
-
-
 
 <h1><a href="https://helsebooking.onrender.com" target="_blank">⚡️ Live Demo ⚡️</a></h1>
 
