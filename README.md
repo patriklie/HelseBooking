@@ -29,7 +29,7 @@ Problemet appen løser er at mange bookingløsninger i helsebransjen er fragment
 Jeg har laget testbrukere under man kan logge på. Med disse er det bare å opprette timer, slette timer, pasienter, behandlere, endre profilbilder og klinikker. **Logg inn og utforsk fritt** — timer og klinikker er forhåndsutfylt.
 
 > [!TIP]
-> <img src="docs/bilder/helsebooking_ios_2_rounded.png" width="80" />
+> <img src="docs/bilder/helsebooking_ios_2_rounded.png" width="80" /></br>
 > Appen er responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px). For best opplevelse: legg til HelseBooking som PWA på mobilen.
 >
 
