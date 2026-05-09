@@ -46,9 +46,8 @@ Jeg har laget testbrukere under man kan logge på. Med disse er det bare å oppr
 
 Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger deg inn på en av testbrukerne å klikker deg rundt selv, eller at vi sammen tar en gjennomgang! 😊
 
----
 
-### 🏠 Forside / About
+## 🏠 Forside / Om
 
 <div>
   <img src="docs/bilder/about_hero_1.png" width="300" style="display:inline-block; vertical-align: top;" />
@@ -60,41 +59,31 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
   <img src="docs/bilder/about_hero_4.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
----
-
-### 🔐 Auth (login/registrering)
+## 🔐 Auth (login/registrering)
 <div>
   <img src="docs/bilder/auth_login_1.png" width="300" style="display:inline-block; vertical-align: top;" />
   <img src="docs/bilder/auth_registrer_1.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
----
-
-### 📅 Book time (pasient)
+## 📅 Book time (pasient)
 <div>
   <img src="docs/bilder/book_time_1.png" width="300" style="display:inline-block; vertical-align: top;" />
   <img src="docs/bilder/book_time_2.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
----
-
-### 👨🏻 Mine timer (pasient)
+## 👨🏻 Mine timer (pasient)
 <div>
   <img src="docs/bilder/mine_timer_1.png" width="300" style="display:inline-block; vertical-align: top;" />
   <img src="docs/bilder/mine_timer_2.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
----
-
-### 🏥 Klinikker (behandler)
+## 🏥 Klinikker (behandler)
 <div>
   <img src="docs/bilder/klinikker_1.png" width="300" style="display:inline-block; vertical-align: top;" />
   <img src="docs/bilder/klinikker_3.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
 
----
-
-### 🩺 Min profil (behandler)
+## 🧑🏻‍⚕️ Min profil (behandler)
 <div>
   <img src="docs/bilder/profil_1.png" width="300" style="display:inline-block; vertical-align: top;" />
   <img src="docs/bilder/profil_2.png" width="300" style="display:inline-block; vertical-align: top;" />
