@@ -368,6 +368,7 @@ input[type="time"]:not([value=""])::-webkit-datetime-edit-minutes-field {
   align-items: center;
   cursor: pointer;
   font-size: 16px;
+  user-select: none;
 /*   transition: transform 0.1s ease; */
 }
 
@@ -412,6 +413,10 @@ input[type="radio"] {
   height: 16px;
   cursor: pointer;
 }
+
+/* Registrer Page */
+
+
 
 /* About Card component */
 

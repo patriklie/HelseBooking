@@ -188,10 +188,12 @@ const RegisterPage = () => {
           <motion.button
             layout="position"
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 1 }}
+              whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 200, damping: 17 }}
             type="submit"
-            className="logginn-btn">
+            className="logginn-btn"
+            style={{ marginTop:  nyBruker.role === "behandler" ? "10px" : 0 }}
+            >
             Opprett konto
             <UserPlus color="#FFFFFF" size={20} />
           </motion.button>
