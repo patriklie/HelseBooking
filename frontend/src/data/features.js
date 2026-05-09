@@ -60,7 +60,7 @@ const features = [
         title: "AI assistanse",
         status: "ongoing",
         detaljer:
-            "Pasienter vil få mulighet til å bruke og få assistanse av kunstig intelligens inne i appen for å raskt velge riktig behandler, lokasjon (klinikk) og time (dato og klokkeslett) ved hjelp av AI prompt."
+            "Pasienter vil få mulighet til å få hjelp av kunstig intelligens inne i appen for å raskt velge riktig behandler, lokasjon (klinikk) og time (dato og klokkeslett) ved hjelp av AI prompt."
     },
     {
         id: 10,
