@@ -2,8 +2,6 @@
 <img src="docs/bilder/HelseBooking_Logo_blue.png" width="300" />
 </div>
 
-<br>
-
 # Hei 👋
 
 ### Velkommen til HelseBooking, min fullstack bookingapplikasjon for helsetjenester hvor pasienter kan finne og booke time hos behandlere.
