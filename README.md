@@ -30,6 +30,8 @@ Problemet appen løser er at mange bookingløsninger i helsebransjen er fragment
 
 </div>
 
+<br>
+
 Jeg har laget testbrukere under man kan logge på med. Med disse er det bare å opprette timer, slette timer, pasienter, behandlere, endre profilbilder og klinikker. **Logg inn og utforsk fritt** — timer og klinikker er forhåndsutfylt.
 
 > [!TIP]
