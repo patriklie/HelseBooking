@@ -18,22 +18,14 @@ Jeg har laget testbrukere under man kan logge på. Med disse er det bare å oppr
 
 <br>
 
-
 <div align="center">
-
-> [!INFO]
-> For best opplevelse: legg til som PWA på mobil.  
-><img src="docs/bilder/helsebooking_ios_2_rounded.png" width="100" />
-
+  <img src="docs/bilder/helsebooking_ios_2_rounded.png" width="100" />
+  <p>For best opplevelse: legg til som PWA på mobil.</p>
 </div>
 
 
+
 # [Live Demo](https://helsebooking.onrender.com)
-
-
-
-
-
 
 ### 🔑 Test-brukere
 
