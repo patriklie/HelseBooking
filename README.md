@@ -1,4 +1,6 @@
+<div align="center">
 <img src="docs/bilder/HelseBooking_Logo_blue.png" width="300" />
+</div>
 
 <br>
 
@@ -8,19 +10,21 @@
 
 Problemet appen løser er at mange bookingløsninger i helsebransjen er fragmenterte og lite brukervennlige. Målet med dette prosjektet var å bygge en enkel og moderne løsning der pasienter og behandlere kan samhandle sømløst i en plattform, og samtidig prøve å redusere antall klikk fra du logger inn til du har booket riktig time. Prosjektet er laget som et CV-prosjekt så jeg ville samtidig demonstrere ferdigheter innen moderne webutvikling, med fokus på brukeropplevelse, autentisering og rollebasert tilgang.
 
+---
+Jeg har laget testbrukere under man kan logge på. Med disse er det bare å opprette timer, slette timer, pasienter, behandlere, endre profilbilder og klinikker. Logg inn og utforsk fritt — timer og klinikker er forhåndsutfylt.
+
+> [!TIP]
 > Appen er responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px).
-
-<h2>
-<a href="https://helsebooking.onrender.com" target="_blank">🔗 Live demo</a>
-</h2>
-
+>
+> For best opplevelse: legg til som PWA på mobil.
+### [Live Demo](https://helsebooking.onrender.com)
 <p style="text-align: left;">
   <img src="docs/bilder/helsebooking_ios_2_rounded.png" width="100" /></br>
 </p>
 
->💡 For best opplevelse: legg til som PWA på mobil.
 
-Jeg har laget testbrukere under man kan logge på. Med disse er det bare å opprette timer, slette timer, pasienter, behandlere, endre profilbilder og klinikker. Logg inn og utforsk fritt — timer og klinikker er forhåndsutfylt.
+
+
 
 ### 🔑 Test-brukere
 
@@ -103,7 +107,7 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
 
 <br>
 
-# ⭐ Funksjonalitet
+# ✨ Funksjonalitet
 
 **Pasient**
 - Registrering og innlogging med JWT-autentisering
