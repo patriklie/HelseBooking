@@ -164,11 +164,10 @@ export const uploadProfilePicture = async (req, res) => {
         profilbildePublicId: response.public_id,
     }, { returnDocument: "after" });
 
-    console.log(response);
-        res.status(200).json({
-            message: "Profilbilde lastet opp.",
-            profilbilde: response.secure_url,
-        });
+    res.status(200).json({
+        message: "Profilbilde lastet opp.",
+        profilbilde: response.secure_url,
+    });
         
     } catch (error) {
       res.status(500).json({ message: error.message, text: "Inni uploadProfilePicture." })

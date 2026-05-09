@@ -38,7 +38,6 @@ const Kalender = ({ timer, onDatoValg }) => {
 const handleDatoValg = (dato) => {
     if (!dato) return;
     const datoStreng = `${year}-${String(month + 1).padStart(2, "0")}-${String(dato).padStart(2, "0")}`;
-    console.log(datoStreng);
     setValgtDato(datoStreng);
     onDatoValg(datoStreng);
 }

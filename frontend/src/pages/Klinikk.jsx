@@ -34,7 +34,7 @@ const Klinikk = () => {
       setKlinikker(response.data);
       
     } catch (error) {
-      console.log(error?.response?.data?.message)
+      console.error(error?.response?.data?.message)
     }
   }
   
@@ -46,10 +46,9 @@ const Klinikk = () => {
         }
       })
       setAlleBehandlere(response.data);
-      console.log("Hent alle behandlere: ", response.data)
 
     } catch (error) {
-      console.log(error?.response?.data?.message)
+      console.error(error?.response?.data?.message)
     }
   }
   
@@ -69,7 +68,6 @@ const Klinikk = () => {
   
   const leggTilBehandlerKlinikk = async (klinikkId, behandlerId) => {
     try {
-      console.log("KlinikkId: ", klinikkId, "behandlerId: ", behandlerId)
       const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/klinikk/${klinikkId}/behandler`, { behandlerId }, {
         headers: {
           Authorization: `Bearer ${token}`
@@ -108,12 +106,10 @@ const Klinikk = () => {
   }, [])
   
   const openDrawer = () => {
-    console.log("Åpner drawer for opprett klinikk")
     setShowOpprettKlinikkDrawer(true);
   }
   
   const closeDrawer = () => {
-    console.log("Lukker drawer for opprett klinikk");
     setShowOpprettKlinikkDrawer(false);
   }
   

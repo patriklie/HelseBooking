@@ -45,8 +45,6 @@ const BookTimePage = () => {
     dialogRef.current.showModal();
   }
   
-  console.log("dette er timen som velges", valgtTime);
-  
   const bookTime = async () => {
     try {
       const response = await axios.patch(`${import.meta.env.VITE_API_URL}/api/time/${valgtTime._id}/book`, {}, {
@@ -131,7 +129,6 @@ const BookTimePage = () => {
       })
 
       setAlleBehandlere(response.data.alleBehandlere)
-      console.log("Her er alle behandleren: ", response.data.alleBehandlere)
     } catch (error) {
       toast.error(error.response?.data?.message || "Feil ved henting av behandlere.")
     }
@@ -140,9 +137,7 @@ const BookTimePage = () => {
   useEffect(() => {
     hentAlleBehandlere();
   }, [])
-  
-  console.log(valgtTime);
-  
+    
   return (
       
   <>

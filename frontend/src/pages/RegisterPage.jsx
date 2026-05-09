@@ -1,4 +1,4 @@
-import { Mail, Eye, EyeOff, EyeClosed, LockKeyhole, ArrowBigRight, User, UserPlus, ChevronDown, Bone, Activity, Stethoscope, Brain, Leaf, Circle, Zap, Dumbbell, Apple, PersonStanding, Smile, CircleAlert, CheckCircle2, XCircle } from "lucide-react";
+import { Mail, Eye, EyeClosed, LockKeyhole, UserPlus, ChevronDown, Bone, Stethoscope, Brain, Leaf, Zap, Dumbbell, Apple, PersonStanding, Smile, CheckCircle2, XCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useAppStore } from "../store/authStore.js";
@@ -62,7 +62,6 @@ const RegisterPage = () => {
 
   const registrerBruker = async (e) => {
     e.preventDefault();
-    console.log(nyBruker);
 
     try {
 
@@ -86,13 +85,11 @@ const RegisterPage = () => {
         email: nyBruker.email,
         password: nyBruker.password,
       });
-      console.log("Dette får jeg tilbake ved registrering: ", loginRespons)
       setToken(loginRespons.data.token);
       navigate("/profil")
 
     } catch (error) {
       toast.error(error.response.data.message);
-      console.log(error.response.data.message)
     }
 
   }

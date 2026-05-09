@@ -8,7 +8,6 @@ import toast from "react-hot-toast";
 
 const DrawerEndretime = ({ time, closeBehandlerTime, hentBehandlerTimer, slettTime, klinikker }) => {
     
-    console.log(time);
     const y = useMotionValue(0);
     const swipeAvstand = 150;
     const overlayOpacity = useTransform(y, [0, swipeAvstand], [1, 0]);
@@ -74,11 +73,8 @@ const DrawerEndretime = ({ time, closeBehandlerTime, hentBehandlerTimer, slettTi
         hentAllePasienter();
     }, []);
     
-    console.log(allePasienter)
-    
     const endreTime = async (e) => {
         e.preventDefault();
-        console.log("endrer time");
         
         try {
             
@@ -96,7 +92,7 @@ const DrawerEndretime = ({ time, closeBehandlerTime, hentBehandlerTimer, slettTi
             toast.error(error.response?.data?.message || "Noe gikk galt ved endring av time.")
         }
     }
-        console.log(valgtPasient)
+
     return (
     <>
         <motion.div

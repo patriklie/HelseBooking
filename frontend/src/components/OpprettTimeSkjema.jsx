@@ -11,8 +11,6 @@ const OpprettTimeSkjema = ({ hentBehandlerTimer, mineKlinikker }) => {
   const timeInputStartRef = useRef();
   const timeInputStopRef = useRef();  
   const token = useAppStore((state) => state.token);
- 
-  console.log(mineKlinikker)
   
   const [time, setTime] = useState({
     dato: "",
@@ -28,7 +26,6 @@ const OpprettTimeSkjema = ({ hentBehandlerTimer, mineKlinikker }) => {
   
   const opprettTime = async (e) => {
     e.preventDefault();
-    console.log("Oppretter time med følgende: ", time)
     
     try {
         const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/time`, time, {

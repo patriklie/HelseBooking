@@ -74,8 +74,6 @@ const DrawerRedigerKlinikk = ({ klinikk: klinikkData, closeDrawer, oppdaterKlini
         e.preventDefault();
 
         try {
-            console.log(klinikk)
-            console.log(klinikkData._id)
             const response = await axios.patch(`${import.meta.env.VITE_API_URL}/api/klinikk/${klinikkData._id}`, klinikk, {
                 headers: { Authorization: `Bearer ${token}` }
             })

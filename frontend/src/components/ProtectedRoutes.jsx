@@ -21,14 +21,12 @@ const ProtectedRoutes = () => {
 
       if (!token) {
         navigate("/login");
-        console.log("Token mangler, sendes til login.")
         return;
       }
 
       // denne må jeg se mer på senere vil faile for utløpte tokens, mulig lage axios interceptor på status 401.
       if (isAuth) {
         setTokenCheck(true);
-        console.log("Bruker er authorized")
         return;
       }
 
@@ -44,12 +42,10 @@ const ProtectedRoutes = () => {
         setIsAuth(true);
         setTokenCheck(true);
         
-        console.log("Respons fra verifiser token Auth/me: ", response.data);
-
       } catch (error) {
         logout();
         navigate("/login");
-        console.log(error.response.data.message, "Token ikke godkjent av backend.")
+        console.error(error.response.data.message, "Token ikke godkjent av backend.")
       }
     }
     verifiserToken();

@@ -133,9 +133,7 @@ const MineTimerPage = () => {
       const response = await axios.delete(`${import.meta.env.VITE_API_URL}/api/time/${time._id}`, {
         headers: { Authorization: `Bearer ${token}` }
       })
-      console.log("Slettet, henter timer på nytt...");
       await hentBehandlerTimer();
-      console.log("behandlerTimer etter sletting:", behandlerTimer);
       toast.success(response.data.message)
     } catch (error) {
     toast.error(error.response?.data?.message || "Noe gikk galt ved sletting av time")
@@ -143,14 +141,11 @@ const MineTimerPage = () => {
   }
   
   const onBehandlerTimeKlikk = (time) => {
-    console.log("Åpner timen for redigering");
-    console.log(time)
     setShowTimeDrawer(true);
     setValgtEndreTime(time);
   }
   
   const closeBehandlerTime = () => {
-    console.log("Stenger vindu")
     setShowTimeDrawer(false);
     setValgtEndreTime("");
   }

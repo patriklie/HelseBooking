@@ -33,8 +33,6 @@ const Profil = () => {
 
 
   const profilbildeKlikk = async (e) => {
-    console.log("Du klikket på profilbilde!");
-    console.log(e)
     const nyttProfilbilde = (e.target.files[0]);
     const maxFileSize = 5 * 1024 * 1024;
     
@@ -104,7 +102,6 @@ const Profil = () => {
           Authorization: `Bearer ${token}`
         }
       });
-      console.log(response);
       
       setProfil({
         username: response.data.username,

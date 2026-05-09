@@ -65,7 +65,6 @@ const DrawerPasientTime = ({ closeDrawer, time, avlysTime }) => {
         animate(y, 0, { type: "spring", stiffness: 300, damping: 30 });
     }, []);    
      
-    console.log(time)
     
     return (
     <>

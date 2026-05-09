@@ -1,11 +1,10 @@
-import { LockKeyhole, ArrowBigRight, Mail, Eye, EyeOff, EyeClosed } from "lucide-react";
+import { LockKeyhole, ArrowBigRight, Mail, Eye, EyeClosed } from "lucide-react";
 import axios from "axios";
 import { useState } from "react";
 import { useAppStore } from "../store/authStore.js";
 import { useNavigate, Link } from "react-router";
 import { motion } from "motion/react";
 import toast from "react-hot-toast";
-import Maskott from "../assets/Maskott_lion_no_bg.png"
 import LoginPerson from "../assets/freepik__background__69816.png";
 
 const LoginPage = () => {
@@ -32,7 +31,6 @@ const LoginPage = () => {
       password: passord
       })
 
-      console.log("Dette får jeg tilbake ved login: ", response);
       toast.success(`Hei ${response.data.username} 👋`);
       
       setToken(response.data.token);
