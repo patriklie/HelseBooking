@@ -22,11 +22,15 @@ Problemet appen løser er at mange bookingløsninger i helsebransjen er fragment
 
 <div align="center">
 
-# [⚡️Live Demo](https://helsebooking.onrender.com)
+
+
+# [⚡️Live Demo ⚡️](https://helsebooking.onrender.com)
+
+<img src="docs/bilder/HelseBooking_booktime.gif" width="350" />
 
 </div>
 
-Jeg har laget testbrukere under man kan logge på. Med disse er det bare å opprette timer, slette timer, pasienter, behandlere, endre profilbilder og klinikker. **Logg inn og utforsk fritt** — timer og klinikker er forhåndsutfylt.
+Jeg har laget testbrukere under man kan logge på med. Med disse er det bare å opprette timer, slette timer, pasienter, behandlere, endre profilbilder og klinikker. **Logg inn og utforsk fritt** — timer og klinikker er forhåndsutfylt.
 
 > [!TIP]
 > Appen er responsiv og fungerer på alle enheter, men er optimalisert for mobil (375px – 1000px). For best opplevelse: legg til HelseBooking som PWA på mobilen.
