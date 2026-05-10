@@ -147,7 +147,7 @@ export const uploadProfilePicture = async (req, res) => {
     }
 
     // options og filhåndtering, legger det i ram.
-    const options = { overwrite: true, folder: `behandler-booking/${id}/profile` };
+    const options = { overwrite: true, folder: `helsebooking/${id}/profile` };
     const base64 = `data:${req.file.mimetype};base64,${req.file.buffer.toString("base64")}`;
         
     // finner aktuell bruker og sletter det gamle profilbilde fra cloudinary

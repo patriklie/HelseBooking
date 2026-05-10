@@ -269,7 +269,7 @@ Backend håndhever all forretningslogikk:
 ## 📁 Mappestruktur:
 
 ```
-behandler-booking/
+HelseBooking/
 ├── backend/
 │   └── src/
 │       ├── controllers/
@@ -300,10 +300,10 @@ Frontend og backend er deployet som to separate services på Render og kommunise
 
 ```bash
 # Klon repoet
-git clone https://github.com/patriklie/behandler-booking.git
+git clone https://github.com/patriklie/HelseBooking.git
 
 # Installer backend
-cd behandler-booking/backend
+cd HelseBooking/backend
 npm install
 
 # Installer frontend
