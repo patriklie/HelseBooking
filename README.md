@@ -12,6 +12,7 @@ Problemet appen løser er at mange bookingløsninger i helsebransjen er fragment
 
 - [Live Demo](https://helsebooking.onrender.com)
 - [Skjermbilder](#-skjermbilder-fra-appen)
+- [Logo design prosess](#-logo-design) 
 - [Funksjonalitet](#-funksjonalitet)
 - [Tech Stack](#tech-stack)
 - [Arkitektur](#️-arkitektur--systemdesign)
@@ -104,6 +105,37 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
   <img src="docs/bilder/profil_1.png" width="300" style="display:inline-block; vertical-align: top;" />
   <img src="docs/bilder/profil_2.png" width="300" style="display:inline-block; vertical-align: top;" />
 </div>
+
+<br>
+
+# 🎨 Logo design
+
+HelseBooking er et fullstack bookingsystem for behandlere og pasienter, bygget som et CV-prosjekt. Denne siden dokumenterer logodesignprosessen fra første idé til endelig valg.
+
+## Inspirasjon
+
+Tidlige varianter bruker arbeidsnavnet **Behandler Booking**. Navnet ble senere endret til **HelseBooking** for å gjøre merkevaren kortere, mer minneverdig og lettere å bygge en visuell identitet rundt.
+
+Utgangspunktet var en håndskrevet B-logo jeg kom over når jeg gjorde research rundt bruken av bokstaven B i logoer. Jeg synes denne bruker bokstaven B på en elegant og leken måte. Det ble startskuddet for å utforske en egen visuell identitet.
+
+![Utgangspunkt](docs/bilder/Logo_prosess/B_retning/Utgangspunkt.png)
+
+Jeg tok inspirasjonen videre ved å legge til en stjerne på enden av B-kurven — et lite detaljelement som skulle gi logoen personlighet. Det åpnet døren til fire ulike designretninger.
+
+- **Retning 1** - Bokstaven B i logoen
+- **Retning 2** - Helse-ikon basert retning
+- **Retning 3** - Rename appen til **Helse.** retningen
+- **Retning 4** - Fart, Flat-design og moderne retning  (Meteor, flamme, lyn retningen)
+
+
+## Retning 1 — Bokstaven B
+
+Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt fra håndskrevne varianter til geometriske og minimalistiske tolkninger.
+
+| | |
+|---|---|
+| ![](docs/bilder/Logo_prosess/B_retning/B_1.png) | ![](docs/bilder/Logo_prosess/B_retning/B_2.png) |
+| App-ikon med bold, bubbly B i blå/svart | Leken håndskriftstil i rød/hvit med wordmark |
 
 <br>
 
