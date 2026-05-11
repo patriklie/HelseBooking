@@ -262,17 +262,23 @@ Logoen jeg til slutt landet på er en **kombinasjon av de fire retningene** logo
 
 <img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue_lav_high.png" width="1200" />
 
-### Retning 1 - Bokstaven H er en del av ikonet (combination mark)
+## Retning 1 - Bokstaven H er en del av ikonet (combination mark)
 
 <img src="docs\bilder\Logo_prosess\Meteor_retning\Logo_H.png" width="279" />
 
-### Retning 2 - Et helse ikon/symbol
+<br>
+
+## Retning 2 - Et helse ikon/symbol
 
 <img src="docs\bilder\Logo_prosess\Meteor_retning\Badge_helse.png" width="200" />
 
-### Retning 3 - Punktumet fra "Helse." 
+<br>
+
+## Retning 3 - Punktumet fra "Helse." 
 
 <img src="docs\bilder\Logo_prosess\Meteor_retning\HelseBooking_tekst.png" width="350" />
+
+<br>
 
 ## Retning - 4 Moderne, men enkelt
 
