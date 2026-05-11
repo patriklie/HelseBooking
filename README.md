@@ -110,27 +110,26 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
 
 # 🎨 Logo design
 
-HelseBooking er et fullstack bookingsystem for behandlere og pasienter, bygget som et CV-prosjekt. Denne siden dokumenterer logodesignprosessen fra første idé til endelig valg.
+Her viser jeg litt av arbeidsprosessen, utkastene og tankegangen jeg hadde for å komme frem til HelseBooking logoen. Som du vil se av utkastene under så brukte jeg arbeidsnavnet **Behandler Booking**. Jeg endret navn underveis i utviklingen til **HelseBooking**. Dette for å gjøre navnet kortere, mer minneverdig og lettere å bygge en visuell identitet rundt.
 
 ## Inspirasjon
 
-Tidlige varianter bruker arbeidsnavnet **Behandler Booking**. Navnet ble senere endret til **HelseBooking** for å gjøre merkevaren kortere, mer minneverdig og lettere å bygge en visuell identitet rundt.
-
-Utgangspunktet var en håndskrevet B-logo jeg kom over når jeg gjorde research rundt bruken av bokstaven B i logoer. Jeg synes denne bruker bokstaven B på en elegant og leken måte. Det ble startskuddet for å utforske en egen visuell identitet.
+Jeg startet med et ønske om en logo som kombinere et ikon med bokstaven B (BehandlerBooking). Når jeg gjorde research for å finne inspirasjon fra andre som brukte bokstaven B i logoen så kom jeg over logoen under. Denne bruker bokstaven B på en elegant måte og ble startskuddet for å utforske en egen visuell identitet.
 
 ![Utgangspunkt](docs/bilder/Logo_prosess/B_retning/Utgangspunkt_tynn.png)
 
-Jeg tok inspirasjonen videre ved å legge til en stjerne på enden av B-kurven — et lite detaljelement som skulle gi logoen personlighet. Det åpnet døren til fire ulike designretninger.
+Jeg tok inspirasjonen videre ved å legge til et helsekors enden av B-kurven, som videre ble til en stjerne for bedre flyt. Det var et lite detaljelement som skulle gi logoen personlighet. Dette ble den midlertidige logoen under utviklingen av appen. Denne logoen åpnet døren til fire ulike designretninger.
 
 - **Retning 1** - Bokstaven B i logoen
-- **Retning 2** - Helse-ikon basert retning
-- **Retning 3** - Rename appen til **Helse.** retningen
-- **Retning 4** - Fart, Flat-design og moderne retning  (Meteor, flamme, lyn retningen)
+- **Retning 2** - En logo og ikon som symboliserer helse
+- **Retning 3** - Rename av appen til **Helse.**
+- **Retning 4** - Moderne, raskt, enkelt og flat-design
 
 
-## Retning 1 — Bokstaven B
+## Retning 1 — Bokstaven B (combination mark)
 
-Det naturlige startpunktet var initialen — bokstaven B for Booking. Jeg utforsket alt fra håndskrevne og lekne varianter til geometriske og minimalistiske tolkninger. Etter hvert begynte noen av variantene å nærme seg helse-symbolikk, og det åpnet døren til neste retning.
+Den første og naturlige retningen logoen tok var fra startpunktet initialen **bokstaven B for BehandlerBooking**. Jeg utforsket alt fra håndskrevne og lekne varianter til geometriske og minimalistiske tolkninger. Etter hvert begynte noen av variantene å nærme seg helse-symbolikk, og det åpnet døren til neste retning. <br><br>
+Et utvalg utkast fra retning 1:
 
 <table align="center">
   <tr>
@@ -139,9 +138,9 @@ Det naturlige startpunktet var initialen — bokstaven B for Booking. Jeg utfors
     <td align="center" width="200"><img src="docs/bilder/Logo_prosess/B_retning/B_3.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center" width="200">Bold B i bubbly håndskriftstil, innrammet i et avrundet kvadrat</td>
+    <td align="center" width="200">B i en B formet hvit bubbly rektangel</td>
     <td align="center" width="200">Negativ B med håndskrevet wordmark</td>
-    <td align="center" width="200">Geometrisk B som ligner et 8-tall, tung og moderne</td>
+    <td align="center" width="200">To stk B speilet mot hverandre fjernet "rygg".</td>
   </tr>
   <tr>
     <td align="center" width="200"><img src="docs/bilder/Logo_prosess/B_retning/B_3-1.png" width="200" /></td>
@@ -149,9 +148,9 @@ Det naturlige startpunktet var initialen — bokstaven B for Booking. Jeg utfors
     <td align="center" width="200"><img src="docs/bilder/Logo_prosess/B_retning/B_5.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center" width="200">BB tolket som to separate avrundede rektangler</td>
+    <td align="center" width="200">Forrige logo rotert 90 grader, kan se ut som tegneserie øyne.</td>
     <td align="center" width="200">Minimalistisk wordmark med to overlappende blå firkanter</td>
-    <td align="center" width="200">Avrundet B-ikon med kryss — begynner å nærme seg helse-territoriet</td>
+    <td align="center" width="200">Avrundet B-ikon med rotert helsekryss, her begynner det å nærme seg neste retning</td>
   </tr>
 </table>
 
@@ -159,7 +158,7 @@ Det naturlige startpunktet var initialen — bokstaven B for Booking. Jeg utfors
 
 ## Retning 2 — Helse Ikon
 
-Med helse som kjernen i appen var det naturlig å utforske klassiske helse-symboler — plusstegnet, hjertet og plasteret. Variantene ble organiske og myke, men også generiske. Den siste varianten i denne retningen introduserte grønt som farge, noe som skulle dukke opp igjen senere.
+Med en helseapp var det naturlig å utforske klassiske helse-symboler som plusstegnet, hjertet og plasteret. Variantene ble organiske og myke, men kanskje noe generiske. Den siste varianten i denne retningen introduserte helsekorset med en skjult H (HelseBooking) i linjene som kutter helsekorset som vi ser igjen i appens logo.
 
 <table align="center">
   <tr>
@@ -182,15 +181,20 @@ Med helse som kjernen i appen var det naturlig å utforske klassiske helse-symbo
     <td align="center" width="200">Fire overlappende hjerter med gradient</td>
     <td align="center" width="200">Samme hjerte-blomst med wordmark under</td>
   </tr>
+  <tr>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_7.png" width="200" /></td>
+  </tr>
+  <tr>
+    <td align="center" width="200">Symmetrisk kryss omgitt av ellipser, nesten som et kompass</td>
+  </tr>
 </table>
 
-legg inn ikon 7
 
 <br>
 
 ## Retning 3 — Rename appen til **Helse.**
 
-Fart og effektivitet ble det nye fokuset — booking skal gå raskt. Flamme- og meteor-formen viste seg å kombinere bevegelse og helse på en måte de andre retningene ikke klarte. Det var her den endelige logoen tok form. Den siste varianten med lynikon viser at jeg også utforsket en helt annen energi før jeg landet.
+Når jeg startet på disse utkastene var utgangspunktet at det skulle være så enkelt og rent som mulig. Jeg vurderte som logoene viser også en rename av appen til å hete kun **Helse.** med et punktum. Inspirert av enkle logoer som VIPPS, men for Helse.
 
 <table align="center">
   <tr>
@@ -198,8 +202,8 @@ Fart og effektivitet ble det nye fokuset — booking skal gå raskt. Flamme- og 
     <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_retning/Helse_2.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center" width="200">"Helse." med avrundet lys boks rundt "e" og punktum</td>
-    <td align="center" width="200">Ekstremt minimalistisk — bare tekst med grå prikk som punktum</td>
+    <td align="center" width="200">Helse. med avrundet lys boks rundt "e" og punktum</td>
+    <td align="center" width="200">Minimalistisk, kun teksten Helse, med grå prikk som punktum</td>
   </tr>
   <tr>
     <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_retning/Helse_3.png" width="200" /></td>
@@ -213,9 +217,9 @@ Fart og effektivitet ble det nye fokuset — booking skal gå raskt. Flamme- og 
 
 <br>
 
-## Retning 4 — Meteor retning
+## Retning 4 — Moderne, raskt, enkelt og flat-design
 
-Parallelt med de visuelle eksperimentene vurderte jeg å forenkle selve navnet til bare Helse. — med punktum som et bevisst stilgrep. Den siste varianten i denne retningen hentet inn det grønne fra retning 2, og fikk meg til å vurdere grønt som hovedfarge for hele appen.
+Fart og effektivitet ble fokuset i denne retningen, booking skal gå raskt. Startpunktet for denne retningen var en geometrisk "flat-design flamme-logo" jeg oppdaget på Dribbble, som viste seg å være logoen appen Fandom på appstore. Formen inspirerte meg til å utforske flamme og meteor (fart), kombinert med symbolikk for helse.
 
 <table align="center">
   <tr>
@@ -224,9 +228,9 @@ Parallelt med de visuelle eksperimentene vurderte jeg å forenkle selve navnet t
     <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_3.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center" width="200">Geometrisk flamme med + og mørk skygge, iOS app-ikon stil</td>
-    <td align="center" width="200">Flamme med gull/blå detaljer og + i avrundet ikon, wordmark til høyre</td>
-    <td align="center" width="200">Liten flamme med + wordmark, navn under med to vekter</td>
+    <td align="center" width="200">Flat-design flamme, helsekors og mørk skygge, iOS FANDOM app-ikon stil</td>
+    <td align="center" width="200">Flammen med detaljer bak</td>
+    <td align="center" width="200">Ikon + wordmark, første gang HelseBooking dukker opp</td>
   </tr>
   <tr>
     <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_4.png" width="200" /></td>
@@ -234,9 +238,9 @@ Parallelt med de visuelle eksperimentene vurderte jeg å forenkle selve navnet t
     <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_6.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center" width="200">Hånd i fart med + — unik kombinasjon av omsorg og bevegelse</td>
-    <td align="center" width="200">Fart-piler med + og "Helse." wordmark</td>
-    <td align="center" width="200">FMeteor med + i app-ikon, wordmark til høyre</td>
+    <td align="center" width="200">Meteor i fart, helsekors og ios ish ramme</td>
+    <td align="center" width="200">Meteor, helsekors og "Helse." wordmarken</td>
+    <td align="center" width="200">Meteor med + i app-ikon, wordmark til høyre</td>
   </tr>
   <tr>
     <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_7.png" width="200" /></td>
@@ -245,30 +249,58 @@ Parallelt med de visuelle eksperimentene vurderte jeg å forenkle selve navnet t
   </tr>
   <tr>
     <td align="center" width="200">Samme meteor med orange flamme-detalj integrert i teksten</td>
-    <td align="center" width="200">Gult lynikon i avrundet boks med HelseBooking wordmark under</td>
-    <td align="center" width="200">Flamme/dråpe som separator mellom "Behandler" og "Booking" i wordmark</td>
+    <td align="center" width="200">Gult lynikon i avrundet boks med HelseBooking wordmark</td>
+    <td align="center" width="200">Flammen som separator mellom "Behandler" og "Booking"</td>
   </tr>
 </table>
 
 <br>
 
-## Her er final versjonen.
+## Final versjonen
+
+Logoen jeg endte opp med å bruke er en kombinasjon av retningene logoen har utviklet seg.
+
+<img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue_lav_high.png" width="1200" />
+
+## Den har bokstaven H "skjult" i ikonet (retning 1)
+
+![](docs\bilder\Logo_prosess\Meteor_retning\Logo_H.png)
+
+## Bruker Helse ikon/symbolikk fra retning 2
+
+<img src="docs\bilder\Logo_prosess\Meteor_retning\HelseBooking_Badge.png" width="200" />
+
+## Punktum og enkelheten fra "Helse." (retning 3)
+
+<img src="docs\bilder\Logo_prosess\Meteor_retning\HelseBooking_tekst.png" width="350" />
+
+## Moderne og enkelhet fra retning 4
+
+<img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue_lav.png" width="300" />
+
+**Hva som fungerer bra med denne logoen:**
+- Fungerer som en "Badge" uten teksten
+- Fungerer i alle størrelser og farger
+- Helse symbolikk i logoen
+- Beskrivende wordmark
+- Bokstaven "H" i logoen sitt ikon/badge igjen i HelseBooking wordmark teksten med samme skrå på H i helse og samme stilart på K i ordet "booking"
+
+<br>
 
 <table align="center">
   <tr>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Green.png" width="300" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue.png" width="300" /></td>
-
-
+    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Green_lav.png" width="300" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue_lav.png" width="300" /></td>
   </tr>
   <tr>
     <td align="center">Final versjon grønn</td>
     <td align="center">Final versjon blå</td>
-
   </tr>
-
-
 </table>
+
+
+
+
 
 # ✨ Funksjonalitet
 
