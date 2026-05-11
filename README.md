@@ -12,7 +12,7 @@ Problemet appen løser er at mange bookingløsninger i helsebransjen er fragment
 
 - [Live Demo](https://helsebooking.onrender.com)
 - [Skjermbilder](#-skjermbilder-fra-appen)
-- [Logo design prosess](#-logo-design) 
+- [Logo design prosess](#️-logo-design)
 - [Funksjonalitet](#-funksjonalitet)
 - [Tech Stack](#tech-stack)
 - [Arkitektur](#️-arkitektur--systemdesign)
@@ -285,31 +285,32 @@ Logoen jeg til slutt landet på er en **kombinasjon av de fire retningene** logo
 
 ## Hva jeg liker med denne logoen:
 - Fungerer som en "Badge" uten teksten
-- Flyter godt i navbar og på about siden
+- Flyter godt i navbar og på **Om** siden i appen
 - Kan enkelt kombineres med andre UI elementer
 - Fungerer i alle størrelser og farger
 - Helse symbolikk i logoen
 - Beskrivende wordmark
 - Bokstaven "H" er bygget inn i bagde/ikon. Stiltrekk fra grafikken er videreført på bokstavene H og K i teksten med skråstreken.
+- Moderne og enkel
 
 <br>
 
 <table align="center">
   <tr>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Green_lav.png" width="300" /></td>
     <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue_lav.png" width="300" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Green_lav.png" width="300" /></td>
   </tr>
   <tr>
-    <td align="center">Final versjon grønn</td>
-    <td align="center">Final versjon blå</td>
+    <td align="center">Ferdig logo blå</td>
+    <td align="center">Ferdig logo grønn</td>
   </tr>
 </table>
 
-
+<br>
 
 # ✨ Funksjonalitet
 
-**Pasient**
+### **Pasient**
 - Registrering og innlogging med JWT-autentisering
 - Bla gjennom behandlere med Swiper-karusell
 
@@ -317,11 +318,13 @@ Logoen jeg til slutt landet på er en **kombinasjon av de fire retningene** logo
 
 - Se behandlerprofiler med profilbilde, navn og spesialitet
 - Booke ledig time med bekreftelsesmodal
-- Se og avbestille egne timer med swipe-to-delete animasjon
+- Se og avbestille egne timer med swipe-to-delete animasjon som revealer animerteikoner som reagerer på draglengde ved swipe
 
 <img src="docs/bilder/HelseBooking_mine_timer.gif" width="300" />
 
-**Behandler**
+<br>
+
+## **Behandler**
 - Opprette ledige timer med dato og tidspunkt
 - Se oversikt over bookede timer i kalender
 - Rollebasert visning – behandlere ser andre verktøy enn pasienter
@@ -329,8 +332,9 @@ Logoen jeg til slutt landet på er en **kombinasjon av de fire retningene** logo
 - Opprett og rediger klinikker og tilhørende behandlere
 - Rediger timer, legg til eller fjern pasienter på timen.
 
+<br>
 
-**Generelt**
+## **Generelt**
 - Rollebasert tilgangskontroll (pasient / behandler / admin)
 - Hindrer at samme time bookes flere ganger
 - Det er ikke mulig å booke eller opprette timer tilbake i tid
@@ -557,8 +561,8 @@ npm run dev
 
 Dette prosjektet bruker tredjepartsillustrasjoner og verktøy:
 
-- Freepik – illustrasjoner og 3D assets
+- Freepik – illustrasjons figurene du ser rundt om i appen
 - Leaflet – kartvisning
 - Geoapify – kartdata
 
-<a href="https://www.magnific.com/free-psd/3d-female-character-with-superhero-cape-launching-into-flight_13678512.htm">Image by freepik</a>
+<a href="https://www.magnific.com/free-psd/3d-female-character-with-superhero-cape-launching-into-flight_13678512.htm">Link til Freepik illustrasjoner</a>
