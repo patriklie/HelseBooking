@@ -118,7 +118,7 @@ Tidlige varianter bruker arbeidsnavnet **Behandler Booking**. Navnet ble senere 
 
 Utgangspunktet var en håndskrevet B-logo jeg kom over når jeg gjorde research rundt bruken av bokstaven B i logoer. Jeg synes denne bruker bokstaven B på en elegant og leken måte. Det ble startskuddet for å utforske en egen visuell identitet.
 
-![Utgangspunkt](docs/bilder/Logo_prosess/B_retning/Utgangspunkt.png)
+![Utgangspunkt](docs/bilder/Logo_prosess/B_retning/Utgangspunkt_tynn.png)
 
 Jeg tok inspirasjonen videre ved å legge til en stjerne på enden av B-kurven — et lite detaljelement som skulle gi logoen personlighet. Det åpnet døren til fire ulike designretninger.
 
@@ -132,12 +132,141 @@ Jeg tok inspirasjonen videre ved å legge til en stjerne på enden av B-kurven �
 
 Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt fra håndskrevne varianter til geometriske og minimalistiske tolkninger.
 
-| | |
-|---|---|
-| ![](docs/bilder/Logo_prosess/B_retning/B_1.png) | ![](docs/bilder/Logo_prosess/B_retning/B_2.png) |
-| App-ikon med bold, bubbly B i blå/svart | Leken håndskriftstil i rød/hvit med wordmark |
+<table>
+  <tr>
+    <td align="center"><img src="docs/bilder/Logo_prosess/B_retning/B_1.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/B_retning/B_2.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/B_retning/B_3.png" width="200" /></td>
+  </tr>
+  <tr>
+    <td align="center">Delt kryss</td>
+    <td align="center">Kryss med ellipser</td>
+    <td align="center">Fire hjerter</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/bilder/Logo_prosess/B_retning/B_3-1.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/B_retning/B_4.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/B_retning/B_5.png" width="200" /></td>
+  </tr>
+  <tr>
+    <td align="center">Delt kryss</td>
+    <td align="center">Kryss med ellipser</td>
+    <td align="center">Fire hjerter</td>
+  </tr>
+</table>
 
 <br>
+
+## Retning 2 — Helse Ikon
+
+Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt fra håndskrevne varianter til geometriske og minimalistiske tolkninger.
+
+<table>
+  <tr>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_1.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_2.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_3.png" width="200" /></td>
+  </tr>
+  <tr>
+    <td align="center">Delt kryss</td>
+    <td align="center">Kryss med ellipser</td>
+    <td align="center">Fire hjerter</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_4.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_5.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_6.png" width="200" /></td>
+  </tr>
+  <tr>
+    <td align="center">Delt kryss</td>
+    <td align="center">Kryss med ellipser</td>
+    <td align="center">Fire hjerter</td>
+  </tr>
+</table>
+
+legg inn ikon 7
+
+<br>
+
+## Retning 3 — Rename appen til **Helse.** retningen
+
+Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt fra håndskrevne varianter til geometriske og minimalistiske tolkninger.
+
+<table>
+  <tr>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_retning/Helse_1.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_retning/Helse_2.png" width="200" /></td>
+  </tr>
+  <tr>
+    <td align="center">Delt kryss</td>
+    <td align="center">Kryss med ellipser</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_retning/Helse_3.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_retning/Helse_4.png" width="200" /></td>
+  </tr>
+  <tr>
+    <td align="center">Delt kryss</td>
+    <td align="center">Kryss med ellipser</td>
+  </tr>
+</table>
+
+<br>
+
+## Retning 4 — Meteor retning
+
+Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt fra håndskrevne varianter til geometriske og minimalistiske tolkninger.
+
+<table>
+  <tr>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_1.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_2.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_3.png" width="200" /></td>
+  </tr>
+  <tr>
+    <td align="center">Delt kryss</td>
+    <td align="center">Kryss med ellipser</td>
+    <td align="center">Fire hjerter</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_4.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_5.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_6.png" width="200" /></td>
+  </tr>
+  <tr>
+    <td align="center">Delt kryss</td>
+    <td align="center">Kryss med ellipser</td>
+    <td align="center">Fire hjerter</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_7.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_8.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_9.png" width="200" /></td>
+  </tr>
+  <tr>
+    <td align="center">Delt kryss</td>
+    <td align="center">Kryss med ellipser</td>
+    <td align="center">Fire hjerter</td>
+  </tr>
+</table>
+
+<br>
+
+<table>
+  <tr>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Green.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue.png" width="200" /></td>
+
+
+  </tr>
+  <tr>
+    <td align="center">Delt kryss</td>
+    <td align="center">Kryss med ellipser</td>
+
+  </tr>
+
+
+</table>
 
 # ✨ Funksjonalitet
 
