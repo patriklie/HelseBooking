@@ -256,25 +256,25 @@ Fart og effektivitet ble fokuset i denne retningen, booking skal gå raskt. Star
 
 <br>
 
-## Final versjonen
+## ✨ Ferdig logo ✨
 
 Logoen jeg endte opp med å bruke er en kombinasjon av de fire retningene logoen har utviklet seg i. Teksten er en redigert versjon av Open Sans Bold/Normal.
 
 <img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue_lav_high.png" width="1200" />
 
-## Bokstaven H er en del av ikonet (retning 1)
+### Bokstaven H er en del av ikonet (retning 1)
 
-![](docs\bilder\Logo_prosess\Meteor_retning\Logo_H.png)
+<img src="docs\bilder\Logo_prosess\Meteor_retning\Logo_H.png" width="279" />
 
-## Bruker Helse ikon/symbolikk fra retning 2
+### Et helse ikon/symbol (retning 2)
 
 <img src="docs\bilder\Logo_prosess\Meteor_retning\Badge_helse.png" width="200" />
 
-## Punktum og enkelheten fra "Helse." (retning 3)
+### Punktumet fra "Helse." (retning 3)
 
 <img src="docs\bilder\Logo_prosess\Meteor_retning\HelseBooking_tekst.png" width="350" />
 
-## Moderne og enkelhet fra retning 4
+## Moderne, men enkelt (retning 4)
 
 <img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue_lav.png" width="300" />
 
@@ -287,7 +287,7 @@ Logoen jeg endte opp med å bruke er en kombinasjon av de fire retningene logoen
 - Fungerer i alle størrelser og farger
 - Helse symbolikk i logoen
 - Beskrivende wordmark
-- Bokstaven "H" er innebygd i selve ikonet/grafikken. Samme stil i grafikk som i H og K med skråstrek.
+- Bokstaven "H" er bygget inn i bagde/ikon. Stiltrekk fra grafikken er videreført på bokstavene H og K i teksten med skråstreken.
 
 <br>
 
