@@ -140,7 +140,7 @@ Et utvalg utkast fra retning 1:
   <tr>
     <td align="center" width="200">B i en B formet hvit bubbly rektangel</td>
     <td align="center" width="200">Negativ B med håndskrevet wordmark</td>
-    <td align="center" width="200">To stk B speilet mot hverandre fjernet "rygg".</td>
+    <td align="center" width="200">Speilet B-form.</td>
   </tr>
   <tr>
     <td align="center" width="200"><img src="docs/bilder/Logo_prosess/B_retning/B_3-1.png" width="200" /></td>
@@ -148,9 +148,9 @@ Et utvalg utkast fra retning 1:
     <td align="center" width="200"><img src="docs/bilder/Logo_prosess/B_retning/B_5.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center" width="200">Forrige logo rotert 90 grader, kan se ut som tegneserie øyne.</td>
+    <td align="center" width="200">Forrige logo rotert 90 grader, tegneserie øyne Oo.</td>
     <td align="center" width="200">Minimalistisk wordmark med to overlappende blå firkanter</td>
-    <td align="center" width="200">Avrundet B-ikon med rotert helsekryss, her begynner det å nærme seg neste retning</td>
+    <td align="center" width="200">Avrundet ikon med konturene til en speilet B, rotert helsekors, her begynner det å nærme seg neste retning</td>
   </tr>
 </table>
 
@@ -167,9 +167,9 @@ Med en helseapp var det naturlig å utforske klassiske helse-symboler som plusst
     <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_3.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center" width="200">Minimalistisk wordmark med lite + over teksten</td>
-    <td align="center" width="200">Kryss som eksploderer ut i stråler, nesten som en snøfnugg</td>
-    <td align="center" width="200">+ med diagonal bølge som deler mørk og lys blå</td>
+    <td align="center" width="200">Minimalistisk og tykt helsekors over wordmark</td>
+    <td align="center" width="200">Stjerne med wordmark</td>
+    <td align="center" width="200">Helsekors med diagonal bølge</td>
   </tr>
   <tr>
     <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_4.png" width="200" /></td>
@@ -177,7 +177,7 @@ Med en helseapp var det naturlig å utforske klassiske helse-symboler som plusst
     <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_6.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center" width="200">Symmetrisk kryss omgitt av ellipser, nesten som et kompass</td>
+    <td align="center" width="200">Symmetrisk logo, helsekors omgitt av ellipser, tenk kompass</td>
     <td align="center" width="200">Fire overlappende hjerter med gradient</td>
     <td align="center" width="200">Samme hjerte-blomst med wordmark under</td>
   </tr>
@@ -185,7 +185,7 @@ Med en helseapp var det naturlig å utforske klassiske helse-symboler som plusst
     <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_7.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center" width="200">Symmetrisk kryss omgitt av ellipser, nesten som et kompass</td>
+    <td align="center" width="200">Helsekors, bygget inn H. Et steg mot ferdig logo.</td>
   </tr>
 </table>
 
@@ -312,10 +312,14 @@ Logoen jeg til slutt landet på er en **kombinasjon av de fire retningene** logo
 **Pasient**
 - Registrering og innlogging med JWT-autentisering
 - Bla gjennom behandlere med Swiper-karusell
+
+<img src="docs/bilder/HelseBooking_swiper.gif" width="300" />
+
 - Se behandlerprofiler med profilbilde, navn og spesialitet
 - Booke ledig time med bekreftelsesmodal
 - Se og avbestille egne timer med swipe-to-delete animasjon
 
+<img src="docs/bilder/HelseBooking_mine_timer.gif" width="300" />
 
 **Behandler**
 - Opprette ledige timer med dato og tidspunkt
