@@ -110,7 +110,7 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
 
 # ✏️ Logo design
 
-Jeg har lyst til å vise litt av arbeidsprosessen, noen av utkastene og samtidig få frem tankegangen jeg hadde for å komme frem til HelseBooking logoen. Som du vil se av utkastene under så brukte jeg arbeidsnavnet **Behandler Booking**. Jeg endret navn underveis i utviklingen til **HelseBooking**. Dette ble helt naturlig ettersom appen utviklet seg og arbeidet med logoen gikk videre. I tillegg ble navnet kortere, beholdt forklarende wordmark, men ble mer minneverdig og lettere å bygge en visuell identitet rundt.
+Jeg har lyst å vise arbeidsprosessen, noen av utkastene og samtidig få frem tankegangen jeg hadde for å komme frem til den endelige versjonen av **HelseBooking** logoen. Som du vil se av utkastene under så brukte jeg tidligere i prosessen arbeidsnavnet **Behandler Booking**. Jeg endret navn underveis i utviklingen til **HelseBooking**. Dette ble helt naturlig ettersom appen utviklet seg og arbeidet med logoen gikk videre. I tillegg ble navnet kortere, beholdt forklarende wordmark, men ble mer minneverdig og lettere å bygge en visuell identitet rundt.
 
 ## Inspirasjon
 
@@ -194,7 +194,7 @@ Med en helseapp var det naturlig å utforske klassiske helse-symboler som plusst
 
 ## Retning 3 — Rename appen til **Helse.**
 
-Når jeg startet på disse utkastene var utgangspunktet at det skulle være så enkelt og rent som mulig. Jeg vurderte som logoene viser også en rename av appen til å hete kun **Helse.** med et punktum. Inspirert av enkle logoer som VIPPS, men for Helse.
+Når jeg startet på disse utkastene var utgangspunktet at det skulle være så enkelt og rent som mulig. Jeg var inspirert av enkle logoer som VIPPS, men for Helse. Jeg vurderte å gi appen et nytt navn og at den kun skulle hete **Helse.** med et punktum som del av logoen.
 
 <table align="center">
   <tr>
@@ -219,7 +219,7 @@ Når jeg startet på disse utkastene var utgangspunktet at det skulle være så 
 
 ## Retning 4 — Moderne, raskt, enkelt og flat-design
 
-Fart og effektivitet ble fokuset i denne retningen, booking skal gå raskt. Startpunktet for denne retningen var en geometrisk "flat-design flamme-logo" jeg oppdaget på Dribbble, som viste seg å være logoen appen Fandom på appstore. Formen inspirerte meg til å utforske flamme og meteor (fart), kombinert med symbolikk for helse.
+Fart og effektivitet ble fokuset i denne retningen, booking skal gå raskt. Startpunktet for denne retningen var en geometrisk "flat-design flamme-logo" jeg oppdaget på Dribbble, som viste seg å være logoen til appen "Fandom" på appstore. Formen inspirerte meg til å utforske flamme og meteor (fart), kombinert med symbolikk for helse.
 
 <table align="center">
   <tr>
@@ -258,27 +258,30 @@ Fart og effektivitet ble fokuset i denne retningen, booking skal gå raskt. Star
 
 ## ✨ Ferdig logo ✨
 
-Logoen jeg endte opp med å bruke er en kombinasjon av de fire retningene logoen har utviklet seg i. Teksten er en redigert versjon av Open Sans Bold/Normal.
+Logoen jeg til slutt landet på er en **kombinasjon av de fire retningene** logo utviklingen har vært innom. Jeg tok med meg det jeg likte best fra hver retning og kombinerte det. Fonten er en redigert versjon av Open Sans Bold/Normal.
 
 <img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue_lav_high.png" width="1200" />
 
-### Bokstaven H er en del av ikonet (retning 1)
+### Retning 1 - Bokstaven H er en del av ikonet (combination mark)
 
 <img src="docs\bilder\Logo_prosess\Meteor_retning\Logo_H.png" width="279" />
 
-### Et helse ikon/symbol (retning 2)
+### Retning 2 - Et helse ikon/symbol
 
 <img src="docs\bilder\Logo_prosess\Meteor_retning\Badge_helse.png" width="200" />
 
-### Punktumet fra "Helse." (retning 3)
+### Retning 3 - Punktumet fra "Helse." 
 
 <img src="docs\bilder\Logo_prosess\Meteor_retning\HelseBooking_tekst.png" width="350" />
 
-## Moderne, men enkelt (retning 4)
+## Retning - 4 Moderne, men enkelt
 
-<img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue_lav.png" width="300" />
+<img src="docs/bilder/Logo_prosess/Meteor_retning/Prosess.png"  />
 
 <br>
+
+<!-- <img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue_lav.png" width="300" />
+ -->
 
 ## Hva jeg liker med denne logoen:
 - Fungerer som en "Badge" uten teksten
@@ -302,7 +305,7 @@ Logoen jeg endte opp med å bruke er en kombinasjon av de fire retningene logoen
   </tr>
 </table>
 
-<img src="docs/bilder/Logo_prosess/Meteor_retning/Prosess.png"  />
+
 
 # ✨ Funksjonalitet
 
