@@ -108,13 +108,13 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
 
 <br>
 
-# 🎨 Logo design
+# ✏️ Logo design
 
-Her viser jeg litt av arbeidsprosessen, utkastene og tankegangen jeg hadde for å komme frem til HelseBooking logoen. Som du vil se av utkastene under så brukte jeg arbeidsnavnet **Behandler Booking**. Jeg endret navn underveis i utviklingen til **HelseBooking**. Dette for å gjøre navnet kortere, mer minneverdig og lettere å bygge en visuell identitet rundt.
+Jeg har lyst til å vise litt av arbeidsprosessen, noen av utkastene og samtidig få frem tankegangen jeg hadde for å komme frem til HelseBooking logoen. Som du vil se av utkastene under så brukte jeg arbeidsnavnet **Behandler Booking**. Jeg endret navn underveis i utviklingen til **HelseBooking**. Dette ble helt naturlig ettersom appen utviklet seg og arbeidet med logoen gikk videre. I tillegg ble navnet kortere, beholdt forklarende wordmark, men ble mer minneverdig og lettere å bygge en visuell identitet rundt.
 
 ## Inspirasjon
 
-Jeg startet med et ønske om en logo som kombinere et ikon med bokstaven B (BehandlerBooking). Når jeg gjorde research for å finne inspirasjon fra andre som brukte bokstaven B i logoen så kom jeg over logoen under. Denne bruker bokstaven B på en elegant måte og ble startskuddet for å utforske en egen visuell identitet.
+Jeg startet med et ønske om en logo som kombinere et ikon med bokstaven B (BehandlerBooking). I min research for å finne inspirasjon fra andre som brukte bokstaven B i logoen så kom jeg over logoen under. Denne bruker bokstaven B på en elegant måte og ble startskuddet for å utforske en egen visuell identitet.
 
 ![Utgangspunkt](docs/bilder/Logo_prosess/B_retning/Utgangspunkt_tynn.png)
 
@@ -297,10 +297,6 @@ Logoen jeg endte opp med å bruke er en kombinasjon av retningene logoen har utv
     <td align="center">Final versjon blå</td>
   </tr>
 </table>
-
-
-
-
 
 # ✨ Funksjonalitet
 
