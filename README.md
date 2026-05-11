@@ -130,28 +130,28 @@ Jeg tok inspirasjonen videre ved å legge til en stjerne på enden av B-kurven �
 
 ## Retning 1 — Bokstaven B
 
-Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt fra håndskrevne varianter til geometriske og minimalistiske tolkninger.
+Det naturlige startpunktet var initialen — bokstaven B for Booking. Jeg utforsket alt fra håndskrevne og lekne varianter til geometriske og minimalistiske tolkninger. Etter hvert begynte noen av variantene å nærme seg helse-symbolikk, og det åpnet døren til neste retning.
 
 <table align="center">
   <tr>
-    <td align="center"><img src="docs/bilder/Logo_prosess/B_retning/B_1.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/B_retning/B_2.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/B_retning/B_3.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/B_retning/B_1.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/B_retning/B_2.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/B_retning/B_3.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center">Delt kryss</td>
-    <td align="center">Kryss med ellipser</td>
-    <td align="center">Fire hjerter</td>
+    <td align="center" width="200">Bold B i bubbly håndskriftstil, innrammet i et avrundet kvadrat</td>
+    <td align="center" width="200">Negativ B med håndskrevet wordmark</td>
+    <td align="center" width="200">Geometrisk B som ligner et 8-tall, tung og moderne</td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/bilder/Logo_prosess/B_retning/B_3-1.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/B_retning/B_4.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/B_retning/B_5.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/B_retning/B_3-1.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/B_retning/B_4.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/B_retning/B_5.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center">Delt kryss</td>
-    <td align="center">Kryss med ellipser</td>
-    <td align="center">Fire hjerter</td>
+    <td align="center" width="200">BB tolket som to separate avrundede rektangler</td>
+    <td align="center" width="200">Minimalistisk wordmark med to overlappende blå firkanter</td>
+    <td align="center" width="200">Avrundet B-ikon med kryss — begynner å nærme seg helse-territoriet</td>
   </tr>
 </table>
 
@@ -159,28 +159,28 @@ Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt 
 
 ## Retning 2 — Helse Ikon
 
-Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt fra håndskrevne varianter til geometriske og minimalistiske tolkninger.
+Med helse som kjernen i appen var det naturlig å utforske klassiske helse-symboler — plusstegnet, hjertet og plasteret. Variantene ble organiske og myke, men også generiske. Den siste varianten i denne retningen introduserte grønt som farge, noe som skulle dukke opp igjen senere.
 
 <table align="center">
   <tr>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_1.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_2.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_3.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_1.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_2.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_3.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center">Delt kryss</td>
-    <td align="center">Kryss med ellipser</td>
-    <td align="center">Fire hjerter</td>
+    <td align="center" width="200">Minimalistisk wordmark med lite + over teksten</td>
+    <td align="center" width="200">Kryss som eksploderer ut i stråler, nesten som en snøfnugg</td>
+    <td align="center" width="200">+ med diagonal bølge som deler mørk og lys blå</td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_4.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_5.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_6.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_4.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_5.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_6.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center">Delt kryss</td>
-    <td align="center">Kryss med ellipser</td>
-    <td align="center">Fire hjerter</td>
+    <td align="center" width="200">Symmetrisk kryss omgitt av ellipser, nesten som et kompass</td>
+    <td align="center" width="200">Fire overlappende hjerter med gradient</td>
+    <td align="center" width="200">Samme hjerte-blomst med wordmark under</td>
   </tr>
 </table>
 
@@ -188,26 +188,26 @@ legg inn ikon 7
 
 <br>
 
-## Retning 3 — Rename appen til **Helse.** retningen
+## Retning 3 — Rename appen til **Helse.**
 
-Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt fra håndskrevne varianter til geometriske og minimalistiske tolkninger.
+Fart og effektivitet ble det nye fokuset — booking skal gå raskt. Flamme- og meteor-formen viste seg å kombinere bevegelse og helse på en måte de andre retningene ikke klarte. Det var her den endelige logoen tok form. Den siste varianten med lynikon viser at jeg også utforsket en helt annen energi før jeg landet.
 
 <table align="center">
   <tr>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_retning/Helse_1.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_retning/Helse_2.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_retning/Helse_1.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_retning/Helse_2.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center">Delt kryss</td>
-    <td align="center">Kryss med ellipser</td>
+    <td align="center" width="200">"Helse." med avrundet lys boks rundt "e" og punktum</td>
+    <td align="center" width="200">Ekstremt minimalistisk — bare tekst med grå prikk som punktum</td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_retning/Helse_3.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Helse_retning/Helse_4.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_retning/Helse_3.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Helse_retning/Helse_4.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center">Delt kryss</td>
-    <td align="center">Kryss med ellipser</td>
+    <td align="center" width="200">"e" og punktum løftet inn i blå avrundet boks</td>
+    <td align="center" width="200">Grønn variant med plaster-ikon til venstre for wordmark</td>
   </tr>
 </table>
 
@@ -215,38 +215,38 @@ Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt 
 
 ## Retning 4 — Meteor retning
 
-Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt fra håndskrevne varianter til geometriske og minimalistiske tolkninger.
+Parallelt med de visuelle eksperimentene vurderte jeg å forenkle selve navnet til bare Helse. — med punktum som et bevisst stilgrep. Den siste varianten i denne retningen hentet inn det grønne fra retning 2, og fikk meg til å vurdere grønt som hovedfarge for hele appen.
 
 <table align="center">
   <tr>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_1.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_2.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_3.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_1.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_2.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_3.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center">Delt kryss</td>
-    <td align="center">Kryss med ellipser</td>
-    <td align="center">Fire hjerter</td>
+    <td align="center" width="200">Geometrisk flamme med + og mørk skygge, iOS app-ikon stil</td>
+    <td align="center" width="200">Flamme med gull/blå detaljer og + i avrundet ikon, wordmark til høyre</td>
+    <td align="center" width="200">Liten flamme med + wordmark, navn under med to vekter</td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_4.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_5.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_6.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_4.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_5.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_6.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center">Delt kryss</td>
-    <td align="center">Kryss med ellipser</td>
-    <td align="center">Fire hjerter</td>
+    <td align="center" width="200">Hånd i fart med + — unik kombinasjon av omsorg og bevegelse</td>
+    <td align="center" width="200">Fart-piler med + og "Helse." wordmark</td>
+    <td align="center" width="200">FMeteor med + i app-ikon, wordmark til høyre</td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_7.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_8.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_9.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_7.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_8.png" width="200" /></td>
+    <td align="center" width="200"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_9.png" width="200" /></td>
   </tr>
   <tr>
-    <td align="center">Delt kryss</td>
-    <td align="center">Kryss med ellipser</td>
-    <td align="center">Fire hjerter</td>
+    <td align="center" width="200">Samme meteor med orange flamme-detalj integrert i teksten</td>
+    <td align="center" width="200">Gult lynikon i avrundet boks med HelseBooking wordmark under</td>
+    <td align="center" width="200">Flamme/dråpe som separator mellom "Behandler" og "Booking" i wordmark</td>
   </tr>
 </table>
 
@@ -256,14 +256,14 @@ Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt 
 
 <table align="center">
   <tr>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Green.png" width="200" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue.png" width="200" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Green.png" width="300" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue.png" width="300" /></td>
 
 
   </tr>
   <tr>
-    <td align="center">Delt kryss</td>
-    <td align="center">Kryss med ellipser</td>
+    <td align="center">Final versjon grønn</td>
+    <td align="center">Final versjon blå</td>
 
   </tr>
 
