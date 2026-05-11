@@ -132,7 +132,7 @@ Jeg tok inspirasjonen videre ved å legge til en stjerne på enden av B-kurven �
 
 Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt fra håndskrevne varianter til geometriske og minimalistiske tolkninger.
 
-<table>
+<table align="center">
   <tr>
     <td align="center"><img src="docs/bilder/Logo_prosess/B_retning/B_1.png" width="200" /></td>
     <td align="center"><img src="docs/bilder/Logo_prosess/B_retning/B_2.png" width="200" /></td>
@@ -161,7 +161,7 @@ Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt 
 
 Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt fra håndskrevne varianter til geometriske og minimalistiske tolkninger.
 
-<table>
+<table align="center">
   <tr>
     <td align="center"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_1.png" width="200" /></td>
     <td align="center"><img src="docs/bilder/Logo_prosess/Helse_ikon_retning/Helse_ikon_2.png" width="200" /></td>
@@ -192,7 +192,7 @@ legg inn ikon 7
 
 Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt fra håndskrevne varianter til geometriske og minimalistiske tolkninger.
 
-<table>
+<table align="center">
   <tr>
     <td align="center"><img src="docs/bilder/Logo_prosess/Helse_retning/Helse_1.png" width="200" /></td>
     <td align="center"><img src="docs/bilder/Logo_prosess/Helse_retning/Helse_2.png" width="200" /></td>
@@ -217,7 +217,7 @@ Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt 
 
 Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt fra håndskrevne varianter til geometriske og minimalistiske tolkninger.
 
-<table>
+<table align="center">
   <tr>
     <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_1.png" width="200" /></td>
     <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/M_2.png" width="200" /></td>
@@ -252,7 +252,9 @@ Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt 
 
 <br>
 
-<table>
+## Her er final.
+
+<table align="center">
   <tr>
     <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Green.png" width="200" /></td>
     <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue.png" width="200" /></td>
