@@ -118,10 +118,10 @@ Jeg startet med et ønske om en logo som kombinere et ikon med bokstaven B (Beha
 
 ![Utgangspunkt](docs/bilder/Logo_prosess/B_retning/Utgangspunkt_tynn.png)
 
-Jeg tok inspirasjonen videre ved å legge til et helsekors enden av B-kurven, som videre ble til en stjerne for bedre flyt. Det var et lite detaljelement som skulle gi logoen personlighet. Dette ble den midlertidige logoen under utviklingen av appen. Denne logoen åpnet døren til fire ulike designretninger.
+Jeg tok inspirasjonen videre ved å endre logoen til appens farge og legge til et helsekors i enden av B-kurven, som videre ble til en stjerne for bedre flyt. Det var et lite detaljelement som skulle gi logoen personlighet. Dette ble den midlertidige logoen under utviklingen av appen. Denne logoen åpnet døren til fire ulike designretninger.
 
 - **Retning 1** - Bokstaven B i logoen
-- **Retning 2** - En logo og ikon som symboliserer helse
+- **Retning 2** - Et symbolsk **Helse Ikon**
 - **Retning 3** - Rename av appen til **Helse.**
 - **Retning 4** - Moderne, raskt, enkelt og flat-design
 
@@ -156,7 +156,7 @@ Et utvalg utkast fra retning 1:
 
 <br>
 
-## Retning 2 — Helse Ikon
+## Retning 2 — Et symbolsk **Helse Ikon**
 
 Med en helseapp var det naturlig å utforske klassiske helse-symboler som plusstegnet, hjertet og plasteret. Variantene ble organiske og myke, men kanskje noe generiske. Den siste varianten i denne retningen introduserte helsekorset med en skjult H (HelseBooking) i linjene som kutter helsekorset som vi ser igjen i appens logo.
 
@@ -258,17 +258,17 @@ Fart og effektivitet ble fokuset i denne retningen, booking skal gå raskt. Star
 
 ## Final versjonen
 
-Logoen jeg endte opp med å bruke er en kombinasjon av retningene logoen har utviklet seg.
+Logoen jeg endte opp med å bruke er en kombinasjon av de fire retningene logoen har utviklet seg i. Teksten er en redigert versjon av Open Sans Bold/Normal.
 
 <img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue_lav_high.png" width="1200" />
 
-## Den har bokstaven H "skjult" i ikonet (retning 1)
+## Bokstaven H er en del av ikonet (retning 1)
 
 ![](docs\bilder\Logo_prosess\Meteor_retning\Logo_H.png)
 
 ## Bruker Helse ikon/symbolikk fra retning 2
 
-<img src="docs\bilder\Logo_prosess\Meteor_retning\HelseBooking_Badge.png" width="200" />
+<img src="docs\bilder\Logo_prosess\Meteor_retning\Badge_helse.png" width="200" />
 
 ## Punktum og enkelheten fra "Helse." (retning 3)
 
@@ -278,12 +278,16 @@ Logoen jeg endte opp med å bruke er en kombinasjon av retningene logoen har utv
 
 <img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue_lav.png" width="300" />
 
-**Hva som fungerer bra med denne logoen:**
+<br>
+
+## Hva jeg liker med denne logoen:
 - Fungerer som en "Badge" uten teksten
+- Flyter godt i navbar og på about siden
+- Kan enkelt kombineres med andre UI elementer
 - Fungerer i alle størrelser og farger
 - Helse symbolikk i logoen
 - Beskrivende wordmark
-- Bokstaven "H" i logoen sitt ikon/badge igjen i HelseBooking wordmark teksten med samme skrå på H i helse og samme stilart på K i ordet "booking"
+- Bokstaven "H" er innebygd i selve ikonet/grafikken. Samme stil i grafikk som i H og K med skråstrek.
 
 <br>
 
@@ -297,6 +301,8 @@ Logoen jeg endte opp med å bruke er en kombinasjon av retningene logoen har utv
     <td align="center">Final versjon blå</td>
   </tr>
 </table>
+
+<img src="docs/bilder/Logo_prosess/Meteor_retning/Prosess.png"  />
 
 # ✨ Funksjonalitet
 
