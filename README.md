@@ -252,7 +252,7 @@ Den første retningen tok utgangspunkt direkte i bokstaven B. Jeg utforsket alt 
 
 <br>
 
-## Her er final.
+## Her er final versjonen.
 
 <table align="center">
   <tr>
