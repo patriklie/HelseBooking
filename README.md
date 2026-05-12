@@ -304,7 +304,7 @@ Logoen jeg til slutt landet på er en **kombinasjon av de fire retningene** logo
 - Bokstaven "H" er bygget inn i bagde/ikon. Stiltrekk fra grafikken er videreført på bokstavene H og K i teksten med skråstreken
 - Moderne og enkel
 
-## Min tolkning 
+## Logo Symbolikk
 Helsekorset er et internasjonalt symbol for helse, trygghet og beskyttelse, et umiddelbart gjenkjennelig utgangspunkt. Samtidig består ikonet av flere lag med symbolikk. 
 
 Det vertikale rektangelet i helsekorset symboliserer en pille eller kapsel med delelinje. Det horisontale rektangelet i helsekorset som ligger bak symboliserer behandler og pasient på hver sin side av bordet. Sirkelen med stroke gir helsekorset ro og rammer det inn som noe trygt og helhetlig.
