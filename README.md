@@ -296,13 +296,25 @@ Logoen jeg til slutt landet på er en **kombinasjon av de fire retningene** logo
  <img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue_lav_high.png" width="1200" />
 
 - Fungerer som en "Badge" uten teksten
-- Flyter godt i navbar og på **Om** siden i appen
+- Flyter godt i **navbaren** og på **om** siden i appen
 - Kan enkelt kombineres med andre UI elementer
 - Fungerer i alle størrelser og farger
 - Helse symbolikk i logoen
 - Beskrivende wordmark
-- Bokstaven "H" er bygget inn i bagde/ikon. Stiltrekk fra grafikken er videreført på bokstavene H og K i teksten med skråstreken.
+- Bokstaven "H" er bygget inn i bagde/ikon. Stiltrekk fra grafikken er videreført på bokstavene H og K i teksten med skråstreken
 - Moderne og enkel
+
+## Min tolkning 
+Helsekorset er et internasjonalt symbol for helse, trygghet og beskyttelse, et umiddelbart gjenkjennelig utgangspunkt. Samtidig består ikonet av flere lag med symbolikk. 
+
+Det vertikale rektangelet i helsekorset symboliserer en pille eller kapsel med delelinje. Det horisontale rektangelet i helsekorset som ligger bak symboliserer behandler og pasient på hver sin side av bordet. Sirkelen med stroke gir helsekorset ro og rammer det inn som noe trygt og helhetlig.
+
+Den diagonale skrålinjen som brukes flere steder i logoen har en oppadgående retning og symboliserer bedring i behandlingsforløpet.
+
+Punktumet i wordmarken bygger videre på ideen fra **Helse.-retningen** og representerer helhet og avslutning, tanken om at plattformen skal være ett samlet sted for behandling, oppfølging og hjelp.
+
+Blåfargen (#006EFF) brukes gjennom hele applikasjonens UI og bidrar til et moderne og helhetlig inntrykk.
+
 
 <br>
 
