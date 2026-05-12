@@ -335,25 +335,29 @@ Blåfargen (#006EFF) brukes gjennom hele applikasjonens UI og bidrar til et mode
 
 ### **Pasient**
 - Registrering og innlogging med JWT-autentisering
+- Sortering av behandlere ved timebestilling etter behandlertype, sorterings knappene for behandler type oppdateres dynamisk etter hvilke typer behandlere som er registrert i appen. 
 - Bla gjennom behandlere med Swiper-karusell
 
 <img src="docs/bilder/HelseBooking_swiper.gif" width="300" />
 
-- Se behandlerprofiler med profilbilde, navn og spesialitet
-- Booke ledig time med bekreftelsesmodal
+- Se behandlerprofiler med profilbilde, navn, beskrivelse og neste ledige time
+- Book ledig time med bekreftelsesmodal med utvidet timeinformasjon
 - Se og avbestille egne timer med swipe-to-delete animasjon som revealer animerteikoner som reagerer på draglengde ved swipe
+- Se utvidet time informasjon under mine timer ved å klikke på en time, med behandler kontaktinformasjon og veibeskrivelse til klinikken tilknyttet timen
 
 <img src="docs/bilder/HelseBooking_mine_timer.gif" width="300" />
 
 <br>
 
 ## **Behandler**
-- Opprette ledige timer med dato og tidspunkt
+- Opprette ledige timer med dato, klinikk og tidspunkt
 - Se oversikt over bookede timer i kalender
 - Rollebasert visning – behandlere ser andre verktøy enn pasienter
 - Laste opp og slette profilbilde via Cloudinary
+- Rediger alle felter i profilen samt behandler beskrivelse og type
 - Opprett og rediger klinikker og tilhørende behandlere
 - Rediger timer, legg til eller fjern pasienter på timen.
+- Behandlere på **Om**-siden roterer ved at backend returnerer et tilfeldig utvalg ved hver lasting
 
 <br>
 
