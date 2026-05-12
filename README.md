@@ -391,11 +391,12 @@ Blåfargen (#006EFF) brukes gjennom hele applikasjonens UI og bidrar til et mode
 | CORS                | Kryssdomene-tilgang             | Nødvendig for separat frontend/backend deploy       |
 
 ### ☁️ Deploy
-| Tjeneste      | Bruk                                                       | Begrunnelse                           |
-|---            |---                                                         |---                                    |
-| Render        | Hosting av frontend og backend                             | Gratis tier, enkel GitHub-integrasjon |
-| MongoDB Atlas | Skybasert database                                         | Gratis tier, enkel oppsett            |
-| Cloudinary    | Bildelagring                                               | Gratis tier med CDN                   |
+| Tjeneste         | Bruk                                                       | Begrunnelse                           |
+|---               |---                                                         |---                                    |
+| Render           | Hosting av frontend og backend                             | Gratis tier, enkel GitHub-integrasjon |
+| MongoDB Atlas    | Skybasert database                                         | Gratis tier, enkel oppsett            |
+| Cloudinary       | Bildelagring                                               | Gratis tier med CDN                   |
+| Google Analytics | Brukertrafikk og besøksstatistikk                          | Gratis tier, enkel integrasjon        |
 
 <br>
 
