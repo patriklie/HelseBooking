@@ -110,11 +110,11 @@ Her er noen skjermbilder av appen, men jeg anbefaler at du logger deg på en av 
 
 # ✏️ Logo design
 
-Jeg har lyst til å vise arbeidsprosessen, noen av utkastene og tankegangen som ligger bak logo utviklingen. Som du vil se har noen av utkastene navnet **Behandler Booking**. Dette var appens "arbeidsnavn" under utviklingen. Ettersom appen utviklet seg og arbeidet med logoen gikk videre ble et navnebytte naturlig. I tillegg ble navnet kortere, beholdt forklarende wordmark, men også mer minneverdig og lettere å bygge en visuell identitet rundt.
+Jeg har lyst til å vise arbeidsprosessen, noen av utkastene og tankegangen som ligger bak logo utviklingen. Som du vil se har noen av utkastene navnet **BehandlerBooking**. Dette var appens "arbeidsnavn" under utviklingen. Ettersom appen utviklet seg og arbeidet med logoen gikk videre ble et navnebytte naturlig. I tillegg ble navnet kortere, beholdt forklarende wordmark, men også mer minneverdig og lettere å bygge en visuell identitet rundt.
 
 ## Inspirasjon
 
-Jeg startet med et ønske om en logo som kombinere et ikon med bokstaven B (BehandlerBooking). Så jeg gjorde research og kom over logoen du kan se under her. Denne bruker bokstaven B på en elegant måte og ble starten på å finne en egen visuell identitet.
+Jeg startet med et ønske om en logo som kombinere et ikon med bokstaven B (BehandlerBooking). Så jeg gjorde research og kom over logoen du kan se under. Denne bruker bokstaven B på en elegant måte og ble starten på å finne en egen visuell identitet.
 
 ![Utgangspunkt](docs/bilder/Logo_prosess/B_retning/Utgangspunkt_tynn.png)
 
@@ -158,7 +158,7 @@ Et utvalg utkast fra retning 1:
 
 ## Retning 2 — Et symbolsk **Helse Ikon**
 
-Med en helseapp var det naturlig å utforske klassiske helse-symboler som plusstegnet, hjertet og plasteret. Variantene ble organiske og myke, men kanskje noe generiske. Den siste varianten i denne retningen introduserte helsekorset med en skjult H (HelseBooking) i linjene som kutter helsekorset som vi ser igjen i appens logo.
+Med en helseapp var det naturlig å utforske klassiske helse-symboler som helsekorset, hjertet og plasteret. Variantene ble organiske og myke, men kanskje noe generiske. Den siste varianten i denne retningen introduserte helsekorset med en skjult H (HelseBooking) i linjene som kutter helsekorset som vi ser igjen i appens logo.
 
 <table align="center">
   <tr>
@@ -219,7 +219,7 @@ Når jeg startet på disse utkastene var utgangspunktet at det skulle være så 
 
 ## Retning 4 — Moderne, raskt, enkelt og flat-design
 
-Fart og effektivitet ble fokuset i denne retningen, booking skal gå raskt. Startpunktet for denne retningen var en geometrisk "flat-design flamme-logo" jeg oppdaget på Dribbble, som viste seg å være logoen til appen "Fandom" på appstore. Formen inspirerte meg til å utforske flamme og meteor (fart), kombinert med symbolikk for helse.
+Fart og effektivitet ble fokuset i denne retningen, booking skal gå raskt. Få klikk fra du logger inn til riktig time er booket. Startpunktet for denne retningen var en geometrisk "flat-design flamme-logo" jeg oppdaget på Dribbble, som viste seg å være logoen til appen "Fandom" på appstore. Formen inspirerte meg til å utforske flamme og meteor (fart), kombinert med symbolikk for helse.
 
 <table align="center">
   <tr>
