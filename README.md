@@ -61,7 +61,7 @@ Jeg har laget testbrukere under man kan logge på med. Med disse er det bare å 
 
 # 📸 Skjermbilder fra appen
 
-Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger deg inn på en av testbrukerne å klikker deg rundt selv, eller at vi sammen tar en gjennomgang! 😊
+Her er noen skjermbilder av appen, men jeg anbefaler at du logger deg på en av testbrukerne å klikker deg rundt selv, eller at vi sammen tar en gjennomgang! 😊
 
 
 ## 🏠 Forside / Om
@@ -110,15 +110,15 @@ Under har jeg tatt noen skjermbilder fra appen! Men jeg anbefaler at du logger d
 
 # ✏️ Logo design
 
-Jeg har lyst å vise arbeidsprosessen, noen av utkastene og samtidig få frem tankegangen jeg hadde for å komme frem til den endelige versjonen av **HelseBooking** logoen. Som du vil se av utkastene under så brukte jeg tidligere i prosessen arbeidsnavnet **Behandler Booking**. Jeg endret navn underveis i utviklingen til **HelseBooking**. Dette ble helt naturlig ettersom appen utviklet seg og arbeidet med logoen gikk videre. I tillegg ble navnet kortere, beholdt forklarende wordmark, men ble mer minneverdig og lettere å bygge en visuell identitet rundt.
+Jeg har lyst til å vise arbeidsprosessen, noen av utkastene og tankegangen som ligger bak logo utviklingen. Som du vil se har noen av utkastene navnet **Behandler Booking**. Dette var appens "arbeidsnavn" under utviklingen. Ettersom appen utviklet seg og arbeidet med logoen gikk videre ble et navnebytte naturlig. I tillegg ble navnet kortere, beholdt forklarende wordmark, men også mer minneverdig og lettere å bygge en visuell identitet rundt.
 
 ## Inspirasjon
 
-Jeg startet med et ønske om en logo som kombinere et ikon med bokstaven B (BehandlerBooking). I min research for å finne inspirasjon fra andre som brukte bokstaven B i logoen så kom jeg over logoen under. Denne bruker bokstaven B på en elegant måte og ble startskuddet for å utforske en egen visuell identitet.
+Jeg startet med et ønske om en logo som kombinere et ikon med bokstaven B (BehandlerBooking). Så jeg gjorde research og kom over logoen du kan se under her. Denne bruker bokstaven B på en elegant måte og ble starten på å finne en egen visuell identitet.
 
 ![Utgangspunkt](docs/bilder/Logo_prosess/B_retning/Utgangspunkt_tynn.png)
 
-Jeg tok inspirasjonen videre ved å endre logoen til appens farge og legge til et helsekors i enden av B-kurven, som videre ble til en stjerne for bedre flyt. Det var et lite detaljelement som skulle gi logoen personlighet. Dette ble den midlertidige logoen under utviklingen av appen. Denne logoen åpnet døren til fire ulike designretninger.
+Jeg tok inspirasjonen videre ved å endre logoen til appens farge og legge til et helsekors i enden av B-kurven, som videre ble til en stjerne for bedre flyt. Det var et lite detaljelement som skulle gi logoen personlighet. Dette ble appens midlertidige logo under utvikling. Denne logoen åpnet døren til fire ulike designretninger.
 
 - **Retning 1** - Bokstaven B i logoen
 - **Retning 2** - Et symbolsk **Helse Ikon**
@@ -128,7 +128,7 @@ Jeg tok inspirasjonen videre ved å endre logoen til appens farge og legge til e
 
 ## Retning 1 — Bokstaven B (combination mark)
 
-Den første og naturlige retningen logoen tok var fra startpunktet initialen **bokstaven B for BehandlerBooking**. Jeg utforsket alt fra håndskrevne og lekne varianter til geometriske og minimalistiske tolkninger. Etter hvert begynte noen av variantene å nærme seg helse-symbolikk, og det åpnet døren til neste retning. <br><br>
+Den første og naturlige retningen logoen tok var fra startpunktet initialen **bokstaven B for BehandlerBooking**. Jeg utforsket alt fra håndskrevne og lekne varianter til geometriske og minimalistiske tolkninger. Det manglet litt helsepreg over logoene, men etter hvert begynte utkastene å bevege seg inn i retning 2, et symbolsk helse ikon.<br><br>
 Et utvalg utkast fra retning 1:
 
 <table align="center">
@@ -289,7 +289,12 @@ Logoen jeg til slutt landet på er en **kombinasjon av de fire retningene** logo
 <!-- <img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue_lav.png" width="300" />
  -->
 
+
+
 ## Hva jeg liker med denne logoen:
+
+ <img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue_lav_high.png" width="1200" />
+
 - Fungerer som en "Badge" uten teksten
 - Flyter godt i navbar og på **Om** siden i appen
 - Kan enkelt kombineres med andre UI elementer
@@ -307,8 +312,8 @@ Logoen jeg til slutt landet på er en **kombinasjon av de fire retningene** logo
     <td align="center"><img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Green_lav.png" width="300" /></td>
   </tr>
   <tr>
-    <td align="center">Ferdig logo blå</td>
-    <td align="center">Ferdig logo grønn</td>
+    <td align="center">HelseBooking logo blå</td>
+    <td align="center">HelseBooking logo grønn</td>
   </tr>
 </table>
 
