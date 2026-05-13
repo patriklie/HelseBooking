@@ -1,10 +1,15 @@
-<div align="center">
-<img src="docs/bilder/HelseBooking_Logo_blue.png" width="300" />
-</div>
-
 # Hei 👋
 
 ### Velkommen til HelseBooking, min fullstack bookingapplikasjon for helsetjenester hvor pasienter kan finne og booke time hos behandlere.
+
+<div align="center">
+<img src="docs\bilder\Logo_prosess\mockups\iPhone_17_Mockup_1_left.png" />
+</div>
+
+<!-- <div align="center">
+<img src="docs/bilder/HelseBooking_Logo_blue.png" width="300" />
+</div> -->
+
 
 Problemet appen løser er at mange bookingløsninger i helsebransjen er fragmenterte og lite brukervennlige. Målet med dette prosjektet var å bygge en enkel og moderne løsning der pasienter og behandlere kan samhandle sømløst i en plattform, og samtidig prøve å redusere antall klikk fra du logger inn til du har booket riktig time. Prosjektet er laget som et CV-prosjekt så jeg ville samtidig demonstrere ferdigheter innen moderne webutvikling, med fokus på brukeropplevelse, autentisering og rollebasert tilgang.
 
@@ -22,6 +27,8 @@ Problemet appen løser er at mange bookingløsninger i helsebransjen er fragment
 <div align="center">
 
 <h1><a href="https://helsebooking.onrender.com" target="_blank">⚡️ Live Demo ⚡️</a></h1>
+
+
 
 <img src="docs/bilder/HelseBooking_booktime.gif" width="350" />
 
