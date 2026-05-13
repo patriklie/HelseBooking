@@ -1,6 +1,6 @@
 {
     "name": "HelseBooking",
-    "short_name": "Booking",
+    "short_name": "HelseBooking",
     "description": "En fullstack bookingapplikasjon for helsetjenester der pasienter kan finne og booke time hos behandlere.",
     "start_url": "/",
     "scope": "/",
@@ -9,14 +9,16 @@
     "background_color": "#ffffff",
     "icons": [
         {
-            "src": "/HelseBooking_192.png",
+            "src": "/HelseBooking_android_app.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         },
         {
             "src": "/HelseBooking_512.png",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ]
 }
