@@ -1,6 +1,6 @@
 import { LockKeyhole, ArrowBigRight, Mail, Eye, EyeClosed } from "lucide-react";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAppStore } from "../store/authStore.js";
 import { useNavigate, Link } from "react-router";
 import { motion } from "motion/react";
@@ -22,6 +22,17 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const [visPassord, setVisPassord] = useState(false);
   const PassordIkon = visPassord ? Eye : EyeClosed;
+  
+  
+  // et lite easter egg 🐣 i consollen for de som tester appen på skjermbredde over 1000px
+  useEffect(() => {
+    if (window.innerWidth > 1000) {
+      console.log(`Hei! 👋 Jeg ser at du bruker appen med en bredde på ${window.innerWidth}px, anbefaler deg å teste den i 375px - 1000px bredde! 👀`);
+      if (!window.matchMedia('(display-mode: standalone)').matches) {
+        console.log("Du har ikke lagt den inn som en PWA, så test gjerne det å! 🤓")
+      }
+    };
+  }, []);
 
   const loginRequest = async (e) => {
     e.preventDefault();
