@@ -360,7 +360,11 @@ Blåfargen (#006EFF) brukes gjennom hele applikasjonens UI og bidrar til et mode
 - Rollebasert visning – behandlere ser andre verktøy enn pasienter
 - Laste opp og slette profilbilde via Cloudinary
 - Rediger alle felter i profilen samt behandler beskrivelse og type
-- Opprett og rediger klinikker og tilhørende behandlere
+- Opprett og rediger klinikker og tilhørende behandlere til klinikken
+- Fly over animasjon ved endring av klinikkens plassering:
+
+<img src="docs/bilder/HelseBooking_kart_animasjon.gif" width="300" />
+
 - Rediger timer, legg til eller fjern pasienter på timen.
 - Behandlere på **Om**-siden roterer og viser et tilfeldig utvalg ved hver lasting
 
