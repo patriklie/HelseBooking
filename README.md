@@ -295,6 +295,8 @@ Logoen jeg til slutt landet på er en **kombinasjon av de fire retningene** logo
 
  <img src="docs/bilder/Logo_prosess/Meteor_retning/HelseBooking_Final_Blue_lav_high.png" width="1200" />
 
+ <br>
+
 - Fungerer som en "Badge" uten teksten
 - Flyter godt i **navbaren** og på **om** siden i appen
 - Kan enkelt kombineres med andre UI elementer
@@ -303,6 +305,17 @@ Logoen jeg til slutt landet på er en **kombinasjon av de fire retningene** logo
 - Beskrivende wordmark
 - Bokstaven "H" er bygget inn i bagde/ikon. Stiltrekk fra grafikken er videreført på bokstavene H og K i teksten med skråstreken
 - Moderne og enkel
+
+<table align="center">
+  <tr>
+    <td align="center"><img src="docs/bilder/Logo_prosess/mockups/Round_Sign_Mockup.png" width="300" /></td>
+    <td align="center"><img src="docs/bilder/Logo_prosess/mockups/Letterhead_Mockup_1.png" width="300" /></td>
+  </tr>
+  <tr>
+    <td align="center">HelseBooking Badge fungerer alene</td>
+    <td align="center">og sammen med andre elementer</td>
+  </tr>
+</table>
 
 ## Logo Symbolikk
 Helsekorset er et internasjonalt symbol for helse, trygghet og beskyttelse, et umiddelbart gjenkjennelig utgangspunkt. Samtidig består ikonet av flere lag med symbolikk. 
@@ -314,7 +327,6 @@ Den diagonale skrålinjen som brukes flere steder i logoen har en oppadgående r
 Punktumet i wordmarken bygger videre på ideen fra **Helse.-retningen** og representerer helhet og avslutning, tanken om at plattformen skal være ett samlet sted for behandling, oppfølging og hjelp.
 
 Blåfargen (#006EFF) brukes gjennom hele applikasjonens UI og bidrar til et moderne og helhetlig inntrykk.
-
 
 <br>
 
@@ -328,8 +340,6 @@ Blåfargen (#006EFF) brukes gjennom hele applikasjonens UI og bidrar til et mode
     <td align="center">HelseBooking logo grønn</td>
   </tr>
 </table>
-
-<br>
 
 # ✨ Funksjonalitet
 
