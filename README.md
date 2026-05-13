@@ -306,16 +306,11 @@ Logoen jeg til slutt landet på er en **kombinasjon av de fire retningene** logo
 - Bokstaven "H" er bygget inn i bagde/ikon. Stiltrekk fra grafikken er videreført på bokstavene H og K i teksten med skråstreken
 - Moderne og enkel
 
-<table align="center">
-  <tr>
-    <td align="center"><img src="docs/bilder/Logo_prosess/mockups/Round_Sign_Mockup.png" width="300" /></td>
-    <td align="center"><img src="docs/bilder/Logo_prosess/mockups/Letterhead_Mockup_1.png" width="300" /></td>
-  </tr>
-  <tr>
-    <td align="center">HelseBooking Badge fungerer alene</td>
-    <td align="center">og sammen med andre elementer</td>
-  </tr>
-</table>
+<br>
+
+![](docs/bilder/Logo_prosess/mockups/Round_Sign_Mockup.png)
+![](docs/bilder/Logo_prosess/mockups/15mm_Lanyard_Mockup_2.png)
+![](docs/bilder/Logo_prosess/mockups/Letterhead_Mockup_1.png)
 
 ## Logo Symbolikk
 Helsekorset er et internasjonalt symbol for helse, trygghet og beskyttelse, et umiddelbart gjenkjennelig utgangspunkt. Samtidig består ikonet av flere lag med symbolikk. 
