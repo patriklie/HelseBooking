@@ -10,7 +10,7 @@
 <img src="docs/bilder/HelseBooking_Logo_blue.png" width="300" />
 </div> -->
 
-De fleste som har forsøkt å booke time i helsebransjen kjenner til eldre systemer, unødvendige steg og brukergrensesnitt som føles utdatert. HelseBooking er et fullstack-prosjekt bygget som et svar på nettopp dette, en moderne plattform der pasienter og behandlere samhandler sømløst, med fokus på få klikk fra innlogging til booket time. 
+De fleste som har forsøkt å booke time i helsebransjen kjenner til eldre systemer, unødvendige steg og brukergrensesnitt som føles utdatert. **HelseBooking** er et fullstack-prosjekt bygget som et svar på nettopp dette, en moderne plattform der pasienter og behandlere samhandler sømløst, med fokus på få klikk fra innlogging til booket time.
 
 Prosjektet demonstrerer ferdigheter innen fullstack webutvikling med MERN-stacken, inkludert JWT-autentisering, rollebasert tilgangskontroll og en moderne brukeropplevelse bygget med React.
 
@@ -18,7 +18,7 @@ Prosjektet demonstrerer ferdigheter innen fullstack webutvikling med MERN-stacke
 
 - [Live Demo](https://helsebooking.onrender.com)
 - [Skjermbilder](#-skjermbilder-fra-appen)
-- [Logo design prosess](#️-logo-design)
+- [Logo design](#️-logo-design)
 - [Funksjonalitet](#-funksjonalitet)
 - [Tech Stack](#tech-stack)
 - [Arkitektur](#️-arkitektur--systemdesign)
