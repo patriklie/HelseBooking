@@ -10,8 +10,9 @@
 <img src="docs/bilder/HelseBooking_Logo_blue.png" width="300" />
 </div> -->
 
+De fleste som har forsøkt å booke time i helsebransjen kjenner til eldre systemer, unødvendige steg og brukergrensesnitt som føles utdatert. HelseBooking er et fullstack-prosjekt bygget som et svar på nettopp dette, en moderne plattform der pasienter og behandlere samhandler sømløst, med fokus på få klikk fra innlogging til booket time. 
 
-Problemet appen løser er at mange bookingløsninger i helsebransjen er fragmenterte og lite brukervennlige. Målet med dette prosjektet var å bygge en enkel og moderne løsning der pasienter og behandlere kan samhandle sømløst i en plattform, og samtidig prøve å redusere antall klikk fra du logger inn til du har booket riktig time. Prosjektet er laget som et CV-prosjekt så jeg ville samtidig demonstrere ferdigheter innen moderne webutvikling, med fokus på brukeropplevelse, autentisering og rollebasert tilgang.
+Prosjektet demonstrerer ferdigheter innen fullstack webutvikling med MERN-stacken, inkludert JWT-autentisering, rollebasert tilgangskontroll og en moderne brukeropplevelse bygget med React.
 
 ## 📋 Innhold
 
@@ -27,8 +28,6 @@ Problemet appen løser er at mange bookingløsninger i helsebransjen er fragment
 <div align="center">
 
 <h1><a href="https://helsebooking.onrender.com" target="_blank">⚡️ Live Demo ⚡️</a></h1>
-
-
 
 <img src="docs/bilder/HelseBooking_booktime.gif" width="350" />
 
@@ -439,7 +438,7 @@ Systemet har tre roller:
 - Behandler – kan opprette tilgjengelige timer og administrere egne pasienter på sine timer
 - Admin – kan administrere systemets struktur (klinikker, brukere og relasjoner) (funksjon kommer)
 
-Brukere lagres i én felles User-modell, der rollen bestemmer tilgangsnivå og funksjonalitet i UI og API.
+Brukere lagres i en felles User-modell, der rollen bestemmer tilgangsnivå og funksjonalitet i UI og API.
 
 Behandlere har i tillegg utvidet profil med:
 
@@ -462,7 +461,7 @@ En Klinikk inneholder:
 - liste over tilknyttede behandlere
 - eier (opprettetAv)
 
-Dette gjør at én behandler kan tilhøre flere klinikker, og klinikker kan skaleres uavhengig av brukere.
+Dette gjør at en behandler kan tilhøre flere klinikker, og klinikker kan skaleres uavhengig av brukere.
 
 <br>
 
@@ -470,7 +469,7 @@ Dette gjør at én behandler kan tilhøre flere klinikker, og klinikker kan skal
 
 ## 📅 Time-modellen (kjerne i systemet)
 
-Time er den mest sentrale entiteten i systemet og binder hele domenet sammen.
+Time er den mest sentrale modellen i systemet og binder det hele sammen.
 
 En time inneholder:
 
@@ -480,7 +479,7 @@ En time inneholder:
 - dato + start/slutt-tid
 - status: ledig | booket | avlyst
 
-Systemet er bygget rundt state transitions:
+Systemet er bygget rundt time states:
 
 - ledig → booket (pasient reserverer)
 - booket → ledig (avlysning)
@@ -513,10 +512,9 @@ Backend håndhever all forretningslogikk:
 ## 🚀 Designvalg
 - MongoDB ble valgt for fleksibel modellering av relasjoner
 - Mongoose brukes til validering og relasjonslogikk
-- Backend håndterer all validering (ikke frontend)
+- Backend håndterer validering (ikke frontend)
 - Frontend er kun presentasjonslag + state management
-- API er REST-basert og delt mellom frontend/backend (separat deploy)
-
+- API er REST-basert og delt mellom frontend/backend (separate deploys)
 
 ## 📁 Mappestruktur:
 
@@ -537,7 +535,7 @@ HelseBooking/
         └── main.jsx
 ```
 
-Frontend og backend er deployet som to separate services på Render og kommuniserer via REST API.
+Som nevnt, så er frontend og backend er deployet som to separate services på Render(.com) og kommuniserer via REST API.
 
 <br>
 
