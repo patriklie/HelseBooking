@@ -60,6 +60,7 @@ export const loginUser = async (req, res) => {
                     typeBehandler: foundUser.typeBehandler || "",
                     profilbilde: foundUser.profilbilde || "",
                     omBehandler: foundUser.omBehandler || "",
+                    pushSubscription: foundUser.pushSubscription,
                 });
             } else {
         // 6. Her returnerer jeg feilmelding om hva som ikke stemmer, jeg velger å gjøre dette konkret siden det er en test.

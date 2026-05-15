@@ -9,11 +9,12 @@ import { useNavigate } from "react-router";
 import SlettCharacter from "../assets/3d-female-character-with-question-marks.png";
 import ProfileCharacter from "../assets/3d-female-character-waving.png";
 import Skillelinje from "../components/Skillelinje.jsx";
+import { urlBase64ToUint8Array } from "../lib/pushVarsler.js"
 
 const Profil = () => {
   
   const navigate = useNavigate();
-  const { username, email, role, typeBehandler, omBehandler } = useProfile();
+  const { username, email, role, typeBehandler, omBehandler, pushSubscription } = useProfile();
   const token = useAppStore((state) => state.token);
   const logout = useAppStore((state) => state.logout);
   const setProfil = useAppStore((state) => state.setProfil);
@@ -119,27 +120,74 @@ const Profil = () => {
   }
 }
 
-const slettProfil = async () => {
-  try {
+  const slettProfil = async () => {
+    try {
 
-    const response = await axios.delete(`${import.meta.env.VITE_API_URL}/api/users/`, {
-      headers: {
-        Authorization: `Bearer ${token}`
-      }
-    });
-    slettModalRef.current.close()
-    toast.success(response.data.message, { duration: 4000 });
-    logout();
-    navigate("/login");
+      const response = await axios.delete(`${import.meta.env.VITE_API_URL}/api/users/`, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+      slettModalRef.current.close()
+      toast.success(response.data.message, { duration: 4000 });
+      logout();
+      navigate("/login");
 
-  } catch(error) {
-    toast.error(error.response?.data?.message)
+    } catch(error) {
+      toast.error(error.response?.data?.message)
+    }
+    }
+  
+  const aktiverPushVarsler = async () => {
+    try {
+      
+      // Her sjekker vi om det finnes om service worker er klar. Skal være registrert av vite PWA plugin npm pakka
+      const registration = await navigator.serviceWorker.ready;
+      
+      // Her ber vi klients nettleser Push Service (google/apple) om en unik adresse for denne enheten
+      // får tilbake i subscription objektet et unik endpoint og tilhørende keys
+      const subscription = await registration.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: urlBase64ToUint8Array(import.meta.env.VITE_VAPID_PUBLIC_KEY)
+      });
+
+      // Her sender vi bare objektet til lagring på brukerens objekt i backend
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/users/push-varsler`, subscription, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      toast.success("Push varslinger på.");
+      
+      // legger info om subscription i store
+      setProfil({ pushSubscription: subscription })
+    } catch (error) {
+      toast.error(error.response?.data?.message)
   }
-}
+
+  }
+  
+  const deaktiverPushVarsler = async () => {
+  
+    try {
+    
+    // først henter vi serviceWorker
+    const serviceWorkeren = await navigator.serviceWorker.ready;
+    const subscription = await serviceWorkeren.pushManager.getSubscription();
+    await subscription.unsubscribe();
+      
+    const response = await axios.delete(`${import.meta.env.VITE_API_URL}/api/users/push-varsler`, {
+      headers: { Authorization: `Bearer ${token}` }
+    });
+    
+    setProfil({ pushSubscription: null });
+    toast.success("Push varslinger av.");
+    } catch (error) {
+      toast.error(error.response?.data?.message)
+    }
+  }
+  
   
   return (
     <>
-    
     
     { role === "behandler" &&
     <>
@@ -157,7 +205,6 @@ const slettProfil = async () => {
 
         </>
       }
-    
     
     <form onSubmit={oppdaterProfil} className="form-container"> 
       <div className="input-container">
@@ -203,9 +250,6 @@ const slettProfil = async () => {
       </>
       } 
         
-
-
-        
     <motion.button
       layout="position"
       whileHover={{ scale: 1.05 }}
@@ -216,7 +260,6 @@ const slettProfil = async () => {
       Oppdater profil
       <UserPen color="#FFFFFF" size={20} />
     </motion.button>  
-
 
     </form>
 

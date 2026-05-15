@@ -228,3 +228,25 @@ export const sjekkBrukernavn = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
+
+export const aktiverPushVarsler = async (req, res) => {
+    try {
+        const { id } = req.user;
+
+
+
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
+export const deaktiverPushVarsler = async (req, res) => {
+    try {
+        const { id } = req.user;
+
+
+
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}

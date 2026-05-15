@@ -51,6 +51,16 @@ const userSchema = new mongoose.Schema({
     profilbildePublicId: {
         type: String,
         default: null,
+    },
+    pushSubscription: {
+        type: {
+            endpoint: String,
+            keys: {
+                p256dh: String,
+                auth: String
+            }
+        },
+        default: null
     }
 }, { timestamps: true, versionKey: false });
 

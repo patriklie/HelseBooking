@@ -24,6 +24,8 @@ router.get("/behandlere/public", getAlleBehandlerePublic); // til about siden kr
 router.get("/behandlere/enkel", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("behandler", "admin"), getAlleBehandlereEnkel);
 router.get("/behandlere", authMiddleware, getAlleBehandlere);
 router.get("/pasienter", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("behandler", "admin"), hentAllePasienter);
+router.get("/push-varsler", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("behandler", "pasient"), aktiverPushVarsler);
+router.delete("/push-varsler", authMiddleware, validateIdMiddleware, verifyRoleMiddleware("behandler", "pasient"), deaktiverPushVarsler);
 router.get("/", authMiddleware, getAllUsers);
 router.get("/:id", authMiddleware, getUserById); // legg til protection her så ikke alle kan hente brukere
 router.patch("/", authMiddleware, updateUser);
