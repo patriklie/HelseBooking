@@ -57,9 +57,9 @@ export const loginUser = async (req, res) => {
                     username: foundUser.username,
                     email: foundUser.email,
                     role: foundUser.role,
-                    typeBehandler: foundUser.typeBehandler,
-                    profilbilde: foundUser.profilbilde,
-                    omBehandler: foundUser.omBehandler,
+                    typeBehandler: foundUser.typeBehandler || "",
+                    profilbilde: foundUser.profilbilde || "",
+                    omBehandler: foundUser.omBehandler || "",
                 });
             } else {
         // 6. Her returnerer jeg feilmelding om hva som ikke stemmer, jeg velger å gjøre dette konkret siden det er en test.

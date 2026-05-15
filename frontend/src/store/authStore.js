@@ -7,6 +7,7 @@ export const useAppStore = create(
         persist(
             (set) => ({
                 token: null,
+                id: "",
                 isAuth: false,
                 username: "",
                 email: "",
@@ -25,6 +26,7 @@ export const useAppStore = create(
                 setProfil: (nyProfil) => set({ ...nyProfil }),
                 logout: () => set({
                     token: null,
+                    id: "",
                     isAuth: false,
                     username: "",
                     email: "",

@@ -11,14 +11,8 @@ const LoginPage = () => {
 
   const [epost, setEpost] = useState("");
   const [passord, setPassord] = useState("");
-  const setToken = useAppStore((state) => state.setToken);
-  const setUsername = useAppStore((state) => state.setUsername);
-  const setEmail = useAppStore((state) => state.setEmail);
-  const setRole = useAppStore((state) => state.setRole);
   const setAuth = useAppStore((state) => state.setIsAuth);
-  const setTypeBehandler = useAppStore((state) => state.setTypeBehandler);
-  const setProfilbilde = useAppStore((state) => state.setProfilbilde);
-  const setOmBehandler = useAppStore((state) => state.setOmBehandler);
+  const setProfil = useAppStore((state) => state.setProfil);
   const navigate = useNavigate();
   const [visPassord, setVisPassord] = useState(false);
   const PassordIkon = visPassord ? Eye : EyeClosed;
@@ -44,19 +38,13 @@ const LoginPage = () => {
 
       toast.success(`Hei ${response.data.username} 👋`);
       
-      setToken(response.data.token);
-      setUsername(response.data.username);
-      setEmail(response.data.email);
-      setRole(response.data.role);
-      setProfilbilde(response.data.profilbilde);
-      setOmBehandler(response.data.omBehandler);
+      setProfil(response.data)
       setAuth(true);
-      setTypeBehandler(response.data.typeBehandler || "");
       navigate("/profil");
 
     } catch (error) {
-      console.error(error.response.data);
-      toast.error(error.response.data.message);
+      console.error(error?.response?.data);
+      toast.error(error?.response?.data?.message || "Noe gikk galt, prøv igjen");
 }
 
 
