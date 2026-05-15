@@ -50,27 +50,34 @@ const features = [
     },
     {
         id: 8,
+        title: "Push varslinger",
+        status: "ongoing",
+        detaljer:
+            "Utvikler instant push varslinger for PWA versjon av appen på IOS og Android."
+    },
+    {
+        id: 9,
         title: "Epost time bekreftelse",
         status: "ongoing",
         detaljer:
             "Brukere vil få bekreftelse på mail når man booker eller avlyser en time samt en påminnelses mail 24 timer før timen."
     },
     {
-        id: 9,
+        id: 10,
         title: "AI assistanse",
         status: "ongoing",
         detaljer:
             "Pasienter vil få mulighet til å få hjelp av kunstig intelligens inne i appen for å raskt velge riktig behandler, lokasjon (klinikk) og time (dato og klokkeslett) ved hjelp av AI prompt."
     },
     {
-        id: 10,
+        id: 11,
         title: "Behandler rating",
         status: "planned",
         detaljer:
             "Brukere kan gi stjernerating til behandlere basert på sin opplevelse etter gjennomført time med status gjennomført. Dette gir et enkelt og oversiktlig grunnlag for å vurdere kvalitet og erfaring før booking."
     },
     {
-        id: 11,
+        id: 12,
         title: "Admin side",
         status: "planned",
         detaljer:
