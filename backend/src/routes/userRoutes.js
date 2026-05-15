@@ -13,7 +13,9 @@ import {
     getAlleBehandlerePublic,
     hentAllePasienter,
     getAlleBehandlereEnkel,
-    sjekkBrukernavn
+    sjekkBrukernavn,
+    aktiverPushVarsler,
+    deaktiverPushVarsler
 } from "../controllers/userController.js";
 import { upload } from "../middleware/uploadMiddleware.js";
 
