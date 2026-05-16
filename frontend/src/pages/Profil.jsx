@@ -156,7 +156,7 @@ const Profil = () => {
       const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/users/pushvarsler`, subscription, {
         headers: { Authorization: `Bearer ${token}` }
       });
-      toast.success("Push varslinger på.");
+      toast.success("Push varslinger på.", { duration: 3000 });
       
       // legger info om subscription i store
       setProfil({ pushSubscription: subscription })
