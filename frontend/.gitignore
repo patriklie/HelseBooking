@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+dev-dist
+registerSW.js
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
