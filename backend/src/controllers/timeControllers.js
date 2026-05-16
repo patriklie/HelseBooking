@@ -1,6 +1,7 @@
 import { Time } from "../models/Time.js";
 import { User } from "../models/User.js";
 import mongoose from "mongoose";
+import webpush from "../lib/webPush.js"
 
 export const hentLedigeTimer = async (req, res) => {
     try {
@@ -103,8 +104,17 @@ export const bookTime = async (req, res) => {
         if (!timeID) return res.status(400).json({ message: "Time ID mangler." });
         if (!mongoose.Types.ObjectId.isValid(timeID)) return res.status(400).json({ message: "Time ID er ikke riktig." });
         
-        const bookaTime = await Time.findOneAndUpdate({ _id: timeID, status: "ledig" }, { pasient: pasientID, status: "booket" }, { returnDocument: "after" }).populate("behandler", "username");
+        const bookaTime = await Time.findOneAndUpdate({ _id: timeID, status: "ledig" }, { pasient: pasientID, status: "booket" }, { returnDocument: "after" }).populate("behandler", "username pushSubscription");
         if (!bookaTime) return res.status(400).json({ message: "Time finnes ikke eller er ikke ledig." });
+
+        const subscription = bookaTime.behandler.pushSubscription
+
+        if (subscription) {
+            webpush.sendNotification(subscription, JSON.stringify({
+                title: "Ny time booket!",
+                body: `${bookaTime.startDatoTidspunkt} er booket`
+            })) 
+        }
 
         res.status(200).json({ message: "Time booket!", bookaTime});
 

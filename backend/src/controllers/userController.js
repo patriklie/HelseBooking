@@ -232,8 +232,9 @@ export const sjekkBrukernavn = async (req, res) => {
 export const aktiverPushVarsler = async (req, res) => {
     try {
         const { id } = req.user;
-
-
+        // nå har vi subscription info i req.body
+        const foundUser = await User.findByIdAndUpdate(id, { pushSubscription: req.body });
+        res.status(200).json({ message: "Aktivert push varsler" })
 
     } catch (error) {
         res.status(500).json({ message: error.message });
@@ -243,8 +244,8 @@ export const aktiverPushVarsler = async (req, res) => {
 export const deaktiverPushVarsler = async (req, res) => {
     try {
         const { id } = req.user;
-
-
+        const foundUser = await User.findByIdAndUpdate(id, { pushSubscription: null });
+        res.status(200).json({ message: "Deaktivert push varsler" })
 
     } catch (error) {
         res.status(500).json({ message: error.message });

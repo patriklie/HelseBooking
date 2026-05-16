@@ -11,6 +11,13 @@ export default defineConfig({
     svgr(),
     VitePWA({
       registerType: 'autoUpdate',
+      devOptions: {
+        enabled: true,
+        type: 'module'
+      },
+      strategies: 'injectManifest',
+      srcDir: 'src',
+      filename: 'service-worker.js',
       manifest: {
         name: 'HelseBooking',
         short_name: 'HelseBooking',

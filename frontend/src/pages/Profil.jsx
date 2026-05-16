@@ -141,6 +141,7 @@ const Profil = () => {
   const aktiverPushVarsler = async () => {
     try {
       
+      console.log("aktiver push varsler");
       // Her sjekker vi om service worker er klar. Skal være registrert av vite PWA plugin npm pakken.
       const registration = await navigator.serviceWorker.ready;
       
@@ -152,7 +153,7 @@ const Profil = () => {
       });
 
       // Her sender vi bare objektet til lagring på brukerens objekt i backend
-      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/users/push-varsler`, subscription, {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/users/pushvarsler`, subscription, {
         headers: { Authorization: `Bearer ${token}` }
       });
       toast.success("Push varslinger på.");
@@ -168,18 +169,22 @@ const Profil = () => {
   const deaktiverPushVarsler = async () => {
   
     try {
+      
+    console.log("deaktiver push varsler");
     
     // først henter vi serviceWorker
     const serviceWorkeren = await navigator.serviceWorker.ready;
     const subscription = await serviceWorkeren.pushManager.getSubscription();
     await subscription.unsubscribe();
       
-    const response = await axios.delete(`${import.meta.env.VITE_API_URL}/api/users/push-varsler`, {
+    const response = await axios.delete(`${import.meta.env.VITE_API_URL}/api/users/pushvarsler`, {
       headers: { Authorization: `Bearer ${token}` }
     });
     
     setProfil({ pushSubscription: null });
     toast.success("Push varslinger av.");
+      
+      
     } catch (error) {
       toast.error(error.response?.data?.message)
     }
@@ -192,12 +197,12 @@ const Profil = () => {
     { role === "behandler" &&
     <>
 
-        <div className="profil-pushvarsler-container">
-          <input type="checkbox" checked={pushSubscription !== null} name="pushSubscription" id="pushSubscription" value="pushSubscription" onChange={pushSubscription ? deaktiverPushVarsler : aktiverPushVarsler} />
-          <label htmlFor="pushSubscription">Push varslinger</label>
-        </div>  
-        
-        <Skillelinje tekst="Min Profil" />
+      <div className="profil-pushvarsler-container">
+        <input type="checkbox" checked={pushSubscription !== null} name="pushSubscription" id="pushSubscription" value="pushSubscription" onChange={pushSubscription ? deaktiverPushVarsler : aktiverPushVarsler} />
+        <label htmlFor="pushSubscription">Push varslinger</label>
+      </div>  
+      
+      <Skillelinje tekst="Min Profil" />
                
       <div className="profile-container-wrapper">
         <ProfileCard profilbildeKlikk={profilbildeKlikk} username={username} email={email} role={role} typeBehandler={typeBehandler} profilbilde={profilbilde} omBehandler={omBehandler} />
@@ -205,13 +210,12 @@ const Profil = () => {
     </>
     }
       
-      {role === "pasient" &&
-        <>
-        <Skillelinje tekst="Min Profil" />
-        <img src={ProfileCharacter} className="profile-character" />
-
-        </>
-      }
+    {role === "pasient" &&
+    <>
+      <Skillelinje tekst="Min Profil" />
+      <img src={ProfileCharacter} className="profile-character" />
+    </>
+    }
     
     <form onSubmit={oppdaterProfil} className="form-container"> 
       <div className="input-container">

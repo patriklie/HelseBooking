@@ -53,7 +53,7 @@ const features = [
         title: "Push varslinger",
         status: "ongoing",
         detaljer:
-            "Utvikler instant push varslinger for PWA versjon av appen på IOS og Android."
+            "Utvikler instant push varslinger for PWA versjon av appen på IOS og Android. Starter med varsling for behandlere når en time bookes."
     },
     {
         id: 9,
