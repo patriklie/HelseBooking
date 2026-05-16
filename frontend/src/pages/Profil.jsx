@@ -138,9 +138,8 @@ const Profil = () => {
     }
     }
   
-  const aktiverPushVarsler = async (e) => {
+  const aktiverPushVarsler = async () => {
     try {
-      e.target.blur()
       console.log("aktiver push varsler");
       // Her sjekker vi om service worker er klar. Skal være registrert av vite PWA plugin npm pakken.
       const registration = await navigator.serviceWorker.ready;
@@ -166,21 +165,28 @@ const Profil = () => {
 
   }
   
-  const deaktiverPushVarsler = async (e) => {
+  const deaktiverPushVarsler = async () => {
   
     try {
-    e.target.blur()  
+ 
     console.log("deaktiver push varsler");
     
     // først henter vi serviceWorker
     const serviceWorkeren = await navigator.serviceWorker.ready;
     const subscription = await serviceWorkeren.pushManager.getSubscription();
-    await subscription.unsubscribe();
+    
+    if (!subscription) {
+      setProfil({ pushSubscription: null });
+      toast.success("Push varslinger av.");
+      return;
+    }
       
+    await subscription.unsubscribe();
+      console.log("kommer vi hit?")
     const response = await axios.delete(`${import.meta.env.VITE_API_URL}/api/users/pushvarsler`, {
       headers: { Authorization: `Bearer ${token}` }
     });
-    
+    console.log("kommer vi hit?")
     setProfil({ pushSubscription: null });
     toast.success("Push varslinger av.");
       
@@ -196,11 +202,8 @@ const Profil = () => {
     
     { role === "behandler" &&
     <>
-
-      <div className="profil-pushvarsler-container">
-        <input type="checkbox" checked={pushSubscription !== null} name="pushSubscription" id="pushSubscription" value="pushSubscription" onChange={(e) => pushSubscription ? deaktiverPushVarsler(e) : aktiverPushVarsler(e) } />
-        <label htmlFor="pushSubscription">Push varslinger</label>
-      </div>  
+      <div className="profil-push-aktiver" onClick={aktiverPushVarsler}>AKTIVER VARSLER</div>
+      <div className="profil-push-deaktiver" onClick={deaktiverPushVarsler}>DEAKTIVER VARSLER</div>
       
       <Skillelinje tekst="Min Profil" />
                

@@ -629,11 +629,15 @@ transition: box-shadow 0.3s ease;
 
 /* Profil siden */
 
-.profil-pushvarsler-container {
-  display: flex;
-  justify-content: center;
-  margin: 2rem;
-  gap: 10px;
+.profil-push-aktiver,
+.profil-push-deaktiver {
+  padding: 10px 20px;
+  text-align: center;
+  background-color: var(--primary-color);
+  width: 200px;
+  margin: 10px;
+  border-radius: 99px;
+  cursor: pointer;
 }
 
 .profil-slett-btn {
