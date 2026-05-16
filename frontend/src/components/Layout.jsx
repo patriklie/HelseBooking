@@ -15,6 +15,7 @@ const Layout = () => {
           top: 70
         }}
         toastOptions={{
+          pauseOnHover: false,
           style: {
             padding: "10px 32px",
             borderRadius: "50px",
