@@ -138,9 +138,9 @@ const Profil = () => {
     }
     }
   
-  const aktiverPushVarsler = async () => {
+  const aktiverPushVarsler = async (e) => {
     try {
-      
+      e.target.blur()
       console.log("aktiver push varsler");
       // Her sjekker vi om service worker er klar. Skal være registrert av vite PWA plugin npm pakken.
       const registration = await navigator.serviceWorker.ready;
@@ -166,10 +166,10 @@ const Profil = () => {
 
   }
   
-  const deaktiverPushVarsler = async () => {
+  const deaktiverPushVarsler = async (e) => {
   
     try {
-      
+    e.target.blur()  
     console.log("deaktiver push varsler");
     
     // først henter vi serviceWorker
@@ -198,7 +198,7 @@ const Profil = () => {
     <>
 
       <div className="profil-pushvarsler-container">
-        <input type="checkbox" checked={pushSubscription !== null} name="pushSubscription" id="pushSubscription" value="pushSubscription" onChange={pushSubscription ? deaktiverPushVarsler : aktiverPushVarsler} />
+        <input type="checkbox" checked={pushSubscription !== null} name="pushSubscription" id="pushSubscription" value="pushSubscription" onChange={(e) => pushSubscription ? deaktiverPushVarsler(e) : aktiverPushVarsler(e) } />
         <label htmlFor="pushSubscription">Push varslinger</label>
       </div>  
       
