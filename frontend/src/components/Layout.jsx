@@ -1,6 +1,7 @@
 import { Outlet } from "react-router";
 import Navbar from "./Navbar.jsx";
 import { Toaster } from "react-hot-toast";
+import PWAOppdatering from "./PWAoppdatering.jsx";
 
 const Layout = () => {
   return (
@@ -8,7 +9,7 @@ const Layout = () => {
       <div className="topp-gap"></div>
       <Navbar />
       <Outlet />   
-
+      <PWAOppdatering />
       <Toaster
         position="top-center"
         containerStyle={{
