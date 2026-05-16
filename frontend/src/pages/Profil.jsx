@@ -141,7 +141,7 @@ const Profil = () => {
   const aktiverPushVarsler = async () => {
     try {
       
-      // Her sjekker vi om det finnes om service worker er klar. Skal være registrert av vite PWA plugin npm pakka
+      // Her sjekker vi om service worker er klar. Skal være registrert av vite PWA plugin npm pakken.
       const registration = await navigator.serviceWorker.ready;
       
       // Her ber vi klients nettleser Push Service (google/apple) om en unik adresse for denne enheten
@@ -191,7 +191,14 @@ const Profil = () => {
     
     { role === "behandler" &&
     <>
-      <Skillelinje tekst="Min Profil" />
+
+        <div className="profil-pushvarsler-container">
+          <input type="checkbox" checked={pushSubscription !== null} name="pushSubscription" id="pushSubscription" value="pushSubscription" onChange={pushSubscription ? deaktiverPushVarsler : aktiverPushVarsler} />
+          <label htmlFor="pushSubscription">Push varslinger</label>
+        </div>  
+        
+        <Skillelinje tekst="Min Profil" />
+               
       <div className="profile-container-wrapper">
         <ProfileCard profilbildeKlikk={profilbildeKlikk} username={username} email={email} role={role} typeBehandler={typeBehandler} profilbilde={profilbilde} omBehandler={omBehandler} />
       </div>

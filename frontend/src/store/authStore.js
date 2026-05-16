@@ -15,7 +15,7 @@ export const useAppStore = create(
                 omBehandler: "",
                 typeBehandler: "",
                 profilbilde: "",
-                pushSubscription: false,
+                pushSubscription: null,
                 setIsAuth: (bool) => set({ isAuth: bool }),
                 setUsername: (newUsername) => set({ username: newUsername }),
                 setEmail: (newEmail) => set({ email: newEmail }),

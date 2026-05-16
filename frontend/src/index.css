@@ -627,6 +627,15 @@ transition: box-shadow 0.3s ease;
   transform: scale(0.9);
 }
 
+/* Profil siden */
+
+.profil-pushvarsler-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  gap: 10px;
+}
+
 .profil-slett-btn {
   display: block;
   margin: 0 auto;
