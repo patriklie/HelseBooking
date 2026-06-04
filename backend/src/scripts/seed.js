@@ -22,7 +22,8 @@ const klinikker = [
     "69fc7015e830aadb2667b093",
     "69fc7066e830aadb2667b099",
     "69fc70afe830aadb2667b09f",
-    "69fc710fe830aadb2667b0a5"
+    "69fc710fe830aadb2667b0a5",
+    "69fe447ac0030599ea61e790"
 ];
 
 const startTider = [
