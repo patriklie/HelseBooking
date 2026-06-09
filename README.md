@@ -1,12 +1,14 @@
 # Velkommen til **HelseBooking**
 
-###  En fullstack bookingapplikasjon for helsetjenester hvor pasienter kan finne og booke time hos behandlere.
+###  En fullstack bookingapplikasjon for helsetjenester hvor pasienter kan finne og booke time hos behandlere, bygget fra bunnen av med mobil som førsteprioritet.
 
 <div align="center">
 <img src="docs\bilder\Logo_prosess\mockups\iPhone_17_Mockup_1_left_rounded.png" />
 </div>
 
-De fleste som har forsøkt å booke time i helsebransjen kjenner til eldre systemer, unødvendige steg og brukergrensesnitt som føles utdatert. **HelseBooking** er et fullstack-prosjekt bygget som et svar på nettopp dette, en moderne plattform der pasienter og behandlere samhandler sømløst, med fokus på få klikk fra innlogging til booket time.
+De fleste som har forsøkt å booke time i helsebransjen kjenner til eldre systemer, unødvendige steg og brukergrensesnitt som føles utdatert. **HelseBooking** er et fullstack-prosjekt bygget som et svar på nettopp dette. En moderne, mobiloptimalisert plattform der pasienter kan finne og booke time hos behandlere med få klikk fra innlogging til bekreftet time.
+
+Designet er mobile-first, optimalisert for skjermstørrelser fra 375 px til 1000px bredde, og all interaksjon er tilpasset touch, fra sveip-for-å-slette til native appfølelse via PWA-støtte.
 
 Prosjektet demonstrerer ferdigheter innen fullstack webutvikling med MERN-stacken, inkludert JWT-autentisering, rollebasert tilgangskontroll og en moderne brukeropplevelse bygget med React.
 
