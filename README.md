@@ -1,6 +1,6 @@
 # Velkommen til **HelseBooking**
 
-###  Min fullstack bookingapplikasjon for helsetjenester hvor pasienter kan finne og booke time hos behandlere.
+###  En fullstack bookingapplikasjon for helsetjenester hvor pasienter kan finne og booke time hos behandlere.
 
 <div align="center">
 <img src="docs\bilder\Logo_prosess\mockups\iPhone_17_Mockup_1_left_rounded.png" />
